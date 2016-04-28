@@ -1,0 +1,341 @@
+---
+title: "Programming Assignment 1 Submission"
+subtitle: "Data Visualization by University of Illinois at Urbana-Champaign"
+author: "[®γσ, Eng Lian Hu](http://englianhu.wordpress.com) <img src='figure/ShirotoNorimichi.jpg' width='24'> 白戸則道®"
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_html:
+    toc: yes
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+# 1. Introduction
+
+  - Section [1.1 Assignment]
+  - Section [1.2 Preparing Environment]
+
+## 1.1 Assignment
+
+**Instructions**
+
+  1.  Take the data from the [GISTEMP](http://data.giss.nasa.gov/gistemp/)^[**GISS Surface Temperature Analysis (GISTEMP)** provides the graphs and tables are updated around the middle of every month using current data files from NOAA GHCN v3 (meteorological stations), ERSST v4 (ocean areas), and SCAR (Antarctic stations), combined as described in our December 2010 publication (Hansen et al. 2010). These updated files incorporate reports for the previous month and also late reports and corrections for earlier months.] site, specifically the data from "*Table Data: Global and Hemispheric Monthly Means and Zonal Annual Means.*" Alternatively you can use any data that you would like to explore instead.
+  2.  Parse the data to a suitable format for the tools that you are using – we have provided two files (in JS, TXT, and CSV formats) that contain the data used to make the visualizations here, which is a subset of the data on the GISTEMP site.
+  3.  Visualize the data in any meaningful way you wish, keeping in mind the requirements of the [Programming Assignment 1 Rubric](https://www.coursera.org/learn/datavisualization/supplement/3fm6e/programming-assignment-1-rubric).
+  4.  Click below to download the .zip file for this programming assignment.
+  
+  [Programming Assignment 1 Data New.zip](https://d3c33hcgiwev3.cloudfront.net/_595a8f2c3bcd6e2c185467a9768e641c_Programming-Assignment-1-Data-New.zip?Expires=1461974400&Signature=QMD76O1PvIyB4RkBYDcdwIcZuy9GSYh~cw7iCvTPtZUIdfXr67Bd09DXYs2a3gbfhLjGYWzK3oLHwDrlty~N7Hbcie07X~Sk42G~dFlJ8UIP1a-vt2vTWUDkyZC5LqA5QlRq9VhlHrgljW9-xXkrENO8NxbK2EZd9bZ3ExzW2Po_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+
+  If you're interested, you can also download the original data by clicking below.
+
+  [Programming Assignment Data - GISTEMP Original.zip](https://d3c33hcgiwev3.cloudfront.net/_1689142cead0f03ce445763f4040d5ec_Programming-Assignment-Data---GISTEMP-Original.zip?Expires=1461974400&Signature=kGK1EX2oRt3nW0Sm~j23xCpconAl6EfJr385shkcG7WB9gnWyzGQmDisOwfpNDCskNHYEiKhpl414RJASstNH~tZ4iJgXiV9LCprnX9MSZ~nbGVLxHL0X7zXlvHW1pCn9~ig0F9m2KF5XACcyr0GD0qvBSGll25wAKjSru5j0vA_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
+
+## 1.2 Preparing Environment
+
+  Loading packages.
+
+```{r load-packages, cache=TRUE}
+## Loading the package 'BBmisc'
+if(suppressMessages(!require('BBmisc'))) install.packages('BBmisc')
+suppressMessages(library('BBmisc'))
+
+pkgs <- c('plyr', 'dplyr', 'magrittr', 'tidyr', 'googleVis', 'htmltools', 'rCharts', 'DT', 'sparkline', 'lubridate')
+suppressAll(lib(pkgs)) 
+rm(pkgs)
+```
+
+  Setup and setting adjustment.
+
+```{r setting adjustment}
+## Set the googleVis options first to change the behaviour of plot.gvis, so that only the chart 
+##  component of the HTML file is written into the output file.
+##  
+## Set option to below if you want to plot an independent webpage with graph 
+#'@ op <- options(gvis.plot.tag=NULL)
+op <- options(gvis.plot.tag='chart')
+
+## knitr configuration
+# invalidate cache when the tufte version changes
+suppressMessages(library('knitr'))
+
+opts_chunk$set(tidy = TRUE, fig.path = 'figure/', comment = NA, message = FALSE, fig.keep = 'high', fig.width = 10, fig.height = 6, fig.align = 'center', cache.extra = packageVersion('tufte'), echo = TRUE, progress = TRUE)
+
+## Setting for rCharts
+## http://ramnathv.github.io/posts/rcharts-nvd3/
+options(warn = -1, htmltools.dir.version = FALSE, 
+        rcharts.mode = 'iframesrc', rcharts.cdn = TRUE, 
+        RCHART_WIDTH = 600, RCHART_HEIGHT = 400, 
+        RCHART_TEMPLATE = 'Rickshaw.html', RCHART_LIB = 'morris')
+```
+
+```{r clear-memory, include = FALSE}
+## clear memory cache to lease the memory capacity ease
+gc()
+```
+
+# 2. Data
+
+  - Section [2.1 Collecting Data]
+  - Section [2.2 Processing Data]
+  - Section [2.2.1 Read Data]
+  - Section [2.2.2 Analyse Data]
+  - Section [2.3 Plot Histogram]
+
+## 2.1 Collecting Data
+
+  The dataset is downloadable in zipped file via [here](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip).
+
+```{r collect-data}
+suppressMessages(library('plyr'))
+
+if(!file.exists('data/')) dir.create('data/')
+
+lnk <- 'https://d3c33hcgiwev3.cloudfront.net/_595a8f2c3bcd6e2c185467a9768e641c_Programming-Assignment-1-Data-New.zip?Expires=1461974400&Signature=QMD76O1PvIyB4RkBYDcdwIcZuy9GSYh~cw7iCvTPtZUIdfXr67Bd09DXYs2a3gbfhLjGYWzK3oLHwDrlty~N7Hbcie07X~Sk42G~dFlJ8UIP1a-vt2vTWUDkyZC5LqA5QlRq9VhlHrgljW9-xXkrENO8NxbK2EZd9bZ3ExzW2Po_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A'
+destfile <- 'Programming-Assignment-1-Data-New.zip'
+
+if(!file.exists(paste0('data/', destfile))) {
+  download.file(lnk, destfile = paste0('data/', destfile))
+}
+
+if(!file.exists(paste0('data/final'))) {
+  ## Unzip the dataset
+  #'@ unzip(paste0('data/', destfile), exdir = 'data/final/de_DE', list = TRUE)
+  # Error in unzip(paste0("data/", destfile), exdir = "data/final/de_DE",  : 
+  #   'exdir' does not exist
+  unzip(paste0('data/', destfile), exdir = 'data/')
+}
+
+## list down the details of the zipped file
+unzip(paste0('data/', destfile), list = TRUE)
+```
+
+```{r rm-objs1, include = FALSE}
+rm(lnk, destfile)
+```
+
+  From above information, we can know the information of the zipped files, and now we try to list out the documents for this mile-stone report as well as the summary of files.
+
+```{r project-files}
+suppressMessages(library('plyr'))
+suppressMessages(library('dplyr'))
+
+## files for this assignment
+lsfiles <- list.files('data/Programming Assignment 1 Data New')
+lsfiles
+
+## summary of files
+datafiles <- paste0('data/Programming Assignment 1 Data New/', lsfiles)
+llply(as.list(datafiles), file.info) %>% rbind_all
+```
+
+```{r rm-objs2, include = FALSE}
+rm(lsfiles)
+```
+
+## 2.2 Read Data
+
+ Read data.  
+
+```{r read-files}
+suppressMessages(library('plyr'))
+suppressMessages(library('dplyr'))
+
+dat1 <- read.csv2('data/Programming Assignment 1 Data New/ExcelFormattedGISTEMPDataCSV.csv', sep=',') %>% tbl_df
+
+dat2 <- read.csv2('data/Programming Assignment 1 Data New/ExcelFormattedGISTEMPData2CSV.csv', sep=',') %>% tbl_df
+```
+
+```{r clear-memory, include = FALSE}
+```
+
+```{r unlink, include = FALSE}
+## Delete the data folders to save the capacity.
+unlink('data/final', recursive = TRUE)
+```
+
+```{r data-details}
+dats <- list(dat1, dat2)
+
+llply(dats, sapply, class)
+str(dats)
+```
+
+```{r clear-memory, include = FALSE}
+```
+
+```{r rm-objs3, include = FALSE}
+rm(datafiles, dat1, dat2)
+```
+
+```{r clear-memory, include = FALSE}
+```
+
+# 3. Data Visulaization
+
+  - Section [3.1 Data Table]
+  - Section [3.2 Line Chart]
+  - Section [3.3 RWeka]
+  - Section [4.4 Plot Dicision Tree]
+
+## 3.1 Data Table
+
+  Now we look at our data set in table format.
+
+```{r datatable1, echo = FALSE}
+suppressMessages(library('DT'))
+
+datatable(dats[[1]], 
+  caption="Table 3.1.1 : Deviation from the 1951 – 1980 Mean in 0.01 Degrees",
+  extensions = list("ColReorder"=NULL, "ColVis"=NULL, "TableTools"=NULL
+                    #, "FixedColumns"=list(leftColumns=2)
+                    ), 
+  options = list(autoWidth=TRUE,
+                 oColReorder=list(realtime=TRUE), #oColVis=list(exclude=c(0, 1), activate='mouseover'),
+                 oTableTools=list(
+                 sSwfPath="//cdnjs.cloudflare.com/ajax/libs/datatables-tabletools/2.1.5/swf/copy_csv_xls.swf",
+                 aButtons=list("copy", "print",
+                               list(sExtends="collection",
+                                    sButtonText="Save",
+                                    aButtons=c("csv","xls")))),
+                 dom='CRTrilftp', scrollX=TRUE, scrollCollapse=TRUE,
+                 colVis=list(exclude=c(0), activate='mouseover')))
+```
+
+  *table 3.1.1 : Deviation from the 1951 – 1980 Mean in 0.01 Degrees.*
+
+```{r datatable2, echo = FALSE}
+suppressMessages(library('DT'))
+
+datatable(dats[[2]], 
+  caption="Table 3.1.2 : Globe and the North and South Hemispheres through all the given years",
+  extensions = list("ColReorder"=NULL, "ColVis"=NULL, "TableTools"=NULL
+                    #, "FixedColumns"=list(leftColumns=2)
+                    ), 
+  options = list(autoWidth=TRUE,
+                 oColReorder=list(realtime=TRUE), #oColVis=list(exclude=c(0, 1), activate='mouseover'),
+                 oTableTools=list(
+                 sSwfPath="//cdnjs.cloudflare.com/ajax/libs/datatables-tabletools/2.1.5/swf/copy_csv_xls.swf",
+                 aButtons=list("copy", "print",
+                               list(sExtends="collection",
+                                    sButtonText="Save",
+                                    aButtons=c("csv","xls")))),
+                 dom='CRTrilftp', scrollX=TRUE, scrollCollapse=TRUE,
+                 colVis=list(exclude=c(0), activate='mouseover')))
+```
+
+  *table 3.1.2 : Globe and the North and South Hemispheres through all the given years.*
+
+```{r clear-memory, include = FALSE}
+```
+
+## 3.2 Line Chart
+
+  Now I plot a *xCharts*.
+
+```{r}
+suppressMessages(library('tidyr'))
+suppressMessages(library('dplyr'))
+suppressMessages(library('rCharts'))
+
+td.dat1 <- dats[[1]] %>% gather(Month, Value, Jan:SON)
+x1 <- xPlot(Value ~ Year, group = 'Month', data = td.dat1,
+  type = 'line-dotted')
+x1
+```
+
+  *graph 3.2.1 : Deviation from the 1951 – 1980 Mean in 0.01 Degrees.*
+
+```{r}
+suppressMessages(library('tidyr'))
+suppressMessages(library('dplyr'))
+suppressMessages(library('rCharts'))
+
+td.dat2 <- dats[[2]] %>% gather(Lat, Value, Glob:X90S.64S)
+x2 <- xPlot(Value ~ Year, group = 'Lat', data = td.dat2,
+  type = 'line-dotted')
+x2
+```
+
+  *graph 3.2.2 : Globe and the North and South Hemispheres through all the given years.*
+
+## 3.3 
+
+```{r , echo = FALSE}
+# Create the chart
+tfrPlot <- nPlot(
+  Value ~ Year, 
+  data = td.dat1, 
+  group = "Month",
+  type = "lineChart")
+
+# Add axis labels and format the tooltip
+tfrPlot$yAxis(axisLabel = "Total fertility rate", width = 62)
+
+tfrPlot$xAxis(axisLabel = "Year")
+
+tfrPlot$chart(tooltipContent = "#! function(key, x, y){
+        return '<h3>' + key + '</h3>' + 
+        '<p>' + y + ' in ' + x + '</p>'
+        } !#")
+tfrPlot
+```
+
+
+
+# 4. Conclusion
+
+  From the text mining for the german dataset, we sampling the dataset to get the high frequency of occurence of words. Compare to previous version, from the report I also applied `tm`, `wordcloud`, `googleVis`, `rCharts` and `RWeka` packages etc to enhance and display a better data visualization on text mining.
+  
+  By the way I've created a shiny app for displaying the ability to predict the next word based on the high frequency rate. The frequency rate would depict the best predictive model.
+
+  **Remarks** : 
+  
+  - Due to some technical errors on the *rpart* and *RWeka* packages, here I ommit the section by made a crossline.
+  - Due to I tried to some solutions to plot the output by codes `p1$print('inline', include_assets = F, cdn = FALSE)`, `p1$show('inline', include_assets = FALSE, cdn = FALSE)`, `p1`, `p1$show()`, `p1$print()` but no one works for me. Below are some references.
+    
+    1. [Display two rCharts NVD3 figures next to each other in rmarkdown](http://stackoverflow.com/questions/29029718/display-two-rcharts-nvd3-figures-next-to-each-other-in-rmarkdown)
+    2. [Are rCharts and DT compatible in rmarkdown?](http://stackoverflow.com/questions/30212788/are-rcharts-and-dt-compatible-in-rmarkdown)
+    3. [Rcharts nPlot() Percentages with discrete/multiBarChart](http://stackoverflow.com/questions/19716356/rcharts-nplot-percentages-with-discrete-multibarchart)
+
+# 5. Appendices
+
+  - Section [5.1 Documenting File Creation]
+  - Section [5.2 Versions' Log]
+
+## 5.1 Documenting File Creation
+
+  It's useful to record some information about how your file was created.
+  
+  - File creation date: 2016-04-29
+  - File latest updated date: `r Sys.Date()`
+  - `r R.version.string`
+  - R version (short form): `r getRversion()`
+  - [**rmarkdown** package]() version: `r packageVersion('rmarkdown')`
+  - [**tufte** package](https://github.com/rstudio/tufte) version: `r packageVersion('tufte')`
+  - [**mosaic** package](https://github.com/ProjectMOSAIC/mosaic) version: `r packageVersion('mosaic')`
+  - File version: 1.0.0
+  - Author Profile: [®γσ, Eng Lian Hu](https://beta.rstudioconnect.com/englianhu/ryo-eng/)
+  - GitHub: [Source Code](https://github.com/englianhu/Coursera-Data-Mining/Coursera-Data-Mining)
+  - Additional session information:
+
+```{r info, echo=FALSE, results='asis'}
+lubridate::now()
+devtools::session_info()$platform
+Sys.info()
+```
+
+## 5.2 Versions' Log
+
+  - *March 29, 2015*: [version: 1.0.0](...................................)
+
+## 5.3 References
+
+  - [*rCharts* Manual](http://rcharts.readthedocs.org/en/latest/intro/create.html)
+  - [Interactive Analysis of Systematic Investor](http://timelyportfolio.github.io/rCharts_nvd3_systematic/cluster_weights.html)
+
