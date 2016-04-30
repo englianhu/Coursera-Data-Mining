@@ -1,0 +1,12334 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css'>
+    
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='//d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js' type='text/javascript'></script>
+    <script src='//nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chart2d3b12157d76' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart2d3b12157d76()
+    });
+    function drawchart2d3b12157d76(){  
+      var opts = {
+ "dom": "chart2d3b12157d76",
+"width":    800,
+"height":    400,
+"x": "Year",
+"y": "Value",
+"group": "Month",
+"type": "lineChart",
+"id": "chart2d3b12157d76" 
+},
+        data = [
+ {
+ "Year":           1880,
+"Month": "Jan",
+"Value":            -29 
+},
+{
+ "Year":           1881,
+"Month": "Jan",
+"Value":             -8 
+},
+{
+ "Year":           1882,
+"Month": "Jan",
+"Value":             10 
+},
+{
+ "Year":           1883,
+"Month": "Jan",
+"Value":            -32 
+},
+{
+ "Year":           1884,
+"Month": "Jan",
+"Value":            -17 
+},
+{
+ "Year":           1885,
+"Month": "Jan",
+"Value":            -64 
+},
+{
+ "Year":           1886,
+"Month": "Jan",
+"Value":            -41 
+},
+{
+ "Year":           1887,
+"Month": "Jan",
+"Value":            -65 
+},
+{
+ "Year":           1888,
+"Month": "Jan",
+"Value":            -42 
+},
+{
+ "Year":           1889,
+"Month": "Jan",
+"Value":            -19 
+},
+{
+ "Year":           1890,
+"Month": "Jan",
+"Value":            -46 
+},
+{
+ "Year":           1891,
+"Month": "Jan",
+"Value":            -45 
+},
+{
+ "Year":           1892,
+"Month": "Jan",
+"Value":            -24 
+},
+{
+ "Year":           1893,
+"Month": "Jan",
+"Value":            -67 
+},
+{
+ "Year":           1894,
+"Month": "Jan",
+"Value":            -54 
+},
+{
+ "Year":           1895,
+"Month": "Jan",
+"Value":            -43 
+},
+{
+ "Year":           1896,
+"Month": "Jan",
+"Value":            -22 
+},
+{
+ "Year":           1897,
+"Month": "Jan",
+"Value":            -22 
+},
+{
+ "Year":           1898,
+"Month": "Jan",
+"Value":             -7 
+},
+{
+ "Year":           1899,
+"Month": "Jan",
+"Value":            -17 
+},
+{
+ "Year":           1900,
+"Month": "Jan",
+"Value":            -39 
+},
+{
+ "Year":           1901,
+"Month": "Jan",
+"Value":            -28 
+},
+{
+ "Year":           1902,
+"Month": "Jan",
+"Value":            -18 
+},
+{
+ "Year":           1903,
+"Month": "Jan",
+"Value":            -27 
+},
+{
+ "Year":           1904,
+"Month": "Jan",
+"Value":            -63 
+},
+{
+ "Year":           1905,
+"Month": "Jan",
+"Value":            -37 
+},
+{
+ "Year":           1906,
+"Month": "Jan",
+"Value":            -29 
+},
+{
+ "Year":           1907,
+"Month": "Jan",
+"Value":            -43 
+},
+{
+ "Year":           1908,
+"Month": "Jan",
+"Value":            -44 
+},
+{
+ "Year":           1909,
+"Month": "Jan",
+"Value":            -69 
+},
+{
+ "Year":           1910,
+"Month": "Jan",
+"Value":            -44 
+},
+{
+ "Year":           1911,
+"Month": "Jan",
+"Value":            -63 
+},
+{
+ "Year":           1912,
+"Month": "Jan",
+"Value":            -27 
+},
+{
+ "Year":           1913,
+"Month": "Jan",
+"Value":            -40 
+},
+{
+ "Year":           1914,
+"Month": "Jan",
+"Value":              2 
+},
+{
+ "Year":           1915,
+"Month": "Jan",
+"Value":            -19 
+},
+{
+ "Year":           1916,
+"Month": "Jan",
+"Value":            -19 
+},
+{
+ "Year":           1917,
+"Month": "Jan",
+"Value":            -46 
+},
+{
+ "Year":           1918,
+"Month": "Jan",
+"Value":            -43 
+},
+{
+ "Year":           1919,
+"Month": "Jan",
+"Value":            -17 
+},
+{
+ "Year":           1920,
+"Month": "Jan",
+"Value":            -14 
+},
+{
+ "Year":           1921,
+"Month": "Jan",
+"Value":             -2 
+},
+{
+ "Year":           1922,
+"Month": "Jan",
+"Value":            -31 
+},
+{
+ "Year":           1923,
+"Month": "Jan",
+"Value":            -25 
+},
+{
+ "Year":           1924,
+"Month": "Jan",
+"Value":            -21 
+},
+{
+ "Year":           1925,
+"Month": "Jan",
+"Value":            -32 
+},
+{
+ "Year":           1926,
+"Month": "Jan",
+"Value":             22 
+},
+{
+ "Year":           1927,
+"Month": "Jan",
+"Value":            -26 
+},
+{
+ "Year":           1928,
+"Month": "Jan",
+"Value":             -2 
+},
+{
+ "Year":           1929,
+"Month": "Jan",
+"Value":            -46 
+},
+{
+ "Year":           1930,
+"Month": "Jan",
+"Value":            -28 
+},
+{
+ "Year":           1931,
+"Month": "Jan",
+"Value":            -10 
+},
+{
+ "Year":           1932,
+"Month": "Jan",
+"Value":             14 
+},
+{
+ "Year":           1933,
+"Month": "Jan",
+"Value":            -31 
+},
+{
+ "Year":           1934,
+"Month": "Jan",
+"Value":            -25 
+},
+{
+ "Year":           1935,
+"Month": "Jan",
+"Value":            -37 
+},
+{
+ "Year":           1936,
+"Month": "Jan",
+"Value":            -28 
+},
+{
+ "Year":           1937,
+"Month": "Jan",
+"Value":             -7 
+},
+{
+ "Year":           1938,
+"Month": "Jan",
+"Value":              3 
+},
+{
+ "Year":           1939,
+"Month": "Jan",
+"Value":            -12 
+},
+{
+ "Year":           1940,
+"Month": "Jan",
+"Value":            -13 
+},
+{
+ "Year":           1941,
+"Month": "Jan",
+"Value":             13 
+},
+{
+ "Year":           1942,
+"Month": "Jan",
+"Value":             29 
+},
+{
+ "Year":           1943,
+"Month": "Jan",
+"Value":              1 
+},
+{
+ "Year":           1944,
+"Month": "Jan",
+"Value":             42 
+},
+{
+ "Year":           1945,
+"Month": "Jan",
+"Value":             15 
+},
+{
+ "Year":           1946,
+"Month": "Jan",
+"Value":             17 
+},
+{
+ "Year":           1947,
+"Month": "Jan",
+"Value":             -8 
+},
+{
+ "Year":           1948,
+"Month": "Jan",
+"Value":              6 
+},
+{
+ "Year":           1949,
+"Month": "Jan",
+"Value":             10 
+},
+{
+ "Year":           1950,
+"Month": "Jan",
+"Value":            -27 
+},
+{
+ "Year":           1951,
+"Month": "Jan",
+"Value":            -35 
+},
+{
+ "Year":           1952,
+"Month": "Jan",
+"Value":             16 
+},
+{
+ "Year":           1953,
+"Month": "Jan",
+"Value":              9 
+},
+{
+ "Year":           1954,
+"Month": "Jan",
+"Value":            -27 
+},
+{
+ "Year":           1955,
+"Month": "Jan",
+"Value":             12 
+},
+{
+ "Year":           1956,
+"Month": "Jan",
+"Value":            -16 
+},
+{
+ "Year":           1957,
+"Month": "Jan",
+"Value":            -13 
+},
+{
+ "Year":           1958,
+"Month": "Jan",
+"Value":             37 
+},
+{
+ "Year":           1959,
+"Month": "Jan",
+"Value":              6 
+},
+{
+ "Year":           1960,
+"Month": "Jan",
+"Value":             -2 
+},
+{
+ "Year":           1961,
+"Month": "Jan",
+"Value":              7 
+},
+{
+ "Year":           1962,
+"Month": "Jan",
+"Value":              7 
+},
+{
+ "Year":           1963,
+"Month": "Jan",
+"Value":             -3 
+},
+{
+ "Year":           1964,
+"Month": "Jan",
+"Value":             -6 
+},
+{
+ "Year":           1965,
+"Month": "Jan",
+"Value":             -9 
+},
+{
+ "Year":           1966,
+"Month": "Jan",
+"Value":            -16 
+},
+{
+ "Year":           1967,
+"Month": "Jan",
+"Value":             -7 
+},
+{
+ "Year":           1968,
+"Month": "Jan",
+"Value":            -22 
+},
+{
+ "Year":           1969,
+"Month": "Jan",
+"Value":            -11 
+},
+{
+ "Year":           1970,
+"Month": "Jan",
+"Value":             10 
+},
+{
+ "Year":           1971,
+"Month": "Jan",
+"Value":             -3 
+},
+{
+ "Year":           1972,
+"Month": "Jan",
+"Value":            -26 
+},
+{
+ "Year":           1973,
+"Month": "Jan",
+"Value":             27 
+},
+{
+ "Year":           1974,
+"Month": "Jan",
+"Value":            -14 
+},
+{
+ "Year":           1975,
+"Month": "Jan",
+"Value":              8 
+},
+{
+ "Year":           1976,
+"Month": "Jan",
+"Value":             -1 
+},
+{
+ "Year":           1977,
+"Month": "Jan",
+"Value":             17 
+},
+{
+ "Year":           1978,
+"Month": "Jan",
+"Value":              8 
+},
+{
+ "Year":           1979,
+"Month": "Jan",
+"Value":             15 
+},
+{
+ "Year":           1980,
+"Month": "Jan",
+"Value":             30 
+},
+{
+ "Year":           1981,
+"Month": "Jan",
+"Value":             55 
+},
+{
+ "Year":           1982,
+"Month": "Jan",
+"Value":              9 
+},
+{
+ "Year":           1983,
+"Month": "Jan",
+"Value":             53 
+},
+{
+ "Year":           1984,
+"Month": "Jan",
+"Value":             31 
+},
+{
+ "Year":           1985,
+"Month": "Jan",
+"Value":             22 
+},
+{
+ "Year":           1986,
+"Month": "Jan",
+"Value":             30 
+},
+{
+ "Year":           1987,
+"Month": "Jan",
+"Value":             36 
+},
+{
+ "Year":           1988,
+"Month": "Jan",
+"Value":             57 
+},
+{
+ "Year":           1989,
+"Month": "Jan",
+"Value":             16 
+},
+{
+ "Year":           1990,
+"Month": "Jan",
+"Value":             40 
+},
+{
+ "Year":           1991,
+"Month": "Jan",
+"Value":             42 
+},
+{
+ "Year":           1992,
+"Month": "Jan",
+"Value":             45 
+},
+{
+ "Year":           1993,
+"Month": "Jan",
+"Value":             37 
+},
+{
+ "Year":           1994,
+"Month": "Jan",
+"Value":             31 
+},
+{
+ "Year":           1995,
+"Month": "Jan",
+"Value":             51 
+},
+{
+ "Year":           1996,
+"Month": "Jan",
+"Value":             27 
+},
+{
+ "Year":           1997,
+"Month": "Jan",
+"Value":             33 
+},
+{
+ "Year":           1998,
+"Month": "Jan",
+"Value":             61 
+},
+{
+ "Year":           1999,
+"Month": "Jan",
+"Value":             48 
+},
+{
+ "Year":           2000,
+"Month": "Jan",
+"Value":             26 
+},
+{
+ "Year":           2001,
+"Month": "Jan",
+"Value":             45 
+},
+{
+ "Year":           2002,
+"Month": "Jan",
+"Value":             74 
+},
+{
+ "Year":           2003,
+"Month": "Jan",
+"Value":             72 
+},
+{
+ "Year":           2004,
+"Month": "Jan",
+"Value":             58 
+},
+{
+ "Year":           2005,
+"Month": "Jan",
+"Value":             72 
+},
+{
+ "Year":           2006,
+"Month": "Jan",
+"Value":             57 
+},
+{
+ "Year":           2007,
+"Month": "Jan",
+"Value":             97 
+},
+{
+ "Year":           2008,
+"Month": "Jan",
+"Value":             27 
+},
+{
+ "Year":           2009,
+"Month": "Jan",
+"Value":             62 
+},
+{
+ "Year":           2010,
+"Month": "Jan",
+"Value":             73 
+},
+{
+ "Year":           2011,
+"Month": "Jan",
+"Value":             50 
+},
+{
+ "Year":           2012,
+"Month": "Jan",
+"Value":             45 
+},
+{
+ "Year":           2013,
+"Month": "Jan",
+"Value":             67 
+},
+{
+ "Year":           2014,
+"Month": "Jan",
+"Value":             74 
+},
+{
+ "Year":           2015,
+"Month": "Jan",
+"Value":             82 
+},
+{
+ "Year":           1880,
+"Month": "Feb",
+"Value":            -19 
+},
+{
+ "Year":           1881,
+"Month": "Feb",
+"Value":            -13 
+},
+{
+ "Year":           1882,
+"Month": "Feb",
+"Value":             10 
+},
+{
+ "Year":           1883,
+"Month": "Feb",
+"Value":            -41 
+},
+{
+ "Year":           1884,
+"Month": "Feb",
+"Value":            -11 
+},
+{
+ "Year":           1885,
+"Month": "Feb",
+"Value":            -29 
+},
+{
+ "Year":           1886,
+"Month": "Feb",
+"Value":            -45 
+},
+{
+ "Year":           1887,
+"Month": "Feb",
+"Value":            -47 
+},
+{
+ "Year":           1888,
+"Month": "Feb",
+"Value":            -42 
+},
+{
+ "Year":           1889,
+"Month": "Feb",
+"Value":             15 
+},
+{
+ "Year":           1890,
+"Month": "Feb",
+"Value":            -48 
+},
+{
+ "Year":           1891,
+"Month": "Feb",
+"Value":            -48 
+},
+{
+ "Year":           1892,
+"Month": "Feb",
+"Value":            -14 
+},
+{
+ "Year":           1893,
+"Month": "Feb",
+"Value":            -50 
+},
+{
+ "Year":           1894,
+"Month": "Feb",
+"Value":            -31 
+},
+{
+ "Year":           1895,
+"Month": "Feb",
+"Value":            -42 
+},
+{
+ "Year":           1896,
+"Month": "Feb",
+"Value":            -15 
+},
+{
+ "Year":           1897,
+"Month": "Feb",
+"Value":            -19 
+},
+{
+ "Year":           1898,
+"Month": "Feb",
+"Value":            -33 
+},
+{
+ "Year":           1899,
+"Month": "Feb",
+"Value":            -39 
+},
+{
+ "Year":           1900,
+"Month": "Feb",
+"Value":             -6 
+},
+{
+ "Year":           1901,
+"Month": "Feb",
+"Value":             -4 
+},
+{
+ "Year":           1902,
+"Month": "Feb",
+"Value":             -2 
+},
+{
+ "Year":           1903,
+"Month": "Feb",
+"Value":             -5 
+},
+{
+ "Year":           1904,
+"Month": "Feb",
+"Value":            -54 
+},
+{
+ "Year":           1905,
+"Month": "Feb",
+"Value":            -58 
+},
+{
+ "Year":           1906,
+"Month": "Feb",
+"Value":            -32 
+},
+{
+ "Year":           1907,
+"Month": "Feb",
+"Value":            -50 
+},
+{
+ "Year":           1908,
+"Month": "Feb",
+"Value":            -35 
+},
+{
+ "Year":           1909,
+"Month": "Feb",
+"Value":            -46 
+},
+{
+ "Year":           1910,
+"Month": "Feb",
+"Value":            -43 
+},
+{
+ "Year":           1911,
+"Month": "Feb",
+"Value":            -60 
+},
+{
+ "Year":           1912,
+"Month": "Feb",
+"Value":            -14 
+},
+{
+ "Year":           1913,
+"Month": "Feb",
+"Value":            -43 
+},
+{
+ "Year":           1914,
+"Month": "Feb",
+"Value":            -13 
+},
+{
+ "Year":           1915,
+"Month": "Feb",
+"Value":             -1 
+},
+{
+ "Year":           1916,
+"Month": "Feb",
+"Value":            -21 
+},
+{
+ "Year":           1917,
+"Month": "Feb",
+"Value":            -55 
+},
+{
+ "Year":           1918,
+"Month": "Feb",
+"Value":            -31 
+},
+{
+ "Year":           1919,
+"Month": "Feb",
+"Value":            -20 
+},
+{
+ "Year":           1920,
+"Month": "Feb",
+"Value":            -22 
+},
+{
+ "Year":           1921,
+"Month": "Feb",
+"Value":            -20 
+},
+{
+ "Year":           1922,
+"Month": "Feb",
+"Value":            -40 
+},
+{
+ "Year":           1923,
+"Month": "Feb",
+"Value":            -35 
+},
+{
+ "Year":           1924,
+"Month": "Feb",
+"Value":            -25 
+},
+{
+ "Year":           1925,
+"Month": "Feb",
+"Value":            -32 
+},
+{
+ "Year":           1926,
+"Month": "Feb",
+"Value":              8 
+},
+{
+ "Year":           1927,
+"Month": "Feb",
+"Value":            -19 
+},
+{
+ "Year":           1928,
+"Month": "Feb",
+"Value":            -10 
+},
+{
+ "Year":           1929,
+"Month": "Feb",
+"Value":            -57 
+},
+{
+ "Year":           1930,
+"Month": "Feb",
+"Value":            -23 
+},
+{
+ "Year":           1931,
+"Month": "Feb",
+"Value":            -20 
+},
+{
+ "Year":           1932,
+"Month": "Feb",
+"Value":            -17 
+},
+{
+ "Year":           1933,
+"Month": "Feb",
+"Value":            -30 
+},
+{
+ "Year":           1934,
+"Month": "Feb",
+"Value":             -3 
+},
+{
+ "Year":           1935,
+"Month": "Feb",
+"Value":             12 
+},
+{
+ "Year":           1936,
+"Month": "Feb",
+"Value":            -39 
+},
+{
+ "Year":           1937,
+"Month": "Feb",
+"Value":              7 
+},
+{
+ "Year":           1938,
+"Month": "Feb",
+"Value":             -2 
+},
+{
+ "Year":           1939,
+"Month": "Feb",
+"Value":            -11 
+},
+{
+ "Year":           1940,
+"Month": "Feb",
+"Value":              6 
+},
+{
+ "Year":           1941,
+"Month": "Feb",
+"Value":             23 
+},
+{
+ "Year":           1942,
+"Month": "Feb",
+"Value":              7 
+},
+{
+ "Year":           1943,
+"Month": "Feb",
+"Value":             23 
+},
+{
+ "Year":           1944,
+"Month": "Feb",
+"Value":             32 
+},
+{
+ "Year":           1945,
+"Month": "Feb",
+"Value":              5 
+},
+{
+ "Year":           1946,
+"Month": "Feb",
+"Value":              6 
+},
+{
+ "Year":           1947,
+"Month": "Feb",
+"Value":             -4 
+},
+{
+ "Year":           1948,
+"Month": "Feb",
+"Value":            -12 
+},
+{
+ "Year":           1949,
+"Month": "Feb",
+"Value":            -16 
+},
+{
+ "Year":           1950,
+"Month": "Feb",
+"Value":            -27 
+},
+{
+ "Year":           1951,
+"Month": "Feb",
+"Value":            -43 
+},
+{
+ "Year":           1952,
+"Month": "Feb",
+"Value":             13 
+},
+{
+ "Year":           1953,
+"Month": "Feb",
+"Value":             16 
+},
+{
+ "Year":           1954,
+"Month": "Feb",
+"Value":            -10 
+},
+{
+ "Year":           1955,
+"Month": "Feb",
+"Value":            -21 
+},
+{
+ "Year":           1956,
+"Month": "Feb",
+"Value":            -25 
+},
+{
+ "Year":           1957,
+"Month": "Feb",
+"Value":             -6 
+},
+{
+ "Year":           1958,
+"Month": "Feb",
+"Value":             23 
+},
+{
+ "Year":           1959,
+"Month": "Feb",
+"Value":              9 
+},
+{
+ "Year":           1960,
+"Month": "Feb",
+"Value":             13 
+},
+{
+ "Year":           1961,
+"Month": "Feb",
+"Value":             19 
+},
+{
+ "Year":           1962,
+"Month": "Feb",
+"Value":             15 
+},
+{
+ "Year":           1963,
+"Month": "Feb",
+"Value":             18 
+},
+{
+ "Year":           1964,
+"Month": "Feb",
+"Value":            -11 
+},
+{
+ "Year":           1965,
+"Month": "Feb",
+"Value":            -17 
+},
+{
+ "Year":           1966,
+"Month": "Feb",
+"Value":             -1 
+},
+{
+ "Year":           1967,
+"Month": "Feb",
+"Value":            -19 
+},
+{
+ "Year":           1968,
+"Month": "Feb",
+"Value":            -14 
+},
+{
+ "Year":           1969,
+"Month": "Feb",
+"Value":            -14 
+},
+{
+ "Year":           1970,
+"Month": "Feb",
+"Value":             23 
+},
+{
+ "Year":           1971,
+"Month": "Feb",
+"Value":            -21 
+},
+{
+ "Year":           1972,
+"Month": "Feb",
+"Value":            -17 
+},
+{
+ "Year":           1973,
+"Month": "Feb",
+"Value":             31 
+},
+{
+ "Year":           1974,
+"Month": "Feb",
+"Value":            -28 
+},
+{
+ "Year":           1975,
+"Month": "Feb",
+"Value":              7 
+},
+{
+ "Year":           1976,
+"Month": "Feb",
+"Value":             -6 
+},
+{
+ "Year":           1977,
+"Month": "Feb",
+"Value":             21 
+},
+{
+ "Year":           1978,
+"Month": "Feb",
+"Value":             12 
+},
+{
+ "Year":           1979,
+"Month": "Feb",
+"Value":             -7 
+},
+{
+ "Year":           1980,
+"Month": "Feb",
+"Value":             42 
+},
+{
+ "Year":           1981,
+"Month": "Feb",
+"Value":             41 
+},
+{
+ "Year":           1982,
+"Month": "Feb",
+"Value":             16 
+},
+{
+ "Year":           1983,
+"Month": "Feb",
+"Value":             41 
+},
+{
+ "Year":           1984,
+"Month": "Feb",
+"Value":             18 
+},
+{
+ "Year":           1985,
+"Month": "Feb",
+"Value":             -5 
+},
+{
+ "Year":           1986,
+"Month": "Feb",
+"Value":             38 
+},
+{
+ "Year":           1987,
+"Month": "Feb",
+"Value":             46 
+},
+{
+ "Year":           1988,
+"Month": "Feb",
+"Value":             42 
+},
+{
+ "Year":           1989,
+"Month": "Feb",
+"Value":             35 
+},
+{
+ "Year":           1990,
+"Month": "Feb",
+"Value":             41 
+},
+{
+ "Year":           1991,
+"Month": "Feb",
+"Value":             50 
+},
+{
+ "Year":           1992,
+"Month": "Feb",
+"Value":             42 
+},
+{
+ "Year":           1993,
+"Month": "Feb",
+"Value":             39 
+},
+{
+ "Year":           1994,
+"Month": "Feb",
+"Value":              3 
+},
+{
+ "Year":           1995,
+"Month": "Feb",
+"Value":             78 
+},
+{
+ "Year":           1996,
+"Month": "Feb",
+"Value":             49 
+},
+{
+ "Year":           1997,
+"Month": "Feb",
+"Value":             37 
+},
+{
+ "Year":           1998,
+"Month": "Feb",
+"Value":             89 
+},
+{
+ "Year":           1999,
+"Month": "Feb",
+"Value":             67 
+},
+{
+ "Year":           2000,
+"Month": "Feb",
+"Value":             59 
+},
+{
+ "Year":           2001,
+"Month": "Feb",
+"Value":             47 
+},
+{
+ "Year":           2002,
+"Month": "Feb",
+"Value":             76 
+},
+{
+ "Year":           2003,
+"Month": "Feb",
+"Value":             55 
+},
+{
+ "Year":           2004,
+"Month": "Feb",
+"Value":             70 
+},
+{
+ "Year":           2005,
+"Month": "Feb",
+"Value":             59 
+},
+{
+ "Year":           2006,
+"Month": "Feb",
+"Value":             71 
+},
+{
+ "Year":           2007,
+"Month": "Feb",
+"Value":             70 
+},
+{
+ "Year":           2008,
+"Month": "Feb",
+"Value":             36 
+},
+{
+ "Year":           2009,
+"Month": "Feb",
+"Value":             54 
+},
+{
+ "Year":           2010,
+"Month": "Feb",
+"Value":             79 
+},
+{
+ "Year":           2011,
+"Month": "Feb",
+"Value":             51 
+},
+{
+ "Year":           2012,
+"Month": "Feb",
+"Value":             49 
+},
+{
+ "Year":           2013,
+"Month": "Feb",
+"Value":             57 
+},
+{
+ "Year":           2014,
+"Month": "Feb",
+"Value":             50 
+},
+{
+ "Year":           2015,
+"Month": "Feb",
+"Value":             88 
+},
+{
+ "Year":           1880,
+"Month": "Mar",
+"Value":            -17 
+},
+{
+ "Year":           1881,
+"Month": "Mar",
+"Value":              2 
+},
+{
+ "Year":           1882,
+"Month": "Mar",
+"Value":              2 
+},
+{
+ "Year":           1883,
+"Month": "Mar",
+"Value":            -17 
+},
+{
+ "Year":           1884,
+"Month": "Mar",
+"Value":            -33 
+},
+{
+ "Year":           1885,
+"Month": "Mar",
+"Value":            -23 
+},
+{
+ "Year":           1886,
+"Month": "Mar",
+"Value":            -41 
+},
+{
+ "Year":           1887,
+"Month": "Mar",
+"Value":            -31 
+},
+{
+ "Year":           1888,
+"Month": "Mar",
+"Value":            -47 
+},
+{
+ "Year":           1889,
+"Month": "Mar",
+"Value":              4 
+},
+{
+ "Year":           1890,
+"Month": "Mar",
+"Value":            -41 
+},
+{
+ "Year":           1891,
+"Month": "Mar",
+"Value":            -14 
+},
+{
+ "Year":           1892,
+"Month": "Mar",
+"Value":            -35 
+},
+{
+ "Year":           1893,
+"Month": "Mar",
+"Value":            -23 
+},
+{
+ "Year":           1894,
+"Month": "Mar",
+"Value":            -21 
+},
+{
+ "Year":           1895,
+"Month": "Mar",
+"Value":            -29 
+},
+{
+ "Year":           1896,
+"Month": "Mar",
+"Value":            -29 
+},
+{
+ "Year":           1897,
+"Month": "Mar",
+"Value":            -13 
+},
+{
+ "Year":           1898,
+"Month": "Mar",
+"Value":            -56 
+},
+{
+ "Year":           1899,
+"Month": "Mar",
+"Value":            -35 
+},
+{
+ "Year":           1900,
+"Month": "Mar",
+"Value":              2 
+},
+{
+ "Year":           1901,
+"Month": "Mar",
+"Value":              6 
+},
+{
+ "Year":           1902,
+"Month": "Mar",
+"Value":            -28 
+},
+{
+ "Year":           1903,
+"Month": "Mar",
+"Value":            -22 
+},
+{
+ "Year":           1904,
+"Month": "Mar",
+"Value":            -45 
+},
+{
+ "Year":           1905,
+"Month": "Mar",
+"Value":            -24 
+},
+{
+ "Year":           1906,
+"Month": "Mar",
+"Value":            -14 
+},
+{
+ "Year":           1907,
+"Month": "Mar",
+"Value":            -24 
+},
+{
+ "Year":           1908,
+"Month": "Mar",
+"Value":            -57 
+},
+{
+ "Year":           1909,
+"Month": "Mar",
+"Value":            -51 
+},
+{
+ "Year":           1910,
+"Month": "Mar",
+"Value":            -47 
+},
+{
+ "Year":           1911,
+"Month": "Mar",
+"Value":            -63 
+},
+{
+ "Year":           1912,
+"Month": "Mar",
+"Value":            -37 
+},
+{
+ "Year":           1913,
+"Month": "Mar",
+"Value":            -43 
+},
+{
+ "Year":           1914,
+"Month": "Mar",
+"Value":            -22 
+},
+{
+ "Year":           1915,
+"Month": "Mar",
+"Value":             -9 
+},
+{
+ "Year":           1916,
+"Month": "Mar",
+"Value":            -29 
+},
+{
+ "Year":           1917,
+"Month": "Mar",
+"Value":            -48 
+},
+{
+ "Year":           1918,
+"Month": "Mar",
+"Value":            -20 
+},
+{
+ "Year":           1919,
+"Month": "Mar",
+"Value":            -25 
+},
+{
+ "Year":           1920,
+"Month": "Mar",
+"Value":             -6 
+},
+{
+ "Year":           1921,
+"Month": "Mar",
+"Value":            -26 
+},
+{
+ "Year":           1922,
+"Month": "Mar",
+"Value":            -12 
+},
+{
+ "Year":           1923,
+"Month": "Mar",
+"Value":            -29 
+},
+{
+ "Year":           1924,
+"Month": "Mar",
+"Value":            -11 
+},
+{
+ "Year":           1925,
+"Month": "Mar",
+"Value":            -21 
+},
+{
+ "Year":           1926,
+"Month": "Mar",
+"Value":             13 
+},
+{
+ "Year":           1927,
+"Month": "Mar",
+"Value":            -37 
+},
+{
+ "Year":           1928,
+"Month": "Mar",
+"Value":            -27 
+},
+{
+ "Year":           1929,
+"Month": "Mar",
+"Value":            -34 
+},
+{
+ "Year":           1930,
+"Month": "Mar",
+"Value":             -9 
+},
+{
+ "Year":           1931,
+"Month": "Mar",
+"Value":             -6 
+},
+{
+ "Year":           1932,
+"Month": "Mar",
+"Value":            -19 
+},
+{
+ "Year":           1933,
+"Month": "Mar",
+"Value":            -27 
+},
+{
+ "Year":           1934,
+"Month": "Mar",
+"Value":            -28 
+},
+{
+ "Year":           1935,
+"Month": "Mar",
+"Value":            -13 
+},
+{
+ "Year":           1936,
+"Month": "Mar",
+"Value":            -24 
+},
+{
+ "Year":           1937,
+"Month": "Mar",
+"Value":            -16 
+},
+{
+ "Year":           1938,
+"Month": "Mar",
+"Value":              6 
+},
+{
+ "Year":           1939,
+"Month": "Mar",
+"Value":            -19 
+},
+{
+ "Year":           1940,
+"Month": "Mar",
+"Value":             12 
+},
+{
+ "Year":           1941,
+"Month": "Mar",
+"Value":              6 
+},
+{
+ "Year":           1942,
+"Month": "Mar",
+"Value":             12 
+},
+{
+ "Year":           1943,
+"Month": "Mar",
+"Value":              3 
+},
+{
+ "Year":           1944,
+"Month": "Mar",
+"Value":             35 
+},
+{
+ "Year":           1945,
+"Month": "Mar",
+"Value":             11 
+},
+{
+ "Year":           1946,
+"Month": "Mar",
+"Value":              0 
+},
+{
+ "Year":           1947,
+"Month": "Mar",
+"Value":              7 
+},
+{
+ "Year":           1948,
+"Month": "Mar",
+"Value":            -23 
+},
+{
+ "Year":           1949,
+"Month": "Mar",
+"Value":             -1 
+},
+{
+ "Year":           1950,
+"Month": "Mar",
+"Value":             -8 
+},
+{
+ "Year":           1951,
+"Month": "Mar",
+"Value":            -19 
+},
+{
+ "Year":           1952,
+"Month": "Mar",
+"Value":             -9 
+},
+{
+ "Year":           1953,
+"Month": "Mar",
+"Value":             11 
+},
+{
+ "Year":           1954,
+"Month": "Mar",
+"Value":            -12 
+},
+{
+ "Year":           1955,
+"Month": "Mar",
+"Value":            -35 
+},
+{
+ "Year":           1956,
+"Month": "Mar",
+"Value":            -22 
+},
+{
+ "Year":           1957,
+"Month": "Mar",
+"Value":             -6 
+},
+{
+ "Year":           1958,
+"Month": "Mar",
+"Value":              9 
+},
+{
+ "Year":           1959,
+"Month": "Mar",
+"Value":             20 
+},
+{
+ "Year":           1960,
+"Month": "Mar",
+"Value":            -36 
+},
+{
+ "Year":           1961,
+"Month": "Mar",
+"Value":             10 
+},
+{
+ "Year":           1962,
+"Month": "Mar",
+"Value":             11 
+},
+{
+ "Year":           1963,
+"Month": "Mar",
+"Value":            -15 
+},
+{
+ "Year":           1964,
+"Month": "Mar",
+"Value":            -24 
+},
+{
+ "Year":           1965,
+"Month": "Mar",
+"Value":            -12 
+},
+{
+ "Year":           1966,
+"Month": "Mar",
+"Value":              4 
+},
+{
+ "Year":           1967,
+"Month": "Mar",
+"Value":              4 
+},
+{
+ "Year":           1968,
+"Month": "Mar",
+"Value":             21 
+},
+{
+ "Year":           1969,
+"Month": "Mar",
+"Value":              1 
+},
+{
+ "Year":           1970,
+"Month": "Mar",
+"Value":              8 
+},
+{
+ "Year":           1971,
+"Month": "Mar",
+"Value":            -19 
+},
+{
+ "Year":           1972,
+"Month": "Mar",
+"Value":              3 
+},
+{
+ "Year":           1973,
+"Month": "Mar",
+"Value":             25 
+},
+{
+ "Year":           1974,
+"Month": "Mar",
+"Value":             -5 
+},
+{
+ "Year":           1975,
+"Month": "Mar",
+"Value":             14 
+},
+{
+ "Year":           1976,
+"Month": "Mar",
+"Value":            -21 
+},
+{
+ "Year":           1977,
+"Month": "Mar",
+"Value":             24 
+},
+{
+ "Year":           1978,
+"Month": "Mar",
+"Value":             21 
+},
+{
+ "Year":           1979,
+"Month": "Mar",
+"Value":             18 
+},
+{
+ "Year":           1980,
+"Month": "Mar",
+"Value":             29 
+},
+{
+ "Year":           1981,
+"Month": "Mar",
+"Value":             49 
+},
+{
+ "Year":           1982,
+"Month": "Mar",
+"Value":             -2 
+},
+{
+ "Year":           1983,
+"Month": "Mar",
+"Value":             42 
+},
+{
+ "Year":           1984,
+"Month": "Mar",
+"Value":             29 
+},
+{
+ "Year":           1985,
+"Month": "Mar",
+"Value":             17 
+},
+{
+ "Year":           1986,
+"Month": "Mar",
+"Value":             29 
+},
+{
+ "Year":           1987,
+"Month": "Mar",
+"Value":             17 
+},
+{
+ "Year":           1988,
+"Month": "Mar",
+"Value":             49 
+},
+{
+ "Year":           1989,
+"Month": "Mar",
+"Value":             36 
+},
+{
+ "Year":           1990,
+"Month": "Mar",
+"Value":             76 
+},
+{
+ "Year":           1991,
+"Month": "Mar",
+"Value":             35 
+},
+{
+ "Year":           1992,
+"Month": "Mar",
+"Value":             47 
+},
+{
+ "Year":           1993,
+"Month": "Mar",
+"Value":             36 
+},
+{
+ "Year":           1994,
+"Month": "Mar",
+"Value":             26 
+},
+{
+ "Year":           1995,
+"Month": "Mar",
+"Value":             45 
+},
+{
+ "Year":           1996,
+"Month": "Mar",
+"Value":             34 
+},
+{
+ "Year":           1997,
+"Month": "Mar",
+"Value":             51 
+},
+{
+ "Year":           1998,
+"Month": "Mar",
+"Value":             62 
+},
+{
+ "Year":           1999,
+"Month": "Mar",
+"Value":             33 
+},
+{
+ "Year":           2000,
+"Month": "Mar",
+"Value":             59 
+},
+{
+ "Year":           2001,
+"Month": "Mar",
+"Value":             58 
+},
+{
+ "Year":           2002,
+"Month": "Mar",
+"Value":             91 
+},
+{
+ "Year":           2003,
+"Month": "Mar",
+"Value":             57 
+},
+{
+ "Year":           2004,
+"Month": "Mar",
+"Value":             66 
+},
+{
+ "Year":           2005,
+"Month": "Mar",
+"Value":             69 
+},
+{
+ "Year":           2006,
+"Month": "Mar",
+"Value":             64 
+},
+{
+ "Year":           2007,
+"Month": "Mar",
+"Value":             70 
+},
+{
+ "Year":           2008,
+"Month": "Mar",
+"Value":             75 
+},
+{
+ "Year":           2009,
+"Month": "Mar",
+"Value":             53 
+},
+{
+ "Year":           2010,
+"Month": "Mar",
+"Value":             92 
+},
+{
+ "Year":           2011,
+"Month": "Mar",
+"Value":             64 
+},
+{
+ "Year":           2012,
+"Month": "Mar",
+"Value":             57 
+},
+{
+ "Year":           2013,
+"Month": "Mar",
+"Value":             65 
+},
+{
+ "Year":           2014,
+"Month": "Mar",
+"Value":             77 
+},
+{
+ "Year":           2015,
+"Month": "Mar",
+"Value":             90 
+},
+{
+ "Year":           1880,
+"Month": "Apr",
+"Value":            -27 
+},
+{
+ "Year":           1881,
+"Month": "Apr",
+"Value":             -2 
+},
+{
+ "Year":           1882,
+"Month": "Apr",
+"Value":            -19 
+},
+{
+ "Year":           1883,
+"Month": "Apr",
+"Value":            -23 
+},
+{
+ "Year":           1884,
+"Month": "Apr",
+"Value":            -35 
+},
+{
+ "Year":           1885,
+"Month": "Apr",
+"Value":            -44 
+},
+{
+ "Year":           1886,
+"Month": "Apr",
+"Value":            -28 
+},
+{
+ "Year":           1887,
+"Month": "Apr",
+"Value":            -37 
+},
+{
+ "Year":           1888,
+"Month": "Apr",
+"Value":            -28 
+},
+{
+ "Year":           1889,
+"Month": "Apr",
+"Value":              5 
+},
+{
+ "Year":           1890,
+"Month": "Apr",
+"Value":            -38 
+},
+{
+ "Year":           1891,
+"Month": "Apr",
+"Value":            -25 
+},
+{
+ "Year":           1892,
+"Month": "Apr",
+"Value":            -34 
+},
+{
+ "Year":           1893,
+"Month": "Apr",
+"Value":            -32 
+},
+{
+ "Year":           1894,
+"Month": "Apr",
+"Value":            -40 
+},
+{
+ "Year":           1895,
+"Month": "Apr",
+"Value":            -22 
+},
+{
+ "Year":           1896,
+"Month": "Apr",
+"Value":            -32 
+},
+{
+ "Year":           1897,
+"Month": "Apr",
+"Value":             -1 
+},
+{
+ "Year":           1898,
+"Month": "Apr",
+"Value":            -34 
+},
+{
+ "Year":           1899,
+"Month": "Apr",
+"Value":            -21 
+},
+{
+ "Year":           1900,
+"Month": "Apr",
+"Value":            -14 
+},
+{
+ "Year":           1901,
+"Month": "Apr",
+"Value":             -5 
+},
+{
+ "Year":           1902,
+"Month": "Apr",
+"Value":            -26 
+},
+{
+ "Year":           1903,
+"Month": "Apr",
+"Value":            -39 
+},
+{
+ "Year":           1904,
+"Month": "Apr",
+"Value":            -50 
+},
+{
+ "Year":           1905,
+"Month": "Apr",
+"Value":            -36 
+},
+{
+ "Year":           1906,
+"Month": "Apr",
+"Value":             -2 
+},
+{
+ "Year":           1907,
+"Month": "Apr",
+"Value":            -40 
+},
+{
+ "Year":           1908,
+"Month": "Apr",
+"Value":            -45 
+},
+{
+ "Year":           1909,
+"Month": "Apr",
+"Value":            -59 
+},
+{
+ "Year":           1910,
+"Month": "Apr",
+"Value":            -38 
+},
+{
+ "Year":           1911,
+"Month": "Apr",
+"Value":            -55 
+},
+{
+ "Year":           1912,
+"Month": "Apr",
+"Value":            -21 
+},
+{
+ "Year":           1913,
+"Month": "Apr",
+"Value":            -36 
+},
+{
+ "Year":           1914,
+"Month": "Apr",
+"Value":            -27 
+},
+{
+ "Year":           1915,
+"Month": "Apr",
+"Value":              8 
+},
+{
+ "Year":           1916,
+"Month": "Apr",
+"Value":            -24 
+},
+{
+ "Year":           1917,
+"Month": "Apr",
+"Value":            -38 
+},
+{
+ "Year":           1918,
+"Month": "Apr",
+"Value":            -38 
+},
+{
+ "Year":           1919,
+"Month": "Apr",
+"Value":            -18 
+},
+{
+ "Year":           1920,
+"Month": "Apr",
+"Value":            -25 
+},
+{
+ "Year":           1921,
+"Month": "Apr",
+"Value":            -34 
+},
+{
+ "Year":           1922,
+"Month": "Apr",
+"Value":            -20 
+},
+{
+ "Year":           1923,
+"Month": "Apr",
+"Value":            -37 
+},
+{
+ "Year":           1924,
+"Month": "Apr",
+"Value":            -33 
+},
+{
+ "Year":           1925,
+"Month": "Apr",
+"Value":            -24 
+},
+{
+ "Year":           1926,
+"Month": "Apr",
+"Value":            -13 
+},
+{
+ "Year":           1927,
+"Month": "Apr",
+"Value":            -31 
+},
+{
+ "Year":           1928,
+"Month": "Apr",
+"Value":            -28 
+},
+{
+ "Year":           1929,
+"Month": "Apr",
+"Value":            -41 
+},
+{
+ "Year":           1930,
+"Month": "Apr",
+"Value":            -24 
+},
+{
+ "Year":           1931,
+"Month": "Apr",
+"Value":            -20 
+},
+{
+ "Year":           1932,
+"Month": "Apr",
+"Value":             -8 
+},
+{
+ "Year":           1933,
+"Month": "Apr",
+"Value":            -23 
+},
+{
+ "Year":           1934,
+"Month": "Apr",
+"Value":            -26 
+},
+{
+ "Year":           1935,
+"Month": "Apr",
+"Value":            -34 
+},
+{
+ "Year":           1936,
+"Month": "Apr",
+"Value":            -19 
+},
+{
+ "Year":           1937,
+"Month": "Apr",
+"Value":            -16 
+},
+{
+ "Year":           1938,
+"Month": "Apr",
+"Value":              5 
+},
+{
+ "Year":           1939,
+"Month": "Apr",
+"Value":            -12 
+},
+{
+ "Year":           1940,
+"Month": "Apr",
+"Value":             16 
+},
+{
+ "Year":           1941,
+"Month": "Apr",
+"Value":             11 
+},
+{
+ "Year":           1942,
+"Month": "Apr",
+"Value":             14 
+},
+{
+ "Year":           1943,
+"Month": "Apr",
+"Value":             15 
+},
+{
+ "Year":           1944,
+"Month": "Apr",
+"Value":             27 
+},
+{
+ "Year":           1945,
+"Month": "Apr",
+"Value":             25 
+},
+{
+ "Year":           1946,
+"Month": "Apr",
+"Value":             12 
+},
+{
+ "Year":           1947,
+"Month": "Apr",
+"Value":              5 
+},
+{
+ "Year":           1948,
+"Month": "Apr",
+"Value":             -9 
+},
+{
+ "Year":           1949,
+"Month": "Apr",
+"Value":             -7 
+},
+{
+ "Year":           1950,
+"Month": "Apr",
+"Value":            -21 
+},
+{
+ "Year":           1951,
+"Month": "Apr",
+"Value":            -11 
+},
+{
+ "Year":           1952,
+"Month": "Apr",
+"Value":              2 
+},
+{
+ "Year":           1953,
+"Month": "Apr",
+"Value":             20 
+},
+{
+ "Year":           1954,
+"Month": "Apr",
+"Value":            -18 
+},
+{
+ "Year":           1955,
+"Month": "Apr",
+"Value":            -22 
+},
+{
+ "Year":           1956,
+"Month": "Apr",
+"Value":            -27 
+},
+{
+ "Year":           1957,
+"Month": "Apr",
+"Value":             -2 
+},
+{
+ "Year":           1958,
+"Month": "Apr",
+"Value":              2 
+},
+{
+ "Year":           1959,
+"Month": "Apr",
+"Value":             17 
+},
+{
+ "Year":           1960,
+"Month": "Apr",
+"Value":            -17 
+},
+{
+ "Year":           1961,
+"Month": "Apr",
+"Value":             15 
+},
+{
+ "Year":           1962,
+"Month": "Apr",
+"Value":              5 
+},
+{
+ "Year":           1963,
+"Month": "Apr",
+"Value":             -5 
+},
+{
+ "Year":           1964,
+"Month": "Apr",
+"Value":            -30 
+},
+{
+ "Year":           1965,
+"Month": "Apr",
+"Value":            -20 
+},
+{
+ "Year":           1966,
+"Month": "Apr",
+"Value":            -14 
+},
+{
+ "Year":           1967,
+"Month": "Apr",
+"Value":             -6 
+},
+{
+ "Year":           1968,
+"Month": "Apr",
+"Value":             -5 
+},
+{
+ "Year":           1969,
+"Month": "Apr",
+"Value":             18 
+},
+{
+ "Year":           1970,
+"Month": "Apr",
+"Value":              9 
+},
+{
+ "Year":           1971,
+"Month": "Apr",
+"Value":            -11 
+},
+{
+ "Year":           1972,
+"Month": "Apr",
+"Value":             -1 
+},
+{
+ "Year":           1973,
+"Month": "Apr",
+"Value":             26 
+},
+{
+ "Year":           1974,
+"Month": "Apr",
+"Value":            -10 
+},
+{
+ "Year":           1975,
+"Month": "Apr",
+"Value":              6 
+},
+{
+ "Year":           1976,
+"Month": "Apr",
+"Value":             -9 
+},
+{
+ "Year":           1977,
+"Month": "Apr",
+"Value":             26 
+},
+{
+ "Year":           1978,
+"Month": "Apr",
+"Value":             14 
+},
+{
+ "Year":           1979,
+"Month": "Apr",
+"Value":             12 
+},
+{
+ "Year":           1980,
+"Month": "Apr",
+"Value":             33 
+},
+{
+ "Year":           1981,
+"Month": "Apr",
+"Value":             32 
+},
+{
+ "Year":           1982,
+"Month": "Apr",
+"Value":              9 
+},
+{
+ "Year":           1983,
+"Month": "Apr",
+"Value":             30 
+},
+{
+ "Year":           1984,
+"Month": "Apr",
+"Value":             10 
+},
+{
+ "Year":           1985,
+"Month": "Apr",
+"Value":             10 
+},
+{
+ "Year":           1986,
+"Month": "Apr",
+"Value":             26 
+},
+{
+ "Year":           1987,
+"Month": "Apr",
+"Value":             26 
+},
+{
+ "Year":           1988,
+"Month": "Apr",
+"Value":             44 
+},
+{
+ "Year":           1989,
+"Month": "Apr",
+"Value":             33 
+},
+{
+ "Year":           1990,
+"Month": "Apr",
+"Value":             54 
+},
+{
+ "Year":           1991,
+"Month": "Apr",
+"Value":             51 
+},
+{
+ "Year":           1992,
+"Month": "Apr",
+"Value":             23 
+},
+{
+ "Year":           1993,
+"Month": "Apr",
+"Value":             27 
+},
+{
+ "Year":           1994,
+"Month": "Apr",
+"Value":             40 
+},
+{
+ "Year":           1995,
+"Month": "Apr",
+"Value":             47 
+},
+{
+ "Year":           1996,
+"Month": "Apr",
+"Value":             36 
+},
+{
+ "Year":           1997,
+"Month": "Apr",
+"Value":             37 
+},
+{
+ "Year":           1998,
+"Month": "Apr",
+"Value":             64 
+},
+{
+ "Year":           1999,
+"Month": "Apr",
+"Value":             34 
+},
+{
+ "Year":           2000,
+"Month": "Apr",
+"Value":             59 
+},
+{
+ "Year":           2001,
+"Month": "Apr",
+"Value":             52 
+},
+{
+ "Year":           2002,
+"Month": "Apr",
+"Value":             59 
+},
+{
+ "Year":           2003,
+"Month": "Apr",
+"Value":             55 
+},
+{
+ "Year":           2004,
+"Month": "Apr",
+"Value":             62 
+},
+{
+ "Year":           2005,
+"Month": "Apr",
+"Value":             70 
+},
+{
+ "Year":           2006,
+"Month": "Apr",
+"Value":             49 
+},
+{
+ "Year":           2007,
+"Month": "Apr",
+"Value":             75 
+},
+{
+ "Year":           2008,
+"Month": "Apr",
+"Value":             53 
+},
+{
+ "Year":           2009,
+"Month": "Apr",
+"Value":             61 
+},
+{
+ "Year":           2010,
+"Month": "Apr",
+"Value":             87 
+},
+{
+ "Year":           2011,
+"Month": "Apr",
+"Value":             66 
+},
+{
+ "Year":           2012,
+"Month": "Apr",
+"Value":             69 
+},
+{
+ "Year":           2013,
+"Month": "Apr",
+"Value":             54 
+},
+{
+ "Year":           2014,
+"Month": "Apr",
+"Value":             78 
+},
+{
+ "Year":           2015,
+"Month": "Apr",
+"Value":             74 
+},
+{
+ "Year":           1880,
+"Month": "May",
+"Value":            -13 
+},
+{
+ "Year":           1881,
+"Month": "May",
+"Value":             -3 
+},
+{
+ "Year":           1882,
+"Month": "May",
+"Value":            -17 
+},
+{
+ "Year":           1883,
+"Month": "May",
+"Value":            -24 
+},
+{
+ "Year":           1884,
+"Month": "May",
+"Value":            -31 
+},
+{
+ "Year":           1885,
+"Month": "May",
+"Value":            -41 
+},
+{
+ "Year":           1886,
+"Month": "May",
+"Value":            -27 
+},
+{
+ "Year":           1887,
+"Month": "May",
+"Value":            -33 
+},
+{
+ "Year":           1888,
+"Month": "May",
+"Value":            -21 
+},
+{
+ "Year":           1889,
+"Month": "May",
+"Value":             -3 
+},
+{
+ "Year":           1890,
+"Month": "May",
+"Value":            -48 
+},
+{
+ "Year":           1891,
+"Month": "May",
+"Value":            -17 
+},
+{
+ "Year":           1892,
+"Month": "May",
+"Value":            -24 
+},
+{
+ "Year":           1893,
+"Month": "May",
+"Value":            -34 
+},
+{
+ "Year":           1894,
+"Month": "May",
+"Value":            -29 
+},
+{
+ "Year":           1895,
+"Month": "May",
+"Value":            -23 
+},
+{
+ "Year":           1896,
+"Month": "May",
+"Value":            -19 
+},
+{
+ "Year":           1897,
+"Month": "May",
+"Value":              0 
+},
+{
+ "Year":           1898,
+"Month": "May",
+"Value":            -36 
+},
+{
+ "Year":           1899,
+"Month": "May",
+"Value":            -20 
+},
+{
+ "Year":           1900,
+"Month": "May",
+"Value":             -4 
+},
+{
+ "Year":           1901,
+"Month": "May",
+"Value":            -17 
+},
+{
+ "Year":           1902,
+"Month": "May",
+"Value":            -29 
+},
+{
+ "Year":           1903,
+"Month": "May",
+"Value":            -41 
+},
+{
+ "Year":           1904,
+"Month": "May",
+"Value":            -50 
+},
+{
+ "Year":           1905,
+"Month": "May",
+"Value":            -33 
+},
+{
+ "Year":           1906,
+"Month": "May",
+"Value":            -20 
+},
+{
+ "Year":           1907,
+"Month": "May",
+"Value":            -45 
+},
+{
+ "Year":           1908,
+"Month": "May",
+"Value":            -39 
+},
+{
+ "Year":           1909,
+"Month": "May",
+"Value":            -54 
+},
+{
+ "Year":           1910,
+"Month": "May",
+"Value":            -33 
+},
+{
+ "Year":           1911,
+"Month": "May",
+"Value":            -52 
+},
+{
+ "Year":           1912,
+"Month": "May",
+"Value":            -20 
+},
+{
+ "Year":           1913,
+"Month": "May",
+"Value":            -45 
+},
+{
+ "Year":           1914,
+"Month": "May",
+"Value":            -19 
+},
+{
+ "Year":           1915,
+"Month": "May",
+"Value":             -1 
+},
+{
+ "Year":           1916,
+"Month": "May",
+"Value":            -26 
+},
+{
+ "Year":           1917,
+"Month": "May",
+"Value":            -48 
+},
+{
+ "Year":           1918,
+"Month": "May",
+"Value":            -36 
+},
+{
+ "Year":           1919,
+"Month": "May",
+"Value":            -18 
+},
+{
+ "Year":           1920,
+"Month": "May",
+"Value":            -24 
+},
+{
+ "Year":           1921,
+"Month": "May",
+"Value":            -34 
+},
+{
+ "Year":           1922,
+"Month": "May",
+"Value":            -33 
+},
+{
+ "Year":           1923,
+"Month": "May",
+"Value":            -31 
+},
+{
+ "Year":           1924,
+"Month": "May",
+"Value":            -17 
+},
+{
+ "Year":           1925,
+"Month": "May",
+"Value":            -29 
+},
+{
+ "Year":           1926,
+"Month": "May",
+"Value":            -23 
+},
+{
+ "Year":           1927,
+"Month": "May",
+"Value":            -24 
+},
+{
+ "Year":           1928,
+"Month": "May",
+"Value":            -28 
+},
+{
+ "Year":           1929,
+"Month": "May",
+"Value":            -38 
+},
+{
+ "Year":           1930,
+"Month": "May",
+"Value":            -24 
+},
+{
+ "Year":           1931,
+"Month": "May",
+"Value":            -21 
+},
+{
+ "Year":           1932,
+"Month": "May",
+"Value":            -22 
+},
+{
+ "Year":           1933,
+"Month": "May",
+"Value":            -25 
+},
+{
+ "Year":           1934,
+"Month": "May",
+"Value":            -10 
+},
+{
+ "Year":           1935,
+"Month": "May",
+"Value":            -25 
+},
+{
+ "Year":           1936,
+"Month": "May",
+"Value":            -15 
+},
+{
+ "Year":           1937,
+"Month": "May",
+"Value":             -6 
+},
+{
+ "Year":           1938,
+"Month": "May",
+"Value":             -7 
+},
+{
+ "Year":           1939,
+"Month": "May",
+"Value":             -7 
+},
+{
+ "Year":           1940,
+"Month": "May",
+"Value":              6 
+},
+{
+ "Year":           1941,
+"Month": "May",
+"Value":             10 
+},
+{
+ "Year":           1942,
+"Month": "May",
+"Value":             15 
+},
+{
+ "Year":           1943,
+"Month": "May",
+"Value":             11 
+},
+{
+ "Year":           1944,
+"Month": "May",
+"Value":             26 
+},
+{
+ "Year":           1945,
+"Month": "May",
+"Value":             11 
+},
+{
+ "Year":           1946,
+"Month": "May",
+"Value":             -2 
+},
+{
+ "Year":           1947,
+"Month": "May",
+"Value":             -6 
+},
+{
+ "Year":           1948,
+"Month": "May",
+"Value":              6 
+},
+{
+ "Year":           1949,
+"Month": "May",
+"Value":            -10 
+},
+{
+ "Year":           1950,
+"Month": "May",
+"Value":            -12 
+},
+{
+ "Year":           1951,
+"Month": "May",
+"Value":             -1 
+},
+{
+ "Year":           1952,
+"Month": "May",
+"Value":             -5 
+},
+{
+ "Year":           1953,
+"Month": "May",
+"Value":              9 
+},
+{
+ "Year":           1954,
+"Month": "May",
+"Value":            -20 
+},
+{
+ "Year":           1955,
+"Month": "May",
+"Value":            -20 
+},
+{
+ "Year":           1956,
+"Month": "May",
+"Value":            -27 
+},
+{
+ "Year":           1957,
+"Month": "May",
+"Value":              7 
+},
+{
+ "Year":           1958,
+"Month": "May",
+"Value":              7 
+},
+{
+ "Year":           1959,
+"Month": "May",
+"Value":              5 
+},
+{
+ "Year":           1960,
+"Month": "May",
+"Value":             -9 
+},
+{
+ "Year":           1961,
+"Month": "May",
+"Value":             14 
+},
+{
+ "Year":           1962,
+"Month": "May",
+"Value":             -6 
+},
+{
+ "Year":           1963,
+"Month": "May",
+"Value":            -10 
+},
+{
+ "Year":           1964,
+"Month": "May",
+"Value":            -26 
+},
+{
+ "Year":           1965,
+"Month": "May",
+"Value":            -14 
+},
+{
+ "Year":           1966,
+"Month": "May",
+"Value":             -9 
+},
+{
+ "Year":           1967,
+"Month": "May",
+"Value":             12 
+},
+{
+ "Year":           1968,
+"Month": "May",
+"Value":            -10 
+},
+{
+ "Year":           1969,
+"Month": "May",
+"Value":             19 
+},
+{
+ "Year":           1970,
+"Month": "May",
+"Value":             -5 
+},
+{
+ "Year":           1971,
+"Month": "May",
+"Value":             -7 
+},
+{
+ "Year":           1972,
+"Month": "May",
+"Value":             -1 
+},
+{
+ "Year":           1973,
+"Month": "May",
+"Value":             26 
+},
+{
+ "Year":           1974,
+"Month": "May",
+"Value":              0 
+},
+{
+ "Year":           1975,
+"Month": "May",
+"Value":             17 
+},
+{
+ "Year":           1976,
+"Month": "May",
+"Value":            -23 
+},
+{
+ "Year":           1977,
+"Month": "May",
+"Value":             30 
+},
+{
+ "Year":           1978,
+"Month": "May",
+"Value":              7 
+},
+{
+ "Year":           1979,
+"Month": "May",
+"Value":              6 
+},
+{
+ "Year":           1980,
+"Month": "May",
+"Value":             35 
+},
+{
+ "Year":           1981,
+"Month": "May",
+"Value":             23 
+},
+{
+ "Year":           1982,
+"Month": "May",
+"Value":             15 
+},
+{
+ "Year":           1983,
+"Month": "May",
+"Value":             36 
+},
+{
+ "Year":           1984,
+"Month": "May",
+"Value":             34 
+},
+{
+ "Year":           1985,
+"Month": "May",
+"Value":             18 
+},
+{
+ "Year":           1986,
+"Month": "May",
+"Value":             26 
+},
+{
+ "Year":           1987,
+"Month": "May",
+"Value":             26 
+},
+{
+ "Year":           1988,
+"Month": "May",
+"Value":             44 
+},
+{
+ "Year":           1989,
+"Month": "May",
+"Value":             17 
+},
+{
+ "Year":           1990,
+"Month": "May",
+"Value":             46 
+},
+{
+ "Year":           1991,
+"Month": "May",
+"Value":             39 
+},
+{
+ "Year":           1992,
+"Month": "May",
+"Value":             32 
+},
+{
+ "Year":           1993,
+"Month": "May",
+"Value":             27 
+},
+{
+ "Year":           1994,
+"Month": "May",
+"Value":             29 
+},
+{
+ "Year":           1995,
+"Month": "May",
+"Value":             29 
+},
+{
+ "Year":           1996,
+"Month": "May",
+"Value":             29 
+},
+{
+ "Year":           1997,
+"Month": "May",
+"Value":             38 
+},
+{
+ "Year":           1998,
+"Month": "May",
+"Value":             71 
+},
+{
+ "Year":           1999,
+"Month": "May",
+"Value":             33 
+},
+{
+ "Year":           2000,
+"Month": "May",
+"Value":             40 
+},
+{
+ "Year":           2001,
+"Month": "May",
+"Value":             59 
+},
+{
+ "Year":           2002,
+"Month": "May",
+"Value":             65 
+},
+{
+ "Year":           2003,
+"Month": "May",
+"Value":             63 
+},
+{
+ "Year":           2004,
+"Month": "May",
+"Value":             42 
+},
+{
+ "Year":           2005,
+"Month": "May",
+"Value":             64 
+},
+{
+ "Year":           2006,
+"Month": "May",
+"Value":             47 
+},
+{
+ "Year":           2007,
+"Month": "May",
+"Value":             69 
+},
+{
+ "Year":           2008,
+"Month": "May",
+"Value":             51 
+},
+{
+ "Year":           2009,
+"Month": "May",
+"Value":             64 
+},
+{
+ "Year":           2010,
+"Month": "May",
+"Value":             75 
+},
+{
+ "Year":           2011,
+"Month": "May",
+"Value":             53 
+},
+{
+ "Year":           2012,
+"Month": "May",
+"Value":             76 
+},
+{
+ "Year":           2013,
+"Month": "May",
+"Value":             61 
+},
+{
+ "Year":           2014,
+"Month": "May",
+"Value":             86 
+},
+{
+ "Year":           2015,
+"Month": "May",
+"Value":             76 
+},
+{
+ "Year":           1880,
+"Month": "Jun",
+"Value":            -28 
+},
+{
+ "Year":           1881,
+"Month": "Jun",
+"Value":            -27 
+},
+{
+ "Year":           1882,
+"Month": "Jun",
+"Value":            -24 
+},
+{
+ "Year":           1883,
+"Month": "Jun",
+"Value":            -11 
+},
+{
+ "Year":           1884,
+"Month": "Jun",
+"Value":            -37 
+},
+{
+ "Year":           1885,
+"Month": "Jun",
+"Value":            -50 
+},
+{
+ "Year":           1886,
+"Month": "Jun",
+"Value":            -39 
+},
+{
+ "Year":           1887,
+"Month": "Jun",
+"Value":            -20 
+},
+{
+ "Year":           1888,
+"Month": "Jun",
+"Value":            -20 
+},
+{
+ "Year":           1889,
+"Month": "Jun",
+"Value":            -11 
+},
+{
+ "Year":           1890,
+"Month": "Jun",
+"Value":            -27 
+},
+{
+ "Year":           1891,
+"Month": "Jun",
+"Value":            -21 
+},
+{
+ "Year":           1892,
+"Month": "Jun",
+"Value":            -18 
+},
+{
+ "Year":           1893,
+"Month": "Jun",
+"Value":            -22 
+},
+{
+ "Year":           1894,
+"Month": "Jun",
+"Value":            -43 
+},
+{
+ "Year":           1895,
+"Month": "Jun",
+"Value":            -24 
+},
+{
+ "Year":           1896,
+"Month": "Jun",
+"Value":            -13 
+},
+{
+ "Year":           1897,
+"Month": "Jun",
+"Value":            -13 
+},
+{
+ "Year":           1898,
+"Month": "Jun",
+"Value":            -21 
+},
+{
+ "Year":           1899,
+"Month": "Jun",
+"Value":            -26 
+},
+{
+ "Year":           1900,
+"Month": "Jun",
+"Value":            -13 
+},
+{
+ "Year":           1901,
+"Month": "Jun",
+"Value":             -9 
+},
+{
+ "Year":           1902,
+"Month": "Jun",
+"Value":            -33 
+},
+{
+ "Year":           1903,
+"Month": "Jun",
+"Value":            -43 
+},
+{
+ "Year":           1904,
+"Month": "Jun",
+"Value":            -49 
+},
+{
+ "Year":           1905,
+"Month": "Jun",
+"Value":            -30 
+},
+{
+ "Year":           1906,
+"Month": "Jun",
+"Value":            -20 
+},
+{
+ "Year":           1907,
+"Month": "Jun",
+"Value":            -42 
+},
+{
+ "Year":           1908,
+"Month": "Jun",
+"Value":            -37 
+},
+{
+ "Year":           1909,
+"Month": "Jun",
+"Value":            -52 
+},
+{
+ "Year":           1910,
+"Month": "Jun",
+"Value":            -36 
+},
+{
+ "Year":           1911,
+"Month": "Jun",
+"Value":            -47 
+},
+{
+ "Year":           1912,
+"Month": "Jun",
+"Value":            -26 
+},
+{
+ "Year":           1913,
+"Month": "Jun",
+"Value":            -45 
+},
+{
+ "Year":           1914,
+"Month": "Jun",
+"Value":            -21 
+},
+{
+ "Year":           1915,
+"Month": "Jun",
+"Value":            -14 
+},
+{
+ "Year":           1916,
+"Month": "Jun",
+"Value":            -41 
+},
+{
+ "Year":           1917,
+"Month": "Jun",
+"Value":            -39 
+},
+{
+ "Year":           1918,
+"Month": "Jun",
+"Value":            -27 
+},
+{
+ "Year":           1919,
+"Month": "Jun",
+"Value":            -26 
+},
+{
+ "Year":           1920,
+"Month": "Jun",
+"Value":            -31 
+},
+{
+ "Year":           1921,
+"Month": "Jun",
+"Value":            -29 
+},
+{
+ "Year":           1922,
+"Month": "Jun",
+"Value":            -31 
+},
+{
+ "Year":           1923,
+"Month": "Jun",
+"Value":            -22 
+},
+{
+ "Year":           1924,
+"Month": "Jun",
+"Value":            -26 
+},
+{
+ "Year":           1925,
+"Month": "Jun",
+"Value":            -32 
+},
+{
+ "Year":           1926,
+"Month": "Jun",
+"Value":            -24 
+},
+{
+ "Year":           1927,
+"Month": "Jun",
+"Value":            -26 
+},
+{
+ "Year":           1928,
+"Month": "Jun",
+"Value":            -40 
+},
+{
+ "Year":           1929,
+"Month": "Jun",
+"Value":            -42 
+},
+{
+ "Year":           1930,
+"Month": "Jun",
+"Value":            -17 
+},
+{
+ "Year":           1931,
+"Month": "Jun",
+"Value":             -5 
+},
+{
+ "Year":           1932,
+"Month": "Jun",
+"Value":            -29 
+},
+{
+ "Year":           1933,
+"Month": "Jun",
+"Value":            -31 
+},
+{
+ "Year":           1934,
+"Month": "Jun",
+"Value":            -13 
+},
+{
+ "Year":           1935,
+"Month": "Jun",
+"Value":            -22 
+},
+{
+ "Year":           1936,
+"Month": "Jun",
+"Value":            -18 
+},
+{
+ "Year":           1937,
+"Month": "Jun",
+"Value":             -7 
+},
+{
+ "Year":           1938,
+"Month": "Jun",
+"Value":            -17 
+},
+{
+ "Year":           1939,
+"Month": "Jun",
+"Value":             -8 
+},
+{
+ "Year":           1940,
+"Month": "Jun",
+"Value":              6 
+},
+{
+ "Year":           1941,
+"Month": "Jun",
+"Value":              4 
+},
+{
+ "Year":           1942,
+"Month": "Jun",
+"Value":             12 
+},
+{
+ "Year":           1943,
+"Month": "Jun",
+"Value":              1 
+},
+{
+ "Year":           1944,
+"Month": "Jun",
+"Value":             21 
+},
+{
+ "Year":           1945,
+"Month": "Jun",
+"Value":              3 
+},
+{
+ "Year":           1946,
+"Month": "Jun",
+"Value":            -15 
+},
+{
+ "Year":           1947,
+"Month": "Jun",
+"Value":             -2 
+},
+{
+ "Year":           1948,
+"Month": "Jun",
+"Value":             -5 
+},
+{
+ "Year":           1949,
+"Month": "Jun",
+"Value":            -25 
+},
+{
+ "Year":           1950,
+"Month": "Jun",
+"Value":             -8 
+},
+{
+ "Year":           1951,
+"Month": "Jun",
+"Value":             -7 
+},
+{
+ "Year":           1952,
+"Month": "Jun",
+"Value":             -4 
+},
+{
+ "Year":           1953,
+"Month": "Jun",
+"Value":              8 
+},
+{
+ "Year":           1954,
+"Month": "Jun",
+"Value":            -15 
+},
+{
+ "Year":           1955,
+"Month": "Jun",
+"Value":             -7 
+},
+{
+ "Year":           1956,
+"Month": "Jun",
+"Value":            -15 
+},
+{
+ "Year":           1957,
+"Month": "Jun",
+"Value":             14 
+},
+{
+ "Year":           1958,
+"Month": "Jun",
+"Value":             -6 
+},
+{
+ "Year":           1959,
+"Month": "Jun",
+"Value":              3 
+},
+{
+ "Year":           1960,
+"Month": "Jun",
+"Value":              0 
+},
+{
+ "Year":           1961,
+"Month": "Jun",
+"Value":             11 
+},
+{
+ "Year":           1962,
+"Month": "Jun",
+"Value":              5 
+},
+{
+ "Year":           1963,
+"Month": "Jun",
+"Value":              3 
+},
+{
+ "Year":           1964,
+"Month": "Jun",
+"Value":             -9 
+},
+{
+ "Year":           1965,
+"Month": "Jun",
+"Value":            -10 
+},
+{
+ "Year":           1966,
+"Month": "Jun",
+"Value":              3 
+},
+{
+ "Year":           1967,
+"Month": "Jun",
+"Value":             -8 
+},
+{
+ "Year":           1968,
+"Month": "Jun",
+"Value":             -5 
+},
+{
+ "Year":           1969,
+"Month": "Jun",
+"Value":              4 
+},
+{
+ "Year":           1970,
+"Month": "Jun",
+"Value":             -1 
+},
+{
+ "Year":           1971,
+"Month": "Jun",
+"Value":            -18 
+},
+{
+ "Year":           1972,
+"Month": "Jun",
+"Value":              4 
+},
+{
+ "Year":           1973,
+"Month": "Jun",
+"Value":             16 
+},
+{
+ "Year":           1974,
+"Month": "Jun",
+"Value":             -5 
+},
+{
+ "Year":           1975,
+"Month": "Jun",
+"Value":              0 
+},
+{
+ "Year":           1976,
+"Month": "Jun",
+"Value":            -15 
+},
+{
+ "Year":           1977,
+"Month": "Jun",
+"Value":             25 
+},
+{
+ "Year":           1978,
+"Month": "Jun",
+"Value":             -2 
+},
+{
+ "Year":           1979,
+"Month": "Jun",
+"Value":             14 
+},
+{
+ "Year":           1980,
+"Month": "Jun",
+"Value":             18 
+},
+{
+ "Year":           1981,
+"Month": "Jun",
+"Value":             31 
+},
+{
+ "Year":           1982,
+"Month": "Jun",
+"Value":              4 
+},
+{
+ "Year":           1983,
+"Month": "Jun",
+"Value":             19 
+},
+{
+ "Year":           1984,
+"Month": "Jun",
+"Value":              6 
+},
+{
+ "Year":           1985,
+"Month": "Jun",
+"Value":             17 
+},
+{
+ "Year":           1986,
+"Month": "Jun",
+"Value":             14 
+},
+{
+ "Year":           1987,
+"Month": "Jun",
+"Value":             36 
+},
+{
+ "Year":           1988,
+"Month": "Jun",
+"Value":             42 
+},
+{
+ "Year":           1989,
+"Month": "Jun",
+"Value":             15 
+},
+{
+ "Year":           1990,
+"Month": "Jun",
+"Value":             38 
+},
+{
+ "Year":           1991,
+"Month": "Jun",
+"Value":             54 
+},
+{
+ "Year":           1992,
+"Month": "Jun",
+"Value":             24 
+},
+{
+ "Year":           1993,
+"Month": "Jun",
+"Value":             23 
+},
+{
+ "Year":           1994,
+"Month": "Jun",
+"Value":             41 
+},
+{
+ "Year":           1995,
+"Month": "Jun",
+"Value":             44 
+},
+{
+ "Year":           1996,
+"Month": "Jun",
+"Value":             26 
+},
+{
+ "Year":           1997,
+"Month": "Jun",
+"Value":             54 
+},
+{
+ "Year":           1998,
+"Month": "Jun",
+"Value":             77 
+},
+{
+ "Year":           1999,
+"Month": "Jun",
+"Value":             37 
+},
+{
+ "Year":           2000,
+"Month": "Jun",
+"Value":             43 
+},
+{
+ "Year":           2001,
+"Month": "Jun",
+"Value":             54 
+},
+{
+ "Year":           2002,
+"Month": "Jun",
+"Value":             55 
+},
+{
+ "Year":           2003,
+"Month": "Jun",
+"Value":             48 
+},
+{
+ "Year":           2004,
+"Month": "Jun",
+"Value":             42 
+},
+{
+ "Year":           2005,
+"Month": "Jun",
+"Value":             66 
+},
+{
+ "Year":           2006,
+"Month": "Jun",
+"Value":             64 
+},
+{
+ "Year":           2007,
+"Month": "Jun",
+"Value":             59 
+},
+{
+ "Year":           2008,
+"Month": "Jun",
+"Value":             48 
+},
+{
+ "Year":           2009,
+"Month": "Jun",
+"Value":             67 
+},
+{
+ "Year":           2010,
+"Month": "Jun",
+"Value":             64 
+},
+{
+ "Year":           2011,
+"Month": "Jun",
+"Value":             59 
+},
+{
+ "Year":           2012,
+"Month": "Jun",
+"Value":             62 
+},
+{
+ "Year":           2013,
+"Month": "Jun",
+"Value":             65 
+},
+{
+ "Year":           2014,
+"Month": "Jun",
+"Value":             66 
+},
+{
+ "Year":           2015,
+"Month": "Jun",
+"Value":             80 
+},
+{
+ "Year":           1880,
+"Month": "Jul",
+"Value":             13 
+},
+{
+ "Year":           1881,
+"Month": "Jul",
+"Value":             31 
+},
+{
+ "Year":           1882,
+"Month": "Jul",
+"Value":             35 
+},
+{
+ "Year":           1883,
+"Month": "Jul",
+"Value":             33 
+},
+{
+ "Year":           1884,
+"Month": "Jul",
+"Value":             25 
+},
+{
+ "Year":           1885,
+"Month": "Jul",
+"Value":             19 
+},
+{
+ "Year":           1886,
+"Month": "Jul",
+"Value":              7 
+},
+{
+ "Year":           1887,
+"Month": "Jul",
+"Value":              9 
+},
+{
+ "Year":           1888,
+"Month": "Jul",
+"Value":             34 
+},
+{
+ "Year":           1889,
+"Month": "Jul",
+"Value":             31 
+},
+{
+ "Year":           1890,
+"Month": "Jul",
+"Value":             20 
+},
+{
+ "Year":           1891,
+"Month": "Jul",
+"Value":             12 
+},
+{
+ "Year":           1892,
+"Month": "Jul",
+"Value":             17 
+},
+{
+ "Year":           1893,
+"Month": "Jul",
+"Value":              4 
+},
+{
+ "Year":           1894,
+"Month": "Jul",
+"Value":             23 
+},
+{
+ "Year":           1895,
+"Month": "Jul",
+"Value":              8 
+},
+{
+ "Year":           1896,
+"Month": "Jul",
+"Value":             31 
+},
+{
+ "Year":           1897,
+"Month": "Jul",
+"Value":             27 
+},
+{
+ "Year":           1898,
+"Month": "Jul",
+"Value":             14 
+},
+{
+ "Year":           1899,
+"Month": "Jul",
+"Value":              5 
+},
+{
+ "Year":           1900,
+"Month": "Jul",
+"Value":             32 
+},
+{
+ "Year":           1901,
+"Month": "Jul",
+"Value":             33 
+},
+{
+ "Year":           1902,
+"Month": "Jul",
+"Value":             16 
+},
+{
+ "Year":           1903,
+"Month": "Jul",
+"Value":             20 
+},
+{
+ "Year":           1904,
+"Month": "Jul",
+"Value":             30 
+},
+{
+ "Year":           1905,
+"Month": "Jul",
+"Value":             15 
+},
+{
+ "Year":           1906,
+"Month": "Jul",
+"Value":             16 
+},
+{
+ "Year":           1907,
+"Month": "Jul",
+"Value":             26 
+},
+{
+ "Year":           1908,
+"Month": "Jul",
+"Value":             25 
+},
+{
+ "Year":           1909,
+"Month": "Jul",
+"Value":             29 
+},
+{
+ "Year":           1910,
+"Month": "Jul",
+"Value":             23 
+},
+{
+ "Year":           1911,
+"Month": "Jul",
+"Value":             28 
+},
+{
+ "Year":           1912,
+"Month": "Jul",
+"Value":             28 
+},
+{
+ "Year":           1913,
+"Month": "Jul",
+"Value":             25 
+},
+{
+ "Year":           1914,
+"Month": "Jul",
+"Value":             14 
+},
+{
+ "Year":           1915,
+"Month": "Jul",
+"Value":              1 
+},
+{
+ "Year":           1916,
+"Month": "Jul",
+"Value":             23 
+},
+{
+ "Year":           1917,
+"Month": "Jul",
+"Value":             12 
+},
+{
+ "Year":           1918,
+"Month": "Jul",
+"Value":             10 
+},
+{
+ "Year":           1919,
+"Month": "Jul",
+"Value":             10 
+},
+{
+ "Year":           1920,
+"Month": "Jul",
+"Value":             22 
+},
+{
+ "Year":           1921,
+"Month": "Jul",
+"Value":              6 
+},
+{
+ "Year":           1922,
+"Month": "Jul",
+"Value":             15 
+},
+{
+ "Year":           1923,
+"Month": "Jul",
+"Value":             18 
+},
+{
+ "Year":           1924,
+"Month": "Jul",
+"Value":             16 
+},
+{
+ "Year":           1925,
+"Month": "Jul",
+"Value":             18 
+},
+{
+ "Year":           1926,
+"Month": "Jul",
+"Value":             10 
+},
+{
+ "Year":           1927,
+"Month": "Jul",
+"Value":              5 
+},
+{
+ "Year":           1928,
+"Month": "Jul",
+"Value":             10 
+},
+{
+ "Year":           1929,
+"Month": "Jul",
+"Value":             24 
+},
+{
+ "Year":           1930,
+"Month": "Jul",
+"Value":              6 
+},
+{
+ "Year":           1931,
+"Month": "Jul",
+"Value":             42 
+},
+{
+ "Year":           1932,
+"Month": "Jul",
+"Value":             14 
+},
+{
+ "Year":           1933,
+"Month": "Jul",
+"Value":             10 
+},
+{
+ "Year":           1934,
+"Month": "Jul",
+"Value":              2 
+},
+{
+ "Year":           1935,
+"Month": "Jul",
+"Value":              9 
+},
+{
+ "Year":           1936,
+"Month": "Jul",
+"Value":             31 
+},
+{
+ "Year":           1937,
+"Month": "Jul",
+"Value":             21 
+},
+{
+ "Year":           1938,
+"Month": "Jul",
+"Value":             34 
+},
+{
+ "Year":           1939,
+"Month": "Jul",
+"Value":             31 
+},
+{
+ "Year":           1940,
+"Month": "Jul",
+"Value":             38 
+},
+{
+ "Year":           1941,
+"Month": "Jul",
+"Value":             41 
+},
+{
+ "Year":           1942,
+"Month": "Jul",
+"Value":             46 
+},
+{
+ "Year":           1943,
+"Month": "Jul",
+"Value":             40 
+},
+{
+ "Year":           1944,
+"Month": "Jul",
+"Value":             43 
+},
+{
+ "Year":           1945,
+"Month": "Jul",
+"Value":             71 
+},
+{
+ "Year":           1946,
+"Month": "Jul",
+"Value":             33 
+},
+{
+ "Year":           1947,
+"Month": "Jul",
+"Value":             21 
+},
+{
+ "Year":           1948,
+"Month": "Jul",
+"Value":              5 
+},
+{
+ "Year":           1949,
+"Month": "Jul",
+"Value":              5 
+},
+{
+ "Year":           1950,
+"Month": "Jul",
+"Value":             35 
+},
+{
+ "Year":           1951,
+"Month": "Jul",
+"Value":             11 
+},
+{
+ "Year":           1952,
+"Month": "Jul",
+"Value":             62 
+},
+{
+ "Year":           1953,
+"Month": "Jul",
+"Value":             46 
+},
+{
+ "Year":           1954,
+"Month": "Jul",
+"Value":              8 
+},
+{
+ "Year":           1955,
+"Month": "Jul",
+"Value":             33 
+},
+{
+ "Year":           1956,
+"Month": "Jul",
+"Value":              3 
+},
+{
+ "Year":           1957,
+"Month": "Jul",
+"Value":             37 
+},
+{
+ "Year":           1958,
+"Month": "Jul",
+"Value":             46 
+},
+{
+ "Year":           1959,
+"Month": "Jul",
+"Value":             56 
+},
+{
+ "Year":           1960,
+"Month": "Jul",
+"Value":             21 
+},
+{
+ "Year":           1961,
+"Month": "Jul",
+"Value":             27 
+},
+{
+ "Year":           1962,
+"Month": "Jul",
+"Value":             11 
+},
+{
+ "Year":           1963,
+"Month": "Jul",
+"Value":             72 
+},
+{
+ "Year":           1964,
+"Month": "Jul",
+"Value":             33 
+},
+{
+ "Year":           1965,
+"Month": "Jul",
+"Value":              2 
+},
+{
+ "Year":           1966,
+"Month": "Jul",
+"Value":             71 
+},
+{
+ "Year":           1967,
+"Month": "Jul",
+"Value":              1 
+},
+{
+ "Year":           1968,
+"Month": "Jul",
+"Value":              2 
+},
+{
+ "Year":           1969,
+"Month": "Jul",
+"Value":             11 
+},
+{
+ "Year":           1970,
+"Month": "Jul",
+"Value":             27 
+},
+{
+ "Year":           1971,
+"Month": "Jul",
+"Value":              5 
+},
+{
+ "Year":           1972,
+"Month": "Jul",
+"Value":             42 
+},
+{
+ "Year":           1973,
+"Month": "Jul",
+"Value":             72 
+},
+{
+ "Year":           1974,
+"Month": "Jul",
+"Value":             21 
+},
+{
+ "Year":           1975,
+"Month": "Jul",
+"Value":             11 
+},
+{
+ "Year":           1976,
+"Month": "Jul",
+"Value":              2 
+},
+{
+ "Year":           1977,
+"Month": "Jul",
+"Value":             43 
+},
+{
+ "Year":           1978,
+"Month": "Jul",
+"Value":             67 
+},
+{
+ "Year":           1979,
+"Month": "Jul",
+"Value":             42 
+},
+{
+ "Year":           1980,
+"Month": "Jul",
+"Value":             45 
+},
+{
+ "Year":           1981,
+"Month": "Jul",
+"Value":             49 
+},
+{
+ "Year":           1982,
+"Month": "Jul",
+"Value":             39 
+},
+{
+ "Year":           1983,
+"Month": "Jul",
+"Value":             40 
+},
+{
+ "Year":           1984,
+"Month": "Jul",
+"Value":             40 
+},
+{
+ "Year":           1985,
+"Month": "Jul",
+"Value":             42 
+},
+{
+ "Year":           1986,
+"Month": "Jul",
+"Value":             39 
+},
+{
+ "Year":           1987,
+"Month": "Jul",
+"Value":             54 
+},
+{
+ "Year":           1988,
+"Month": "Jul",
+"Value":             49 
+},
+{
+ "Year":           1989,
+"Month": "Jul",
+"Value":             48 
+},
+{
+ "Year":           1990,
+"Month": "Jul",
+"Value":             53 
+},
+{
+ "Year":           1991,
+"Month": "Jul",
+"Value":             57 
+},
+{
+ "Year":           1992,
+"Month": "Jul",
+"Value":             39 
+},
+{
+ "Year":           1993,
+"Month": "Jul",
+"Value":             44 
+},
+{
+ "Year":           1994,
+"Month": "Jul",
+"Value":             47 
+},
+{
+ "Year":           1995,
+"Month": "Jul",
+"Value":             55 
+},
+{
+ "Year":           1996,
+"Month": "Jul",
+"Value":             49 
+},
+{
+ "Year":           1997,
+"Month": "Jul",
+"Value":             50 
+},
+{
+ "Year":           1998,
+"Month": "Jul",
+"Value":             68 
+},
+{
+ "Year":           1999,
+"Month": "Jul",
+"Value":             51 
+},
+{
+ "Year":           2000,
+"Month": "Jul",
+"Value":             52 
+},
+{
+ "Year":           2001,
+"Month": "Jul",
+"Value":             63 
+},
+{
+ "Year":           2002,
+"Month": "Jul",
+"Value":             64 
+},
+{
+ "Year":           2003,
+"Month": "Jul",
+"Value":             58 
+},
+{
+ "Year":           2004,
+"Month": "Jul",
+"Value":             44 
+},
+{
+ "Year":           2005,
+"Month": "Jul",
+"Value":             66 
+},
+{
+ "Year":           2006,
+"Month": "Jul",
+"Value":             58 
+},
+{
+ "Year":           2007,
+"Month": "Jul",
+"Value":             65 
+},
+{
+ "Year":           2008,
+"Month": "Jul",
+"Value":             63 
+},
+{
+ "Year":           2009,
+"Month": "Jul",
+"Value":             69 
+},
+{
+ "Year":           2010,
+"Month": "Jul",
+"Value":             64 
+},
+{
+ "Year":           2011,
+"Month": "Jul",
+"Value":             70 
+},
+{
+ "Year":           2012,
+"Month": "Jul",
+"Value":             59 
+},
+{
+ "Year":           2013,
+"Month": "Jul",
+"Value":             61 
+},
+{
+ "Year":           2014,
+"Month": "Jul",
+"Value":             60 
+},
+{
+ "Year":           2015,
+"Month": "Jul",
+"Value":             36 
+},
+{
+ "Year":           1880,
+"Month": "Aug",
+"Value":             35 
+},
+{
+ "Year":           1881,
+"Month": "Aug",
+"Value":              1 
+},
+{
+ "Year":           1882,
+"Month": "Aug",
+"Value":             65 
+},
+{
+ "Year":           1883,
+"Month": "Aug",
+"Value":              4 
+},
+{
+ "Year":           1884,
+"Month": "Aug",
+"Value":             18 
+},
+{
+ "Year":           1885,
+"Month": "Aug",
+"Value":             20 
+},
+{
+ "Year":           1886,
+"Month": "Aug",
+"Value":             25 
+},
+{
+ "Year":           1887,
+"Month": "Aug",
+"Value":             20 
+},
+{
+ "Year":           1888,
+"Month": "Aug",
+"Value":              2 
+},
+{
+ "Year":           1889,
+"Month": "Aug",
+"Value":             10 
+},
+{
+ "Year":           1890,
+"Month": "Aug",
+"Value":             28 
+},
+{
+ "Year":           1891,
+"Month": "Aug",
+"Value":             13 
+},
+{
+ "Year":           1892,
+"Month": "Aug",
+"Value":             10 
+},
+{
+ "Year":           1893,
+"Month": "Aug",
+"Value":             15 
+},
+{
+ "Year":           1894,
+"Month": "Aug",
+"Value":             19 
+},
+{
+ "Year":           1895,
+"Month": "Aug",
+"Value":              7 
+},
+{
+ "Year":           1896,
+"Month": "Aug",
+"Value":             37 
+},
+{
+ "Year":           1897,
+"Month": "Aug",
+"Value":             23 
+},
+{
+ "Year":           1898,
+"Month": "Aug",
+"Value":             16 
+},
+{
+ "Year":           1899,
+"Month": "Aug",
+"Value":             30 
+},
+{
+ "Year":           1900,
+"Month": "Aug",
+"Value":             23 
+},
+{
+ "Year":           1901,
+"Month": "Aug",
+"Value":              3 
+},
+{
+ "Year":           1902,
+"Month": "Aug",
+"Value":             20 
+},
+{
+ "Year":           1903,
+"Month": "Aug",
+"Value":             32 
+},
+{
+ "Year":           1904,
+"Month": "Aug",
+"Value":             31 
+},
+{
+ "Year":           1905,
+"Month": "Aug",
+"Value":             13 
+},
+{
+ "Year":           1906,
+"Month": "Aug",
+"Value":             10 
+},
+{
+ "Year":           1907,
+"Month": "Aug",
+"Value":             29 
+},
+{
+ "Year":           1908,
+"Month": "Aug",
+"Value":             33 
+},
+{
+ "Year":           1909,
+"Month": "Aug",
+"Value":             24 
+},
+{
+ "Year":           1910,
+"Month": "Aug",
+"Value":             27 
+},
+{
+ "Year":           1911,
+"Month": "Aug",
+"Value":             31 
+},
+{
+ "Year":           1912,
+"Month": "Aug",
+"Value":             34 
+},
+{
+ "Year":           1913,
+"Month": "Aug",
+"Value":             25 
+},
+{
+ "Year":           1914,
+"Month": "Aug",
+"Value":              5 
+},
+{
+ "Year":           1915,
+"Month": "Aug",
+"Value":              6 
+},
+{
+ "Year":           1916,
+"Month": "Aug",
+"Value":             18 
+},
+{
+ "Year":           1917,
+"Month": "Aug",
+"Value":             18 
+},
+{
+ "Year":           1918,
+"Month": "Aug",
+"Value":             17 
+},
+{
+ "Year":           1919,
+"Month": "Aug",
+"Value":             10 
+},
+{
+ "Year":           1920,
+"Month": "Aug",
+"Value":             20 
+},
+{
+ "Year":           1921,
+"Month": "Aug",
+"Value":             15 
+},
+{
+ "Year":           1922,
+"Month": "Aug",
+"Value":             22 
+},
+{
+ "Year":           1923,
+"Month": "Aug",
+"Value":             21 
+},
+{
+ "Year":           1924,
+"Month": "Aug",
+"Value":             26 
+},
+{
+ "Year":           1925,
+"Month": "Aug",
+"Value":              9 
+},
+{
+ "Year":           1926,
+"Month": "Aug",
+"Value":             38 
+},
+{
+ "Year":           1927,
+"Month": "Aug",
+"Value":             10 
+},
+{
+ "Year":           1928,
+"Month": "Aug",
+"Value":             17 
+},
+{
+ "Year":           1929,
+"Month": "Aug",
+"Value":             21 
+},
+{
+ "Year":           1930,
+"Month": "Aug",
+"Value":             38 
+},
+{
+ "Year":           1931,
+"Month": "Aug",
+"Value":             40 
+},
+{
+ "Year":           1932,
+"Month": "Aug",
+"Value":             16 
+},
+{
+ "Year":           1933,
+"Month": "Aug",
+"Value":             15 
+},
+{
+ "Year":           1934,
+"Month": "Aug",
+"Value":             38 
+},
+{
+ "Year":           1935,
+"Month": "Aug",
+"Value":              8 
+},
+{
+ "Year":           1936,
+"Month": "Aug",
+"Value":              3 
+},
+{
+ "Year":           1937,
+"Month": "Aug",
+"Value":             59 
+},
+{
+ "Year":           1938,
+"Month": "Aug",
+"Value":             23 
+},
+{
+ "Year":           1939,
+"Month": "Aug",
+"Value":             30 
+},
+{
+ "Year":           1940,
+"Month": "Aug",
+"Value":             41 
+},
+{
+ "Year":           1941,
+"Month": "Aug",
+"Value":             46 
+},
+{
+ "Year":           1942,
+"Month": "Aug",
+"Value":             12 
+},
+{
+ "Year":           1943,
+"Month": "Aug",
+"Value":             59 
+},
+{
+ "Year":           1944,
+"Month": "Aug",
+"Value":             51 
+},
+{
+ "Year":           1945,
+"Month": "Aug",
+"Value":             52 
+},
+{
+ "Year":           1946,
+"Month": "Aug",
+"Value":             38 
+},
+{
+ "Year":           1947,
+"Month": "Aug",
+"Value":             36 
+},
+{
+ "Year":           1948,
+"Month": "Aug",
+"Value":             38 
+},
+{
+ "Year":           1949,
+"Month": "Aug",
+"Value":             38 
+},
+{
+ "Year":           1950,
+"Month": "Aug",
+"Value":             10 
+},
+{
+ "Year":           1951,
+"Month": "Aug",
+"Value":             68 
+},
+{
+ "Year":           1952,
+"Month": "Aug",
+"Value":             79 
+},
+{
+ "Year":           1953,
+"Month": "Aug",
+"Value":             81 
+},
+{
+ "Year":           1954,
+"Month": "Aug",
+"Value":              4 
+},
+{
+ "Year":           1955,
+"Month": "Aug",
+"Value":             76 
+},
+{
+ "Year":           1956,
+"Month": "Aug",
+"Value":             19 
+},
+{
+ "Year":           1957,
+"Month": "Aug",
+"Value":             45 
+},
+{
+ "Year":           1958,
+"Month": "Aug",
+"Value":             35 
+},
+{
+ "Year":           1959,
+"Month": "Aug",
+"Value":              1 
+},
+{
+ "Year":           1960,
+"Month": "Aug",
+"Value":             40 
+},
+{
+ "Year":           1961,
+"Month": "Aug",
+"Value":             40 
+},
+{
+ "Year":           1962,
+"Month": "Aug",
+"Value":             23 
+},
+{
+ "Year":           1963,
+"Month": "Aug",
+"Value":             51 
+},
+{
+ "Year":           1964,
+"Month": "Aug",
+"Value":             15 
+},
+{
+ "Year":           1965,
+"Month": "Aug",
+"Value":              1 
+},
+{
+ "Year":           1966,
+"Month": "Aug",
+"Value":              3 
+},
+{
+ "Year":           1967,
+"Month": "Aug",
+"Value":             54 
+},
+{
+ "Year":           1968,
+"Month": "Aug",
+"Value":              3 
+},
+{
+ "Year":           1969,
+"Month": "Aug",
+"Value":             54 
+},
+{
+ "Year":           1970,
+"Month": "Aug",
+"Value":              2 
+},
+{
+ "Year":           1971,
+"Month": "Aug",
+"Value":             23 
+},
+{
+ "Year":           1972,
+"Month": "Aug",
+"Value":             47 
+},
+{
+ "Year":           1973,
+"Month": "Aug",
+"Value":             48 
+},
+{
+ "Year":           1974,
+"Month": "Aug",
+"Value":             43 
+},
+{
+ "Year":           1975,
+"Month": "Aug",
+"Value":             14 
+},
+{
+ "Year":           1976,
+"Month": "Aug",
+"Value":              8 
+},
+{
+ "Year":           1977,
+"Month": "Aug",
+"Value":             49 
+},
+{
+ "Year":           1978,
+"Month": "Aug",
+"Value":             11 
+},
+{
+ "Year":           1979,
+"Month": "Aug",
+"Value":             45 
+},
+{
+ "Year":           1980,
+"Month": "Aug",
+"Value":             52 
+},
+{
+ "Year":           1981,
+"Month": "Aug",
+"Value":             57 
+},
+{
+ "Year":           1982,
+"Month": "Aug",
+"Value":             81 
+},
+{
+ "Year":           1983,
+"Month": "Aug",
+"Value":             56 
+},
+{
+ "Year":           1984,
+"Month": "Aug",
+"Value":             46 
+},
+{
+ "Year":           1985,
+"Month": "Aug",
+"Value":             46 
+},
+{
+ "Year":           1986,
+"Month": "Aug",
+"Value":             44 
+},
+{
+ "Year":           1987,
+"Month": "Aug",
+"Value":             53 
+},
+{
+ "Year":           1988,
+"Month": "Aug",
+"Value":             62 
+},
+{
+ "Year":           1989,
+"Month": "Aug",
+"Value":             58 
+},
+{
+ "Year":           1990,
+"Month": "Aug",
+"Value":             55 
+},
+{
+ "Year":           1991,
+"Month": "Aug",
+"Value":             60 
+},
+{
+ "Year":           1992,
+"Month": "Aug",
+"Value":             42 
+},
+{
+ "Year":           1993,
+"Month": "Aug",
+"Value":             45 
+},
+{
+ "Year":           1994,
+"Month": "Aug",
+"Value":             50 
+},
+{
+ "Year":           1995,
+"Month": "Aug",
+"Value":             64 
+},
+{
+ "Year":           1996,
+"Month": "Aug",
+"Value":             66 
+},
+{
+ "Year":           1997,
+"Month": "Aug",
+"Value":             60 
+},
+{
+ "Year":           1998,
+"Month": "Aug",
+"Value":             75 
+},
+{
+ "Year":           1999,
+"Month": "Aug",
+"Value":             58 
+},
+{
+ "Year":           2000,
+"Month": "Aug",
+"Value":             61 
+},
+{
+ "Year":           2001,
+"Month": "Aug",
+"Value":             66 
+},
+{
+ "Year":           2002,
+"Month": "Aug",
+"Value":             67 
+},
+{
+ "Year":           2003,
+"Month": "Aug",
+"Value":             73 
+},
+{
+ "Year":           2004,
+"Month": "Aug",
+"Value":             63 
+},
+{
+ "Year":           2005,
+"Month": "Aug",
+"Value":             70 
+},
+{
+ "Year":           2006,
+"Month": "Aug",
+"Value":             77 
+},
+{
+ "Year":           2007,
+"Month": "Aug",
+"Value":             69 
+},
+{
+ "Year":           2008,
+"Month": "Aug",
+"Value":             63 
+},
+{
+ "Year":           2009,
+"Month": "Aug",
+"Value":             74 
+},
+{
+ "Year":           2010,
+"Month": "Aug",
+"Value":             72 
+},
+{
+ "Year":           2011,
+"Month": "Aug",
+"Value":             78 
+},
+{
+ "Year":           2012,
+"Month": "Aug",
+"Value":             71 
+},
+{
+ "Year":           2013,
+"Month": "Aug",
+"Value":             73 
+},
+{
+ "Year":           2014,
+"Month": "Aug",
+"Value":             80 
+},
+{
+ "Year":           2015,
+"Month": "Aug",
+"Value":             39 
+},
+{
+ "Year":           1880,
+"Month": "Sep",
+"Value":              8 
+},
+{
+ "Year":           1881,
+"Month": "Sep",
+"Value":             34 
+},
+{
+ "Year":           1882,
+"Month": "Sep",
+"Value":             37 
+},
+{
+ "Year":           1883,
+"Month": "Sep",
+"Value":             10 
+},
+{
+ "Year":           1884,
+"Month": "Sep",
+"Value":             14 
+},
+{
+ "Year":           1885,
+"Month": "Sep",
+"Value":             11 
+},
+{
+ "Year":           1886,
+"Month": "Sep",
+"Value":             10 
+},
+{
+ "Year":           1887,
+"Month": "Sep",
+"Value":             11 
+},
+{
+ "Year":           1888,
+"Month": "Sep",
+"Value":             33 
+},
+{
+ "Year":           1889,
+"Month": "Sep",
+"Value":             10 
+},
+{
+ "Year":           1890,
+"Month": "Sep",
+"Value":             24 
+},
+{
+ "Year":           1891,
+"Month": "Sep",
+"Value":              5 
+},
+{
+ "Year":           1892,
+"Month": "Sep",
+"Value":             16 
+},
+{
+ "Year":           1893,
+"Month": "Sep",
+"Value":              9 
+},
+{
+ "Year":           1894,
+"Month": "Sep",
+"Value":             14 
+},
+{
+ "Year":           1895,
+"Month": "Sep",
+"Value":              1 
+},
+{
+ "Year":           1896,
+"Month": "Sep",
+"Value":             21 
+},
+{
+ "Year":           1897,
+"Month": "Sep",
+"Value":             27 
+},
+{
+ "Year":           1898,
+"Month": "Sep",
+"Value":             13 
+},
+{
+ "Year":           1899,
+"Month": "Sep",
+"Value":             12 
+},
+{
+ "Year":           1900,
+"Month": "Sep",
+"Value":             46 
+},
+{
+ "Year":           1901,
+"Month": "Sep",
+"Value":              8 
+},
+{
+ "Year":           1902,
+"Month": "Sep",
+"Value":             13 
+},
+{
+ "Year":           1903,
+"Month": "Sep",
+"Value":             28 
+},
+{
+ "Year":           1904,
+"Month": "Sep",
+"Value":             29 
+},
+{
+ "Year":           1905,
+"Month": "Sep",
+"Value":              6 
+},
+{
+ "Year":           1906,
+"Month": "Sep",
+"Value":             16 
+},
+{
+ "Year":           1907,
+"Month": "Sep",
+"Value":             22 
+},
+{
+ "Year":           1908,
+"Month": "Sep",
+"Value":             23 
+},
+{
+ "Year":           1909,
+"Month": "Sep",
+"Value":             25 
+},
+{
+ "Year":           1910,
+"Month": "Sep",
+"Value":             24 
+},
+{
+ "Year":           1911,
+"Month": "Sep",
+"Value":             26 
+},
+{
+ "Year":           1912,
+"Month": "Sep",
+"Value":             30 
+},
+{
+ "Year":           1913,
+"Month": "Sep",
+"Value":             23 
+},
+{
+ "Year":           1914,
+"Month": "Sep",
+"Value":              5 
+},
+{
+ "Year":           1915,
+"Month": "Sep",
+"Value":              3 
+},
+{
+ "Year":           1916,
+"Month": "Sep",
+"Value":             19 
+},
+{
+ "Year":           1917,
+"Month": "Sep",
+"Value":              9 
+},
+{
+ "Year":           1918,
+"Month": "Sep",
+"Value":              5 
+},
+{
+ "Year":           1919,
+"Month": "Sep",
+"Value":              8 
+},
+{
+ "Year":           1920,
+"Month": "Sep",
+"Value":             10 
+},
+{
+ "Year":           1921,
+"Month": "Sep",
+"Value":              8 
+},
+{
+ "Year":           1922,
+"Month": "Sep",
+"Value":             18 
+},
+{
+ "Year":           1923,
+"Month": "Sep",
+"Value":             17 
+},
+{
+ "Year":           1924,
+"Month": "Sep",
+"Value":             20 
+},
+{
+ "Year":           1925,
+"Month": "Sep",
+"Value":              4 
+},
+{
+ "Year":           1926,
+"Month": "Sep",
+"Value":              2 
+},
+{
+ "Year":           1927,
+"Month": "Sep",
+"Value":             31 
+},
+{
+ "Year":           1928,
+"Month": "Sep",
+"Value":             11 
+},
+{
+ "Year":           1929,
+"Month": "Sep",
+"Value":             15 
+},
+{
+ "Year":           1930,
+"Month": "Sep",
+"Value":              2 
+},
+{
+ "Year":           1931,
+"Month": "Sep",
+"Value":             32 
+},
+{
+ "Year":           1932,
+"Month": "Sep",
+"Value":              4 
+},
+{
+ "Year":           1933,
+"Month": "Sep",
+"Value":             17 
+},
+{
+ "Year":           1934,
+"Month": "Sep",
+"Value":              7 
+},
+{
+ "Year":           1935,
+"Month": "Sep",
+"Value":              9 
+},
+{
+ "Year":           1936,
+"Month": "Sep",
+"Value":             31 
+},
+{
+ "Year":           1937,
+"Month": "Sep",
+"Value":             42 
+},
+{
+ "Year":           1938,
+"Month": "Sep",
+"Value":             56 
+},
+{
+ "Year":           1939,
+"Month": "Sep",
+"Value":             38 
+},
+{
+ "Year":           1940,
+"Month": "Sep",
+"Value":             41 
+},
+{
+ "Year":           1941,
+"Month": "Sep",
+"Value":             51 
+},
+{
+ "Year":           1942,
+"Month": "Sep",
+"Value":             37 
+},
+{
+ "Year":           1943,
+"Month": "Sep",
+"Value":             41 
+},
+{
+ "Year":           1944,
+"Month": "Sep",
+"Value":             52 
+},
+{
+ "Year":           1945,
+"Month": "Sep",
+"Value":             48 
+},
+{
+ "Year":           1946,
+"Month": "Sep",
+"Value":             12 
+},
+{
+ "Year":           1947,
+"Month": "Sep",
+"Value":              6 
+},
+{
+ "Year":           1948,
+"Month": "Sep",
+"Value":              5 
+},
+{
+ "Year":           1949,
+"Month": "Sep",
+"Value":             35 
+},
+{
+ "Year":           1950,
+"Month": "Sep",
+"Value":              2 
+},
+{
+ "Year":           1951,
+"Month": "Sep",
+"Value":             56 
+},
+{
+ "Year":           1952,
+"Month": "Sep",
+"Value":             74 
+},
+{
+ "Year":           1953,
+"Month": "Sep",
+"Value":             66 
+},
+{
+ "Year":           1954,
+"Month": "Sep",
+"Value":             33 
+},
+{
+ "Year":           1955,
+"Month": "Sep",
+"Value":              6 
+},
+{
+ "Year":           1956,
+"Month": "Sep",
+"Value":             11 
+},
+{
+ "Year":           1957,
+"Month": "Sep",
+"Value":             74 
+},
+{
+ "Year":           1958,
+"Month": "Sep",
+"Value":             31 
+},
+{
+ "Year":           1959,
+"Month": "Sep",
+"Value":             31 
+},
+{
+ "Year":           1960,
+"Month": "Sep",
+"Value":             56 
+},
+{
+ "Year":           1961,
+"Month": "Sep",
+"Value":             62 
+},
+{
+ "Year":           1962,
+"Month": "Sep",
+"Value":             12 
+},
+{
+ "Year":           1963,
+"Month": "Sep",
+"Value":             47 
+},
+{
+ "Year":           1964,
+"Month": "Sep",
+"Value":             19 
+},
+{
+ "Year":           1965,
+"Month": "Sep",
+"Value":              4 
+},
+{
+ "Year":           1966,
+"Month": "Sep",
+"Value":             12 
+},
+{
+ "Year":           1967,
+"Month": "Sep",
+"Value":             27 
+},
+{
+ "Year":           1968,
+"Month": "Sep",
+"Value":             11 
+},
+{
+ "Year":           1969,
+"Month": "Sep",
+"Value":             39 
+},
+{
+ "Year":           1970,
+"Month": "Sep",
+"Value":             40 
+},
+{
+ "Year":           1971,
+"Month": "Sep",
+"Value":             37 
+},
+{
+ "Year":           1972,
+"Month": "Sep",
+"Value":             56 
+},
+{
+ "Year":           1973,
+"Month": "Sep",
+"Value":             66 
+},
+{
+ "Year":           1974,
+"Month": "Sep",
+"Value":              6 
+},
+{
+ "Year":           1975,
+"Month": "Sep",
+"Value":             12 
+},
+{
+ "Year":           1976,
+"Month": "Sep",
+"Value":             35 
+},
+{
+ "Year":           1977,
+"Month": "Sep",
+"Value":             46 
+},
+{
+ "Year":           1978,
+"Month": "Sep",
+"Value":             66 
+},
+{
+ "Year":           1979,
+"Month": "Sep",
+"Value":             49 
+},
+{
+ "Year":           1980,
+"Month": "Sep",
+"Value":             48 
+},
+{
+ "Year":           1981,
+"Month": "Sep",
+"Value":             44 
+},
+{
+ "Year":           1982,
+"Month": "Sep",
+"Value":             43 
+},
+{
+ "Year":           1983,
+"Month": "Sep",
+"Value":             55 
+},
+{
+ "Year":           1984,
+"Month": "Sep",
+"Value":             45 
+},
+{
+ "Year":           1985,
+"Month": "Sep",
+"Value":             42 
+},
+{
+ "Year":           1986,
+"Month": "Sep",
+"Value":             46 
+},
+{
+ "Year":           1987,
+"Month": "Sep",
+"Value":             57 
+},
+{
+ "Year":           1988,
+"Month": "Sep",
+"Value":             58 
+},
+{
+ "Year":           1989,
+"Month": "Sep",
+"Value":             54 
+},
+{
+ "Year":           1990,
+"Month": "Sep",
+"Value":             50 
+},
+{
+ "Year":           1991,
+"Month": "Sep",
+"Value":             61 
+},
+{
+ "Year":           1992,
+"Month": "Sep",
+"Value":              1 
+},
+{
+ "Year":           1993,
+"Month": "Sep",
+"Value":             40 
+},
+{
+ "Year":           1994,
+"Month": "Sep",
+"Value":             53 
+},
+{
+ "Year":           1995,
+"Month": "Sep",
+"Value":             53 
+},
+{
+ "Year":           1996,
+"Month": "Sep",
+"Value":             49 
+},
+{
+ "Year":           1997,
+"Month": "Sep",
+"Value":             64 
+},
+{
+ "Year":           1998,
+"Month": "Sep",
+"Value":             60 
+},
+{
+ "Year":           1999,
+"Month": "Sep",
+"Value":             59 
+},
+{
+ "Year":           2000,
+"Month": "Sep",
+"Value":             59 
+},
+{
+ "Year":           2001,
+"Month": "Sep",
+"Value":             65 
+},
+{
+ "Year":           2002,
+"Month": "Sep",
+"Value":             68 
+},
+{
+ "Year":           2003,
+"Month": "Sep",
+"Value":             70 
+},
+{
+ "Year":           2004,
+"Month": "Sep",
+"Value":             63 
+},
+{
+ "Year":           2005,
+"Month": "Sep",
+"Value":             73 
+},
+{
+ "Year":           2006,
+"Month": "Sep",
+"Value":             68 
+},
+{
+ "Year":           2007,
+"Month": "Sep",
+"Value":             69 
+},
+{
+ "Year":           2008,
+"Month": "Sep",
+"Value":             68 
+},
+{
+ "Year":           2009,
+"Month": "Sep",
+"Value":             71 
+},
+{
+ "Year":           2010,
+"Month": "Sep",
+"Value":             67 
+},
+{
+ "Year":           2011,
+"Month": "Sep",
+"Value":             65 
+},
+{
+ "Year":           2012,
+"Month": "Sep",
+"Value":             72 
+},
+{
+ "Year":           2013,
+"Month": "Sep",
+"Value":             73 
+},
+{
+ "Year":           2014,
+"Month": "Sep",
+"Value":             75 
+},
+{
+ "Year":           2015,
+"Month": "Sep",
+"Value":             36 
+},
+{
+ "Year":           1880,
+"Month": "Oct",
+"Value":              4 
+},
+{
+ "Year":           1881,
+"Month": "Oct",
+"Value":              6 
+},
+{
+ "Year":           1882,
+"Month": "Oct",
+"Value":             10 
+},
+{
+ "Year":           1883,
+"Month": "Oct",
+"Value":              2 
+},
+{
+ "Year":           1884,
+"Month": "Oct",
+"Value":             11 
+},
+{
+ "Year":           1885,
+"Month": "Oct",
+"Value":              7 
+},
+{
+ "Year":           1886,
+"Month": "Oct",
+"Value":             14 
+},
+{
+ "Year":           1887,
+"Month": "Oct",
+"Value":             19 
+},
+{
+ "Year":           1888,
+"Month": "Oct",
+"Value":             44 
+},
+{
+ "Year":           1889,
+"Month": "Oct",
+"Value":             11 
+},
+{
+ "Year":           1890,
+"Month": "Oct",
+"Value":             12 
+},
+{
+ "Year":           1891,
+"Month": "Oct",
+"Value":             12 
+},
+{
+ "Year":           1892,
+"Month": "Oct",
+"Value":              4 
+},
+{
+ "Year":           1893,
+"Month": "Oct",
+"Value":              4 
+},
+{
+ "Year":           1894,
+"Month": "Oct",
+"Value":              5 
+},
+{
+ "Year":           1895,
+"Month": "Oct",
+"Value":              1 
+},
+{
+ "Year":           1896,
+"Month": "Oct",
+"Value":             63 
+},
+{
+ "Year":           1897,
+"Month": "Oct",
+"Value":             32 
+},
+{
+ "Year":           1898,
+"Month": "Oct",
+"Value":             20 
+},
+{
+ "Year":           1899,
+"Month": "Oct",
+"Value":             34 
+},
+{
+ "Year":           1900,
+"Month": "Oct",
+"Value":             36 
+},
+{
+ "Year":           1901,
+"Month": "Oct",
+"Value":             16 
+},
+{
+ "Year":           1902,
+"Month": "Oct",
+"Value":             15 
+},
+{
+ "Year":           1903,
+"Month": "Oct",
+"Value":             25 
+},
+{
+ "Year":           1904,
+"Month": "Oct",
+"Value":             21 
+},
+{
+ "Year":           1905,
+"Month": "Oct",
+"Value":             11 
+},
+{
+ "Year":           1906,
+"Month": "Oct",
+"Value":              9 
+},
+{
+ "Year":           1907,
+"Month": "Oct",
+"Value":             12 
+},
+{
+ "Year":           1908,
+"Month": "Oct",
+"Value":             26 
+},
+{
+ "Year":           1909,
+"Month": "Oct",
+"Value":             23 
+},
+{
+ "Year":           1910,
+"Month": "Oct",
+"Value":             22 
+},
+{
+ "Year":           1911,
+"Month": "Oct",
+"Value":             14 
+},
+{
+ "Year":           1912,
+"Month": "Oct",
+"Value":             28 
+},
+{
+ "Year":           1913,
+"Month": "Oct",
+"Value":             20 
+},
+{
+ "Year":           1914,
+"Month": "Oct",
+"Value":             27 
+},
+{
+ "Year":           1915,
+"Month": "Oct",
+"Value":             10 
+},
+{
+ "Year":           1916,
+"Month": "Oct",
+"Value":             16 
+},
+{
+ "Year":           1917,
+"Month": "Oct",
+"Value":             21 
+},
+{
+ "Year":           1918,
+"Month": "Oct",
+"Value":              8 
+},
+{
+ "Year":           1919,
+"Month": "Oct",
+"Value":              3 
+},
+{
+ "Year":           1920,
+"Month": "Oct",
+"Value":             16 
+},
+{
+ "Year":           1921,
+"Month": "Oct",
+"Value":             27 
+},
+{
+ "Year":           1922,
+"Month": "Oct",
+"Value":             18 
+},
+{
+ "Year":           1923,
+"Month": "Oct",
+"Value":              1 
+},
+{
+ "Year":           1924,
+"Month": "Oct",
+"Value":             21 
+},
+{
+ "Year":           1925,
+"Month": "Oct",
+"Value":              5 
+},
+{
+ "Year":           1926,
+"Month": "Oct",
+"Value":              1 
+},
+{
+ "Year":           1927,
+"Month": "Oct",
+"Value":             35 
+},
+{
+ "Year":           1928,
+"Month": "Oct",
+"Value":              6 
+},
+{
+ "Year":           1929,
+"Month": "Oct",
+"Value":              3 
+},
+{
+ "Year":           1930,
+"Month": "Oct",
+"Value":             31 
+},
+{
+ "Year":           1931,
+"Month": "Oct",
+"Value":             34 
+},
+{
+ "Year":           1932,
+"Month": "Oct",
+"Value":             32 
+},
+{
+ "Year":           1933,
+"Month": "Oct",
+"Value":             12 
+},
+{
+ "Year":           1934,
+"Month": "Oct",
+"Value":              1 
+},
+{
+ "Year":           1935,
+"Month": "Oct",
+"Value":             30 
+},
+{
+ "Year":           1936,
+"Month": "Oct",
+"Value":              8 
+},
+{
+ "Year":           1937,
+"Month": "Oct",
+"Value":             36 
+},
+{
+ "Year":           1938,
+"Month": "Oct",
+"Value":             39 
+},
+{
+ "Year":           1939,
+"Month": "Oct",
+"Value":             17 
+},
+{
+ "Year":           1940,
+"Month": "Oct",
+"Value":             72 
+},
+{
+ "Year":           1941,
+"Month": "Oct",
+"Value":             48 
+},
+{
+ "Year":           1942,
+"Month": "Oct",
+"Value":             72 
+},
+{
+ "Year":           1943,
+"Month": "Oct",
+"Value":             53 
+},
+{
+ "Year":           1944,
+"Month": "Oct",
+"Value":             50 
+},
+{
+ "Year":           1945,
+"Month": "Oct",
+"Value":             46 
+},
+{
+ "Year":           1946,
+"Month": "Oct",
+"Value":             29 
+},
+{
+ "Year":           1947,
+"Month": "Oct",
+"Value":             67 
+},
+{
+ "Year":           1948,
+"Month": "Oct",
+"Value":             29 
+},
+{
+ "Year":           1949,
+"Month": "Oct",
+"Value":             17 
+},
+{
+ "Year":           1950,
+"Month": "Oct",
+"Value":              6 
+},
+{
+ "Year":           1951,
+"Month": "Oct",
+"Value":             75 
+},
+{
+ "Year":           1952,
+"Month": "Oct",
+"Value":             17 
+},
+{
+ "Year":           1953,
+"Month": "Oct",
+"Value":             60 
+},
+{
+ "Year":           1954,
+"Month": "Oct",
+"Value":             34 
+},
+{
+ "Year":           1955,
+"Month": "Oct",
+"Value":             27 
+},
+{
+ "Year":           1956,
+"Month": "Oct",
+"Value":             13 
+},
+{
+ "Year":           1957,
+"Month": "Oct",
+"Value":             34 
+},
+{
+ "Year":           1958,
+"Month": "Oct",
+"Value":             52 
+},
+{
+ "Year":           1959,
+"Month": "Oct",
+"Value":             32 
+},
+{
+ "Year":           1960,
+"Month": "Oct",
+"Value":             72 
+},
+{
+ "Year":           1961,
+"Month": "Oct",
+"Value":             34 
+},
+{
+ "Year":           1962,
+"Month": "Oct",
+"Value":             24 
+},
+{
+ "Year":           1963,
+"Month": "Oct",
+"Value":             40 
+},
+{
+ "Year":           1964,
+"Month": "Oct",
+"Value":             18 
+},
+{
+ "Year":           1965,
+"Month": "Oct",
+"Value":             24 
+},
+{
+ "Year":           1966,
+"Month": "Oct",
+"Value":              4 
+},
+{
+ "Year":           1967,
+"Month": "Oct",
+"Value":             67 
+},
+{
+ "Year":           1968,
+"Month": "Oct",
+"Value":             37 
+},
+{
+ "Year":           1969,
+"Month": "Oct",
+"Value":             75 
+},
+{
+ "Year":           1970,
+"Month": "Oct",
+"Value":             56 
+},
+{
+ "Year":           1971,
+"Month": "Oct",
+"Value":             29 
+},
+{
+ "Year":           1972,
+"Month": "Oct",
+"Value":             67 
+},
+{
+ "Year":           1973,
+"Month": "Oct",
+"Value":             38 
+},
+{
+ "Year":           1974,
+"Month": "Oct",
+"Value":             30 
+},
+{
+ "Year":           1975,
+"Month": "Oct",
+"Value":             32 
+},
+{
+ "Year":           1976,
+"Month": "Oct",
+"Value":             15 
+},
+{
+ "Year":           1977,
+"Month": "Oct",
+"Value":             60 
+},
+{
+ "Year":           1978,
+"Month": "Oct",
+"Value":             35 
+},
+{
+ "Year":           1979,
+"Month": "Oct",
+"Value":             49 
+},
+{
+ "Year":           1980,
+"Month": "Oct",
+"Value":             43 
+},
+{
+ "Year":           1981,
+"Month": "Oct",
+"Value":             40 
+},
+{
+ "Year":           1982,
+"Month": "Oct",
+"Value":             40 
+},
+{
+ "Year":           1983,
+"Month": "Oct",
+"Value":             42 
+},
+{
+ "Year":           1984,
+"Month": "Oct",
+"Value":             41 
+},
+{
+ "Year":           1985,
+"Month": "Oct",
+"Value":             39 
+},
+{
+ "Year":           1986,
+"Month": "Oct",
+"Value":             40 
+},
+{
+ "Year":           1987,
+"Month": "Oct",
+"Value":             54 
+},
+{
+ "Year":           1988,
+"Month": "Oct",
+"Value":             55 
+},
+{
+ "Year":           1989,
+"Month": "Oct",
+"Value":             54 
+},
+{
+ "Year":           1990,
+"Month": "Oct",
+"Value":             57 
+},
+{
+ "Year":           1991,
+"Month": "Oct",
+"Value":             53 
+},
+{
+ "Year":           1992,
+"Month": "Oct",
+"Value":             36 
+},
+{
+ "Year":           1993,
+"Month": "Oct",
+"Value":             47 
+},
+{
+ "Year":           1994,
+"Month": "Oct",
+"Value":             57 
+},
+{
+ "Year":           1995,
+"Month": "Oct",
+"Value":             59 
+},
+{
+ "Year":           1996,
+"Month": "Oct",
+"Value":             45 
+},
+{
+ "Year":           1997,
+"Month": "Oct",
+"Value":             65 
+},
+{
+ "Year":           1998,
+"Month": "Oct",
+"Value":             58 
+},
+{
+ "Year":           1999,
+"Month": "Oct",
+"Value":             57 
+},
+{
+ "Year":           2000,
+"Month": "Oct",
+"Value":             51 
+},
+{
+ "Year":           2001,
+"Month": "Oct",
+"Value":             61 
+},
+{
+ "Year":           2002,
+"Month": "Oct",
+"Value":             62 
+},
+{
+ "Year":           2003,
+"Month": "Oct",
+"Value":             70 
+},
+{
+ "Year":           2004,
+"Month": "Oct",
+"Value":             66 
+},
+{
+ "Year":           2005,
+"Month": "Oct",
+"Value":             73 
+},
+{
+ "Year":           2006,
+"Month": "Oct",
+"Value":             68 
+},
+{
+ "Year":           2007,
+"Month": "Oct",
+"Value":             64 
+},
+{
+ "Year":           2008,
+"Month": "Oct",
+"Value":             66 
+},
+{
+ "Year":           2009,
+"Month": "Oct",
+"Value":             65 
+},
+{
+ "Year":           2010,
+"Month": "Oct",
+"Value":             69 
+},
+{
+ "Year":           2011,
+"Month": "Oct",
+"Value":             66 
+},
+{
+ "Year":           2012,
+"Month": "Oct",
+"Value":             71 
+},
+{
+ "Year":           2013,
+"Month": "Oct",
+"Value":             68 
+},
+{
+ "Year":           2014,
+"Month": "Oct",
+"Value":             74 
+},
+{
+ "Year":           2015,
+"Month": "Oct",
+"Value":             33 
+},
+{
+ "Year":           1880,
+"Month": "Nov",
+"Value":              8 
+},
+{
+ "Year":           1881,
+"Month": "Nov",
+"Value":             15 
+},
+{
+ "Year":           1882,
+"Month": "Nov",
+"Value":             11 
+},
+{
+ "Year":           1883,
+"Month": "Nov",
+"Value":              9 
+},
+{
+ "Year":           1884,
+"Month": "Nov",
+"Value":             21 
+},
+{
+ "Year":           1885,
+"Month": "Nov",
+"Value":             13 
+},
+{
+ "Year":           1886,
+"Month": "Nov",
+"Value":             16 
+},
+{
+ "Year":           1887,
+"Month": "Nov",
+"Value":             15 
+},
+{
+ "Year":           1888,
+"Month": "Nov",
+"Value":             40 
+},
+{
+ "Year":           1889,
+"Month": "Nov",
+"Value":             21 
+},
+{
+ "Year":           1890,
+"Month": "Nov",
+"Value":             27 
+},
+{
+ "Year":           1891,
+"Month": "Nov",
+"Value":             26 
+},
+{
+ "Year":           1892,
+"Month": "Nov",
+"Value":             31 
+},
+{
+ "Year":           1893,
+"Month": "Nov",
+"Value":              6 
+},
+{
+ "Year":           1894,
+"Month": "Nov",
+"Value":             14 
+},
+{
+ "Year":           1895,
+"Month": "Nov",
+"Value":              5 
+},
+{
+ "Year":           1896,
+"Month": "Nov",
+"Value":              5 
+},
+{
+ "Year":           1897,
+"Month": "Nov",
+"Value":              8 
+},
+{
+ "Year":           1898,
+"Month": "Nov",
+"Value":             25 
+},
+{
+ "Year":           1899,
+"Month": "Nov",
+"Value":             44 
+},
+{
+ "Year":           1900,
+"Month": "Nov",
+"Value":              3 
+},
+{
+ "Year":           1901,
+"Month": "Nov",
+"Value":              5 
+},
+{
+ "Year":           1902,
+"Month": "Nov",
+"Value":             25 
+},
+{
+ "Year":           1903,
+"Month": "Nov",
+"Value":             28 
+},
+{
+ "Year":           1904,
+"Month": "Nov",
+"Value":              6 
+},
+{
+ "Year":           1905,
+"Month": "Nov",
+"Value":             36 
+},
+{
+ "Year":           1906,
+"Month": "Nov",
+"Value":             28 
+},
+{
+ "Year":           1907,
+"Month": "Nov",
+"Value":             33 
+},
+{
+ "Year":           1908,
+"Month": "Nov",
+"Value":             33 
+},
+{
+ "Year":           1909,
+"Month": "Nov",
+"Value":             23 
+},
+{
+ "Year":           1910,
+"Month": "Nov",
+"Value":             34 
+},
+{
+ "Year":           1911,
+"Month": "Nov",
+"Value":              9 
+},
+{
+ "Year":           1912,
+"Month": "Nov",
+"Value":             27 
+},
+{
+ "Year":           1913,
+"Month": "Nov",
+"Value":              7 
+},
+{
+ "Year":           1914,
+"Month": "Nov",
+"Value":             11 
+},
+{
+ "Year":           1915,
+"Month": "Nov",
+"Value":              3 
+},
+{
+ "Year":           1916,
+"Month": "Nov",
+"Value":             30 
+},
+{
+ "Year":           1917,
+"Month": "Nov",
+"Value":             18 
+},
+{
+ "Year":           1918,
+"Month": "Nov",
+"Value":              4 
+},
+{
+ "Year":           1919,
+"Month": "Nov",
+"Value":             19 
+},
+{
+ "Year":           1920,
+"Month": "Nov",
+"Value":             23 
+},
+{
+ "Year":           1921,
+"Month": "Nov",
+"Value":              5 
+},
+{
+ "Year":           1922,
+"Month": "Nov",
+"Value":              5 
+},
+{
+ "Year":           1923,
+"Month": "Nov",
+"Value":             66 
+},
+{
+ "Year":           1924,
+"Month": "Nov",
+"Value":             12 
+},
+{
+ "Year":           1925,
+"Month": "Nov",
+"Value":             66 
+},
+{
+ "Year":           1926,
+"Month": "Nov",
+"Value":             35 
+},
+{
+ "Year":           1927,
+"Month": "Nov",
+"Value":             20 
+},
+{
+ "Year":           1928,
+"Month": "Nov",
+"Value":             38 
+},
+{
+ "Year":           1929,
+"Month": "Nov",
+"Value":              4 
+},
+{
+ "Year":           1930,
+"Month": "Nov",
+"Value":             47 
+},
+{
+ "Year":           1931,
+"Month": "Nov",
+"Value":              2 
+},
+{
+ "Year":           1932,
+"Month": "Nov",
+"Value":             16 
+},
+{
+ "Year":           1933,
+"Month": "Nov",
+"Value":             22 
+},
+{
+ "Year":           1934,
+"Month": "Nov",
+"Value":             40 
+},
+{
+ "Year":           1935,
+"Month": "Nov",
+"Value":             17 
+},
+{
+ "Year":           1936,
+"Month": "Nov",
+"Value":             29 
+},
+{
+ "Year":           1937,
+"Month": "Nov",
+"Value":             43 
+},
+{
+ "Year":           1938,
+"Month": "Nov",
+"Value":             57 
+},
+{
+ "Year":           1939,
+"Month": "Nov",
+"Value":             75 
+},
+{
+ "Year":           1940,
+"Month": "Nov",
+"Value":             45 
+},
+{
+ "Year":           1941,
+"Month": "Nov",
+"Value":             45 
+},
+{
+ "Year":           1942,
+"Month": "Nov",
+"Value":             46 
+},
+{
+ "Year":           1943,
+"Month": "Nov",
+"Value":             55 
+},
+{
+ "Year":           1944,
+"Month": "Nov",
+"Value":             46 
+},
+{
+ "Year":           1945,
+"Month": "Nov",
+"Value":             42 
+},
+{
+ "Year":           1946,
+"Month": "Nov",
+"Value":              1 
+},
+{
+ "Year":           1947,
+"Month": "Nov",
+"Value":             40 
+},
+{
+ "Year":           1948,
+"Month": "Nov",
+"Value":             38 
+},
+{
+ "Year":           1949,
+"Month": "Nov",
+"Value":             37 
+},
+{
+ "Year":           1950,
+"Month": "Nov",
+"Value":             24 
+},
+{
+ "Year":           1951,
+"Month": "Nov",
+"Value":             41 
+},
+{
+ "Year":           1952,
+"Month": "Nov",
+"Value":              6 
+},
+{
+ "Year":           1953,
+"Month": "Nov",
+"Value":             32 
+},
+{
+ "Year":           1954,
+"Month": "Nov",
+"Value":             84 
+},
+{
+ "Year":           1955,
+"Month": "Nov",
+"Value":             18 
+},
+{
+ "Year":           1956,
+"Month": "Nov",
+"Value":              6 
+},
+{
+ "Year":           1957,
+"Month": "Nov",
+"Value":             71 
+},
+{
+ "Year":           1958,
+"Month": "Nov",
+"Value":             51 
+},
+{
+ "Year":           1959,
+"Month": "Nov",
+"Value":             38 
+},
+{
+ "Year":           1960,
+"Month": "Nov",
+"Value":              3 
+},
+{
+ "Year":           1961,
+"Month": "Nov",
+"Value":             51 
+},
+{
+ "Year":           1962,
+"Month": "Nov",
+"Value":             71 
+},
+{
+ "Year":           1963,
+"Month": "Nov",
+"Value":             48 
+},
+{
+ "Year":           1964,
+"Month": "Nov",
+"Value":             12 
+},
+{
+ "Year":           1965,
+"Month": "Nov",
+"Value":             35 
+},
+{
+ "Year":           1966,
+"Month": "Nov",
+"Value":             10 
+},
+{
+ "Year":           1967,
+"Month": "Nov",
+"Value":             35 
+},
+{
+ "Year":           1968,
+"Month": "Nov",
+"Value":             32 
+},
+{
+ "Year":           1969,
+"Month": "Nov",
+"Value":             44 
+},
+{
+ "Year":           1970,
+"Month": "Nov",
+"Value":             41 
+},
+{
+ "Year":           1971,
+"Month": "Nov",
+"Value":             32 
+},
+{
+ "Year":           1972,
+"Month": "Nov",
+"Value":             41 
+},
+{
+ "Year":           1973,
+"Month": "Nov",
+"Value":             66 
+},
+{
+ "Year":           1974,
+"Month": "Nov",
+"Value":             36 
+},
+{
+ "Year":           1975,
+"Month": "Nov",
+"Value":              6 
+},
+{
+ "Year":           1976,
+"Month": "Nov",
+"Value":             35 
+},
+{
+ "Year":           1977,
+"Month": "Nov",
+"Value":             52 
+},
+{
+ "Year":           1978,
+"Month": "Nov",
+"Value":             49 
+},
+{
+ "Year":           1979,
+"Month": "Nov",
+"Value":             56 
+},
+{
+ "Year":           1980,
+"Month": "Nov",
+"Value":             56 
+},
+{
+ "Year":           1981,
+"Month": "Nov",
+"Value":             53 
+},
+{
+ "Year":           1982,
+"Month": "Nov",
+"Value":             46 
+},
+{
+ "Year":           1983,
+"Month": "Nov",
+"Value":             58 
+},
+{
+ "Year":           1984,
+"Month": "Nov",
+"Value":             60 
+},
+{
+ "Year":           1985,
+"Month": "Nov",
+"Value":             42 
+},
+{
+ "Year":           1986,
+"Month": "Nov",
+"Value":             43 
+},
+{
+ "Year":           1987,
+"Month": "Nov",
+"Value":             54 
+},
+{
+ "Year":           1988,
+"Month": "Nov",
+"Value":             43 
+},
+{
+ "Year":           1989,
+"Month": "Nov",
+"Value":             50 
+},
+{
+ "Year":           1990,
+"Month": "Nov",
+"Value":             63 
+},
+{
+ "Year":           1991,
+"Month": "Nov",
+"Value":             58 
+},
+{
+ "Year":           1992,
+"Month": "Nov",
+"Value":             60 
+},
+{
+ "Year":           1993,
+"Month": "Nov",
+"Value":             75 
+},
+{
+ "Year":           1994,
+"Month": "Nov",
+"Value":             64 
+},
+{
+ "Year":           1995,
+"Month": "Nov",
+"Value":             62 
+},
+{
+ "Year":           1996,
+"Month": "Nov",
+"Value":             61 
+},
+{
+ "Year":           1997,
+"Month": "Nov",
+"Value":             72 
+},
+{
+ "Year":           1998,
+"Month": "Nov",
+"Value":             65 
+},
+{
+ "Year":           1999,
+"Month": "Nov",
+"Value":             61 
+},
+{
+ "Year":           2000,
+"Month": "Nov",
+"Value":             59 
+},
+{
+ "Year":           2001,
+"Month": "Nov",
+"Value":             76 
+},
+{
+ "Year":           2002,
+"Month": "Nov",
+"Value":             70 
+},
+{
+ "Year":           2003,
+"Month": "Nov",
+"Value":             67 
+},
+{
+ "Year":           2004,
+"Month": "Nov",
+"Value":             77 
+},
+{
+ "Year":           2005,
+"Month": "Nov",
+"Value":             80 
+},
+{
+ "Year":           2006,
+"Month": "Nov",
+"Value":             78 
+},
+{
+ "Year":           2007,
+"Month": "Nov",
+"Value":             69 
+},
+{
+ "Year":           2008,
+"Month": "Nov",
+"Value":             73 
+},
+{
+ "Year":           2009,
+"Month": "Nov",
+"Value":             81 
+},
+{
+ "Year":           2010,
+"Month": "Nov",
+"Value":             82 
+},
+{
+ "Year":           2011,
+"Month": "Nov",
+"Value":             68 
+},
+{
+ "Year":           2012,
+"Month": "Nov",
+"Value":             79 
+},
+{
+ "Year":           2013,
+"Month": "Nov",
+"Value":             83 
+},
+{
+ "Year":           2014,
+"Month": "Nov",
+"Value":             74 
+},
+{
+ "Year":           2015,
+"Month": "Nov",
+"Value":             39 
+},
+{
+ "Year":           1880,
+"Month": "Dec",
+"Value":             11 
+},
+{
+ "Year":           1881,
+"Month": "Dec",
+"Value":              5 
+},
+{
+ "Year":           1882,
+"Month": "Dec",
+"Value":             15 
+},
+{
+ "Year":           1883,
+"Month": "Dec",
+"Value":              8 
+},
+{
+ "Year":           1884,
+"Month": "Dec",
+"Value":             18 
+},
+{
+ "Year":           1885,
+"Month": "Dec",
+"Value":             32 
+},
+{
+ "Year":           1886,
+"Month": "Dec",
+"Value":             15 
+},
+{
+ "Year":           1887,
+"Month": "Dec",
+"Value":             26 
+},
+{
+ "Year":           1888,
+"Month": "Dec",
+"Value":              3 
+},
+{
+ "Year":           1889,
+"Month": "Dec",
+"Value":             19 
+},
+{
+ "Year":           1890,
+"Month": "Dec",
+"Value":             19 
+},
+{
+ "Year":           1891,
+"Month": "Dec",
+"Value":             43 
+},
+{
+ "Year":           1892,
+"Month": "Dec",
+"Value":             17 
+},
+{
+ "Year":           1893,
+"Month": "Dec",
+"Value":             25 
+},
+{
+ "Year":           1894,
+"Month": "Dec",
+"Value":             12 
+},
+{
+ "Year":           1895,
+"Month": "Dec",
+"Value":              3 
+},
+{
+ "Year":           1896,
+"Month": "Dec",
+"Value":              3 
+},
+{
+ "Year":           1897,
+"Month": "Dec",
+"Value":             16 
+},
+{
+ "Year":           1898,
+"Month": "Dec",
+"Value":             12 
+},
+{
+ "Year":           1899,
+"Month": "Dec",
+"Value":             16 
+},
+{
+ "Year":           1900,
+"Month": "Dec",
+"Value":              4 
+},
+{
+ "Year":           1901,
+"Month": "Dec",
+"Value":             18 
+},
+{
+ "Year":           1902,
+"Month": "Dec",
+"Value":             29 
+},
+{
+ "Year":           1903,
+"Month": "Dec",
+"Value":             30 
+},
+{
+ "Year":           1904,
+"Month": "Dec",
+"Value":             18 
+},
+{
+ "Year":           1905,
+"Month": "Dec",
+"Value":             11 
+},
+{
+ "Year":           1906,
+"Month": "Dec",
+"Value":              7 
+},
+{
+ "Year":           1907,
+"Month": "Dec",
+"Value":             31 
+},
+{
+ "Year":           1908,
+"Month": "Dec",
+"Value":             31 
+},
+{
+ "Year":           1909,
+"Month": "Dec",
+"Value":             33 
+},
+{
+ "Year":           1910,
+"Month": "Dec",
+"Value":             35 
+},
+{
+ "Year":           1911,
+"Month": "Dec",
+"Value":             15 
+},
+{
+ "Year":           1912,
+"Month": "Dec",
+"Value":             27 
+},
+{
+ "Year":           1913,
+"Month": "Dec",
+"Value":             20 
+},
+{
+ "Year":           1914,
+"Month": "Dec",
+"Value":             40 
+},
+{
+ "Year":           1915,
+"Month": "Dec",
+"Value":             15 
+},
+{
+ "Year":           1916,
+"Month": "Dec",
+"Value":             38 
+},
+{
+ "Year":           1917,
+"Month": "Dec",
+"Value":             37 
+},
+{
+ "Year":           1918,
+"Month": "Dec",
+"Value":             17 
+},
+{
+ "Year":           1919,
+"Month": "Dec",
+"Value":             23 
+},
+{
+ "Year":           1920,
+"Month": "Dec",
+"Value":             28 
+},
+{
+ "Year":           1921,
+"Month": "Dec",
+"Value":              8 
+},
+{
+ "Year":           1922,
+"Month": "Dec",
+"Value":              6 
+},
+{
+ "Year":           1923,
+"Month": "Dec",
+"Value":             20 
+},
+{
+ "Year":           1924,
+"Month": "Dec",
+"Value":             27 
+},
+{
+ "Year":           1925,
+"Month": "Dec",
+"Value":             44 
+},
+{
+ "Year":           1926,
+"Month": "Dec",
+"Value":             19 
+},
+{
+ "Year":           1927,
+"Month": "Dec",
+"Value":             24 
+},
+{
+ "Year":           1928,
+"Month": "Dec",
+"Value":              9 
+},
+{
+ "Year":           1929,
+"Month": "Dec",
+"Value":             33 
+},
+{
+ "Year":           1930,
+"Month": "Dec",
+"Value":             36 
+},
+{
+ "Year":           1931,
+"Month": "Dec",
+"Value":             40 
+},
+{
+ "Year":           1932,
+"Month": "Dec",
+"Value":             13 
+},
+{
+ "Year":           1933,
+"Month": "Dec",
+"Value":             29 
+},
+{
+ "Year":           1934,
+"Month": "Dec",
+"Value":             36 
+},
+{
+ "Year":           1935,
+"Month": "Dec",
+"Value":             11 
+},
+{
+ "Year":           1936,
+"Month": "Dec",
+"Value":              1 
+},
+{
+ "Year":           1937,
+"Month": "Dec",
+"Value":             40 
+},
+{
+ "Year":           1938,
+"Month": "Dec",
+"Value":             14 
+},
+{
+ "Year":           1939,
+"Month": "Dec",
+"Value":             60 
+},
+{
+ "Year":           1940,
+"Month": "Dec",
+"Value":             51 
+},
+{
+ "Year":           1941,
+"Month": "Dec",
+"Value":             46 
+},
+{
+ "Year":           1942,
+"Month": "Dec",
+"Value":             45 
+},
+{
+ "Year":           1943,
+"Month": "Dec",
+"Value":             54 
+},
+{
+ "Year":           1944,
+"Month": "Dec",
+"Value":             77 
+},
+{
+ "Year":           1945,
+"Month": "Dec",
+"Value":             39 
+},
+{
+ "Year":           1946,
+"Month": "Dec",
+"Value":             17 
+},
+{
+ "Year":           1947,
+"Month": "Dec",
+"Value":              6 
+},
+{
+ "Year":           1948,
+"Month": "Dec",
+"Value":             11 
+},
+{
+ "Year":           1949,
+"Month": "Dec",
+"Value":              6 
+},
+{
+ "Year":           1950,
+"Month": "Dec",
+"Value":              9 
+},
+{
+ "Year":           1951,
+"Month": "Dec",
+"Value":             47 
+},
+{
+ "Year":           1952,
+"Month": "Dec",
+"Value":             10 
+},
+{
+ "Year":           1953,
+"Month": "Dec",
+"Value":             58 
+},
+{
+ "Year":           1954,
+"Month": "Dec",
+"Value":              7 
+},
+{
+ "Year":           1955,
+"Month": "Dec",
+"Value":             22 
+},
+{
+ "Year":           1956,
+"Month": "Dec",
+"Value":              2 
+},
+{
+ "Year":           1957,
+"Month": "Dec",
+"Value":             47 
+},
+{
+ "Year":           1958,
+"Month": "Dec",
+"Value":             42 
+},
+{
+ "Year":           1959,
+"Month": "Dec",
+"Value":             10 
+},
+{
+ "Year":           1960,
+"Month": "Dec",
+"Value":             49 
+},
+{
+ "Year":           1961,
+"Month": "Dec",
+"Value":              6 
+},
+{
+ "Year":           1962,
+"Month": "Dec",
+"Value":              1 
+},
+{
+ "Year":           1963,
+"Month": "Dec",
+"Value":             42 
+},
+{
+ "Year":           1964,
+"Month": "Dec",
+"Value":             21 
+},
+{
+ "Year":           1965,
+"Month": "Dec",
+"Value":             34 
+},
+{
+ "Year":           1966,
+"Month": "Dec",
+"Value":             34 
+},
+{
+ "Year":           1967,
+"Month": "Dec",
+"Value":             10 
+},
+{
+ "Year":           1968,
+"Month": "Dec",
+"Value":              5 
+},
+{
+ "Year":           1969,
+"Month": "Dec",
+"Value":             53 
+},
+{
+ "Year":           1970,
+"Month": "Dec",
+"Value":              5 
+},
+{
+ "Year":           1971,
+"Month": "Dec",
+"Value":             39 
+},
+{
+ "Year":           1972,
+"Month": "Dec",
+"Value":             49 
+},
+{
+ "Year":           1973,
+"Month": "Dec",
+"Value":             34 
+},
+{
+ "Year":           1974,
+"Month": "Dec",
+"Value":              2 
+},
+{
+ "Year":           1975,
+"Month": "Dec",
+"Value":              8 
+},
+{
+ "Year":           1976,
+"Month": "Dec",
+"Value":             77 
+},
+{
+ "Year":           1977,
+"Month": "Dec",
+"Value":             65 
+},
+{
+ "Year":           1978,
+"Month": "Dec",
+"Value":             44 
+},
+{
+ "Year":           1979,
+"Month": "Dec",
+"Value":             63 
+},
+{
+ "Year":           1980,
+"Month": "Dec",
+"Value":             51 
+},
+{
+ "Year":           1981,
+"Month": "Dec",
+"Value":             59 
+},
+{
+ "Year":           1982,
+"Month": "Dec",
+"Value":             62 
+},
+{
+ "Year":           1983,
+"Month": "Dec",
+"Value":             48 
+},
+{
+ "Year":           1984,
+"Month": "Dec",
+"Value":             34 
+},
+{
+ "Year":           1985,
+"Month": "Dec",
+"Value":             47 
+},
+{
+ "Year":           1986,
+"Month": "Dec",
+"Value":             47 
+},
+{
+ "Year":           1987,
+"Month": "Dec",
+"Value":             63 
+},
+{
+ "Year":           1988,
+"Month": "Dec",
+"Value":             56 
+},
+{
+ "Year":           1989,
+"Month": "Dec",
+"Value":             57 
+},
+{
+ "Year":           1990,
+"Month": "Dec",
+"Value":             60 
+},
+{
+ "Year":           1991,
+"Month": "Dec",
+"Value":             56 
+},
+{
+ "Year":           1992,
+"Month": "Dec",
+"Value":             52 
+},
+{
+ "Year":           1993,
+"Month": "Dec",
+"Value":             50 
+},
+{
+ "Year":           1994,
+"Month": "Dec",
+"Value":             57 
+},
+{
+ "Year":           1995,
+"Month": "Dec",
+"Value":             55 
+},
+{
+ "Year":           1996,
+"Month": "Dec",
+"Value":             59 
+},
+{
+ "Year":           1997,
+"Month": "Dec",
+"Value":             70 
+},
+{
+ "Year":           1998,
+"Month": "Dec",
+"Value":             69 
+},
+{
+ "Year":           1999,
+"Month": "Dec",
+"Value":             63 
+},
+{
+ "Year":           2000,
+"Month": "Dec",
+"Value":             55 
+},
+{
+ "Year":           2001,
+"Month": "Dec",
+"Value":             68 
+},
+{
+ "Year":           2002,
+"Month": "Dec",
+"Value":             61 
+},
+{
+ "Year":           2003,
+"Month": "Dec",
+"Value":             74 
+},
+{
+ "Year":           2004,
+"Month": "Dec",
+"Value":             66 
+},
+{
+ "Year":           2005,
+"Month": "Dec",
+"Value":             73 
+},
+{
+ "Year":           2006,
+"Month": "Dec",
+"Value":             75 
+},
+{
+ "Year":           2007,
+"Month": "Dec",
+"Value":             64 
+},
+{
+ "Year":           2008,
+"Month": "Dec",
+"Value":             68 
+},
+{
+ "Year":           2009,
+"Month": "Dec",
+"Value":             71 
+},
+{
+ "Year":           2010,
+"Month": "Dec",
+"Value":             64 
+},
+{
+ "Year":           2011,
+"Month": "Dec",
+"Value":             67 
+},
+{
+ "Year":           2012,
+"Month": "Dec",
+"Value":             66 
+},
+{
+ "Year":           2013,
+"Month": "Dec",
+"Value":             72 
+},
+{
+ "Year":           2014,
+"Month": "Dec",
+"Value":             76 
+},
+{
+ "Year":           2015,
+"Month": "Dec",
+"Value":             41 
+},
+{
+ "Year":           1880,
+"Month": "J.D",
+"Value":             10 
+},
+{
+ "Year":           1881,
+"Month": "J.D",
+"Value":              2 
+},
+{
+ "Year":           1882,
+"Month": "J.D",
+"Value":             35 
+},
+{
+ "Year":           1883,
+"Month": "J.D",
+"Value":             10 
+},
+{
+ "Year":           1884,
+"Month": "J.D",
+"Value":             19 
+},
+{
+ "Year":           1885,
+"Month": "J.D",
+"Value":             24 
+},
+{
+ "Year":           1886,
+"Month": "J.D",
+"Value":             23 
+},
+{
+ "Year":           1887,
+"Month": "J.D",
+"Value":             25 
+},
+{
+ "Year":           1888,
+"Month": "J.D",
+"Value":             12 
+},
+{
+ "Year":           1889,
+"Month": "J.D",
+"Value":              3 
+},
+{
+ "Year":           1890,
+"Month": "J.D",
+"Value":             27 
+},
+{
+ "Year":           1891,
+"Month": "J.D",
+"Value":             15 
+},
+{
+ "Year":           1892,
+"Month": "J.D",
+"Value":             18 
+},
+{
+ "Year":           1893,
+"Month": "J.D",
+"Value":             21 
+},
+{
+ "Year":           1894,
+"Month": "J.D",
+"Value":             23 
+},
+{
+ "Year":           1895,
+"Month": "J.D",
+"Value":             13 
+},
+{
+ "Year":           1896,
+"Month": "J.D",
+"Value":              6 
+},
+{
+ "Year":           1897,
+"Month": "J.D",
+"Value":              3 
+},
+{
+ "Year":           1898,
+"Month": "J.D",
+"Value":             20 
+},
+{
+ "Year":           1899,
+"Month": "J.D",
+"Value":              8 
+},
+{
+ "Year":           1900,
+"Month": "J.D",
+"Value":             34 
+},
+{
+ "Year":           1901,
+"Month": "J.D",
+"Value":              5 
+},
+{
+ "Year":           1902,
+"Month": "J.D",
+"Value":             18 
+},
+{
+ "Year":           1903,
+"Month": "J.D",
+"Value":             26 
+},
+{
+ "Year":           1904,
+"Month": "J.D",
+"Value":             30 
+},
+{
+ "Year":           1905,
+"Month": "J.D",
+"Value":             19 
+},
+{
+ "Year":           1906,
+"Month": "J.D",
+"Value":             13 
+},
+{
+ "Year":           1907,
+"Month": "J.D",
+"Value":             28 
+},
+{
+ "Year":           1908,
+"Month": "J.D",
+"Value":             29 
+},
+{
+ "Year":           1909,
+"Month": "J.D",
+"Value":             31 
+},
+{
+ "Year":           1910,
+"Month": "J.D",
+"Value":             29 
+},
+{
+ "Year":           1911,
+"Month": "J.D",
+"Value":             30 
+},
+{
+ "Year":           1912,
+"Month": "J.D",
+"Value":             26 
+},
+{
+ "Year":           1913,
+"Month": "J.D",
+"Value":             25 
+},
+{
+ "Year":           1914,
+"Month": "J.D",
+"Value":              7 
+},
+{
+ "Year":           1915,
+"Month": "J.D",
+"Value":              2 
+},
+{
+ "Year":           1916,
+"Month": "J.D",
+"Value":             25 
+},
+{
+ "Year":           1917,
+"Month": "J.D",
+"Value":             28 
+},
+{
+ "Year":           1918,
+"Month": "J.D",
+"Value":             16 
+},
+{
+ "Year":           1919,
+"Month": "J.D",
+"Value":             13 
+},
+{
+ "Year":           1920,
+"Month": "J.D",
+"Value":             17 
+},
+{
+ "Year":           1921,
+"Month": "J.D",
+"Value":             10 
+},
+{
+ "Year":           1922,
+"Month": "J.D",
+"Value":             18 
+},
+{
+ "Year":           1923,
+"Month": "J.D",
+"Value":             14 
+},
+{
+ "Year":           1924,
+"Month": "J.D",
+"Value":             18 
+},
+{
+ "Year":           1925,
+"Month": "J.D",
+"Value":             10 
+},
+{
+ "Year":           1926,
+"Month": "J.D",
+"Value":             34 
+},
+{
+ "Year":           1927,
+"Month": "J.D",
+"Value":             12 
+},
+{
+ "Year":           1928,
+"Month": "J.D",
+"Value":             12 
+},
+{
+ "Year":           1929,
+"Month": "J.D",
+"Value":             26 
+},
+{
+ "Year":           1930,
+"Month": "J.D",
+"Value":              5 
+},
+{
+ "Year":           1931,
+"Month": "J.D",
+"Value":             35 
+},
+{
+ "Year":           1932,
+"Month": "J.D",
+"Value":              8 
+},
+{
+ "Year":           1933,
+"Month": "J.D",
+"Value":             20 
+},
+{
+ "Year":           1934,
+"Month": "J.D",
+"Value":              5 
+},
+{
+ "Year":           1935,
+"Month": "J.D",
+"Value":             10 
+},
+{
+ "Year":           1936,
+"Month": "J.D",
+"Value":              6 
+},
+{
+ "Year":           1937,
+"Month": "J.D",
+"Value":              1 
+},
+{
+ "Year":           1938,
+"Month": "J.D",
+"Value":             11 
+},
+{
+ "Year":           1939,
+"Month": "J.D",
+"Value":             22 
+},
+{
+ "Year":           1940,
+"Month": "J.D",
+"Value":             77 
+},
+{
+ "Year":           1941,
+"Month": "J.D",
+"Value":             40 
+},
+{
+ "Year":           1942,
+"Month": "J.D",
+"Value":             38 
+},
+{
+ "Year":           1943,
+"Month": "J.D",
+"Value":             41 
+},
+{
+ "Year":           1944,
+"Month": "J.D",
+"Value":             49 
+},
+{
+ "Year":           1945,
+"Month": "J.D",
+"Value":             40 
+},
+{
+ "Year":           1946,
+"Month": "J.D",
+"Value":             22 
+},
+{
+ "Year":           1947,
+"Month": "J.D",
+"Value":             22 
+},
+{
+ "Year":           1948,
+"Month": "J.D",
+"Value":             35 
+},
+{
+ "Year":           1949,
+"Month": "J.D",
+"Value":             35 
+},
+{
+ "Year":           1950,
+"Month": "J.D",
+"Value":              9 
+},
+{
+ "Year":           1951,
+"Month": "J.D",
+"Value":             33 
+},
+{
+ "Year":           1952,
+"Month": "J.D",
+"Value":             37 
+},
+{
+ "Year":           1953,
+"Month": "J.D",
+"Value":             77 
+},
+{
+ "Year":           1954,
+"Month": "J.D",
+"Value":              4 
+},
+{
+ "Year":           1955,
+"Month": "J.D",
+"Value":              6 
+},
+{
+ "Year":           1956,
+"Month": "J.D",
+"Value":             12 
+},
+{
+ "Year":           1957,
+"Month": "J.D",
+"Value":             52 
+},
+{
+ "Year":           1958,
+"Month": "J.D",
+"Value":             66 
+},
+{
+ "Year":           1959,
+"Month": "J.D",
+"Value":             52 
+},
+{
+ "Year":           1960,
+"Month": "J.D",
+"Value":             22 
+},
+{
+ "Year":           1961,
+"Month": "J.D",
+"Value":             63 
+},
+{
+ "Year":           1962,
+"Month": "J.D",
+"Value":             52 
+},
+{
+ "Year":           1963,
+"Month": "J.D",
+"Value":             66 
+},
+{
+ "Year":           1964,
+"Month": "J.D",
+"Value":             12 
+},
+{
+ "Year":           1965,
+"Month": "J.D",
+"Value":              2 
+},
+{
+ "Year":           1966,
+"Month": "J.D",
+"Value":             32 
+},
+{
+ "Year":           1967,
+"Month": "J.D",
+"Value":             11 
+},
+{
+ "Year":           1968,
+"Month": "J.D",
+"Value":             33 
+},
+{
+ "Year":           1969,
+"Month": "J.D",
+"Value":             66 
+},
+{
+ "Year":           1970,
+"Month": "J.D",
+"Value":             52 
+},
+{
+ "Year":           1971,
+"Month": "J.D",
+"Value":             35 
+},
+{
+ "Year":           1972,
+"Month": "J.D",
+"Value":             37 
+},
+{
+ "Year":           1973,
+"Month": "J.D",
+"Value":             42 
+},
+{
+ "Year":           1974,
+"Month": "J.D",
+"Value":             34 
+},
+{
+ "Year":           1975,
+"Month": "J.D",
+"Value":              1 
+},
+{
+ "Year":           1976,
+"Month": "J.D",
+"Value":              3 
+},
+{
+ "Year":           1977,
+"Month": "J.D",
+"Value":             45 
+},
+{
+ "Year":           1978,
+"Month": "J.D",
+"Value":             74 
+},
+{
+ "Year":           1979,
+"Month": "J.D",
+"Value":             44 
+},
+{
+ "Year":           1980,
+"Month": "J.D",
+"Value":             50 
+},
+{
+ "Year":           1981,
+"Month": "J.D",
+"Value":             55 
+},
+{
+ "Year":           1982,
+"Month": "J.D",
+"Value":             40 
+},
+{
+ "Year":           1983,
+"Month": "J.D",
+"Value":             53 
+},
+{
+ "Year":           1984,
+"Month": "J.D",
+"Value":             43 
+},
+{
+ "Year":           1985,
+"Month": "J.D",
+"Value":             39 
+},
+{
+ "Year":           1986,
+"Month": "J.D",
+"Value":             46 
+},
+{
+ "Year":           1987,
+"Month": "J.D",
+"Value":             56 
+},
+{
+ "Year":           1988,
+"Month": "J.D",
+"Value":             58 
+},
+{
+ "Year":           1989,
+"Month": "J.D",
+"Value":             51 
+},
+{
+ "Year":           1990,
+"Month": "J.D",
+"Value":             60 
+},
+{
+ "Year":           1991,
+"Month": "J.D",
+"Value":             59 
+},
+{
+ "Year":           1992,
+"Month": "J.D",
+"Value":             47 
+},
+{
+ "Year":           1993,
+"Month": "J.D",
+"Value":             48 
+},
+{
+ "Year":           1994,
+"Month": "J.D",
+"Value":             54 
+},
+{
+ "Year":           1995,
+"Month": "J.D",
+"Value":             61 
+},
+{
+ "Year":           1996,
+"Month": "J.D",
+"Value":             57 
+},
+{
+ "Year":           1997,
+"Month": "J.D",
+"Value":             62 
+},
+{
+ "Year":           1998,
+"Month": "J.D",
+"Value":             69 
+},
+{
+ "Year":           1999,
+"Month": "J.D",
+"Value":             59 
+},
+{
+ "Year":           2000,
+"Month": "J.D",
+"Value":             59 
+},
+{
+ "Year":           2001,
+"Month": "J.D",
+"Value":             65 
+},
+{
+ "Year":           2002,
+"Month": "J.D",
+"Value":             69 
+},
+{
+ "Year":           2003,
+"Month": "J.D",
+"Value":             68 
+},
+{
+ "Year":           2004,
+"Month": "J.D",
+"Value":             65 
+},
+{
+ "Year":           2005,
+"Month": "J.D",
+"Value":             73 
+},
+{
+ "Year":           2006,
+"Month": "J.D",
+"Value":             70 
+},
+{
+ "Year":           2007,
+"Month": "J.D",
+"Value":             72 
+},
+{
+ "Year":           2008,
+"Month": "J.D",
+"Value":             64 
+},
+{
+ "Year":           2009,
+"Month": "J.D",
+"Value":             71 
+},
+{
+ "Year":           2010,
+"Month": "J.D",
+"Value":             75 
+},
+{
+ "Year":           2011,
+"Month": "J.D",
+"Value":             67 
+},
+{
+ "Year":           2012,
+"Month": "J.D",
+"Value":             69 
+},
+{
+ "Year":           2013,
+"Month": "J.D",
+"Value":             72 
+},
+{
+ "Year":           2014,
+"Month": "J.D",
+"Value":             76 
+},
+{
+ "Year":           2015,
+"Month": "J.D",
+"Value":             36 
+},
+{
+ "Year":           1880,
+"Month": "D.N",
+"Value":             40 
+},
+{
+ "Year":           1881,
+"Month": "D.N",
+"Value":              3 
+},
+{
+ "Year":           1882,
+"Month": "D.N",
+"Value":             38 
+},
+{
+ "Year":           1883,
+"Month": "D.N",
+"Value":             12 
+},
+{
+ "Year":           1884,
+"Month": "D.N",
+"Value":             18 
+},
+{
+ "Year":           1885,
+"Month": "D.N",
+"Value":             24 
+},
+{
+ "Year":           1886,
+"Month": "D.N",
+"Value":             19 
+},
+{
+ "Year":           1887,
+"Month": "D.N",
+"Value":             23 
+},
+{
+ "Year":           1888,
+"Month": "D.N",
+"Value":             14 
+},
+{
+ "Year":           1889,
+"Month": "D.N",
+"Value":             39 
+},
+{
+ "Year":           1890,
+"Month": "D.N",
+"Value":             26 
+},
+{
+ "Year":           1891,
+"Month": "D.N",
+"Value":             18 
+},
+{
+ "Year":           1892,
+"Month": "D.N",
+"Value":             15 
+},
+{
+ "Year":           1893,
+"Month": "D.N",
+"Value":             19 
+},
+{
+ "Year":           1894,
+"Month": "D.N",
+"Value":             22 
+},
+{
+ "Year":           1895,
+"Month": "D.N",
+"Value":             14 
+},
+{
+ "Year":           1896,
+"Month": "D.N",
+"Value":              6 
+},
+{
+ "Year":           1897,
+"Month": "D.N",
+"Value":              2 
+},
+{
+ "Year":           1898,
+"Month": "D.N",
+"Value":             20 
+},
+{
+ "Year":           1899,
+"Month": "D.N",
+"Value":              8 
+},
+{
+ "Year":           1900,
+"Month": "D.N",
+"Value":             39 
+},
+{
+ "Year":           1901,
+"Month": "D.N",
+"Value":              4 
+},
+{
+ "Year":           1902,
+"Month": "D.N",
+"Value":             17 
+},
+{
+ "Year":           1903,
+"Month": "D.N",
+"Value":             25 
+},
+{
+ "Year":           1904,
+"Month": "D.N",
+"Value":             32 
+},
+{
+ "Year":           1905,
+"Month": "D.N",
+"Value":             19 
+},
+{
+ "Year":           1906,
+"Month": "D.N",
+"Value":             14 
+},
+{
+ "Year":           1907,
+"Month": "D.N",
+"Value":             26 
+},
+{
+ "Year":           1908,
+"Month": "D.N",
+"Value":             31 
+},
+{
+ "Year":           1909,
+"Month": "D.N",
+"Value":             33 
+},
+{
+ "Year":           1910,
+"Month": "D.N",
+"Value":             30 
+},
+{
+ "Year":           1911,
+"Month": "D.N",
+"Value":             34 
+},
+{
+ "Year":           1912,
+"Month": "D.N",
+"Value":             24 
+},
+{
+ "Year":           1913,
+"Month": "D.N",
+"Value":             27 
+},
+{
+ "Year":           1914,
+"Month": "D.N",
+"Value":              7 
+},
+{
+ "Year":           1915,
+"Month": "D.N",
+"Value":             39 
+},
+{
+ "Year":           1916,
+"Month": "D.N",
+"Value":             19 
+},
+{
+ "Year":           1917,
+"Month": "D.N",
+"Value":             29 
+},
+{
+ "Year":           1918,
+"Month": "D.N",
+"Value":             19 
+},
+{
+ "Year":           1919,
+"Month": "D.N",
+"Value":             13 
+},
+{
+ "Year":           1920,
+"Month": "D.N",
+"Value":             16 
+},
+{
+ "Year":           1921,
+"Month": "D.N",
+"Value":             14 
+},
+{
+ "Year":           1922,
+"Month": "D.N",
+"Value":             18 
+},
+{
+ "Year":           1923,
+"Month": "D.N",
+"Value":             16 
+},
+{
+ "Year":           1924,
+"Month": "D.N",
+"Value":             15 
+},
+{
+ "Year":           1925,
+"Month": "D.N",
+"Value":             15 
+},
+{
+ "Year":           1926,
+"Month": "D.N",
+"Value":             35 
+},
+{
+ "Year":           1927,
+"Month": "D.N",
+"Value":             11 
+},
+{
+ "Year":           1928,
+"Month": "D.N",
+"Value":             13 
+},
+{
+ "Year":           1929,
+"Month": "D.N",
+"Value":             23 
+},
+{
+ "Year":           1930,
+"Month": "D.N",
+"Value":              9 
+},
+{
+ "Year":           1931,
+"Month": "D.N",
+"Value":             38 
+},
+{
+ "Year":           1932,
+"Month": "D.N",
+"Value":              7 
+},
+{
+ "Year":           1933,
+"Month": "D.N",
+"Value":             18 
+},
+{
+ "Year":           1934,
+"Month": "D.N",
+"Value":              8 
+},
+{
+ "Year":           1935,
+"Month": "D.N",
+"Value":             10 
+},
+{
+ "Year":           1936,
+"Month": "D.N",
+"Value":              8 
+},
+{
+ "Year":           1937,
+"Month": "D.N",
+"Value":              1 
+},
+{
+ "Year":           1938,
+"Month": "D.N",
+"Value":              1 
+},
+{
+ "Year":           1939,
+"Month": "D.N",
+"Value":             38 
+},
+{
+ "Year":           1940,
+"Month": "D.N",
+"Value":             42 
+},
+{
+ "Year":           1941,
+"Month": "D.N",
+"Value":             44 
+},
+{
+ "Year":           1942,
+"Month": "D.N",
+"Value":             42 
+},
+{
+ "Year":           1943,
+"Month": "D.N",
+"Value":             44 
+},
+{
+ "Year":           1944,
+"Month": "D.N",
+"Value":             50 
+},
+{
+ "Year":           1945,
+"Month": "D.N",
+"Value":             45 
+},
+{
+ "Year":           1946,
+"Month": "D.N",
+"Value":              1 
+},
+{
+ "Year":           1947,
+"Month": "D.N",
+"Value":             28 
+},
+{
+ "Year":           1948,
+"Month": "D.N",
+"Value":             39 
+},
+{
+ "Year":           1949,
+"Month": "D.N",
+"Value":             39 
+},
+{
+ "Year":           1950,
+"Month": "D.N",
+"Value":              9 
+},
+{
+ "Year":           1951,
+"Month": "D.N",
+"Value":              2 
+},
+{
+ "Year":           1952,
+"Month": "D.N",
+"Value":             52 
+},
+{
+ "Year":           1953,
+"Month": "D.N",
+"Value":             70 
+},
+{
+ "Year":           1954,
+"Month": "D.N",
+"Value":              2 
+},
+{
+ "Year":           1955,
+"Month": "D.N",
+"Value":              5 
+},
+{
+ "Year":           1956,
+"Month": "D.N",
+"Value":             14 
+},
+{
+ "Year":           1957,
+"Month": "D.N",
+"Value":             41 
+},
+{
+ "Year":           1958,
+"Month": "D.N",
+"Value":             70 
+},
+{
+ "Year":           1959,
+"Month": "D.N",
+"Value":             52 
+},
+{
+ "Year":           1960,
+"Month": "D.N",
+"Value":             35 
+},
+{
+ "Year":           1961,
+"Month": "D.N",
+"Value":             73 
+},
+{
+ "Year":           1962,
+"Month": "D.N",
+"Value":             41 
+},
+{
+ "Year":           1963,
+"Month": "D.N",
+"Value":             64 
+},
+{
+ "Year":           1964,
+"Month": "D.N",
+"Value":             10 
+},
+{
+ "Year":           1965,
+"Month": "D.N",
+"Value":              4 
+},
+{
+ "Year":           1966,
+"Month": "D.N",
+"Value":             35 
+},
+{
+ "Year":           1967,
+"Month": "D.N",
+"Value":             21 
+},
+{
+ "Year":           1968,
+"Month": "D.N",
+"Value":             36 
+},
+{
+ "Year":           1969,
+"Month": "D.N",
+"Value":             52 
+},
+{
+ "Year":           1970,
+"Month": "D.N",
+"Value":             64 
+},
+{
+ "Year":           1971,
+"Month": "D.N",
+"Value":              2 
+},
+{
+ "Year":           1972,
+"Month": "D.N",
+"Value":              1 
+},
+{
+ "Year":           1973,
+"Month": "D.N",
+"Value":             46 
+},
+{
+ "Year":           1974,
+"Month": "D.N",
+"Value":             37 
+},
+{
+ "Year":           1975,
+"Month": "D.N",
+"Value":              1 
+},
+{
+ "Year":           1976,
+"Month": "D.N",
+"Value":              5 
+},
+{
+ "Year":           1977,
+"Month": "D.N",
+"Value":             48 
+},
+{
+ "Year":           1978,
+"Month": "D.N",
+"Value":             70 
+},
+{
+ "Year":           1979,
+"Month": "D.N",
+"Value":             45 
+},
+{
+ "Year":           1980,
+"Month": "D.N",
+"Value":             53 
+},
+{
+ "Year":           1981,
+"Month": "D.N",
+"Value":             54 
+},
+{
+ "Year":           1982,
+"Month": "D.N",
+"Value":             44 
+},
+{
+ "Year":           1983,
+"Month": "D.N",
+"Value":             55 
+},
+{
+ "Year":           1984,
+"Month": "D.N",
+"Value":             47 
+},
+{
+ "Year":           1985,
+"Month": "D.N",
+"Value":             43 
+},
+{
+ "Year":           1986,
+"Month": "D.N",
+"Value":             48 
+},
+{
+ "Year":           1987,
+"Month": "D.N",
+"Value":             54 
+},
+{
+ "Year":           1988,
+"Month": "D.N",
+"Value":             57 
+},
+{
+ "Year":           1989,
+"Month": "D.N",
+"Value":             51 
+},
+{
+ "Year":           1990,
+"Month": "D.N",
+"Value":             58 
+},
+{
+ "Year":           1991,
+"Month": "D.N",
+"Value":             58 
+},
+{
+ "Year":           1992,
+"Month": "D.N",
+"Value":             49 
+},
+{
+ "Year":           1993,
+"Month": "D.N",
+"Value":             49 
+},
+{
+ "Year":           1994,
+"Month": "D.N",
+"Value":             53 
+},
+{
+ "Year":           1995,
+"Month": "D.N",
+"Value":             60 
+},
+{
+ "Year":           1996,
+"Month": "D.N",
+"Value":             56 
+},
+{
+ "Year":           1997,
+"Month": "D.N",
+"Value":             60 
+},
+{
+ "Year":           1998,
+"Month": "D.N",
+"Value":             67 
+},
+{
+ "Year":           1999,
+"Month": "D.N",
+"Value":             58 
+},
+{
+ "Year":           2000,
+"Month": "D.N",
+"Value":             59 
+},
+{
+ "Year":           2001,
+"Month": "D.N",
+"Value":             61 
+},
+{
+ "Year":           2002,
+"Month": "D.N",
+"Value":             67 
+},
+{
+ "Year":           2003,
+"Month": "D.N",
+"Value":             63 
+},
+{
+ "Year":           2004,
+"Month": "D.N",
+"Value":             62 
+},
+{
+ "Year":           2005,
+"Month": "D.N",
+"Value":             68 
+},
+{
+ "Year":           2006,
+"Month": "D.N",
+"Value":             66 
+},
+{
+ "Year":           2007,
+"Month": "D.N",
+"Value":             69 
+},
+{
+ "Year":           2008,
+"Month": "D.N",
+"Value":             61 
+},
+{
+ "Year":           2009,
+"Month": "D.N",
+"Value":             67 
+},
+{
+ "Year":           2010,
+"Month": "D.N",
+"Value":             71 
+},
+{
+ "Year":           2011,
+"Month": "D.N",
+"Value":             65 
+},
+{
+ "Year":           2012,
+"Month": "D.N",
+"Value":             66 
+},
+{
+ "Year":           2013,
+"Month": "D.N",
+"Value":             67 
+},
+{
+ "Year":           2014,
+"Month": "D.N",
+"Value":             72 
+},
+{
+ "Year":           2015,
+"Month": "D.N",
+"Value":             40 
+},
+{
+ "Year":           1880,
+"Month": "DJF",
+"Value":             39 
+},
+{
+ "Year":           1881,
+"Month": "DJF",
+"Value":              5 
+},
+{
+ "Year":           1882,
+"Month": "DJF",
+"Value":             49 
+},
+{
+ "Year":           1883,
+"Month": "DJF",
+"Value":             20 
+},
+{
+ "Year":           1884,
+"Month": "DJF",
+"Value":              6 
+},
+{
+ "Year":           1885,
+"Month": "DJF",
+"Value":             25 
+},
+{
+ "Year":           1886,
+"Month": "DJF",
+"Value":             19 
+},
+{
+ "Year":           1887,
+"Month": "DJF",
+"Value":             27 
+},
+{
+ "Year":           1888,
+"Month": "DJF",
+"Value":             24 
+},
+{
+ "Year":           1889,
+"Month": "DJF",
+"Value":             30 
+},
+{
+ "Year":           1890,
+"Month": "DJF",
+"Value":             25 
+},
+{
+ "Year":           1891,
+"Month": "DJF",
+"Value":             25 
+},
+{
+ "Year":           1892,
+"Month": "DJF",
+"Value":              4 
+},
+{
+ "Year":           1893,
+"Month": "DJF",
+"Value":             29 
+},
+{
+ "Year":           1894,
+"Month": "DJF",
+"Value":             24 
+},
+{
+ "Year":           1895,
+"Month": "DJF",
+"Value":             21 
+},
+{
+ "Year":           1896,
+"Month": "DJF",
+"Value":              7 
+},
+{
+ "Year":           1897,
+"Month": "DJF",
+"Value":              8 
+},
+{
+ "Year":           1898,
+"Month": "DJF",
+"Value":             11 
+},
+{
+ "Year":           1899,
+"Month": "DJF",
+"Value":             15 
+},
+{
+ "Year":           1900,
+"Month": "DJF",
+"Value":             13 
+},
+{
+ "Year":           1901,
+"Month": "DJF",
+"Value":              6 
+},
+{
+ "Year":           1902,
+"Month": "DJF",
+"Value":              7 
+},
+{
+ "Year":           1903,
+"Month": "DJF",
+"Value":             14 
+},
+{
+ "Year":           1904,
+"Month": "DJF",
+"Value":             31 
+},
+{
+ "Year":           1905,
+"Month": "DJF",
+"Value":             25 
+},
+{
+ "Year":           1906,
+"Month": "DJF",
+"Value":             16 
+},
+{
+ "Year":           1907,
+"Month": "DJF",
+"Value":             22 
+},
+{
+ "Year":           1908,
+"Month": "DJF",
+"Value":             26 
+},
+{
+ "Year":           1909,
+"Month": "DJF",
+"Value":             32 
+},
+{
+ "Year":           1910,
+"Month": "DJF",
+"Value":             28 
+},
+{
+ "Year":           1911,
+"Month": "DJF",
+"Value":             35 
+},
+{
+ "Year":           1912,
+"Month": "DJF",
+"Value":             11 
+},
+{
+ "Year":           1913,
+"Month": "DJF",
+"Value":             25 
+},
+{
+ "Year":           1914,
+"Month": "DJF",
+"Value":             30 
+},
+{
+ "Year":           1915,
+"Month": "DJF",
+"Value":              2 
+},
+{
+ "Year":           1916,
+"Month": "DJF",
+"Value":             10 
+},
+{
+ "Year":           1917,
+"Month": "DJF",
+"Value":             33 
+},
+{
+ "Year":           1918,
+"Month": "DJF",
+"Value":             29 
+},
+{
+ "Year":           1919,
+"Month": "DJF",
+"Value":             10 
+},
+{
+ "Year":           1920,
+"Month": "DJF",
+"Value":             12 
+},
+{
+ "Year":           1921,
+"Month": "DJF",
+"Value":             11 
+},
+{
+ "Year":           1922,
+"Month": "DJF",
+"Value":             17 
+},
+{
+ "Year":           1923,
+"Month": "DJF",
+"Value":             14 
+},
+{
+ "Year":           1924,
+"Month": "DJF",
+"Value":              7 
+},
+{
+ "Year":           1925,
+"Month": "DJF",
+"Value":             21 
+},
+{
+ "Year":           1926,
+"Month": "DJF",
+"Value":             44 
+},
+{
+ "Year":           1927,
+"Month": "DJF",
+"Value":             14 
+},
+{
+ "Year":           1928,
+"Month": "DJF",
+"Value":              7 
+},
+{
+ "Year":           1929,
+"Month": "DJF",
+"Value":             25 
+},
+{
+ "Year":           1930,
+"Month": "DJF",
+"Value":             21 
+},
+{
+ "Year":           1931,
+"Month": "DJF",
+"Value":              4 
+},
+{
+ "Year":           1932,
+"Month": "DJF",
+"Value":             23 
+},
+{
+ "Year":           1933,
+"Month": "DJF",
+"Value":             16 
+},
+{
+ "Year":           1934,
+"Month": "DJF",
+"Value":             14 
+},
+{
+ "Year":           1935,
+"Month": "DJF",
+"Value":              3 
+},
+{
+ "Year":           1936,
+"Month": "DJF",
+"Value":             17 
+},
+{
+ "Year":           1937,
+"Month": "DJF",
+"Value":              1 
+},
+{
+ "Year":           1938,
+"Month": "DJF",
+"Value":             18 
+},
+{
+ "Year":           1939,
+"Month": "DJF",
+"Value":              6 
+},
+{
+ "Year":           1940,
+"Month": "DJF",
+"Value":             42 
+},
+{
+ "Year":           1941,
+"Month": "DJF",
+"Value":             48 
+},
+{
+ "Year":           1942,
+"Month": "DJF",
+"Value":             46 
+},
+{
+ "Year":           1943,
+"Month": "DJF",
+"Value":             43 
+},
+{
+ "Year":           1944,
+"Month": "DJF",
+"Value":             56 
+},
+{
+ "Year":           1945,
+"Month": "DJF",
+"Value":             41 
+},
+{
+ "Year":           1946,
+"Month": "DJF",
+"Value":             66 
+},
+{
+ "Year":           1947,
+"Month": "DJF",
+"Value":              5 
+},
+{
+ "Year":           1948,
+"Month": "DJF",
+"Value":             36 
+},
+{
+ "Year":           1949,
+"Month": "DJF",
+"Value":             38 
+},
+{
+ "Year":           1950,
+"Month": "DJF",
+"Value":             12 
+},
+{
+ "Year":           1951,
+"Month": "DJF",
+"Value":             20 
+},
+{
+ "Year":           1952,
+"Month": "DJF",
+"Value":             45 
+},
+{
+ "Year":           1953,
+"Month": "DJF",
+"Value":             79 
+},
+{
+ "Year":           1954,
+"Month": "DJF",
+"Value":              3 
+},
+{
+ "Year":           1955,
+"Month": "DJF",
+"Value":             37 
+},
+{
+ "Year":           1956,
+"Month": "DJF",
+"Value":             13 
+},
+{
+ "Year":           1957,
+"Month": "DJF",
+"Value":             38 
+},
+{
+ "Year":           1958,
+"Month": "DJF",
+"Value":             52 
+},
+{
+ "Year":           1959,
+"Month": "DJF",
+"Value":             66 
+},
+{
+ "Year":           1960,
+"Month": "DJF",
+"Value":             54 
+},
+{
+ "Year":           1961,
+"Month": "DJF",
+"Value":             45 
+},
+{
+ "Year":           1962,
+"Month": "DJF",
+"Value":             49 
+},
+{
+ "Year":           1963,
+"Month": "DJF",
+"Value":             66 
+},
+{
+ "Year":           1964,
+"Month": "DJF",
+"Value":             34 
+},
+{
+ "Year":           1965,
+"Month": "DJF",
+"Value":              9 
+},
+{
+ "Year":           1966,
+"Month": "DJF",
+"Value":             37 
+},
+{
+ "Year":           1967,
+"Month": "DJF",
+"Value":              3 
+},
+{
+ "Year":           1968,
+"Month": "DJF",
+"Value":              5 
+},
+{
+ "Year":           1969,
+"Month": "DJF",
+"Value":              5 
+},
+{
+ "Year":           1970,
+"Month": "DJF",
+"Value":             50 
+},
+{
+ "Year":           1971,
+"Month": "DJF",
+"Value":              5 
+},
+{
+ "Year":           1972,
+"Month": "DJF",
+"Value":              8 
+},
+{
+ "Year":           1973,
+"Month": "DJF",
+"Value":             52 
+},
+{
+ "Year":           1974,
+"Month": "DJF",
+"Value":              7 
+},
+{
+ "Year":           1975,
+"Month": "DJF",
+"Value":             40 
+},
+{
+ "Year":           1976,
+"Month": "DJF",
+"Value":             37 
+},
+{
+ "Year":           1977,
+"Month": "DJF",
+"Value":             45 
+},
+{
+ "Year":           1978,
+"Month": "DJF",
+"Value":             82 
+},
+{
+ "Year":           1979,
+"Month": "DJF",
+"Value":             71 
+},
+{
+ "Year":           1980,
+"Month": "DJF",
+"Value":             61 
+},
+{
+ "Year":           1981,
+"Month": "DJF",
+"Value":             59 
+},
+{
+ "Year":           1982,
+"Month": "DJF",
+"Value":             51 
+},
+{
+ "Year":           1983,
+"Month": "DJF",
+"Value":             64 
+},
+{
+ "Year":           1984,
+"Month": "DJF",
+"Value":             51 
+},
+{
+ "Year":           1985,
+"Month": "DJF",
+"Value":             60 
+},
+{
+ "Year":           1986,
+"Month": "DJF",
+"Value":             53 
+},
+{
+ "Year":           1987,
+"Month": "DJF",
+"Value":             55 
+},
+{
+ "Year":           1988,
+"Month": "DJF",
+"Value":             65 
+},
+{
+ "Year":           1989,
+"Month": "DJF",
+"Value":             53 
+},
+{
+ "Year":           1990,
+"Month": "DJF",
+"Value":             59 
+},
+{
+ "Year":           1991,
+"Month": "DJF",
+"Value":             63 
+},
+{
+ "Year":           1992,
+"Month": "DJF",
+"Value":             61 
+},
+{
+ "Year":           1993,
+"Month": "DJF",
+"Value":             55 
+},
+{
+ "Year":           1994,
+"Month": "DJF",
+"Value":             47 
+},
+{
+ "Year":           1995,
+"Month": "DJF",
+"Value":             68 
+},
+{
+ "Year":           1996,
+"Month": "DJF",
+"Value":             57 
+},
+{
+ "Year":           1997,
+"Month": "DJF",
+"Value":             58 
+},
+{
+ "Year":           1998,
+"Month": "DJF",
+"Value":             77 
+},
+{
+ "Year":           1999,
+"Month": "DJF",
+"Value":             70 
+},
+{
+ "Year":           2000,
+"Month": "DJF",
+"Value":             63 
+},
+{
+ "Year":           2001,
+"Month": "DJF",
+"Value":             62 
+},
+{
+ "Year":           2002,
+"Month": "DJF",
+"Value":             76 
+},
+{
+ "Year":           2003,
+"Month": "DJF",
+"Value":             69 
+},
+{
+ "Year":           2004,
+"Month": "DJF",
+"Value":             75 
+},
+{
+ "Year":           2005,
+"Month": "DJF",
+"Value":             72 
+},
+{
+ "Year":           2006,
+"Month": "DJF",
+"Value":             74 
+},
+{
+ "Year":           2007,
+"Month": "DJF",
+"Value":             80 
+},
+{
+ "Year":           2008,
+"Month": "DJF",
+"Value":             58 
+},
+{
+ "Year":           2009,
+"Month": "DJF",
+"Value":             69 
+},
+{
+ "Year":           2010,
+"Month": "DJF",
+"Value":             78 
+},
+{
+ "Year":           2011,
+"Month": "DJF",
+"Value":             67 
+},
+{
+ "Year":           2012,
+"Month": "DJF",
+"Value":             65 
+},
+{
+ "Year":           2013,
+"Month": "DJF",
+"Value":             70 
+},
+{
+ "Year":           2014,
+"Month": "DJF",
+"Value":             73 
+},
+{
+ "Year":           2015,
+"Month": "DJF",
+"Value":             81 
+},
+{
+ "Year":           1880,
+"Month": "MAM",
+"Value":            -19 
+},
+{
+ "Year":           1881,
+"Month": "MAM",
+"Value":             -1 
+},
+{
+ "Year":           1882,
+"Month": "MAM",
+"Value":            -11 
+},
+{
+ "Year":           1883,
+"Month": "MAM",
+"Value":            -22 
+},
+{
+ "Year":           1884,
+"Month": "MAM",
+"Value":            -33 
+},
+{
+ "Year":           1885,
+"Month": "MAM",
+"Value":            -36 
+},
+{
+ "Year":           1886,
+"Month": "MAM",
+"Value":            -32 
+},
+{
+ "Year":           1887,
+"Month": "MAM",
+"Value":            -33 
+},
+{
+ "Year":           1888,
+"Month": "MAM",
+"Value":            -32 
+},
+{
+ "Year":           1889,
+"Month": "MAM",
+"Value":              2 
+},
+{
+ "Year":           1890,
+"Month": "MAM",
+"Value":            -42 
+},
+{
+ "Year":           1891,
+"Month": "MAM",
+"Value":            -19 
+},
+{
+ "Year":           1892,
+"Month": "MAM",
+"Value":            -31 
+},
+{
+ "Year":           1893,
+"Month": "MAM",
+"Value":            -30 
+},
+{
+ "Year":           1894,
+"Month": "MAM",
+"Value":            -30 
+},
+{
+ "Year":           1895,
+"Month": "MAM",
+"Value":            -24 
+},
+{
+ "Year":           1896,
+"Month": "MAM",
+"Value":            -27 
+},
+{
+ "Year":           1897,
+"Month": "MAM",
+"Value":             -5 
+},
+{
+ "Year":           1898,
+"Month": "MAM",
+"Value":            -42 
+},
+{
+ "Year":           1899,
+"Month": "MAM",
+"Value":            -25 
+},
+{
+ "Year":           1900,
+"Month": "MAM",
+"Value":             -5 
+},
+{
+ "Year":           1901,
+"Month": "MAM",
+"Value":             -5 
+},
+{
+ "Year":           1902,
+"Month": "MAM",
+"Value":            -28 
+},
+{
+ "Year":           1903,
+"Month": "MAM",
+"Value":            -34 
+},
+{
+ "Year":           1904,
+"Month": "MAM",
+"Value":            -48 
+},
+{
+ "Year":           1905,
+"Month": "MAM",
+"Value":            -31 
+},
+{
+ "Year":           1906,
+"Month": "MAM",
+"Value":            -12 
+},
+{
+ "Year":           1907,
+"Month": "MAM",
+"Value":            -36 
+},
+{
+ "Year":           1908,
+"Month": "MAM",
+"Value":            -47 
+},
+{
+ "Year":           1909,
+"Month": "MAM",
+"Value":            -55 
+},
+{
+ "Year":           1910,
+"Month": "MAM",
+"Value":            -39 
+},
+{
+ "Year":           1911,
+"Month": "MAM",
+"Value":            -56 
+},
+{
+ "Year":           1912,
+"Month": "MAM",
+"Value":            -26 
+},
+{
+ "Year":           1913,
+"Month": "MAM",
+"Value":            -41 
+},
+{
+ "Year":           1914,
+"Month": "MAM",
+"Value":            -23 
+},
+{
+ "Year":           1915,
+"Month": "MAM",
+"Value":             -1 
+},
+{
+ "Year":           1916,
+"Month": "MAM",
+"Value":            -26 
+},
+{
+ "Year":           1917,
+"Month": "MAM",
+"Value":            -45 
+},
+{
+ "Year":           1918,
+"Month": "MAM",
+"Value":            -31 
+},
+{
+ "Year":           1919,
+"Month": "MAM",
+"Value":            -20 
+},
+{
+ "Year":           1920,
+"Month": "MAM",
+"Value":            -18 
+},
+{
+ "Year":           1921,
+"Month": "MAM",
+"Value":            -32 
+},
+{
+ "Year":           1922,
+"Month": "MAM",
+"Value":            -21 
+},
+{
+ "Year":           1923,
+"Month": "MAM",
+"Value":            -33 
+},
+{
+ "Year":           1924,
+"Month": "MAM",
+"Value":            -20 
+},
+{
+ "Year":           1925,
+"Month": "MAM",
+"Value":            -25 
+},
+{
+ "Year":           1926,
+"Month": "MAM",
+"Value":             -8 
+},
+{
+ "Year":           1927,
+"Month": "MAM",
+"Value":            -31 
+},
+{
+ "Year":           1928,
+"Month": "MAM",
+"Value":            -28 
+},
+{
+ "Year":           1929,
+"Month": "MAM",
+"Value":            -38 
+},
+{
+ "Year":           1930,
+"Month": "MAM",
+"Value":            -19 
+},
+{
+ "Year":           1931,
+"Month": "MAM",
+"Value":            -16 
+},
+{
+ "Year":           1932,
+"Month": "MAM",
+"Value":            -16 
+},
+{
+ "Year":           1933,
+"Month": "MAM",
+"Value":            -25 
+},
+{
+ "Year":           1934,
+"Month": "MAM",
+"Value":            -22 
+},
+{
+ "Year":           1935,
+"Month": "MAM",
+"Value":            -24 
+},
+{
+ "Year":           1936,
+"Month": "MAM",
+"Value":            -20 
+},
+{
+ "Year":           1937,
+"Month": "MAM",
+"Value":            -13 
+},
+{
+ "Year":           1938,
+"Month": "MAM",
+"Value":              2 
+},
+{
+ "Year":           1939,
+"Month": "MAM",
+"Value":            -13 
+},
+{
+ "Year":           1940,
+"Month": "MAM",
+"Value":             11 
+},
+{
+ "Year":           1941,
+"Month": "MAM",
+"Value":              9 
+},
+{
+ "Year":           1942,
+"Month": "MAM",
+"Value":             13 
+},
+{
+ "Year":           1943,
+"Month": "MAM",
+"Value":              9 
+},
+{
+ "Year":           1944,
+"Month": "MAM",
+"Value":             30 
+},
+{
+ "Year":           1945,
+"Month": "MAM",
+"Value":             16 
+},
+{
+ "Year":           1946,
+"Month": "MAM",
+"Value":              3 
+},
+{
+ "Year":           1947,
+"Month": "MAM",
+"Value":              2 
+},
+{
+ "Year":           1948,
+"Month": "MAM",
+"Value":             -9 
+},
+{
+ "Year":           1949,
+"Month": "MAM",
+"Value":             -6 
+},
+{
+ "Year":           1950,
+"Month": "MAM",
+"Value":            -14 
+},
+{
+ "Year":           1951,
+"Month": "MAM",
+"Value":            -10 
+},
+{
+ "Year":           1952,
+"Month": "MAM",
+"Value":             -4 
+},
+{
+ "Year":           1953,
+"Month": "MAM",
+"Value":             13 
+},
+{
+ "Year":           1954,
+"Month": "MAM",
+"Value":            -16 
+},
+{
+ "Year":           1955,
+"Month": "MAM",
+"Value":            -26 
+},
+{
+ "Year":           1956,
+"Month": "MAM",
+"Value":            -25 
+},
+{
+ "Year":           1957,
+"Month": "MAM",
+"Value":              0 
+},
+{
+ "Year":           1958,
+"Month": "MAM",
+"Value":              6 
+},
+{
+ "Year":           1959,
+"Month": "MAM",
+"Value":             14 
+},
+{
+ "Year":           1960,
+"Month": "MAM",
+"Value":            -20 
+},
+{
+ "Year":           1961,
+"Month": "MAM",
+"Value":             13 
+},
+{
+ "Year":           1962,
+"Month": "MAM",
+"Value":              3 
+},
+{
+ "Year":           1963,
+"Month": "MAM",
+"Value":            -10 
+},
+{
+ "Year":           1964,
+"Month": "MAM",
+"Value":            -27 
+},
+{
+ "Year":           1965,
+"Month": "MAM",
+"Value":            -15 
+},
+{
+ "Year":           1966,
+"Month": "MAM",
+"Value":             -6 
+},
+{
+ "Year":           1967,
+"Month": "MAM",
+"Value":              4 
+},
+{
+ "Year":           1968,
+"Month": "MAM",
+"Value":              2 
+},
+{
+ "Year":           1969,
+"Month": "MAM",
+"Value":             13 
+},
+{
+ "Year":           1970,
+"Month": "MAM",
+"Value":              4 
+},
+{
+ "Year":           1971,
+"Month": "MAM",
+"Value":            -12 
+},
+{
+ "Year":           1972,
+"Month": "MAM",
+"Value":              0 
+},
+{
+ "Year":           1973,
+"Month": "MAM",
+"Value":             25 
+},
+{
+ "Year":           1974,
+"Month": "MAM",
+"Value":             -5 
+},
+{
+ "Year":           1975,
+"Month": "MAM",
+"Value":             12 
+},
+{
+ "Year":           1976,
+"Month": "MAM",
+"Value":            -18 
+},
+{
+ "Year":           1977,
+"Month": "MAM",
+"Value":             27 
+},
+{
+ "Year":           1978,
+"Month": "MAM",
+"Value":             14 
+},
+{
+ "Year":           1979,
+"Month": "MAM",
+"Value":             12 
+},
+{
+ "Year":           1980,
+"Month": "MAM",
+"Value":             32 
+},
+{
+ "Year":           1981,
+"Month": "MAM",
+"Value":             35 
+},
+{
+ "Year":           1982,
+"Month": "MAM",
+"Value":              7 
+},
+{
+ "Year":           1983,
+"Month": "MAM",
+"Value":             36 
+},
+{
+ "Year":           1984,
+"Month": "MAM",
+"Value":             24 
+},
+{
+ "Year":           1985,
+"Month": "MAM",
+"Value":             15 
+},
+{
+ "Year":           1986,
+"Month": "MAM",
+"Value":             27 
+},
+{
+ "Year":           1987,
+"Month": "MAM",
+"Value":             23 
+},
+{
+ "Year":           1988,
+"Month": "MAM",
+"Value":             46 
+},
+{
+ "Year":           1989,
+"Month": "MAM",
+"Value":             29 
+},
+{
+ "Year":           1990,
+"Month": "MAM",
+"Value":             58 
+},
+{
+ "Year":           1991,
+"Month": "MAM",
+"Value":             42 
+},
+{
+ "Year":           1992,
+"Month": "MAM",
+"Value":             34 
+},
+{
+ "Year":           1993,
+"Month": "MAM",
+"Value":             30 
+},
+{
+ "Year":           1994,
+"Month": "MAM",
+"Value":             32 
+},
+{
+ "Year":           1995,
+"Month": "MAM",
+"Value":             40 
+},
+{
+ "Year":           1996,
+"Month": "MAM",
+"Value":             33 
+},
+{
+ "Year":           1997,
+"Month": "MAM",
+"Value":             42 
+},
+{
+ "Year":           1998,
+"Month": "MAM",
+"Value":             65 
+},
+{
+ "Year":           1999,
+"Month": "MAM",
+"Value":             33 
+},
+{
+ "Year":           2000,
+"Month": "MAM",
+"Value":             53 
+},
+{
+ "Year":           2001,
+"Month": "MAM",
+"Value":             57 
+},
+{
+ "Year":           2002,
+"Month": "MAM",
+"Value":             71 
+},
+{
+ "Year":           2003,
+"Month": "MAM",
+"Value":             58 
+},
+{
+ "Year":           2004,
+"Month": "MAM",
+"Value":             57 
+},
+{
+ "Year":           2005,
+"Month": "MAM",
+"Value":             68 
+},
+{
+ "Year":           2006,
+"Month": "MAM",
+"Value":             53 
+},
+{
+ "Year":           2007,
+"Month": "MAM",
+"Value":             71 
+},
+{
+ "Year":           2008,
+"Month": "MAM",
+"Value":             60 
+},
+{
+ "Year":           2009,
+"Month": "MAM",
+"Value":             59 
+},
+{
+ "Year":           2010,
+"Month": "MAM",
+"Value":             85 
+},
+{
+ "Year":           2011,
+"Month": "MAM",
+"Value":             61 
+},
+{
+ "Year":           2012,
+"Month": "MAM",
+"Value":             67 
+},
+{
+ "Year":           2013,
+"Month": "MAM",
+"Value":             60 
+},
+{
+ "Year":           2014,
+"Month": "MAM",
+"Value":             81 
+},
+{
+ "Year":           2015,
+"Month": "MAM",
+"Value":             80 
+},
+{
+ "Year":           1880,
+"Month": "JJA",
+"Value":             10 
+},
+{
+ "Year":           1881,
+"Month": "JJA",
+"Value":              3 
+},
+{
+ "Year":           1882,
+"Month": "JJA",
+"Value":             38 
+},
+{
+ "Year":           1883,
+"Month": "JJA",
+"Value":              2 
+},
+{
+ "Year":           1884,
+"Month": "JJA",
+"Value":             23 
+},
+{
+ "Year":           1885,
+"Month": "JJA",
+"Value":             26 
+},
+{
+ "Year":           1886,
+"Month": "JJA",
+"Value":             19 
+},
+{
+ "Year":           1887,
+"Month": "JJA",
+"Value":             12 
+},
+{
+ "Year":           1888,
+"Month": "JJA",
+"Value":              5 
+},
+{
+ "Year":           1889,
+"Month": "JJA",
+"Value":              3 
+},
+{
+ "Year":           1890,
+"Month": "JJA",
+"Value":             22 
+},
+{
+ "Year":           1891,
+"Month": "JJA",
+"Value":             12 
+},
+{
+ "Year":           1892,
+"Month": "JJA",
+"Value":             12 
+},
+{
+ "Year":           1893,
+"Month": "JJA",
+"Value":             10 
+},
+{
+ "Year":           1894,
+"Month": "JJA",
+"Value":             24 
+},
+{
+ "Year":           1895,
+"Month": "JJA",
+"Value":              9 
+},
+{
+ "Year":           1896,
+"Month": "JJA",
+"Value":             38 
+},
+{
+ "Year":           1897,
+"Month": "JJA",
+"Value":             36 
+},
+{
+ "Year":           1898,
+"Month": "JJA",
+"Value":             13 
+},
+{
+ "Year":           1899,
+"Month": "JJA",
+"Value":              6 
+},
+{
+ "Year":           1900,
+"Month": "JJA",
+"Value":             36 
+},
+{
+ "Year":           1901,
+"Month": "JJA",
+"Value":             38 
+},
+{
+ "Year":           1902,
+"Month": "JJA",
+"Value":             19 
+},
+{
+ "Year":           1903,
+"Month": "JJA",
+"Value":             29 
+},
+{
+ "Year":           1904,
+"Month": "JJA",
+"Value":             34 
+},
+{
+ "Year":           1905,
+"Month": "JJA",
+"Value":             15 
+},
+{
+ "Year":           1906,
+"Month": "JJA",
+"Value":             12 
+},
+{
+ "Year":           1907,
+"Month": "JJA",
+"Value":             28 
+},
+{
+ "Year":           1908,
+"Month": "JJA",
+"Value":             29 
+},
+{
+ "Year":           1909,
+"Month": "JJA",
+"Value":             32 
+},
+{
+ "Year":           1910,
+"Month": "JJA",
+"Value":             24 
+},
+{
+ "Year":           1911,
+"Month": "JJA",
+"Value":             33 
+},
+{
+ "Year":           1912,
+"Month": "JJA",
+"Value":             30 
+},
+{
+ "Year":           1913,
+"Month": "JJA",
+"Value":             27 
+},
+{
+ "Year":           1914,
+"Month": "JJA",
+"Value":             10 
+},
+{
+ "Year":           1915,
+"Month": "JJA",
+"Value":              2 
+},
+{
+ "Year":           1916,
+"Month": "JJA",
+"Value":             24 
+},
+{
+ "Year":           1917,
+"Month": "JJA",
+"Value":             19 
+},
+{
+ "Year":           1918,
+"Month": "JJA",
+"Value":             14 
+},
+{
+ "Year":           1919,
+"Month": "JJA",
+"Value":             12 
+},
+{
+ "Year":           1920,
+"Month": "JJA",
+"Value":             20 
+},
+{
+ "Year":           1921,
+"Month": "JJA",
+"Value":             12 
+},
+{
+ "Year":           1922,
+"Month": "JJA",
+"Value":             19 
+},
+{
+ "Year":           1923,
+"Month": "JJA",
+"Value":             17 
+},
+{
+ "Year":           1924,
+"Month": "JJA",
+"Value":             19 
+},
+{
+ "Year":           1925,
+"Month": "JJA",
+"Value":             16 
+},
+{
+ "Year":           1926,
+"Month": "JJA",
+"Value":              8 
+},
+{
+ "Year":           1927,
+"Month": "JJA",
+"Value":             10 
+},
+{
+ "Year":           1928,
+"Month": "JJA",
+"Value":             18 
+},
+{
+ "Year":           1929,
+"Month": "JJA",
+"Value":             25 
+},
+{
+ "Year":           1930,
+"Month": "JJA",
+"Value":              6 
+},
+{
+ "Year":           1931,
+"Month": "JJA",
+"Value":              1 
+},
+{
+ "Year":           1932,
+"Month": "JJA",
+"Value":             16 
+},
+{
+ "Year":           1933,
+"Month": "JJA",
+"Value":             15 
+},
+{
+ "Year":           1934,
+"Month": "JJA",
+"Value":              3 
+},
+{
+ "Year":           1935,
+"Month": "JJA",
+"Value":             10 
+},
+{
+ "Year":           1936,
+"Month": "JJA",
+"Value":              3 
+},
+{
+ "Year":           1937,
+"Month": "JJA",
+"Value":             11 
+},
+{
+ "Year":           1938,
+"Month": "JJA",
+"Value":             38 
+},
+{
+ "Year":           1939,
+"Month": "JJA",
+"Value":             35 
+},
+{
+ "Year":           1940,
+"Month": "JJA",
+"Value":             67 
+},
+{
+ "Year":           1941,
+"Month": "JJA",
+"Value":             44 
+},
+{
+ "Year":           1942,
+"Month": "JJA",
+"Value":             58 
+},
+{
+ "Year":           1943,
+"Month": "JJA",
+"Value":             72 
+},
+{
+ "Year":           1944,
+"Month": "JJA",
+"Value":             49 
+},
+{
+ "Year":           1945,
+"Month": "JJA",
+"Value":             45 
+},
+{
+ "Year":           1946,
+"Month": "JJA",
+"Value":              2 
+},
+{
+ "Year":           1947,
+"Month": "JJA",
+"Value":             31 
+},
+{
+ "Year":           1948,
+"Month": "JJA",
+"Value":             38 
+},
+{
+ "Year":           1949,
+"Month": "JJA",
+"Value":              7 
+},
+{
+ "Year":           1950,
+"Month": "JJA",
+"Value":              4 
+},
+{
+ "Year":           1951,
+"Month": "JJA",
+"Value":              1 
+},
+{
+ "Year":           1952,
+"Month": "JJA",
+"Value":             53 
+},
+{
+ "Year":           1953,
+"Month": "JJA",
+"Value":             67 
+},
+{
+ "Year":           1954,
+"Month": "JJA",
+"Value":              6 
+},
+{
+ "Year":           1955,
+"Month": "JJA",
+"Value":             11 
+},
+{
+ "Year":           1956,
+"Month": "JJA",
+"Value":              8 
+},
+{
+ "Year":           1957,
+"Month": "JJA",
+"Value":             75 
+},
+{
+ "Year":           1958,
+"Month": "JJA",
+"Value":             21 
+},
+{
+ "Year":           1959,
+"Month": "JJA",
+"Value":             47 
+},
+{
+ "Year":           1960,
+"Month": "JJA",
+"Value":              1 
+},
+{
+ "Year":           1961,
+"Month": "JJA",
+"Value":             47 
+},
+{
+ "Year":           1962,
+"Month": "JJA",
+"Value":             40 
+},
+{
+ "Year":           1963,
+"Month": "JJA",
+"Value":             43 
+},
+{
+ "Year":           1964,
+"Month": "JJA",
+"Value":              5 
+},
+{
+ "Year":           1965,
+"Month": "JJA",
+"Value":             36 
+},
+{
+ "Year":           1966,
+"Month": "JJA",
+"Value":             40 
+},
+{
+ "Year":           1967,
+"Month": "JJA",
+"Value":             11 
+},
+{
+ "Year":           1968,
+"Month": "JJA",
+"Value":             38 
+},
+{
+ "Year":           1969,
+"Month": "JJA",
+"Value":             47 
+},
+{
+ "Year":           1970,
+"Month": "JJA",
+"Value":             35 
+},
+{
+ "Year":           1971,
+"Month": "JJA",
+"Value":              3 
+},
+{
+ "Year":           1972,
+"Month": "JJA",
+"Value":             74 
+},
+{
+ "Year":           1973,
+"Month": "JJA",
+"Value":             75 
+},
+{
+ "Year":           1974,
+"Month": "JJA",
+"Value":             41 
+},
+{
+ "Year":           1975,
+"Month": "JJA",
+"Value":             37 
+},
+{
+ "Year":           1976,
+"Month": "JJA",
+"Value":              6 
+},
+{
+ "Year":           1977,
+"Month": "JJA",
+"Value":             50 
+},
+{
+ "Year":           1978,
+"Month": "JJA",
+"Value":             35 
+},
+{
+ "Year":           1979,
+"Month": "JJA",
+"Value":             42 
+},
+{
+ "Year":           1980,
+"Month": "JJA",
+"Value":             51 
+},
+{
+ "Year":           1981,
+"Month": "JJA",
+"Value":             55 
+},
+{
+ "Year":           1982,
+"Month": "JJA",
+"Value":             75 
+},
+{
+ "Year":           1983,
+"Month": "JJA",
+"Value":             49 
+},
+{
+ "Year":           1984,
+"Month": "JJA",
+"Value":             44 
+},
+{
+ "Year":           1985,
+"Month": "JJA",
+"Value":             43 
+},
+{
+ "Year":           1986,
+"Month": "JJA",
+"Value":             45 
+},
+{
+ "Year":           1987,
+"Month": "JJA",
+"Value":             56 
+},
+{
+ "Year":           1988,
+"Month": "JJA",
+"Value":             59 
+},
+{
+ "Year":           1989,
+"Month": "JJA",
+"Value":             52 
+},
+{
+ "Year":           1990,
+"Month": "JJA",
+"Value":             56 
+},
+{
+ "Year":           1991,
+"Month": "JJA",
+"Value":             63 
+},
+{
+ "Year":           1992,
+"Month": "JJA",
+"Value":             46 
+},
+{
+ "Year":           1993,
+"Month": "JJA",
+"Value":             48 
+},
+{
+ "Year":           1994,
+"Month": "JJA",
+"Value":             54 
+},
+{
+ "Year":           1995,
+"Month": "JJA",
+"Value":             62 
+},
+{
+ "Year":           1996,
+"Month": "JJA",
+"Value":             56 
+},
+{
+ "Year":           1997,
+"Month": "JJA",
+"Value":             61 
+},
+{
+ "Year":           1998,
+"Month": "JJA",
+"Value":             73 
+},
+{
+ "Year":           1999,
+"Month": "JJA",
+"Value":             57 
+},
+{
+ "Year":           2000,
+"Month": "JJA",
+"Value":             60 
+},
+{
+ "Year":           2001,
+"Month": "JJA",
+"Value":             65 
+},
+{
+ "Year":           2002,
+"Month": "JJA",
+"Value":             66 
+},
+{
+ "Year":           2003,
+"Month": "JJA",
+"Value":             66 
+},
+{
+ "Year":           2004,
+"Month": "JJA",
+"Value":             57 
+},
+{
+ "Year":           2005,
+"Month": "JJA",
+"Value":             70 
+},
+{
+ "Year":           2006,
+"Month": "JJA",
+"Value":             69 
+},
+{
+ "Year":           2007,
+"Month": "JJA",
+"Value":             68 
+},
+{
+ "Year":           2008,
+"Month": "JJA",
+"Value":             64 
+},
+{
+ "Year":           2009,
+"Month": "JJA",
+"Value":             71 
+},
+{
+ "Year":           2010,
+"Month": "JJA",
+"Value":             69 
+},
+{
+ "Year":           2011,
+"Month": "JJA",
+"Value":             71 
+},
+{
+ "Year":           2012,
+"Month": "JJA",
+"Value":             68 
+},
+{
+ "Year":           2013,
+"Month": "JJA",
+"Value":             69 
+},
+{
+ "Year":           2014,
+"Month": "JJA",
+"Value":             71 
+},
+{
+ "Year":           2015,
+"Month": "JJA",
+"Value":             39 
+},
+{
+ "Year":           1880,
+"Month": "SON",
+"Value":              7 
+},
+{
+ "Year":           1881,
+"Month": "SON",
+"Value":              8 
+},
+{
+ "Year":           1882,
+"Month": "SON",
+"Value":              5 
+},
+{
+ "Year":           1883,
+"Month": "SON",
+"Value":              7 
+},
+{
+ "Year":           1884,
+"Month": "SON",
+"Value":             15 
+},
+{
+ "Year":           1885,
+"Month": "SON",
+"Value":             11 
+},
+{
+ "Year":           1886,
+"Month": "SON",
+"Value":             13 
+},
+{
+ "Year":           1887,
+"Month": "SON",
+"Value":             16 
+},
+{
+ "Year":           1888,
+"Month": "SON",
+"Value":             10 
+},
+{
+ "Year":           1889,
+"Month": "SON",
+"Value":             13 
+},
+{
+ "Year":           1890,
+"Month": "SON",
+"Value":             21 
+},
+{
+ "Year":           1891,
+"Month": "SON",
+"Value":             14 
+},
+{
+ "Year":           1892,
+"Month": "SON",
+"Value":             19 
+},
+{
+ "Year":           1893,
+"Month": "SON",
+"Value":              7 
+},
+{
+ "Year":           1894,
+"Month": "SON",
+"Value":             12 
+},
+{
+ "Year":           1895,
+"Month": "SON",
+"Value":             33 
+},
+{
+ "Year":           1896,
+"Month": "SON",
+"Value":             24 
+},
+{
+ "Year":           1897,
+"Month": "SON",
+"Value":              2 
+},
+{
+ "Year":           1898,
+"Month": "SON",
+"Value":             19 
+},
+{
+ "Year":           1899,
+"Month": "SON",
+"Value":             50 
+},
+{
+ "Year":           1900,
+"Month": "SON",
+"Value":             35 
+},
+{
+ "Year":           1901,
+"Month": "SON",
+"Value":              9 
+},
+{
+ "Year":           1902,
+"Month": "SON",
+"Value":             17 
+},
+{
+ "Year":           1903,
+"Month": "SON",
+"Value":             25 
+},
+{
+ "Year":           1904,
+"Month": "SON",
+"Value":             21 
+},
+{
+ "Year":           1905,
+"Month": "SON",
+"Value":              5 
+},
+{
+ "Year":           1906,
+"Month": "SON",
+"Value":             17 
+},
+{
+ "Year":           1907,
+"Month": "SON",
+"Value":             22 
+},
+{
+ "Year":           1908,
+"Month": "SON",
+"Value":             26 
+},
+{
+ "Year":           1909,
+"Month": "SON",
+"Value":             23 
+},
+{
+ "Year":           1910,
+"Month": "SON",
+"Value":             27 
+},
+{
+ "Year":           1911,
+"Month": "SON",
+"Value":             18 
+},
+{
+ "Year":           1912,
+"Month": "SON",
+"Value":             28 
+},
+{
+ "Year":           1913,
+"Month": "SON",
+"Value":             17 
+},
+{
+ "Year":           1914,
+"Month": "SON",
+"Value":              4 
+},
+{
+ "Year":           1915,
+"Month": "SON",
+"Value":              6 
+},
+{
+ "Year":           1916,
+"Month": "SON",
+"Value":             21 
+},
+{
+ "Year":           1917,
+"Month": "SON",
+"Value":             16 
+},
+{
+ "Year":           1918,
+"Month": "SON",
+"Value":              2 
+},
+{
+ "Year":           1919,
+"Month": "SON",
+"Value":             11 
+},
+{
+ "Year":           1920,
+"Month": "SON",
+"Value":             15 
+},
+{
+ "Year":           1921,
+"Month": "SON",
+"Value":              4 
+},
+{
+ "Year":           1922,
+"Month": "SON",
+"Value":             14 
+},
+{
+ "Year":           1923,
+"Month": "SON",
+"Value":              3 
+},
+{
+ "Year":           1924,
+"Month": "SON",
+"Value":             18 
+},
+{
+ "Year":           1925,
+"Month": "SON",
+"Value":             32 
+},
+{
+ "Year":           1926,
+"Month": "SON",
+"Value":             32 
+},
+{
+ "Year":           1927,
+"Month": "SON",
+"Value":             10 
+},
+{
+ "Year":           1928,
+"Month": "SON",
+"Value":              6 
+},
+{
+ "Year":           1929,
+"Month": "SON",
+"Value":              8 
+},
+{
+ "Year":           1930,
+"Month": "SON",
+"Value":              1 
+},
+{
+ "Year":           1931,
+"Month": "SON",
+"Value":             29 
+},
+{
+ "Year":           1932,
+"Month": "SON",
+"Value":              7 
+},
+{
+ "Year":           1933,
+"Month": "SON",
+"Value":             17 
+},
+{
+ "Year":           1934,
+"Month": "SON",
+"Value":             32 
+},
+{
+ "Year":           1935,
+"Month": "SON",
+"Value":              8 
+},
+{
+ "Year":           1936,
+"Month": "SON",
+"Value":             20 
+},
+{
+ "Year":           1937,
+"Month": "SON",
+"Value":             39 
+},
+{
+ "Year":           1938,
+"Month": "SON",
+"Value":             63 
+},
+{
+ "Year":           1939,
+"Month": "SON",
+"Value":             44 
+},
+{
+ "Year":           1940,
+"Month": "SON",
+"Value":             38 
+},
+{
+ "Year":           1941,
+"Month": "SON",
+"Value":             41 
+},
+{
+ "Year":           1942,
+"Month": "SON",
+"Value":             70 
+},
+{
+ "Year":           1943,
+"Month": "SON",
+"Value":             45 
+},
+{
+ "Year":           1944,
+"Month": "SON",
+"Value":             46 
+},
+{
+ "Year":           1945,
+"Month": "SON",
+"Value":             43 
+},
+{
+ "Year":           1946,
+"Month": "SON",
+"Value":             20 
+},
+{
+ "Year":           1947,
+"Month": "SON",
+"Value":             10 
+},
+{
+ "Year":           1948,
+"Month": "SON",
+"Value":             33 
+},
+{
+ "Year":           1949,
+"Month": "SON",
+"Value":             31 
+},
+{
+ "Year":           1950,
+"Month": "SON",
+"Value":             12 
+},
+{
+ "Year":           1951,
+"Month": "SON",
+"Value":             61 
+},
+{
+ "Year":           1952,
+"Month": "SON",
+"Value":             24 
+},
+{
+ "Year":           1953,
+"Month": "SON",
+"Value":             44 
+},
+{
+ "Year":           1954,
+"Month": "SON",
+"Value":             36 
+},
+{
+ "Year":           1955,
+"Month": "SON",
+"Value":              6 
+},
+{
+ "Year":           1956,
+"Month": "SON",
+"Value":              9 
+},
+{
+ "Year":           1957,
+"Month": "SON",
+"Value":             61 
+},
+{
+ "Year":           1958,
+"Month": "SON",
+"Value":             35 
+},
+{
+ "Year":           1959,
+"Month": "SON",
+"Value":             32 
+},
+{
+ "Year":           1960,
+"Month": "SON",
+"Value":             35 
+},
+{
+ "Year":           1961,
+"Month": "SON",
+"Value":             44 
+},
+{
+ "Year":           1962,
+"Month": "SON",
+"Value":             35 
+},
+{
+ "Year":           1963,
+"Month": "SON",
+"Value":             42 
+},
+{
+ "Year":           1964,
+"Month": "SON",
+"Value":             16 
+},
+{
+ "Year":           1965,
+"Month": "SON",
+"Value":             31 
+},
+{
+ "Year":           1966,
+"Month": "SON",
+"Value":             30 
+},
+{
+ "Year":           1967,
+"Month": "SON",
+"Value":              1 
+},
+{
+ "Year":           1968,
+"Month": "SON",
+"Value":             24 
+},
+{
+ "Year":           1969,
+"Month": "SON",
+"Value":             37 
+},
+{
+ "Year":           1970,
+"Month": "SON",
+"Value":             63 
+},
+{
+ "Year":           1971,
+"Month": "SON",
+"Value":             24 
+},
+{
+ "Year":           1972,
+"Month": "SON",
+"Value":             56 
+},
+{
+ "Year":           1973,
+"Month": "SON",
+"Value":             74 
+},
+{
+ "Year":           1974,
+"Month": "SON",
+"Value":             33 
+},
+{
+ "Year":           1975,
+"Month": "SON",
+"Value":             33 
+},
+{
+ "Year":           1976,
+"Month": "SON",
+"Value":              5 
+},
+{
+ "Year":           1977,
+"Month": "SON",
+"Value":             76 
+},
+{
+ "Year":           1978,
+"Month": "SON",
+"Value":             74 
+},
+{
+ "Year":           1979,
+"Month": "SON",
+"Value":             47 
+},
+{
+ "Year":           1980,
+"Month": "SON",
+"Value":             45 
+},
+{
+ "Year":           1981,
+"Month": "SON",
+"Value":             43 
+},
+{
+ "Year":           1982,
+"Month": "SON",
+"Value":             41 
+},
+{
+ "Year":           1983,
+"Month": "SON",
+"Value":             48 
+},
+{
+ "Year":           1984,
+"Month": "SON",
+"Value":             40 
+},
+{
+ "Year":           1985,
+"Month": "SON",
+"Value":             40 
+},
+{
+ "Year":           1986,
+"Month": "SON",
+"Value":             76 
+},
+{
+ "Year":           1987,
+"Month": "SON",
+"Value":             52 
+},
+{
+ "Year":           1988,
+"Month": "SON",
+"Value":             51 
+},
+{
+ "Year":           1989,
+"Month": "SON",
+"Value":             51 
+},
+{
+ "Year":           1990,
+"Month": "SON",
+"Value":             55 
+},
+{
+ "Year":           1991,
+"Month": "SON",
+"Value":             54 
+},
+{
+ "Year":           1992,
+"Month": "SON",
+"Value":             61 
+},
+{
+ "Year":           1993,
+"Month": "SON",
+"Value":             41 
+},
+{
+ "Year":           1994,
+"Month": "SON",
+"Value":             57 
+},
+{
+ "Year":           1995,
+"Month": "SON",
+"Value":             59 
+},
+{
+ "Year":           1996,
+"Month": "SON",
+"Value":             49 
+},
+{
+ "Year":           1997,
+"Month": "SON",
+"Value":             66 
+},
+{
+ "Year":           1998,
+"Month": "SON",
+"Value":             60 
+},
+{
+ "Year":           1999,
+"Month": "SON",
+"Value":             58 
+},
+{
+ "Year":           2000,
+"Month": "SON",
+"Value":             53 
+},
+{
+ "Year":           2001,
+"Month": "SON",
+"Value":             62 
+},
+{
+ "Year":           2002,
+"Month": "SON",
+"Value":             64 
+},
+{
+ "Year":           2003,
+"Month": "SON",
+"Value":             68 
+},
+{
+ "Year":           2004,
+"Month": "SON",
+"Value":             67 
+},
+{
+ "Year":           2005,
+"Month": "SON",
+"Value":             73 
+},
+{
+ "Year":           2006,
+"Month": "SON",
+"Value":             69 
+},
+{
+ "Year":           2007,
+"Month": "SON",
+"Value":             65 
+},
+{
+ "Year":           2008,
+"Month": "SON",
+"Value":             68 
+},
+{
+ "Year":           2009,
+"Month": "SON",
+"Value":             71 
+},
+{
+ "Year":           2010,
+"Month": "SON",
+"Value":             71 
+},
+{
+ "Year":           2011,
+"Month": "SON",
+"Value":             64 
+},
+{
+ "Year":           2012,
+"Month": "SON",
+"Value":             72 
+},
+{
+ "Year":           2013,
+"Month": "SON",
+"Value":             72 
+},
+{
+ "Year":           2014,
+"Month": "SON",
+"Value":             75 
+},
+{
+ "Year":           2015,
+"Month": "SON",
+"Value":             34 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+    <script></script>    
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/css/jquery.dataTables.css'>
+    
+    <script src='//code.jquery.com/jquery-1.10.2.min.js' type='text/javascript'></script>
+    <script src='//ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <table id = 'chart2d3b2765a3fe' class = 'rChart datatables'></table>    
+    <script type="text/javascript" charset="utf-8">
+  var chartParamschart2d3b2765a3fe = {
+ "dom": "chart2d3b2765a3fe",
+"width":    800,
+"height":    400,
+"table": {
+ "aaData": [
+ [
+   7282,
+false,
+420,
+1.462e+09,
+1.462e+09,
+1.462e+09,
+1000,
+1000,
+"ryoeng",
+"ryoeng" 
+],
+[
+  49840,
+false,
+420,
+1.462e+09,
+1.462e+09,
+1.462e+09,
+1000,
+1000,
+"ryoeng",
+"ryoeng" 
+],
+[
+   7282,
+false,
+420,
+1.462e+09,
+1.462e+09,
+1.462e+09,
+1000,
+1000,
+"ryoeng",
+"ryoeng" 
+],
+[
+   9064,
+false,
+420,
+1.462e+09,
+1.462e+09,
+1.462e+09,
+1000,
+1000,
+"ryoeng",
+"ryoeng" 
+],
+[
+  54827,
+false,
+420,
+1.462e+09,
+1.462e+09,
+1.462e+09,
+1000,
+1000,
+"ryoeng",
+"ryoeng" 
+],
+[
+   9064,
+false,
+420,
+1.462e+09,
+1.462e+09,
+1.462e+09,
+1000,
+1000,
+"ryoeng",
+"ryoeng" 
+] 
+],
+"aoColumns": [
+ {
+ "sTitle": "size" 
+},
+{
+ "sTitle": "isdir" 
+},
+{
+ "sTitle": "mode" 
+},
+{
+ "sTitle": "mtime" 
+},
+{
+ "sTitle": "ctime" 
+},
+{
+ "sTitle": "atime" 
+},
+{
+ "sTitle": "uid" 
+},
+{
+ "sTitle": "gid" 
+},
+{
+ "sTitle": "uname" 
+},
+{
+ "sTitle": "grname" 
+} 
+],
+"sPaginationType": "full_numbers",
+"iDisplayLength":      6,
+"sScrollX": "100%" 
+},
+"id": "chart2d3b2765a3fe" 
+}
+  $('#' + chartParamschart2d3b2765a3fe.id).removeClass("rChart")
+
+  $(document).ready(function() {
+		drawDataTable(chartParamschart2d3b2765a3fe)
+	});
+  function drawDataTable(chartParams){
+    var dTable = $('#' + chartParams.dom).dataTable(
+      chartParams.table
+    );
+    //first use rCharts width
+  	$('#'+chartParams.id+"_wrapper").css("width",chartParams.width)  
+		$('#'+chartParams.id+"_wrapper").css("width",chartParams.table.width)
+    
+    //then if specified change to table width
+    $('#'+chartParams.id+"_wrapper").css("margin-left", "auto");
+    $('#'+chartParams.id+"_wrapper").css("margin-right", "auto");
+		dTable.fnAdjustColumnSizing();
+  }
+		
+</script>
+    
+    <script></script>    
+  </body>
+</html>

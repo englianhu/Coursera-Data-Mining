@@ -52,26 +52,27 @@ rm(pkgs)
 
   Setup and setting adjustment.
 
-```{r setting adjustment}
+```{r setting adjustment, include = FALSE}
 ## Set the googleVis options first to change the behaviour of plot.gvis, so that only the chart 
 ##  component of the HTML file is written into the output file.
 ##  
 ## Set option to below if you want to plot an independent webpage with graph 
 #'@ op <- options(gvis.plot.tag=NULL)
 op <- options(gvis.plot.tag='chart')
+options(rpubs.upload.method = 'internal')
 
 ## knitr configuration
 # invalidate cache when the tufte version changes
 suppressMessages(library('knitr'))
 
-opts_chunk$set(tidy = TRUE, fig.path = 'figure/', comment = NA, message = FALSE, fig.keep = 'high', fig.width = 10, fig.height = 6, fig.align = 'center', cache.extra = packageVersion('tufte'), echo = TRUE, progress = TRUE)
+opts_chunk$set(tidy = TRUE, fig.path = 'figure/', comment = NA, message = FALSE, cache.extra = packageVersion('tufte'), echo = TRUE, progress = TRUE)#, fig.align = 'center', fig.keep = 'high', fig.width = 10, fig.height = 6)
 
 ## Setting for rCharts
 ## http://ramnathv.github.io/posts/rcharts-nvd3/
-options(warn = -1, htmltools.dir.version = FALSE, 
-        rcharts.mode = 'iframesrc', rcharts.cdn = TRUE, 
-        RCHART_WIDTH = 600, RCHART_HEIGHT = 400, 
-        RCHART_TEMPLATE = 'Rickshaw.html', RCHART_LIB = 'morris')
+#'@ options(warn = -1, htmltools.dir.version = FALSE, 
+#'@         rcharts.mode = 'iframesrc', rcharts.cdn = TRUE, 
+#'@         RCHART_WIDTH = 600, RCHART_HEIGHT = 400, 
+#'@         RCHART_TEMPLATE = 'Rickshaw.html', RCHART_LIB = 'morris')
 ```
 
 ```{r clear-memory, include = FALSE}
@@ -91,8 +92,11 @@ gc()
 
   The dataset is downloadable in zipped file via [here](https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip).
 
-```{r collect-data}
+```{r collect-data, echo = FALSE}
 suppressMessages(library('plyr'))
+suppressMessages(library('magrittr'))
+suppressMessages(library('formattable'))
+suppressMessages(library('knitr'))
 
 if(!file.exists('data/')) dir.create('data/')
 
@@ -112,7 +116,7 @@ if(!file.exists(paste0('data/final'))) {
 }
 
 ## list down the details of the zipped file
-unzip(paste0('data/', destfile), list = TRUE)
+unzip(paste0('data/', destfile), list = TRUE) %>% kable #%>% formattable(Length = normalize_bar('blue', 0.2), Date = color_tile('white', 'orange'))
 ```
 
 ```{r rm-objs1, include = FALSE}
@@ -121,9 +125,12 @@ rm(lnk, destfile)
 
   From above information, we can know the information of the zipped files, and now we try to list out the documents for this mile-stone report as well as the summary of files.
 
-```{r project-files}
+```{r project-files, results = 'asis', echo = FALSE, comment = NA, cache = FALSE}
 suppressMessages(library('plyr'))
 suppressMessages(library('dplyr'))
+suppressMessages(library('knitr'))
+suppressMessages(library('rCharts'))
+suppressMessages(library('formattable'))
 
 ## files for this assignment
 lsfiles <- list.files('data/Programming Assignment 1 Data New')
@@ -131,24 +138,26 @@ lsfiles
 
 ## summary of files
 datafiles <- paste0('data/Programming Assignment 1 Data New/', lsfiles)
-llply(as.list(datafiles), file.info) %>% rbind_all
+summ <- llply(as.list(datafiles), file.info) %>% rbind_all #%>% formattable(., list(size=color_bar('pink', 0.5)))
+dt <- dTable(summ, sPaginationType = "full_numbers", iDisplayLength = 6, sScrollX = "100%")
+dt$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
 ```{r rm-objs2, include = FALSE}
-rm(lsfiles)
+rm(lsfiles, summ)
 ```
 
 ## 2.2 Read Data
 
  Read data.  
 
-```{r read-files}
+```{r read-files, echo = FALSE, comment = NA, cache = FALSE}
 suppressMessages(library('plyr'))
 suppressMessages(library('dplyr'))
 
-dat1 <- read.csv2('data/Programming Assignment 1 Data New/ExcelFormattedGISTEMPDataCSV.csv', sep=',') %>% tbl_df
+dat1 <- read.csv2('data/Programming Assignment 1 Data New/ExcelFormattedGISTEMPDataCSV.csv', sep=',') %>% tbl_df %>% mutate_each(funs(as.numeric))
 
-dat2 <- read.csv2('data/Programming Assignment 1 Data New/ExcelFormattedGISTEMPData2CSV.csv', sep=',') %>% tbl_df
+dat2 <- read.csv2('data/Programming Assignment 1 Data New/ExcelFormattedGISTEMPData2CSV.csv', sep=',') %>% tbl_df %>% mutate_each(funs(as.numeric))
 ```
 
 ```{r clear-memory, include = FALSE}
@@ -156,14 +165,13 @@ dat2 <- read.csv2('data/Programming Assignment 1 Data New/ExcelFormattedGISTEMPD
 
 ```{r unlink, include = FALSE}
 ## Delete the data folders to save the capacity.
-unlink('data/final', recursive = TRUE)
+unlink('data/Programming Assignment 1 Data New', recursive = TRUE)
 ```
 
-```{r data-details}
+```{r data-details, echo = FALSE}
 dats <- list(dat1, dat2)
 
 llply(dats, sapply, class)
-str(dats)
 ```
 
 ```{r clear-memory, include = FALSE}
@@ -179,19 +187,26 @@ rm(datafiles, dat1, dat2)
 # 3. Data Visulaization
 
   - Section [3.1 Data Table]
-  - Section [3.2 Line Chart]
-  - Section [3.3 RWeka]
-  - Section [4.4 Plot Dicision Tree]
+    - Section [3.1.1 Functional Table]
+    - Section [3.1.2 stylish Table]
+  - Section [3.2 Zooming Line Chart]
+  - Section [3.3 Moving Trend Line Chart]
+  - Section [3.4 Option Line Chart]
+  - Section [3.5 Google Line Chart]
 
 ## 3.1 Data Table
 
   Now we look at our data set in table format.
 
-```{r datatable1, echo = FALSE}
+### 3.1.1 Functional Table
+
+  The table has few functions which allow you to print, save etc.
+
+```{r datatable1a, echo = FALSE, comment = NA, cache = FALSE}
 suppressMessages(library('DT'))
 
 datatable(dats[[1]], 
-  caption="Table 3.1.1 : Deviation from the 1951 – 1980 Mean in 0.01 Degrees",
+  caption="Table 3.1.1 : Climate Degree Celsius from Year 1880 to 2015",
   extensions = list("ColReorder"=NULL, "ColVis"=NULL, "TableTools"=NULL
                     #, "FixedColumns"=list(leftColumns=2)
                     ), 
@@ -207,13 +222,13 @@ datatable(dats[[1]],
                  colVis=list(exclude=c(0), activate='mouseover')))
 ```
 
-  *table 3.1.1 : Deviation from the 1951 – 1980 Mean in 0.01 Degrees.*
+  *table 3.1.1 : Climate Degree Celsius from Year 1880 to 2015.*
 
-```{r datatable2, echo = FALSE}
+```{r datatable2a, echo = FALSE, comment = NA, cache = FALSE}
 suppressMessages(library('DT'))
 
 datatable(dats[[2]], 
-  caption="Table 3.1.2 : Globe and the North and South Hemispheres through all the given years",
+  caption="Table 3.1.2 : Global Temperature over the years",
   extensions = list("ColReorder"=NULL, "ColVis"=NULL, "TableTools"=NULL
                     #, "FixedColumns"=list(leftColumns=2)
                     ), 
@@ -229,79 +244,151 @@ datatable(dats[[2]],
                  colVis=list(exclude=c(0), activate='mouseover')))
 ```
 
-  *table 3.1.2 : Globe and the North and South Hemispheres through all the given years.*
+  *table 3.1.2 : Global Temperature over the years.*
+
+### 3.1.2 stylish Table
+
+  The table display with theme.
+
+```{r datatable1b, results = 'asis', echo = FALSE, comment = NA, cache = FALSE}
+suppressMessages(library('rCharts'))
+
+dt1 <- dTable(dats[[1]], sPaginationType = "full_numbers", iDisplayLength = 10, sScrollX = "100%")
+dt1$show('inline', include_assets = TRUE, cdn = TRUE)
+```
+
+  *table 3.2.1 : Climate Degree Celsius from Year 1880 to 2015.*
+
+```{r datatable2b, results = 'asis', echo = FALSE, comment = NA, cache = FALSE}
+dt2 <- dTable(dats[[2]], sPaginationType = "full_numbers", iDisplayLength = 10, sScrollX = "100%")
+dt2$show('inline', include_assets = TRUE, cdn = TRUE)
+```
+
+  *table 3.2.2 : Global Temperature over the years.*
 
 ```{r clear-memory, include = FALSE}
 ```
 
-## 3.2 Line Chart
+## 3.2 Zooming Line Chart
 
-  Now I plot a *xCharts*.
+  The zooming graph allow you to :
+  
+  - Click-and-drag to zoom into the elements inside the graph
+  - Move the cursor on the points will show you the value
+  - You can choose what element(s) to be show on the graph
+  - You can download and save the graph in different format through the top corner of right-hand site
+  - The graph will be auto zooming to fit the trend if you select/deselect a/some element(s)
 
-```{r}
+```{r line-1a, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
 suppressMessages(library('tidyr'))
-suppressMessages(library('dplyr'))
 suppressMessages(library('rCharts'))
 
-td.dat1 <- dats[[1]] %>% gather(Month, Value, Jan:SON)
-x1 <- xPlot(Value ~ Year, group = 'Month', data = td.dat1,
-  type = 'line-dotted')
-x1
+td.dat1 <- dats[[1]] %>% gather(Month, Value, Jan:SON) %>% mutate(Year = as.numeric(Year), Month = factor(Month), Value = as.numeric(Value))
+
+## hPlot
+L1a <- hPlot(Value ~ Year, data = td.dat1, group = 'Month', type = 'line', size = 'hp', title = 'Zoom with Line Chart 1', subtitle = 'Climate Degree Celsius from Year 1880 to 2015')
+L1a$exporting(enabled = T)
+L1a$chart(zoomType = "xy", margin = list(left=100, right=100, top=100, bottom=200))
+L1a$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
-  *graph 3.2.1 : Deviation from the 1951 – 1980 Mean in 0.01 Degrees.*
+  *graph 3.2.1 : Climate Degree Celsius from Year 1880 to 2015.*
 
-```{r}
-suppressMessages(library('tidyr'))
-suppressMessages(library('dplyr'))
-suppressMessages(library('rCharts'))
+  From the above graph, the *X Axis* indicates the year and *Y Axis* indicates the degree celsius.
+  
+```{r line-2a, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
+td.dat2 <- dats[[2]] %>% gather(Lat, Value, Glob:X90S.64S) %>% mutate(Year = as.numeric(Year), Lat = factor(Lat), Value = as.numeric(Value))
 
-td.dat2 <- dats[[2]] %>% gather(Lat, Value, Glob:X90S.64S)
-x2 <- xPlot(Value ~ Year, group = 'Lat', data = td.dat2,
-  type = 'line-dotted')
-x2
+## hPlot
+L2a <- hPlot(Value ~ Year, data = td.dat2, group = 'Lat', type = 'line', size = 'hp', title = 'Zoom with Line Chart 2', subtitle = 'Global Temperature over the years')
+L2a$exporting(enabled = T)
+L2a$chart(zoomType = "xy", margin = list(left=100, right=100, top=100, bottom=200))
+L2a$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
   *graph 3.2.2 : Globe and the North and South Hemispheres through all the given years.*
 
-## 3.3 
+  The resulting graph shows an increasing mean Global Temperature over the years.
 
-```{r , echo = FALSE}
-# Create the chart
-tfrPlot <- nPlot(
-  Value ~ Year, 
-  data = td.dat1, 
-  group = "Month",
-  type = "lineChart")
+## 3.3 Moving Trend Line Chart
 
-# Add axis labels and format the tooltip
-tfrPlot$yAxis(axisLabel = "Total fertility rate", width = 62)
+  The moving trend graph enable you to compare the value of all elements at once (at the same time point).
 
-tfrPlot$xAxis(axisLabel = "Year")
-
-tfrPlot$chart(tooltipContent = "#! function(key, x, y){
-        return '<h3>' + key + '</h3>' + 
-        '<p>' + y + ' in ' + x + '</p>'
-        } !#")
-tfrPlot
+```{r line-1b, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
+L1b <- mPlot(x = 'Year', y = names(dats[[1]])[-1], type = "Line", data = dats[[1]])
+L1b$set(pointSize = 0, lineWidth = 1)
+L1b$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
+  *graph 3.3.1 : Climate Degree Celsius from Year 1880 to 2015.*
 
+  From the above graph, the *X Axis* indicates the year and *Y Axis* indicates the degree celsius.
+  
+```{r line-2b, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
+L2b <- mPlot(x = 'Year', y = names(dats[[2]])[-1], type = "Line", data = dats[[2]])
+L2b$set(pointSize = 0, lineWidth = 1)
+L2b$show('inline', include_assets = TRUE, cdn = TRUE)
+```
+
+  *graph 3.3.2 : Global Temperature over the years.*
+
+  The resulting graph shows an increasing mean Global Temperature over the years.
+
+## 3.4 Option Line Chart
+
+  The option line chart only allow you to choose what element(s) to be display on the graph.
+
+```{r line-1c, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
+L2a <- nPlot(Value ~ Year, group = 'Month', data = td.dat1, type = 'lineChart')
+L2a$show('inline', include_assets = TRUE, cdn = TRUE)
+```
+
+  *graph 3.4.1 : Climate Degree Celsius from Year 1880 to 2015.*
+
+  From the above graph, the *X Axis* indicates the year and *Y Axis* indicates the degree celsius.
+  
+```{r line-2c, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
+L2c <- nPlot(Value ~ Year, group = 'Lat', data = td.dat2, type = 'lineChart')
+L2c$show('inline', include_assets = TRUE, cdn = TRUE)
+```
+
+  *graph 3.4.2 : Global Temperature over the years.*
+
+  The resulting graph shows an increasing mean Global Temperature over the years.
+  
+## 3.5 Google Line Chart
+
+  Google line chart allow you to see the value of element once you move your cursor to a particular time point. Besides, you can also select the chart type from the **Edit** option.
+
+```{r line-1d, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
+suppressMessages(library('googleVis'))
+op <- options(gvis.plot.tag='chart')
+
+L1d <-  gvisLineChart(dats[[1]], options = list(title = 'Climate Degree Celsius from Year 1880 to 2015', gvis.editor = 'Edit me!'))
+plot(L1d)
+```
+
+  *graph 3.5.1 : Climate Degree Celsius from Year 1880 to 2015.*
+
+  From the above graph, the *X Axis* indicates the year and *Y Axis* indicates the degree celsius.
+
+```{r line-2d, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
+L1d <-  gvisLineChart(dats[[2]], options = list(title = 'Global Temperature over the years', gvis.editor = 'Edit me!'))
+plot(L1d)
+```
+
+  *graph 3.5.2 : Global Temperature over the years.*
+
+  The resulting graph shows an increasing mean Global Temperature over the years.
+
+```{r reset-setting, include = FALSE}
+## Set options back to original options
+options(op)
+```
 
 # 4. Conclusion
 
-  From the text mining for the german dataset, we sampling the dataset to get the high frequency of occurence of words. Compare to previous version, from the report I also applied `tm`, `wordcloud`, `googleVis`, `rCharts` and `RWeka` packages etc to enhance and display a better data visualization on text mining.
-  
-  By the way I've created a shiny app for displaying the ability to predict the next word based on the high frequency rate. The frequency rate would depict the best predictive model.
-
-  **Remarks** : 
-  
-  - Due to some technical errors on the *rpart* and *RWeka* packages, here I ommit the section by made a crossline.
-  - Due to I tried to some solutions to plot the output by codes `p1$print('inline', include_assets = F, cdn = FALSE)`, `p1$show('inline', include_assets = FALSE, cdn = FALSE)`, `p1`, `p1$show()`, `p1$print()` but no one works for me. Below are some references.
-    
-    1. [Display two rCharts NVD3 figures next to each other in rmarkdown](http://stackoverflow.com/questions/29029718/display-two-rcharts-nvd3-figures-next-to-each-other-in-rmarkdown)
-    2. [Are rCharts and DT compatible in rmarkdown?](http://stackoverflow.com/questions/30212788/are-rcharts-and-dt-compatible-in-rmarkdown)
-    3. [Rcharts nPlot() Percentages with discrete/multiBarChart](http://stackoverflow.com/questions/19716356/rcharts-nplot-percentages-with-discrete-multibarchart)
+  In the paper I've plot few line charts by calling `rCharts`^[[**rCharts**](http://rcharts.io/) is an R package to create, customize and publish interactive javascript visualizations from R using a familiar lattice style plotting interface.] package.
 
 # 5. Appendices
 
@@ -321,7 +408,7 @@ tfrPlot
   - [**mosaic** package](https://github.com/ProjectMOSAIC/mosaic) version: `r packageVersion('mosaic')`
   - File version: 1.0.0
   - Author Profile: [®γσ, Eng Lian Hu](https://beta.rstudioconnect.com/englianhu/ryo-eng/)
-  - GitHub: [Source Code](https://github.com/englianhu/Coursera-Data-Mining/Coursera-Data-Mining)
+  - GitHub: [Source Code](https://github.com/englianhu/Coursera-Data-Mining)
   - Additional session information:
 
 ```{r info, echo=FALSE, results='asis'}
@@ -332,10 +419,20 @@ Sys.info()
 
 ## 5.2 Versions' Log
 
-  - *March 29, 2015*: [version: 1.0.0](...................................)
+  - *March 29, 2015*: [version: 1.0.0](https://github.com/englianhu/Coursera-Data-Mining/tree/master/Data%20Visualization)
 
-## 5.3 References
+## 5.3 Speech and Blooper
+
+  I faced few issues during preparation of this assignment.
+  - Tried to refer to [Add sparkline graph to a table](http://stackoverflow.com/questions/32841221/add-sparkline-graph-to-a-table)^[There has [**formattable** package](https://github.com/renkun-ken/formattable) and also an example of [mixing **sparklines** with formattable](https://github.com/renkun-ken/formattable/issues/10#issuecomment-110864675)] and applied it on my dataset but formattable doesn't work.
+  - 
+
+## 5.4 References
 
   - [*rCharts* Manual](http://rcharts.readthedocs.org/en/latest/intro/create.html)
   - [Interactive Analysis of Systematic Investor](http://timelyportfolio.github.io/rCharts_nvd3_systematic/cluster_weights.html)
+  - [**NVD3 with rCharts** *2014-01-14*](http://ramnathv.github.io/posts/rcharts-nvd3/)
+  - [**rCharts sharing to Rpubs issue** : *by Koba Khitalishvili - May 16, 2015*](https://rpubs.com/Koba/80208)
+  - [**UFO Reports Chart Demo** : *Connie Zabarovskaya - Monday, July 14, 2014*](http://rpubs.com/conniez/ufo_rchart)
+  - [Add sparkline graph to a table](http://stackoverflow.com/questions/32841221/add-sparkline-graph-to-a-table)
 

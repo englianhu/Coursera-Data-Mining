@@ -1,0 +1,9544 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css'>
+    
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='//d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js' type='text/javascript'></script>
+    <script src='//nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chart2d3b1c1ad210' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchart2d3b1c1ad210()
+    });
+    function drawchart2d3b1c1ad210(){  
+      var opts = {
+ "dom": "chart2d3b1c1ad210",
+"width":    800,
+"height":    400,
+"x": "Year",
+"y": "Value",
+"group": "Lat",
+"type": "lineChart",
+"id": "chart2d3b1c1ad210" 
+},
+        data = [
+ {
+ "Year":           1880,
+"Lat": "Glob",
+"Value":            -19 
+},
+{
+ "Year":           1881,
+"Lat": "Glob",
+"Value":            -10 
+},
+{
+ "Year":           1882,
+"Lat": "Glob",
+"Value":             -9 
+},
+{
+ "Year":           1883,
+"Lat": "Glob",
+"Value":            -19 
+},
+{
+ "Year":           1884,
+"Lat": "Glob",
+"Value":            -27 
+},
+{
+ "Year":           1885,
+"Lat": "Glob",
+"Value":            -31 
+},
+{
+ "Year":           1886,
+"Lat": "Glob",
+"Value":            -30 
+},
+{
+ "Year":           1887,
+"Lat": "Glob",
+"Value":            -33 
+},
+{
+ "Year":           1888,
+"Lat": "Glob",
+"Value":            -20 
+},
+{
+ "Year":           1889,
+"Lat": "Glob",
+"Value":            -11 
+},
+{
+ "Year":           1890,
+"Lat": "Glob",
+"Value":            -36 
+},
+{
+ "Year":           1891,
+"Lat": "Glob",
+"Value":            -23 
+},
+{
+ "Year":           1892,
+"Lat": "Glob",
+"Value":            -26 
+},
+{
+ "Year":           1893,
+"Lat": "Glob",
+"Value":            -29 
+},
+{
+ "Year":           1894,
+"Lat": "Glob",
+"Value":            -30 
+},
+{
+ "Year":           1895,
+"Lat": "Glob",
+"Value":            -21 
+},
+{
+ "Year":           1896,
+"Lat": "Glob",
+"Value":            -14 
+},
+{
+ "Year":           1897,
+"Lat": "Glob",
+"Value":            -11 
+},
+{
+ "Year":           1898,
+"Lat": "Glob",
+"Value":            -28 
+},
+{
+ "Year":           1899,
+"Lat": "Glob",
+"Value":            -16 
+},
+{
+ "Year":           1900,
+"Lat": "Glob",
+"Value":             -8 
+},
+{
+ "Year":           1901,
+"Lat": "Glob",
+"Value":            -13 
+},
+{
+ "Year":           1902,
+"Lat": "Glob",
+"Value":            -26 
+},
+{
+ "Year":           1903,
+"Lat": "Glob",
+"Value":            -35 
+},
+{
+ "Year":           1904,
+"Lat": "Glob",
+"Value":            -44 
+},
+{
+ "Year":           1905,
+"Lat": "Glob",
+"Value":            -27 
+},
+{
+ "Year":           1906,
+"Lat": "Glob",
+"Value":            -21 
+},
+{
+ "Year":           1907,
+"Lat": "Glob",
+"Value":            -39 
+},
+{
+ "Year":           1908,
+"Lat": "Glob",
+"Value":            -42 
+},
+{
+ "Year":           1909,
+"Lat": "Glob",
+"Value":            -47 
+},
+{
+ "Year":           1910,
+"Lat": "Glob",
+"Value":            -42 
+},
+{
+ "Year":           1911,
+"Lat": "Glob",
+"Value":            -44 
+},
+{
+ "Year":           1912,
+"Lat": "Glob",
+"Value":            -35 
+},
+{
+ "Year":           1913,
+"Lat": "Glob",
+"Value":            -33 
+},
+{
+ "Year":           1914,
+"Lat": "Glob",
+"Value":            -15 
+},
+{
+ "Year":           1915,
+"Lat": "Glob",
+"Value":            -10 
+},
+{
+ "Year":           1916,
+"Lat": "Glob",
+"Value":            -33 
+},
+{
+ "Year":           1917,
+"Lat": "Glob",
+"Value":            -39 
+},
+{
+ "Year":           1918,
+"Lat": "Glob",
+"Value":            -24 
+},
+{
+ "Year":           1919,
+"Lat": "Glob",
+"Value":            -21 
+},
+{
+ "Year":           1920,
+"Lat": "Glob",
+"Value":            -25 
+},
+{
+ "Year":           1921,
+"Lat": "Glob",
+"Value":            -19 
+},
+{
+ "Year":           1922,
+"Lat": "Glob",
+"Value":            -26 
+},
+{
+ "Year":           1923,
+"Lat": "Glob",
+"Value":            -22 
+},
+{
+ "Year":           1924,
+"Lat": "Glob",
+"Value":            -26 
+},
+{
+ "Year":           1925,
+"Lat": "Glob",
+"Value":            -19 
+},
+{
+ "Year":           1926,
+"Lat": "Glob",
+"Value":             -8 
+},
+{
+ "Year":           1927,
+"Lat": "Glob",
+"Value":            -20 
+},
+{
+ "Year":           1928,
+"Lat": "Glob",
+"Value":            -20 
+},
+{
+ "Year":           1929,
+"Lat": "Glob",
+"Value":            -35 
+},
+{
+ "Year":           1930,
+"Lat": "Glob",
+"Value":            -13 
+},
+{
+ "Year":           1931,
+"Lat": "Glob",
+"Value":             -9 
+},
+{
+ "Year":           1932,
+"Lat": "Glob",
+"Value":            -16 
+},
+{
+ "Year":           1933,
+"Lat": "Glob",
+"Value":            -28 
+},
+{
+ "Year":           1934,
+"Lat": "Glob",
+"Value":            -13 
+},
+{
+ "Year":           1935,
+"Lat": "Glob",
+"Value":            -19 
+},
+{
+ "Year":           1936,
+"Lat": "Glob",
+"Value":            -14 
+},
+{
+ "Year":           1937,
+"Lat": "Glob",
+"Value":             -1 
+},
+{
+ "Year":           1938,
+"Lat": "Glob",
+"Value":             -2 
+},
+{
+ "Year":           1939,
+"Lat": "Glob",
+"Value":             -3 
+},
+{
+ "Year":           1940,
+"Lat": "Glob",
+"Value":              8 
+},
+{
+ "Year":           1941,
+"Lat": "Glob",
+"Value":             13 
+},
+{
+ "Year":           1942,
+"Lat": "Glob",
+"Value":             10 
+},
+{
+ "Year":           1943,
+"Lat": "Glob",
+"Value":             14 
+},
+{
+ "Year":           1944,
+"Lat": "Glob",
+"Value":             26 
+},
+{
+ "Year":           1945,
+"Lat": "Glob",
+"Value":             13 
+},
+{
+ "Year":           1946,
+"Lat": "Glob",
+"Value":             -3 
+},
+{
+ "Year":           1947,
+"Lat": "Glob",
+"Value":             -3 
+},
+{
+ "Year":           1948,
+"Lat": "Glob",
+"Value":             -9 
+},
+{
+ "Year":           1949,
+"Lat": "Glob",
+"Value":             -9 
+},
+{
+ "Year":           1950,
+"Lat": "Glob",
+"Value":            -18 
+},
+{
+ "Year":           1951,
+"Lat": "Glob",
+"Value":             -7 
+},
+{
+ "Year":           1952,
+"Lat": "Glob",
+"Value":              1 
+},
+{
+ "Year":           1953,
+"Lat": "Glob",
+"Value":              8 
+},
+{
+ "Year":           1954,
+"Lat": "Glob",
+"Value":            -12 
+},
+{
+ "Year":           1955,
+"Lat": "Glob",
+"Value":            -14 
+},
+{
+ "Year":           1956,
+"Lat": "Glob",
+"Value":            -20 
+},
+{
+ "Year":           1957,
+"Lat": "Glob",
+"Value":              3 
+},
+{
+ "Year":           1958,
+"Lat": "Glob",
+"Value":              6 
+},
+{
+ "Year":           1959,
+"Lat": "Glob",
+"Value":              3 
+},
+{
+ "Year":           1960,
+"Lat": "Glob",
+"Value":             -3 
+},
+{
+ "Year":           1961,
+"Lat": "Glob",
+"Value":              5 
+},
+{
+ "Year":           1962,
+"Lat": "Glob",
+"Value":              3 
+},
+{
+ "Year":           1963,
+"Lat": "Glob",
+"Value":              6 
+},
+{
+ "Year":           1964,
+"Lat": "Glob",
+"Value":            -20 
+},
+{
+ "Year":           1965,
+"Lat": "Glob",
+"Value":            -10 
+},
+{
+ "Year":           1966,
+"Lat": "Glob",
+"Value":             -5 
+},
+{
+ "Year":           1967,
+"Lat": "Glob",
+"Value":             -2 
+},
+{
+ "Year":           1968,
+"Lat": "Glob",
+"Value":             -7 
+},
+{
+ "Year":           1969,
+"Lat": "Glob",
+"Value":              6 
+},
+{
+ "Year":           1970,
+"Lat": "Glob",
+"Value":              3 
+},
+{
+ "Year":           1971,
+"Lat": "Glob",
+"Value":             -9 
+},
+{
+ "Year":           1972,
+"Lat": "Glob",
+"Value":              1 
+},
+{
+ "Year":           1973,
+"Lat": "Glob",
+"Value":             15 
+},
+{
+ "Year":           1974,
+"Lat": "Glob",
+"Value":             -8 
+},
+{
+ "Year":           1975,
+"Lat": "Glob",
+"Value":             -1 
+},
+{
+ "Year":           1976,
+"Lat": "Glob",
+"Value":            -11 
+},
+{
+ "Year":           1977,
+"Lat": "Glob",
+"Value":             18 
+},
+{
+ "Year":           1978,
+"Lat": "Glob",
+"Value":              7 
+},
+{
+ "Year":           1979,
+"Lat": "Glob",
+"Value":             17 
+},
+{
+ "Year":           1980,
+"Lat": "Glob",
+"Value":             28 
+},
+{
+ "Year":           1981,
+"Lat": "Glob",
+"Value":             33 
+},
+{
+ "Year":           1982,
+"Lat": "Glob",
+"Value":             13 
+},
+{
+ "Year":           1983,
+"Lat": "Glob",
+"Value":             31 
+},
+{
+ "Year":           1984,
+"Lat": "Glob",
+"Value":             16 
+},
+{
+ "Year":           1985,
+"Lat": "Glob",
+"Value":             12 
+},
+{
+ "Year":           1986,
+"Lat": "Glob",
+"Value":             19 
+},
+{
+ "Year":           1987,
+"Lat": "Glob",
+"Value":             34 
+},
+{
+ "Year":           1988,
+"Lat": "Glob",
+"Value":             40 
+},
+{
+ "Year":           1989,
+"Lat": "Glob",
+"Value":             29 
+},
+{
+ "Year":           1990,
+"Lat": "Glob",
+"Value":             44 
+},
+{
+ "Year":           1991,
+"Lat": "Glob",
+"Value":             42 
+},
+{
+ "Year":           1992,
+"Lat": "Glob",
+"Value":             23 
+},
+{
+ "Year":           1993,
+"Lat": "Glob",
+"Value":             24 
+},
+{
+ "Year":           1994,
+"Lat": "Glob",
+"Value":             32 
+},
+{
+ "Year":           1995,
+"Lat": "Glob",
+"Value":             46 
+},
+{
+ "Year":           1996,
+"Lat": "Glob",
+"Value":             35 
+},
+{
+ "Year":           1997,
+"Lat": "Glob",
+"Value":             48 
+},
+{
+ "Year":           1998,
+"Lat": "Glob",
+"Value":             63 
+},
+{
+ "Year":           1999,
+"Lat": "Glob",
+"Value":             42 
+},
+{
+ "Year":           2000,
+"Lat": "Glob",
+"Value":             42 
+},
+{
+ "Year":           2001,
+"Lat": "Glob",
+"Value":             55 
+},
+{
+ "Year":           2002,
+"Lat": "Glob",
+"Value":             63 
+},
+{
+ "Year":           2003,
+"Lat": "Glob",
+"Value":             62 
+},
+{
+ "Year":           2004,
+"Lat": "Glob",
+"Value":             55 
+},
+{
+ "Year":           2005,
+"Lat": "Glob",
+"Value":             69 
+},
+{
+ "Year":           2006,
+"Lat": "Glob",
+"Value":             64 
+},
+{
+ "Year":           2007,
+"Lat": "Glob",
+"Value":             66 
+},
+{
+ "Year":           2008,
+"Lat": "Glob",
+"Value":             54 
+},
+{
+ "Year":           2009,
+"Lat": "Glob",
+"Value":             65 
+},
+{
+ "Year":           2010,
+"Lat": "Glob",
+"Value":             71 
+},
+{
+ "Year":           2011,
+"Lat": "Glob",
+"Value":             60 
+},
+{
+ "Year":           2012,
+"Lat": "Glob",
+"Value":             63 
+},
+{
+ "Year":           2013,
+"Lat": "Glob",
+"Value":             66 
+},
+{
+ "Year":           2014,
+"Lat": "Glob",
+"Value":             75 
+},
+{
+ "Year":           1880,
+"Lat": "NHem",
+"Value":            -33 
+},
+{
+ "Year":           1881,
+"Lat": "NHem",
+"Value":            -18 
+},
+{
+ "Year":           1882,
+"Lat": "NHem",
+"Value":            -17 
+},
+{
+ "Year":           1883,
+"Lat": "NHem",
+"Value":            -30 
+},
+{
+ "Year":           1884,
+"Lat": "NHem",
+"Value":            -42 
+},
+{
+ "Year":           1885,
+"Lat": "NHem",
+"Value":            -41 
+},
+{
+ "Year":           1886,
+"Lat": "NHem",
+"Value":            -39 
+},
+{
+ "Year":           1887,
+"Lat": "NHem",
+"Value":            -37 
+},
+{
+ "Year":           1888,
+"Lat": "NHem",
+"Value":            -22 
+},
+{
+ "Year":           1889,
+"Lat": "NHem",
+"Value":            -16 
+},
+{
+ "Year":           1890,
+"Lat": "NHem",
+"Value":            -40 
+},
+{
+ "Year":           1891,
+"Lat": "NHem",
+"Value":            -23 
+},
+{
+ "Year":           1892,
+"Lat": "NHem",
+"Value":            -30 
+},
+{
+ "Year":           1893,
+"Lat": "NHem",
+"Value":            -39 
+},
+{
+ "Year":           1894,
+"Lat": "NHem",
+"Value":            -37 
+},
+{
+ "Year":           1895,
+"Lat": "NHem",
+"Value":            -28 
+},
+{
+ "Year":           1896,
+"Lat": "NHem",
+"Value":            -20 
+},
+{
+ "Year":           1897,
+"Lat": "NHem",
+"Value":            -13 
+},
+{
+ "Year":           1898,
+"Lat": "NHem",
+"Value":            -28 
+},
+{
+ "Year":           1899,
+"Lat": "NHem",
+"Value":            -17 
+},
+{
+ "Year":           1900,
+"Lat": "NHem",
+"Value":             -3 
+},
+{
+ "Year":           1901,
+"Lat": "NHem",
+"Value":             -8 
+},
+{
+ "Year":           1902,
+"Lat": "NHem",
+"Value":            -29 
+},
+{
+ "Year":           1903,
+"Lat": "NHem",
+"Value":            -35 
+},
+{
+ "Year":           1904,
+"Lat": "NHem",
+"Value":            -45 
+},
+{
+ "Year":           1905,
+"Lat": "NHem",
+"Value":            -28 
+},
+{
+ "Year":           1906,
+"Lat": "NHem",
+"Value":            -20 
+},
+{
+ "Year":           1907,
+"Lat": "NHem",
+"Value":            -46 
+},
+{
+ "Year":           1908,
+"Lat": "NHem",
+"Value":            -45 
+},
+{
+ "Year":           1909,
+"Lat": "NHem",
+"Value":            -48 
+},
+{
+ "Year":           1910,
+"Lat": "NHem",
+"Value":            -43 
+},
+{
+ "Year":           1911,
+"Lat": "NHem",
+"Value":            -41 
+},
+{
+ "Year":           1912,
+"Lat": "NHem",
+"Value":            -47 
+},
+{
+ "Year":           1913,
+"Lat": "NHem",
+"Value":            -42 
+},
+{
+ "Year":           1914,
+"Lat": "NHem",
+"Value":            -18 
+},
+{
+ "Year":           1915,
+"Lat": "NHem",
+"Value":             -9 
+},
+{
+ "Year":           1916,
+"Lat": "NHem",
+"Value":            -35 
+},
+{
+ "Year":           1917,
+"Lat": "NHem",
+"Value":            -52 
+},
+{
+ "Year":           1918,
+"Lat": "NHem",
+"Value":            -32 
+},
+{
+ "Year":           1919,
+"Lat": "NHem",
+"Value":            -32 
+},
+{
+ "Year":           1920,
+"Lat": "NHem",
+"Value":            -26 
+},
+{
+ "Year":           1921,
+"Lat": "NHem",
+"Value":             -8 
+},
+{
+ "Year":           1922,
+"Lat": "NHem",
+"Value":            -25 
+},
+{
+ "Year":           1923,
+"Lat": "NHem",
+"Value":            -18 
+},
+{
+ "Year":           1924,
+"Lat": "NHem",
+"Value":            -15 
+},
+{
+ "Year":           1925,
+"Lat": "NHem",
+"Value":             -7 
+},
+{
+ "Year":           1926,
+"Lat": "NHem",
+"Value":              4 
+},
+{
+ "Year":           1927,
+"Lat": "NHem",
+"Value":            -10 
+},
+{
+ "Year":           1928,
+"Lat": "NHem",
+"Value":             -7 
+},
+{
+ "Year":           1929,
+"Lat": "NHem",
+"Value":            -30 
+},
+{
+ "Year":           1930,
+"Lat": "NHem",
+"Value":              2 
+},
+{
+ "Year":           1931,
+"Lat": "NHem",
+"Value":              5 
+},
+{
+ "Year":           1932,
+"Lat": "NHem",
+"Value":             -3 
+},
+{
+ "Year":           1933,
+"Lat": "NHem",
+"Value":            -24 
+},
+{
+ "Year":           1934,
+"Lat": "NHem",
+"Value":              1 
+},
+{
+ "Year":           1935,
+"Lat": "NHem",
+"Value":             -8 
+},
+{
+ "Year":           1936,
+"Lat": "NHem",
+"Value":             -3 
+},
+{
+ "Year":           1937,
+"Lat": "NHem",
+"Value":             13 
+},
+{
+ "Year":           1938,
+"Lat": "NHem",
+"Value":             14 
+},
+{
+ "Year":           1939,
+"Lat": "NHem",
+"Value":              7 
+},
+{
+ "Year":           1940,
+"Lat": "NHem",
+"Value":             14 
+},
+{
+ "Year":           1941,
+"Lat": "NHem",
+"Value":             16 
+},
+{
+ "Year":           1942,
+"Lat": "NHem",
+"Value":             14 
+},
+{
+ "Year":           1943,
+"Lat": "NHem",
+"Value":             21 
+},
+{
+ "Year":           1944,
+"Lat": "NHem",
+"Value":             28 
+},
+{
+ "Year":           1945,
+"Lat": "NHem",
+"Value":              9 
+},
+{
+ "Year":           1946,
+"Lat": "NHem",
+"Value":              7 
+},
+{
+ "Year":           1947,
+"Lat": "NHem",
+"Value":              5 
+},
+{
+ "Year":           1948,
+"Lat": "NHem",
+"Value":              0 
+},
+{
+ "Year":           1949,
+"Lat": "NHem",
+"Value":             -2 
+},
+{
+ "Year":           1950,
+"Lat": "NHem",
+"Value":            -16 
+},
+{
+ "Year":           1951,
+"Lat": "NHem",
+"Value":              5 
+},
+{
+ "Year":           1952,
+"Lat": "NHem",
+"Value":              5 
+},
+{
+ "Year":           1953,
+"Lat": "NHem",
+"Value":             22 
+},
+{
+ "Year":           1954,
+"Lat": "NHem",
+"Value":             -4 
+},
+{
+ "Year":           1955,
+"Lat": "NHem",
+"Value":             -9 
+},
+{
+ "Year":           1956,
+"Lat": "NHem",
+"Value":            -25 
+},
+{
+ "Year":           1957,
+"Lat": "NHem",
+"Value":              4 
+},
+{
+ "Year":           1958,
+"Lat": "NHem",
+"Value":             16 
+},
+{
+ "Year":           1959,
+"Lat": "NHem",
+"Value":             11 
+},
+{
+ "Year":           1960,
+"Lat": "NHem",
+"Value":              8 
+},
+{
+ "Year":           1961,
+"Lat": "NHem",
+"Value":              8 
+},
+{
+ "Year":           1962,
+"Lat": "NHem",
+"Value":             14 
+},
+{
+ "Year":           1963,
+"Lat": "NHem",
+"Value":             15 
+},
+{
+ "Year":           1964,
+"Lat": "NHem",
+"Value":            -20 
+},
+{
+ "Year":           1965,
+"Lat": "NHem",
+"Value":            -13 
+},
+{
+ "Year":           1966,
+"Lat": "NHem",
+"Value":              0 
+},
+{
+ "Year":           1967,
+"Lat": "NHem",
+"Value":              3 
+},
+{
+ "Year":           1968,
+"Lat": "NHem",
+"Value":             -5 
+},
+{
+ "Year":           1969,
+"Lat": "NHem",
+"Value":             -2 
+},
+{
+ "Year":           1970,
+"Lat": "NHem",
+"Value":             -3 
+},
+{
+ "Year":           1971,
+"Lat": "NHem",
+"Value":            -15 
+},
+{
+ "Year":           1972,
+"Lat": "NHem",
+"Value":            -18 
+},
+{
+ "Year":           1973,
+"Lat": "NHem",
+"Value":             10 
+},
+{
+ "Year":           1974,
+"Lat": "NHem",
+"Value":            -19 
+},
+{
+ "Year":           1975,
+"Lat": "NHem",
+"Value":             -5 
+},
+{
+ "Year":           1976,
+"Lat": "NHem",
+"Value":            -21 
+},
+{
+ "Year":           1977,
+"Lat": "NHem",
+"Value":             12 
+},
+{
+ "Year":           1978,
+"Lat": "NHem",
+"Value":              2 
+},
+{
+ "Year":           1979,
+"Lat": "NHem",
+"Value":              8 
+},
+{
+ "Year":           1980,
+"Lat": "NHem",
+"Value":             16 
+},
+{
+ "Year":           1981,
+"Lat": "NHem",
+"Value":             39 
+},
+{
+ "Year":           1982,
+"Lat": "NHem",
+"Value":              6 
+},
+{
+ "Year":           1983,
+"Lat": "NHem",
+"Value":             26 
+},
+{
+ "Year":           1984,
+"Lat": "NHem",
+"Value":              5 
+},
+{
+ "Year":           1985,
+"Lat": "NHem",
+"Value":              0 
+},
+{
+ "Year":           1986,
+"Lat": "NHem",
+"Value":             14 
+},
+{
+ "Year":           1987,
+"Lat": "NHem",
+"Value":             27 
+},
+{
+ "Year":           1988,
+"Lat": "NHem",
+"Value":             37 
+},
+{
+ "Year":           1989,
+"Lat": "NHem",
+"Value":             29 
+},
+{
+ "Year":           1990,
+"Lat": "NHem",
+"Value":             51 
+},
+{
+ "Year":           1991,
+"Lat": "NHem",
+"Value":             41 
+},
+{
+ "Year":           1992,
+"Lat": "NHem",
+"Value":             12 
+},
+{
+ "Year":           1993,
+"Lat": "NHem",
+"Value":             20 
+},
+{
+ "Year":           1994,
+"Lat": "NHem",
+"Value":             36 
+},
+{
+ "Year":           1995,
+"Lat": "NHem",
+"Value":             58 
+},
+{
+ "Year":           1996,
+"Lat": "NHem",
+"Value":             28 
+},
+{
+ "Year":           1997,
+"Lat": "NHem",
+"Value":             53 
+},
+{
+ "Year":           1998,
+"Lat": "NHem",
+"Value":             73 
+},
+{
+ "Year":           1999,
+"Lat": "NHem",
+"Value":             52 
+},
+{
+ "Year":           2000,
+"Lat": "NHem",
+"Value":             51 
+},
+{
+ "Year":           2001,
+"Lat": "NHem",
+"Value":             64 
+},
+{
+ "Year":           2002,
+"Lat": "NHem",
+"Value":             71 
+},
+{
+ "Year":           2003,
+"Lat": "NHem",
+"Value":             72 
+},
+{
+ "Year":           2004,
+"Lat": "NHem",
+"Value":             67 
+},
+{
+ "Year":           2005,
+"Lat": "NHem",
+"Value":             84 
+},
+{
+ "Year":           2006,
+"Lat": "NHem",
+"Value":             80 
+},
+{
+ "Year":           2007,
+"Lat": "NHem",
+"Value":             83 
+},
+{
+ "Year":           2008,
+"Lat": "NHem",
+"Value":             66 
+},
+{
+ "Year":           2009,
+"Lat": "NHem",
+"Value":             71 
+},
+{
+ "Year":           2010,
+"Lat": "NHem",
+"Value":             88 
+},
+{
+ "Year":           2011,
+"Lat": "NHem",
+"Value":             71 
+},
+{
+ "Year":           2012,
+"Lat": "NHem",
+"Value":             77 
+},
+{
+ "Year":           2013,
+"Lat": "NHem",
+"Value":             76 
+},
+{
+ "Year":           2014,
+"Lat": "NHem",
+"Value":             91 
+},
+{
+ "Year":           1880,
+"Lat": "SHem",
+"Value":             -5 
+},
+{
+ "Year":           1881,
+"Lat": "SHem",
+"Value":             -2 
+},
+{
+ "Year":           1882,
+"Lat": "SHem",
+"Value":             -1 
+},
+{
+ "Year":           1883,
+"Lat": "SHem",
+"Value":             -8 
+},
+{
+ "Year":           1884,
+"Lat": "SHem",
+"Value":            -12 
+},
+{
+ "Year":           1885,
+"Lat": "SHem",
+"Value":            -21 
+},
+{
+ "Year":           1886,
+"Lat": "SHem",
+"Value":            -21 
+},
+{
+ "Year":           1887,
+"Lat": "SHem",
+"Value":            -28 
+},
+{
+ "Year":           1888,
+"Lat": "SHem",
+"Value":            -17 
+},
+{
+ "Year":           1889,
+"Lat": "SHem",
+"Value":             -6 
+},
+{
+ "Year":           1890,
+"Lat": "SHem",
+"Value":            -33 
+},
+{
+ "Year":           1891,
+"Lat": "SHem",
+"Value":            -24 
+},
+{
+ "Year":           1892,
+"Lat": "SHem",
+"Value":            -21 
+},
+{
+ "Year":           1893,
+"Lat": "SHem",
+"Value":            -19 
+},
+{
+ "Year":           1894,
+"Lat": "SHem",
+"Value":            -23 
+},
+{
+ "Year":           1895,
+"Lat": "SHem",
+"Value":            -14 
+},
+{
+ "Year":           1896,
+"Lat": "SHem",
+"Value":             -8 
+},
+{
+ "Year":           1897,
+"Lat": "SHem",
+"Value":             -9 
+},
+{
+ "Year":           1898,
+"Lat": "SHem",
+"Value":            -29 
+},
+{
+ "Year":           1899,
+"Lat": "SHem",
+"Value":            -15 
+},
+{
+ "Year":           1900,
+"Lat": "SHem",
+"Value":            -13 
+},
+{
+ "Year":           1901,
+"Lat": "SHem",
+"Value":            -19 
+},
+{
+ "Year":           1902,
+"Lat": "SHem",
+"Value":            -23 
+},
+{
+ "Year":           1903,
+"Lat": "SHem",
+"Value":            -35 
+},
+{
+ "Year":           1904,
+"Lat": "SHem",
+"Value":            -42 
+},
+{
+ "Year":           1905,
+"Lat": "SHem",
+"Value":            -26 
+},
+{
+ "Year":           1906,
+"Lat": "SHem",
+"Value":            -23 
+},
+{
+ "Year":           1907,
+"Lat": "SHem",
+"Value":            -31 
+},
+{
+ "Year":           1908,
+"Lat": "SHem",
+"Value":            -39 
+},
+{
+ "Year":           1909,
+"Lat": "SHem",
+"Value":            -46 
+},
+{
+ "Year":           1910,
+"Lat": "SHem",
+"Value":            -41 
+},
+{
+ "Year":           1911,
+"Lat": "SHem",
+"Value":            -47 
+},
+{
+ "Year":           1912,
+"Lat": "SHem",
+"Value":            -22 
+},
+{
+ "Year":           1913,
+"Lat": "SHem",
+"Value":            -25 
+},
+{
+ "Year":           1914,
+"Lat": "SHem",
+"Value":            -13 
+},
+{
+ "Year":           1915,
+"Lat": "SHem",
+"Value":            -11 
+},
+{
+ "Year":           1916,
+"Lat": "SHem",
+"Value":            -30 
+},
+{
+ "Year":           1917,
+"Lat": "SHem",
+"Value":            -26 
+},
+{
+ "Year":           1918,
+"Lat": "SHem",
+"Value":            -17 
+},
+{
+ "Year":           1919,
+"Lat": "SHem",
+"Value":            -10 
+},
+{
+ "Year":           1920,
+"Lat": "SHem",
+"Value":            -24 
+},
+{
+ "Year":           1921,
+"Lat": "SHem",
+"Value":            -31 
+},
+{
+ "Year":           1922,
+"Lat": "SHem",
+"Value":            -27 
+},
+{
+ "Year":           1923,
+"Lat": "SHem",
+"Value":            -27 
+},
+{
+ "Year":           1924,
+"Lat": "SHem",
+"Value":            -38 
+},
+{
+ "Year":           1925,
+"Lat": "SHem",
+"Value":            -30 
+},
+{
+ "Year":           1926,
+"Lat": "SHem",
+"Value":            -21 
+},
+{
+ "Year":           1927,
+"Lat": "SHem",
+"Value":            -29 
+},
+{
+ "Year":           1928,
+"Lat": "SHem",
+"Value":            -33 
+},
+{
+ "Year":           1929,
+"Lat": "SHem",
+"Value":            -40 
+},
+{
+ "Year":           1930,
+"Lat": "SHem",
+"Value":            -29 
+},
+{
+ "Year":           1931,
+"Lat": "SHem",
+"Value":            -23 
+},
+{
+ "Year":           1932,
+"Lat": "SHem",
+"Value":            -30 
+},
+{
+ "Year":           1933,
+"Lat": "SHem",
+"Value":            -31 
+},
+{
+ "Year":           1934,
+"Lat": "SHem",
+"Value":            -27 
+},
+{
+ "Year":           1935,
+"Lat": "SHem",
+"Value":            -29 
+},
+{
+ "Year":           1936,
+"Lat": "SHem",
+"Value":            -26 
+},
+{
+ "Year":           1937,
+"Lat": "SHem",
+"Value":            -16 
+},
+{
+ "Year":           1938,
+"Lat": "SHem",
+"Value":            -18 
+},
+{
+ "Year":           1939,
+"Lat": "SHem",
+"Value":            -13 
+},
+{
+ "Year":           1940,
+"Lat": "SHem",
+"Value":              3 
+},
+{
+ "Year":           1941,
+"Lat": "SHem",
+"Value":             10 
+},
+{
+ "Year":           1942,
+"Lat": "SHem",
+"Value":              6 
+},
+{
+ "Year":           1943,
+"Lat": "SHem",
+"Value":              7 
+},
+{
+ "Year":           1944,
+"Lat": "SHem",
+"Value":             24 
+},
+{
+ "Year":           1945,
+"Lat": "SHem",
+"Value":             16 
+},
+{
+ "Year":           1946,
+"Lat": "SHem",
+"Value":            -12 
+},
+{
+ "Year":           1947,
+"Lat": "SHem",
+"Value":            -12 
+},
+{
+ "Year":           1948,
+"Lat": "SHem",
+"Value":            -18 
+},
+{
+ "Year":           1949,
+"Lat": "SHem",
+"Value":            -16 
+},
+{
+ "Year":           1950,
+"Lat": "SHem",
+"Value":            -19 
+},
+{
+ "Year":           1951,
+"Lat": "SHem",
+"Value":            -18 
+},
+{
+ "Year":           1952,
+"Lat": "SHem",
+"Value":             -3 
+},
+{
+ "Year":           1953,
+"Lat": "SHem",
+"Value":             -6 
+},
+{
+ "Year":           1954,
+"Lat": "SHem",
+"Value":            -20 
+},
+{
+ "Year":           1955,
+"Lat": "SHem",
+"Value":            -19 
+},
+{
+ "Year":           1956,
+"Lat": "SHem",
+"Value":            -14 
+},
+{
+ "Year":           1957,
+"Lat": "SHem",
+"Value":              3 
+},
+{
+ "Year":           1958,
+"Lat": "SHem",
+"Value":             -5 
+},
+{
+ "Year":           1959,
+"Lat": "SHem",
+"Value":             -4 
+},
+{
+ "Year":           1960,
+"Lat": "SHem",
+"Value":            -13 
+},
+{
+ "Year":           1961,
+"Lat": "SHem",
+"Value":              3 
+},
+{
+ "Year":           1962,
+"Lat": "SHem",
+"Value":             -9 
+},
+{
+ "Year":           1963,
+"Lat": "SHem",
+"Value":             -3 
+},
+{
+ "Year":           1964,
+"Lat": "SHem",
+"Value":            -21 
+},
+{
+ "Year":           1965,
+"Lat": "SHem",
+"Value":             -7 
+},
+{
+ "Year":           1966,
+"Lat": "SHem",
+"Value":            -10 
+},
+{
+ "Year":           1967,
+"Lat": "SHem",
+"Value":             -8 
+},
+{
+ "Year":           1968,
+"Lat": "SHem",
+"Value":             -9 
+},
+{
+ "Year":           1969,
+"Lat": "SHem",
+"Value":             14 
+},
+{
+ "Year":           1970,
+"Lat": "SHem",
+"Value":              9 
+},
+{
+ "Year":           1971,
+"Lat": "SHem",
+"Value":             -3 
+},
+{
+ "Year":           1972,
+"Lat": "SHem",
+"Value":             20 
+},
+{
+ "Year":           1973,
+"Lat": "SHem",
+"Value":             20 
+},
+{
+ "Year":           1974,
+"Lat": "SHem",
+"Value":              4 
+},
+{
+ "Year":           1975,
+"Lat": "SHem",
+"Value":              2 
+},
+{
+ "Year":           1976,
+"Lat": "SHem",
+"Value":             -2 
+},
+{
+ "Year":           1977,
+"Lat": "SHem",
+"Value":             24 
+},
+{
+ "Year":           1978,
+"Lat": "SHem",
+"Value":             12 
+},
+{
+ "Year":           1979,
+"Lat": "SHem",
+"Value":             26 
+},
+{
+ "Year":           1980,
+"Lat": "SHem",
+"Value":             39 
+},
+{
+ "Year":           1981,
+"Lat": "SHem",
+"Value":             27 
+},
+{
+ "Year":           1982,
+"Lat": "SHem",
+"Value":             21 
+},
+{
+ "Year":           1983,
+"Lat": "SHem",
+"Value":             35 
+},
+{
+ "Year":           1984,
+"Lat": "SHem",
+"Value":             27 
+},
+{
+ "Year":           1985,
+"Lat": "SHem",
+"Value":             25 
+},
+{
+ "Year":           1986,
+"Lat": "SHem",
+"Value":             25 
+},
+{
+ "Year":           1987,
+"Lat": "SHem",
+"Value":             41 
+},
+{
+ "Year":           1988,
+"Lat": "SHem",
+"Value":             43 
+},
+{
+ "Year":           1989,
+"Lat": "SHem",
+"Value":             29 
+},
+{
+ "Year":           1990,
+"Lat": "SHem",
+"Value":             36 
+},
+{
+ "Year":           1991,
+"Lat": "SHem",
+"Value":             44 
+},
+{
+ "Year":           1992,
+"Lat": "SHem",
+"Value":             33 
+},
+{
+ "Year":           1993,
+"Lat": "SHem",
+"Value":             29 
+},
+{
+ "Year":           1994,
+"Lat": "SHem",
+"Value":             27 
+},
+{
+ "Year":           1995,
+"Lat": "SHem",
+"Value":             34 
+},
+{
+ "Year":           1996,
+"Lat": "SHem",
+"Value":             42 
+},
+{
+ "Year":           1997,
+"Lat": "SHem",
+"Value":             42 
+},
+{
+ "Year":           1998,
+"Lat": "SHem",
+"Value":             54 
+},
+{
+ "Year":           1999,
+"Lat": "SHem",
+"Value":             32 
+},
+{
+ "Year":           2000,
+"Lat": "SHem",
+"Value":             33 
+},
+{
+ "Year":           2001,
+"Lat": "SHem",
+"Value":             46 
+},
+{
+ "Year":           2002,
+"Lat": "SHem",
+"Value":             56 
+},
+{
+ "Year":           2003,
+"Lat": "SHem",
+"Value":             52 
+},
+{
+ "Year":           2004,
+"Lat": "SHem",
+"Value":             42 
+},
+{
+ "Year":           2005,
+"Lat": "SHem",
+"Value":             55 
+},
+{
+ "Year":           2006,
+"Lat": "SHem",
+"Value":             47 
+},
+{
+ "Year":           2007,
+"Lat": "SHem",
+"Value":             49 
+},
+{
+ "Year":           2008,
+"Lat": "SHem",
+"Value":             42 
+},
+{
+ "Year":           2009,
+"Lat": "SHem",
+"Value":             59 
+},
+{
+ "Year":           2010,
+"Lat": "SHem",
+"Value":             55 
+},
+{
+ "Year":           2011,
+"Lat": "SHem",
+"Value":             50 
+},
+{
+ "Year":           2012,
+"Lat": "SHem",
+"Value":             50 
+},
+{
+ "Year":           2013,
+"Lat": "SHem",
+"Value":             56 
+},
+{
+ "Year":           2014,
+"Lat": "SHem",
+"Value":             58 
+},
+{
+ "Year":           1880,
+"Lat": "X24N.90N",
+"Value":            -38 
+},
+{
+ "Year":           1881,
+"Lat": "X24N.90N",
+"Value":            -27 
+},
+{
+ "Year":           1882,
+"Lat": "X24N.90N",
+"Value":            -21 
+},
+{
+ "Year":           1883,
+"Lat": "X24N.90N",
+"Value":            -34 
+},
+{
+ "Year":           1884,
+"Lat": "X24N.90N",
+"Value":            -56 
+},
+{
+ "Year":           1885,
+"Lat": "X24N.90N",
+"Value":            -61 
+},
+{
+ "Year":           1886,
+"Lat": "X24N.90N",
+"Value":            -49 
+},
+{
+ "Year":           1887,
+"Lat": "X24N.90N",
+"Value":            -46 
+},
+{
+ "Year":           1888,
+"Lat": "X24N.90N",
+"Value":            -42 
+},
+{
+ "Year":           1889,
+"Lat": "X24N.90N",
+"Value":            -25 
+},
+{
+ "Year":           1890,
+"Lat": "X24N.90N",
+"Value":            -44 
+},
+{
+ "Year":           1891,
+"Lat": "X24N.90N",
+"Value":            -33 
+},
+{
+ "Year":           1892,
+"Lat": "X24N.90N",
+"Value":            -29 
+},
+{
+ "Year":           1893,
+"Lat": "X24N.90N",
+"Value":            -37 
+},
+{
+ "Year":           1894,
+"Lat": "X24N.90N",
+"Value":            -26 
+},
+{
+ "Year":           1895,
+"Lat": "X24N.90N",
+"Value":            -34 
+},
+{
+ "Year":           1896,
+"Lat": "X24N.90N",
+"Value":            -33 
+},
+{
+ "Year":           1897,
+"Lat": "X24N.90N",
+"Value":            -30 
+},
+{
+ "Year":           1898,
+"Lat": "X24N.90N",
+"Value":            -28 
+},
+{
+ "Year":           1899,
+"Lat": "X24N.90N",
+"Value":            -18 
+},
+{
+ "Year":           1900,
+"Lat": "X24N.90N",
+"Value":            -12 
+},
+{
+ "Year":           1901,
+"Lat": "X24N.90N",
+"Value":            -10 
+},
+{
+ "Year":           1902,
+"Lat": "X24N.90N",
+"Value":            -47 
+},
+{
+ "Year":           1903,
+"Lat": "X24N.90N",
+"Value":            -39 
+},
+{
+ "Year":           1904,
+"Lat": "X24N.90N",
+"Value":            -46 
+},
+{
+ "Year":           1905,
+"Lat": "X24N.90N",
+"Value":            -37 
+},
+{
+ "Year":           1906,
+"Lat": "X24N.90N",
+"Value":            -19 
+},
+{
+ "Year":           1907,
+"Lat": "X24N.90N",
+"Value":            -56 
+},
+{
+ "Year":           1908,
+"Lat": "X24N.90N",
+"Value":            -46 
+},
+{
+ "Year":           1909,
+"Lat": "X24N.90N",
+"Value":            -47 
+},
+{
+ "Year":           1910,
+"Lat": "X24N.90N",
+"Value":            -36 
+},
+{
+ "Year":           1911,
+"Lat": "X24N.90N",
+"Value":            -37 
+},
+{
+ "Year":           1912,
+"Lat": "X24N.90N",
+"Value":            -57 
+},
+{
+ "Year":           1913,
+"Lat": "X24N.90N",
+"Value":            -40 
+},
+{
+ "Year":           1914,
+"Lat": "X24N.90N",
+"Value":            -22 
+},
+{
+ "Year":           1915,
+"Lat": "X24N.90N",
+"Value":            -16 
+},
+{
+ "Year":           1916,
+"Lat": "X24N.90N",
+"Value":            -27 
+},
+{
+ "Year":           1917,
+"Lat": "X24N.90N",
+"Value":            -40 
+},
+{
+ "Year":           1918,
+"Lat": "X24N.90N",
+"Value":            -32 
+},
+{
+ "Year":           1919,
+"Lat": "X24N.90N",
+"Value":            -39 
+},
+{
+ "Year":           1920,
+"Lat": "X24N.90N",
+"Value":            -16 
+},
+{
+ "Year":           1921,
+"Lat": "X24N.90N",
+"Value":              7 
+},
+{
+ "Year":           1922,
+"Lat": "X24N.90N",
+"Value":            -18 
+},
+{
+ "Year":           1923,
+"Lat": "X24N.90N",
+"Value":             -7 
+},
+{
+ "Year":           1924,
+"Lat": "X24N.90N",
+"Value":             -7 
+},
+{
+ "Year":           1925,
+"Lat": "X24N.90N",
+"Value":              3 
+},
+{
+ "Year":           1926,
+"Lat": "X24N.90N",
+"Value":              6 
+},
+{
+ "Year":           1927,
+"Lat": "X24N.90N",
+"Value":             -9 
+},
+{
+ "Year":           1928,
+"Lat": "X24N.90N",
+"Value":             -3 
+},
+{
+ "Year":           1929,
+"Lat": "X24N.90N",
+"Value":            -33 
+},
+{
+ "Year":           1930,
+"Lat": "X24N.90N",
+"Value":             10 
+},
+{
+ "Year":           1931,
+"Lat": "X24N.90N",
+"Value":              5 
+},
+{
+ "Year":           1932,
+"Lat": "X24N.90N",
+"Value":              7 
+},
+{
+ "Year":           1933,
+"Lat": "X24N.90N",
+"Value":            -21 
+},
+{
+ "Year":           1934,
+"Lat": "X24N.90N",
+"Value":             21 
+},
+{
+ "Year":           1935,
+"Lat": "X24N.90N",
+"Value":              0 
+},
+{
+ "Year":           1936,
+"Lat": "X24N.90N",
+"Value":             -1 
+},
+{
+ "Year":           1937,
+"Lat": "X24N.90N",
+"Value":             21 
+},
+{
+ "Year":           1938,
+"Lat": "X24N.90N",
+"Value":             37 
+},
+{
+ "Year":           1939,
+"Lat": "X24N.90N",
+"Value":             24 
+},
+{
+ "Year":           1940,
+"Lat": "X24N.90N",
+"Value":             10 
+},
+{
+ "Year":           1941,
+"Lat": "X24N.90N",
+"Value":             -3 
+},
+{
+ "Year":           1942,
+"Lat": "X24N.90N",
+"Value":             14 
+},
+{
+ "Year":           1943,
+"Lat": "X24N.90N",
+"Value":             38 
+},
+{
+ "Year":           1944,
+"Lat": "X24N.90N",
+"Value":             39 
+},
+{
+ "Year":           1945,
+"Lat": "X24N.90N",
+"Value":             10 
+},
+{
+ "Year":           1946,
+"Lat": "X24N.90N",
+"Value":              8 
+},
+{
+ "Year":           1947,
+"Lat": "X24N.90N",
+"Value":             14 
+},
+{
+ "Year":           1948,
+"Lat": "X24N.90N",
+"Value":             14 
+},
+{
+ "Year":           1949,
+"Lat": "X24N.90N",
+"Value":             12 
+},
+{
+ "Year":           1950,
+"Lat": "X24N.90N",
+"Value":             -8 
+},
+{
+ "Year":           1951,
+"Lat": "X24N.90N",
+"Value":              7 
+},
+{
+ "Year":           1952,
+"Lat": "X24N.90N",
+"Value":              9 
+},
+{
+ "Year":           1953,
+"Lat": "X24N.90N",
+"Value":             33 
+},
+{
+ "Year":           1954,
+"Lat": "X24N.90N",
+"Value":              3 
+},
+{
+ "Year":           1955,
+"Lat": "X24N.90N",
+"Value":              2 
+},
+{
+ "Year":           1956,
+"Lat": "X24N.90N",
+"Value":            -24 
+},
+{
+ "Year":           1957,
+"Lat": "X24N.90N",
+"Value":              2 
+},
+{
+ "Year":           1958,
+"Lat": "X24N.90N",
+"Value":             10 
+},
+{
+ "Year":           1959,
+"Lat": "X24N.90N",
+"Value":             15 
+},
+{
+ "Year":           1960,
+"Lat": "X24N.90N",
+"Value":              9 
+},
+{
+ "Year":           1961,
+"Lat": "X24N.90N",
+"Value":             18 
+},
+{
+ "Year":           1962,
+"Lat": "X24N.90N",
+"Value":             27 
+},
+{
+ "Year":           1963,
+"Lat": "X24N.90N",
+"Value":             16 
+},
+{
+ "Year":           1964,
+"Lat": "X24N.90N",
+"Value":            -24 
+},
+{
+ "Year":           1965,
+"Lat": "X24N.90N",
+"Value":            -17 
+},
+{
+ "Year":           1966,
+"Lat": "X24N.90N",
+"Value":            -12 
+},
+{
+ "Year":           1967,
+"Lat": "X24N.90N",
+"Value":             13 
+},
+{
+ "Year":           1968,
+"Lat": "X24N.90N",
+"Value":             -8 
+},
+{
+ "Year":           1969,
+"Lat": "X24N.90N",
+"Value":            -26 
+},
+{
+ "Year":           1970,
+"Lat": "X24N.90N",
+"Value":            -10 
+},
+{
+ "Year":           1971,
+"Lat": "X24N.90N",
+"Value":             -6 
+},
+{
+ "Year":           1972,
+"Lat": "X24N.90N",
+"Value":            -35 
+},
+{
+ "Year":           1973,
+"Lat": "X24N.90N",
+"Value":             12 
+},
+{
+ "Year":           1974,
+"Lat": "X24N.90N",
+"Value":            -17 
+},
+{
+ "Year":           1975,
+"Lat": "X24N.90N",
+"Value":             12 
+},
+{
+ "Year":           1976,
+"Lat": "X24N.90N",
+"Value":            -26 
+},
+{
+ "Year":           1977,
+"Lat": "X24N.90N",
+"Value":             14 
+},
+{
+ "Year":           1978,
+"Lat": "X24N.90N",
+"Value":             -3 
+},
+{
+ "Year":           1979,
+"Lat": "X24N.90N",
+"Value":             -3 
+},
+{
+ "Year":           1980,
+"Lat": "X24N.90N",
+"Value":              6 
+},
+{
+ "Year":           1981,
+"Lat": "X24N.90N",
+"Value":             50 
+},
+{
+ "Year":           1982,
+"Lat": "X24N.90N",
+"Value":             -6 
+},
+{
+ "Year":           1983,
+"Lat": "X24N.90N",
+"Value":             24 
+},
+{
+ "Year":           1984,
+"Lat": "X24N.90N",
+"Value":              3 
+},
+{
+ "Year":           1985,
+"Lat": "X24N.90N",
+"Value":             -3 
+},
+{
+ "Year":           1986,
+"Lat": "X24N.90N",
+"Value":             11 
+},
+{
+ "Year":           1987,
+"Lat": "X24N.90N",
+"Value":              7 
+},
+{
+ "Year":           1988,
+"Lat": "X24N.90N",
+"Value":             40 
+},
+{
+ "Year":           1989,
+"Lat": "X24N.90N",
+"Value":             42 
+},
+{
+ "Year":           1990,
+"Lat": "X24N.90N",
+"Value":             61 
+},
+{
+ "Year":           1991,
+"Lat": "X24N.90N",
+"Value":             46 
+},
+{
+ "Year":           1992,
+"Lat": "X24N.90N",
+"Value":              7 
+},
+{
+ "Year":           1993,
+"Lat": "X24N.90N",
+"Value":             13 
+},
+{
+ "Year":           1994,
+"Lat": "X24N.90N",
+"Value":             43 
+},
+{
+ "Year":           1995,
+"Lat": "X24N.90N",
+"Value":             70 
+},
+{
+ "Year":           1996,
+"Lat": "X24N.90N",
+"Value":             26 
+},
+{
+ "Year":           1997,
+"Lat": "X24N.90N",
+"Value":             54 
+},
+{
+ "Year":           1998,
+"Lat": "X24N.90N",
+"Value":             79 
+},
+{
+ "Year":           1999,
+"Lat": "X24N.90N",
+"Value":             73 
+},
+{
+ "Year":           2000,
+"Lat": "X24N.90N",
+"Value":             71 
+},
+{
+ "Year":           2001,
+"Lat": "X24N.90N",
+"Value":             80 
+},
+{
+ "Year":           2002,
+"Lat": "X24N.90N",
+"Value":             81 
+},
+{
+ "Year":           2003,
+"Lat": "X24N.90N",
+"Value":             80 
+},
+{
+ "Year":           2004,
+"Lat": "X24N.90N",
+"Value":             75 
+},
+{
+ "Year":           2005,
+"Lat": "X24N.90N",
+"Value":             99 
+},
+{
+ "Year":           2006,
+"Lat": "X24N.90N",
+"Value":             96 
+},
+{
+ "Year":           2007,
+"Lat": "X24N.90N",
+"Value":            110 
+},
+{
+ "Year":           2008,
+"Lat": "X24N.90N",
+"Value":             88 
+},
+{
+ "Year":           2009,
+"Lat": "X24N.90N",
+"Value":             74 
+},
+{
+ "Year":           2010,
+"Lat": "X24N.90N",
+"Value":             98 
+},
+{
+ "Year":           2011,
+"Lat": "X24N.90N",
+"Value":             93 
+},
+{
+ "Year":           2012,
+"Lat": "X24N.90N",
+"Value":             97 
+},
+{
+ "Year":           2013,
+"Lat": "X24N.90N",
+"Value":             88 
+},
+{
+ "Year":           2014,
+"Lat": "X24N.90N",
+"Value":            106 
+},
+{
+ "Year":           1880,
+"Lat": "X24S.24N",
+"Value":            -16 
+},
+{
+ "Year":           1881,
+"Lat": "X24S.24N",
+"Value":             -2 
+},
+{
+ "Year":           1882,
+"Lat": "X24S.24N",
+"Value":            -10 
+},
+{
+ "Year":           1883,
+"Lat": "X24S.24N",
+"Value":            -22 
+},
+{
+ "Year":           1884,
+"Lat": "X24S.24N",
+"Value":            -17 
+},
+{
+ "Year":           1885,
+"Lat": "X24S.24N",
+"Value":            -17 
+},
+{
+ "Year":           1886,
+"Lat": "X24S.24N",
+"Value":            -24 
+},
+{
+ "Year":           1887,
+"Lat": "X24S.24N",
+"Value":            -27 
+},
+{
+ "Year":           1888,
+"Lat": "X24S.24N",
+"Value":              7 
+},
+{
+ "Year":           1889,
+"Lat": "X24S.24N",
+"Value":              4 
+},
+{
+ "Year":           1890,
+"Lat": "X24S.24N",
+"Value":            -39 
+},
+{
+ "Year":           1891,
+"Lat": "X24S.24N",
+"Value":            -16 
+},
+{
+ "Year":           1892,
+"Lat": "X24S.24N",
+"Value":            -30 
+},
+{
+ "Year":           1893,
+"Lat": "X24S.24N",
+"Value":            -40 
+},
+{
+ "Year":           1894,
+"Lat": "X24S.24N",
+"Value":            -38 
+},
+{
+ "Year":           1895,
+"Lat": "X24S.24N",
+"Value":            -13 
+},
+{
+ "Year":           1896,
+"Lat": "X24S.24N",
+"Value":              3 
+},
+{
+ "Year":           1897,
+"Lat": "X24S.24N",
+"Value":             16 
+},
+{
+ "Year":           1898,
+"Lat": "X24S.24N",
+"Value":            -29 
+},
+{
+ "Year":           1899,
+"Lat": "X24S.24N",
+"Value":            -13 
+},
+{
+ "Year":           1900,
+"Lat": "X24S.24N",
+"Value":             15 
+},
+{
+ "Year":           1901,
+"Lat": "X24S.24N",
+"Value":             -5 
+},
+{
+ "Year":           1902,
+"Lat": "X24S.24N",
+"Value":             -5 
+},
+{
+ "Year":           1903,
+"Lat": "X24S.24N",
+"Value":            -32 
+},
+{
+ "Year":           1904,
+"Lat": "X24S.24N",
+"Value":            -46 
+},
+{
+ "Year":           1905,
+"Lat": "X24S.24N",
+"Value":            -13 
+},
+{
+ "Year":           1906,
+"Lat": "X24S.24N",
+"Value":            -22 
+},
+{
+ "Year":           1907,
+"Lat": "X24S.24N",
+"Value":            -34 
+},
+{
+ "Year":           1908,
+"Lat": "X24S.24N",
+"Value":            -47 
+},
+{
+ "Year":           1909,
+"Lat": "X24S.24N",
+"Value":            -53 
+},
+{
+ "Year":           1910,
+"Lat": "X24S.24N",
+"Value":            -54 
+},
+{
+ "Year":           1911,
+"Lat": "X24S.24N",
+"Value":            -47 
+},
+{
+ "Year":           1912,
+"Lat": "X24S.24N",
+"Value":            -22 
+},
+{
+ "Year":           1913,
+"Lat": "X24S.24N",
+"Value":            -31 
+},
+{
+ "Year":           1914,
+"Lat": "X24S.24N",
+"Value":             -7 
+},
+{
+ "Year":           1915,
+"Lat": "X24S.24N",
+"Value":              1 
+},
+{
+ "Year":           1916,
+"Lat": "X24S.24N",
+"Value":            -45 
+},
+{
+ "Year":           1917,
+"Lat": "X24S.24N",
+"Value":            -61 
+},
+{
+ "Year":           1918,
+"Lat": "X24S.24N",
+"Value":            -27 
+},
+{
+ "Year":           1919,
+"Lat": "X24S.24N",
+"Value":            -14 
+},
+{
+ "Year":           1920,
+"Lat": "X24S.24N",
+"Value":            -27 
+},
+{
+ "Year":           1921,
+"Lat": "X24S.24N",
+"Value":            -27 
+},
+{
+ "Year":           1922,
+"Lat": "X24S.24N",
+"Value":            -32 
+},
+{
+ "Year":           1923,
+"Lat": "X24S.24N",
+"Value":            -30 
+},
+{
+ "Year":           1924,
+"Lat": "X24S.24N",
+"Value":            -25 
+},
+{
+ "Year":           1925,
+"Lat": "X24S.24N",
+"Value":            -22 
+},
+{
+ "Year":           1926,
+"Lat": "X24S.24N",
+"Value":              3 
+},
+{
+ "Year":           1927,
+"Lat": "X24S.24N",
+"Value":            -14 
+},
+{
+ "Year":           1928,
+"Lat": "X24S.24N",
+"Value":            -14 
+},
+{
+ "Year":           1929,
+"Lat": "X24S.24N",
+"Value":            -27 
+},
+{
+ "Year":           1930,
+"Lat": "X24S.24N",
+"Value":            -12 
+},
+{
+ "Year":           1931,
+"Lat": "X24S.24N",
+"Value":              3 
+},
+{
+ "Year":           1932,
+"Lat": "X24S.24N",
+"Value":            -17 
+},
+{
+ "Year":           1933,
+"Lat": "X24S.24N",
+"Value":            -29 
+},
+{
+ "Year":           1934,
+"Lat": "X24S.24N",
+"Value":            -27 
+},
+{
+ "Year":           1935,
+"Lat": "X24S.24N",
+"Value":            -22 
+},
+{
+ "Year":           1936,
+"Lat": "X24S.24N",
+"Value":            -14 
+},
+{
+ "Year":           1937,
+"Lat": "X24S.24N",
+"Value":             -6 
+},
+{
+ "Year":           1938,
+"Lat": "X24S.24N",
+"Value":            -26 
+},
+{
+ "Year":           1939,
+"Lat": "X24S.24N",
+"Value":            -17 
+},
+{
+ "Year":           1940,
+"Lat": "X24S.24N",
+"Value":             19 
+},
+{
+ "Year":           1941,
+"Lat": "X24S.24N",
+"Value":             39 
+},
+{
+ "Year":           1942,
+"Lat": "X24S.24N",
+"Value":             15 
+},
+{
+ "Year":           1943,
+"Lat": "X24S.24N",
+"Value":              0 
+},
+{
+ "Year":           1944,
+"Lat": "X24S.24N",
+"Value":             22 
+},
+{
+ "Year":           1945,
+"Lat": "X24S.24N",
+"Value":             22 
+},
+{
+ "Year":           1946,
+"Lat": "X24S.24N",
+"Value":             -1 
+},
+{
+ "Year":           1947,
+"Lat": "X24S.24N",
+"Value":             -9 
+},
+{
+ "Year":           1948,
+"Lat": "X24S.24N",
+"Value":            -18 
+},
+{
+ "Year":           1949,
+"Lat": "X24S.24N",
+"Value":            -18 
+},
+{
+ "Year":           1950,
+"Lat": "X24S.24N",
+"Value":            -27 
+},
+{
+ "Year":           1951,
+"Lat": "X24S.24N",
+"Value":             -6 
+},
+{
+ "Year":           1952,
+"Lat": "X24S.24N",
+"Value":              2 
+},
+{
+ "Year":           1953,
+"Lat": "X24S.24N",
+"Value":              5 
+},
+{
+ "Year":           1954,
+"Lat": "X24S.24N",
+"Value":            -21 
+},
+{
+ "Year":           1955,
+"Lat": "X24S.24N",
+"Value":            -32 
+},
+{
+ "Year":           1956,
+"Lat": "X24S.24N",
+"Value":            -32 
+},
+{
+ "Year":           1957,
+"Lat": "X24S.24N",
+"Value":              7 
+},
+{
+ "Year":           1958,
+"Lat": "X24S.24N",
+"Value":             20 
+},
+{
+ "Year":           1959,
+"Lat": "X24S.24N",
+"Value":              6 
+},
+{
+ "Year":           1960,
+"Lat": "X24S.24N",
+"Value":              1 
+},
+{
+ "Year":           1961,
+"Lat": "X24S.24N",
+"Value":             -3 
+},
+{
+ "Year":           1962,
+"Lat": "X24S.24N",
+"Value":             -4 
+},
+{
+ "Year":           1963,
+"Lat": "X24S.24N",
+"Value":             11 
+},
+{
+ "Year":           1964,
+"Lat": "X24S.24N",
+"Value":            -14 
+},
+{
+ "Year":           1965,
+"Lat": "X24S.24N",
+"Value":             -3 
+},
+{
+ "Year":           1966,
+"Lat": "X24S.24N",
+"Value":              8 
+},
+{
+ "Year":           1967,
+"Lat": "X24S.24N",
+"Value":            -14 
+},
+{
+ "Year":           1968,
+"Lat": "X24S.24N",
+"Value":             -6 
+},
+{
+ "Year":           1969,
+"Lat": "X24S.24N",
+"Value":             32 
+},
+{
+ "Year":           1970,
+"Lat": "X24S.24N",
+"Value":              6 
+},
+{
+ "Year":           1971,
+"Lat": "X24S.24N",
+"Value":            -26 
+},
+{
+ "Year":           1972,
+"Lat": "X24S.24N",
+"Value":             16 
+},
+{
+ "Year":           1973,
+"Lat": "X24S.24N",
+"Value":             17 
+},
+{
+ "Year":           1974,
+"Lat": "X24S.24N",
+"Value":            -19 
+},
+{
+ "Year":           1975,
+"Lat": "X24S.24N",
+"Value":            -22 
+},
+{
+ "Year":           1976,
+"Lat": "X24S.24N",
+"Value":            -11 
+},
+{
+ "Year":           1977,
+"Lat": "X24S.24N",
+"Value":             16 
+},
+{
+ "Year":           1978,
+"Lat": "X24S.24N",
+"Value":              9 
+},
+{
+ "Year":           1979,
+"Lat": "X24S.24N",
+"Value":             25 
+},
+{
+ "Year":           1980,
+"Lat": "X24S.24N",
+"Value":             30 
+},
+{
+ "Year":           1981,
+"Lat": "X24S.24N",
+"Value":             19 
+},
+{
+ "Year":           1982,
+"Lat": "X24S.24N",
+"Value":             27 
+},
+{
+ "Year":           1983,
+"Lat": "X24S.24N",
+"Value":             44 
+},
+{
+ "Year":           1984,
+"Lat": "X24S.24N",
+"Value":             19 
+},
+{
+ "Year":           1985,
+"Lat": "X24S.24N",
+"Value":             11 
+},
+{
+ "Year":           1986,
+"Lat": "X24S.24N",
+"Value":             24 
+},
+{
+ "Year":           1987,
+"Lat": "X24S.24N",
+"Value":             60 
+},
+{
+ "Year":           1988,
+"Lat": "X24S.24N",
+"Value":             38 
+},
+{
+ "Year":           1989,
+"Lat": "X24S.24N",
+"Value":             16 
+},
+{
+ "Year":           1990,
+"Lat": "X24S.24N",
+"Value":             38 
+},
+{
+ "Year":           1991,
+"Lat": "X24S.24N",
+"Value":             39 
+},
+{
+ "Year":           1992,
+"Lat": "X24S.24N",
+"Value":             30 
+},
+{
+ "Year":           1993,
+"Lat": "X24S.24N",
+"Value":             34 
+},
+{
+ "Year":           1994,
+"Lat": "X24S.24N",
+"Value":             32 
+},
+{
+ "Year":           1995,
+"Lat": "X24S.24N",
+"Value":             44 
+},
+{
+ "Year":           1996,
+"Lat": "X24S.24N",
+"Value":             34 
+},
+{
+ "Year":           1997,
+"Lat": "X24S.24N",
+"Value":             53 
+},
+{
+ "Year":           1998,
+"Lat": "X24S.24N",
+"Value":             72 
+},
+{
+ "Year":           1999,
+"Lat": "X24S.24N",
+"Value":             26 
+},
+{
+ "Year":           2000,
+"Lat": "X24S.24N",
+"Value":             28 
+},
+{
+ "Year":           2001,
+"Lat": "X24S.24N",
+"Value":             45 
+},
+{
+ "Year":           2002,
+"Lat": "X24S.24N",
+"Value":             61 
+},
+{
+ "Year":           2003,
+"Lat": "X24S.24N",
+"Value":             64 
+},
+{
+ "Year":           2004,
+"Lat": "X24S.24N",
+"Value":             57 
+},
+{
+ "Year":           2005,
+"Lat": "X24S.24N",
+"Value":             65 
+},
+{
+ "Year":           2006,
+"Lat": "X24S.24N",
+"Value":             56 
+},
+{
+ "Year":           2007,
+"Lat": "X24S.24N",
+"Value":             47 
+},
+{
+ "Year":           2008,
+"Lat": "X24S.24N",
+"Value":             39 
+},
+{
+ "Year":           2009,
+"Lat": "X24S.24N",
+"Value":             68 
+},
+{
+ "Year":           2010,
+"Lat": "X24S.24N",
+"Value":             69 
+},
+{
+ "Year":           2011,
+"Lat": "X24S.24N",
+"Value":             37 
+},
+{
+ "Year":           2012,
+"Lat": "X24S.24N",
+"Value":             51 
+},
+{
+ "Year":           2013,
+"Lat": "X24S.24N",
+"Value":             58 
+},
+{
+ "Year":           2014,
+"Lat": "X24S.24N",
+"Value":             67 
+},
+{
+ "Year":           1880,
+"Lat": "X90S.24S",
+"Value":             -5 
+},
+{
+ "Year":           1881,
+"Lat": "X90S.24S",
+"Value":             -5 
+},
+{
+ "Year":           1882,
+"Lat": "X90S.24S",
+"Value":              4 
+},
+{
+ "Year":           1883,
+"Lat": "X90S.24S",
+"Value":             -2 
+},
+{
+ "Year":           1884,
+"Lat": "X90S.24S",
+"Value":            -11 
+},
+{
+ "Year":           1885,
+"Lat": "X90S.24S",
+"Value":            -20 
+},
+{
+ "Year":           1886,
+"Lat": "X90S.24S",
+"Value":            -20 
+},
+{
+ "Year":           1887,
+"Lat": "X90S.24S",
+"Value":            -26 
+},
+{
+ "Year":           1888,
+"Lat": "X90S.24S",
+"Value":            -33 
+},
+{
+ "Year":           1889,
+"Lat": "X90S.24S",
+"Value":            -17 
+},
+{
+ "Year":           1890,
+"Lat": "X90S.24S",
+"Value":            -26 
+},
+{
+ "Year":           1891,
+"Lat": "X90S.24S",
+"Value":            -23 
+},
+{
+ "Year":           1892,
+"Lat": "X90S.24S",
+"Value":            -16 
+},
+{
+ "Year":           1893,
+"Lat": "X90S.24S",
+"Value":             -7 
+},
+{
+ "Year":           1894,
+"Lat": "X90S.24S",
+"Value":            -22 
+},
+{
+ "Year":           1895,
+"Lat": "X90S.24S",
+"Value":            -19 
+},
+{
+ "Year":           1896,
+"Lat": "X90S.24S",
+"Value":            -18 
+},
+{
+ "Year":           1897,
+"Lat": "X90S.24S",
+"Value":            -28 
+},
+{
+ "Year":           1898,
+"Lat": "X90S.24S",
+"Value":            -29 
+},
+{
+ "Year":           1899,
+"Lat": "X90S.24S",
+"Value":            -17 
+},
+{
+ "Year":           1900,
+"Lat": "X90S.24S",
+"Value":            -34 
+},
+{
+ "Year":           1901,
+"Lat": "X90S.24S",
+"Value":            -28 
+},
+{
+ "Year":           1902,
+"Lat": "X90S.24S",
+"Value":            -33 
+},
+{
+ "Year":           1903,
+"Lat": "X90S.24S",
+"Value":            -33 
+},
+{
+ "Year":           1904,
+"Lat": "X90S.24S",
+"Value":            -38 
+},
+{
+ "Year":           1905,
+"Lat": "X90S.24S",
+"Value":            -36 
+},
+{
+ "Year":           1906,
+"Lat": "X90S.24S",
+"Value":            -24 
+},
+{
+ "Year":           1907,
+"Lat": "X90S.24S",
+"Value":            -28 
+},
+{
+ "Year":           1908,
+"Lat": "X90S.24S",
+"Value":            -33 
+},
+{
+ "Year":           1909,
+"Lat": "X90S.24S",
+"Value":            -40 
+},
+{
+ "Year":           1910,
+"Lat": "X90S.24S",
+"Value":            -32 
+},
+{
+ "Year":           1911,
+"Lat": "X90S.24S",
+"Value":            -47 
+},
+{
+ "Year":           1912,
+"Lat": "X90S.24S",
+"Value":            -30 
+},
+{
+ "Year":           1913,
+"Lat": "X90S.24S",
+"Value":            -31 
+},
+{
+ "Year":           1914,
+"Lat": "X90S.24S",
+"Value":            -19 
+},
+{
+ "Year":           1915,
+"Lat": "X90S.24S",
+"Value":            -18 
+},
+{
+ "Year":           1916,
+"Lat": "X90S.24S",
+"Value":            -22 
+},
+{
+ "Year":           1917,
+"Lat": "X90S.24S",
+"Value":             -9 
+},
+{
+ "Year":           1918,
+"Lat": "X90S.24S",
+"Value":            -14 
+},
+{
+ "Year":           1919,
+"Lat": "X90S.24S",
+"Value":            -13 
+},
+{
+ "Year":           1920,
+"Lat": "X90S.24S",
+"Value":            -30 
+},
+{
+ "Year":           1921,
+"Lat": "X90S.24S",
+"Value":            -35 
+},
+{
+ "Year":           1922,
+"Lat": "X90S.24S",
+"Value":            -25 
+},
+{
+ "Year":           1923,
+"Lat": "X90S.24S",
+"Value":            -28 
+},
+{
+ "Year":           1924,
+"Lat": "X90S.24S",
+"Value":            -47 
+},
+{
+ "Year":           1925,
+"Lat": "X90S.24S",
+"Value":            -36 
+},
+{
+ "Year":           1926,
+"Lat": "X90S.24S",
+"Value":            -38 
+},
+{
+ "Year":           1927,
+"Lat": "X90S.24S",
+"Value":            -37 
+},
+{
+ "Year":           1928,
+"Lat": "X90S.24S",
+"Value":            -46 
+},
+{
+ "Year":           1929,
+"Lat": "X90S.24S",
+"Value":            -48 
+},
+{
+ "Year":           1930,
+"Lat": "X90S.24S",
+"Value":            -38 
+},
+{
+ "Year":           1931,
+"Lat": "X90S.24S",
+"Value":            -38 
+},
+{
+ "Year":           1932,
+"Lat": "X90S.24S",
+"Value":            -38 
+},
+{
+ "Year":           1933,
+"Lat": "X90S.24S",
+"Value":            -33 
+},
+{
+ "Year":           1934,
+"Lat": "X90S.24S",
+"Value":            -28 
+},
+{
+ "Year":           1935,
+"Lat": "X90S.24S",
+"Value":            -33 
+},
+{
+ "Year":           1936,
+"Lat": "X90S.24S",
+"Value":            -27 
+},
+{
+ "Year":           1937,
+"Lat": "X90S.24S",
+"Value":            -18 
+},
+{
+ "Year":           1938,
+"Lat": "X90S.24S",
+"Value":            -10 
+},
+{
+ "Year":           1939,
+"Lat": "X90S.24S",
+"Value":             -9 
+},
+{
+ "Year":           1940,
+"Lat": "X90S.24S",
+"Value":             -7 
+},
+{
+ "Year":           1941,
+"Lat": "X90S.24S",
+"Value":             -6 
+},
+{
+ "Year":           1942,
+"Lat": "X90S.24S",
+"Value":              1 
+},
+{
+ "Year":           1943,
+"Lat": "X90S.24S",
+"Value":              9 
+},
+{
+ "Year":           1944,
+"Lat": "X90S.24S",
+"Value":             18 
+},
+{
+ "Year":           1945,
+"Lat": "X90S.24S",
+"Value":              3 
+},
+{
+ "Year":           1946,
+"Lat": "X90S.24S",
+"Value":            -16 
+},
+{
+ "Year":           1947,
+"Lat": "X90S.24S",
+"Value":            -13 
+},
+{
+ "Year":           1948,
+"Lat": "X90S.24S",
+"Value":            -20 
+},
+{
+ "Year":           1949,
+"Lat": "X90S.24S",
+"Value":            -19 
+},
+{
+ "Year":           1950,
+"Lat": "X90S.24S",
+"Value":            -14 
+},
+{
+ "Year":           1951,
+"Lat": "X90S.24S",
+"Value":            -22 
+},
+{
+ "Year":           1952,
+"Lat": "X90S.24S",
+"Value":             -7 
+},
+{
+ "Year":           1953,
+"Lat": "X90S.24S",
+"Value":            -14 
+},
+{
+ "Year":           1954,
+"Lat": "X90S.24S",
+"Value":            -14 
+},
+{
+ "Year":           1955,
+"Lat": "X90S.24S",
+"Value":             -7 
+},
+{
+ "Year":           1956,
+"Lat": "X90S.24S",
+"Value":              1 
+},
+{
+ "Year":           1957,
+"Lat": "X90S.24S",
+"Value":             -1 
+},
+{
+ "Year":           1958,
+"Lat": "X90S.24S",
+"Value":            -17 
+},
+{
+ "Year":           1959,
+"Lat": "X90S.24S",
+"Value":            -13 
+},
+{
+ "Year":           1960,
+"Lat": "X90S.24S",
+"Value":            -20 
+},
+{
+ "Year":           1961,
+"Lat": "X90S.24S",
+"Value":              4 
+},
+{
+ "Year":           1962,
+"Lat": "X90S.24S",
+"Value":            -13 
+},
+{
+ "Year":           1963,
+"Lat": "X90S.24S",
+"Value":            -12 
+},
+{
+ "Year":           1964,
+"Lat": "X90S.24S",
+"Value":            -26 
+},
+{
+ "Year":           1965,
+"Lat": "X90S.24S",
+"Value":            -12 
+},
+{
+ "Year":           1966,
+"Lat": "X90S.24S",
+"Value":            -16 
+},
+{
+ "Year":           1967,
+"Lat": "X90S.24S",
+"Value":             -2 
+},
+{
+ "Year":           1968,
+"Lat": "X90S.24S",
+"Value":             -8 
+},
+{
+ "Year":           1969,
+"Lat": "X90S.24S",
+"Value":              4 
+},
+{
+ "Year":           1970,
+"Lat": "X90S.24S",
+"Value":             11 
+},
+{
+ "Year":           1971,
+"Lat": "X90S.24S",
+"Value":              9 
+},
+{
+ "Year":           1972,
+"Lat": "X90S.24S",
+"Value":             16 
+},
+{
+ "Year":           1973,
+"Lat": "X90S.24S",
+"Value":             14 
+},
+{
+ "Year":           1974,
+"Lat": "X90S.24S",
+"Value":             17 
+},
+{
+ "Year":           1975,
+"Lat": "X90S.24S",
+"Value":             12 
+},
+{
+ "Year":           1976,
+"Lat": "X90S.24S",
+"Value":              2 
+},
+{
+ "Year":           1977,
+"Lat": "X90S.24S",
+"Value":             25 
+},
+{
+ "Year":           1978,
+"Lat": "X90S.24S",
+"Value":             15 
+},
+{
+ "Year":           1979,
+"Lat": "X90S.24S",
+"Value":             25 
+},
+{
+ "Year":           1980,
+"Lat": "X90S.24S",
+"Value":             46 
+},
+{
+ "Year":           1981,
+"Lat": "X90S.24S",
+"Value":             35 
+},
+{
+ "Year":           1982,
+"Lat": "X90S.24S",
+"Value":             14 
+},
+{
+ "Year":           1983,
+"Lat": "X90S.24S",
+"Value":             20 
+},
+{
+ "Year":           1984,
+"Lat": "X90S.24S",
+"Value":             25 
+},
+{
+ "Year":           1985,
+"Lat": "X90S.24S",
+"Value":             29 
+},
+{
+ "Year":           1986,
+"Lat": "X90S.24S",
+"Value":             21 
+},
+{
+ "Year":           1987,
+"Lat": "X90S.24S",
+"Value":             27 
+},
+{
+ "Year":           1988,
+"Lat": "X90S.24S",
+"Value":             42 
+},
+{
+ "Year":           1989,
+"Lat": "X90S.24S",
+"Value":             33 
+},
+{
+ "Year":           1990,
+"Lat": "X90S.24S",
+"Value":             35 
+},
+{
+ "Year":           1991,
+"Lat": "X90S.24S",
+"Value":             43 
+},
+{
+ "Year":           1992,
+"Lat": "X90S.24S",
+"Value":             28 
+},
+{
+ "Year":           1993,
+"Lat": "X90S.24S",
+"Value":             23 
+},
+{
+ "Year":           1994,
+"Lat": "X90S.24S",
+"Value":             21 
+},
+{
+ "Year":           1995,
+"Lat": "X90S.24S",
+"Value":             23 
+},
+{
+ "Year":           1996,
+"Lat": "X90S.24S",
+"Value":             45 
+},
+{
+ "Year":           1997,
+"Lat": "X90S.24S",
+"Value":             34 
+},
+{
+ "Year":           1998,
+"Lat": "X90S.24S",
+"Value":             36 
+},
+{
+ "Year":           1999,
+"Lat": "X90S.24S",
+"Value":             32 
+},
+{
+ "Year":           2000,
+"Lat": "X90S.24S",
+"Value":             33 
+},
+{
+ "Year":           2001,
+"Lat": "X90S.24S",
+"Value":             44 
+},
+{
+ "Year":           2002,
+"Lat": "X90S.24S",
+"Value":             48 
+},
+{
+ "Year":           2003,
+"Lat": "X90S.24S",
+"Value":             41 
+},
+{
+ "Year":           2004,
+"Lat": "X90S.24S",
+"Value":             32 
+},
+{
+ "Year":           2005,
+"Lat": "X90S.24S",
+"Value":             45 
+},
+{
+ "Year":           2006,
+"Lat": "X90S.24S",
+"Value":             40 
+},
+{
+ "Year":           2007,
+"Lat": "X90S.24S",
+"Value":             48 
+},
+{
+ "Year":           2008,
+"Lat": "X90S.24S",
+"Value":             40 
+},
+{
+ "Year":           2009,
+"Lat": "X90S.24S",
+"Value":             51 
+},
+{
+ "Year":           2010,
+"Lat": "X90S.24S",
+"Value":             48 
+},
+{
+ "Year":           2011,
+"Lat": "X90S.24S",
+"Value":             58 
+},
+{
+ "Year":           2012,
+"Lat": "X90S.24S",
+"Value":             44 
+},
+{
+ "Year":           2013,
+"Lat": "X90S.24S",
+"Value":             54 
+},
+{
+ "Year":           2014,
+"Lat": "X90S.24S",
+"Value":             54 
+},
+{
+ "Year":           1880,
+"Lat": "X64N.90N",
+"Value":            -89 
+},
+{
+ "Year":           1881,
+"Lat": "X64N.90N",
+"Value":            -54 
+},
+{
+ "Year":           1882,
+"Lat": "X64N.90N",
+"Value":           -125 
+},
+{
+ "Year":           1883,
+"Lat": "X64N.90N",
+"Value":            -28 
+},
+{
+ "Year":           1884,
+"Lat": "X64N.90N",
+"Value":           -127 
+},
+{
+ "Year":           1885,
+"Lat": "X64N.90N",
+"Value":           -119 
+},
+{
+ "Year":           1886,
+"Lat": "X64N.90N",
+"Value":           -124 
+},
+{
+ "Year":           1887,
+"Lat": "X64N.90N",
+"Value":           -158 
+},
+{
+ "Year":           1888,
+"Lat": "X64N.90N",
+"Value":           -141 
+},
+{
+ "Year":           1889,
+"Lat": "X64N.90N",
+"Value":            -82 
+},
+{
+ "Year":           1890,
+"Lat": "X64N.90N",
+"Value":           -127 
+},
+{
+ "Year":           1891,
+"Lat": "X64N.90N",
+"Value":           -118 
+},
+{
+ "Year":           1892,
+"Lat": "X64N.90N",
+"Value":           -119 
+},
+{
+ "Year":           1893,
+"Lat": "X64N.90N",
+"Value":            -76 
+},
+{
+ "Year":           1894,
+"Lat": "X64N.90N",
+"Value":           -121 
+},
+{
+ "Year":           1895,
+"Lat": "X64N.90N",
+"Value":            -86 
+},
+{
+ "Year":           1896,
+"Lat": "X64N.90N",
+"Value":           -113 
+},
+{
+ "Year":           1897,
+"Lat": "X64N.90N",
+"Value":            -73 
+},
+{
+ "Year":           1898,
+"Lat": "X64N.90N",
+"Value":           -121 
+},
+{
+ "Year":           1899,
+"Lat": "X64N.90N",
+"Value":            -99 
+},
+{
+ "Year":           1900,
+"Lat": "X64N.90N",
+"Value":            -50 
+},
+{
+ "Year":           1901,
+"Lat": "X64N.90N",
+"Value":            -41 
+},
+{
+ "Year":           1902,
+"Lat": "X64N.90N",
+"Value":           -145 
+},
+{
+ "Year":           1903,
+"Lat": "X64N.90N",
+"Value":            -37 
+},
+{
+ "Year":           1904,
+"Lat": "X64N.90N",
+"Value":            -23 
+},
+{
+ "Year":           1905,
+"Lat": "X64N.90N",
+"Value":            -12 
+},
+{
+ "Year":           1906,
+"Lat": "X64N.90N",
+"Value":            -29 
+},
+{
+ "Year":           1907,
+"Lat": "X64N.90N",
+"Value":            -68 
+},
+{
+ "Year":           1908,
+"Lat": "X64N.90N",
+"Value":            -39 
+},
+{
+ "Year":           1909,
+"Lat": "X64N.90N",
+"Value":            -72 
+},
+{
+ "Year":           1910,
+"Lat": "X64N.90N",
+"Value":            -62 
+},
+{
+ "Year":           1911,
+"Lat": "X64N.90N",
+"Value":            -24 
+},
+{
+ "Year":           1912,
+"Lat": "X64N.90N",
+"Value":            -60 
+},
+{
+ "Year":           1913,
+"Lat": "X64N.90N",
+"Value":            -51 
+},
+{
+ "Year":           1914,
+"Lat": "X64N.90N",
+"Value":            -50 
+},
+{
+ "Year":           1915,
+"Lat": "X64N.90N",
+"Value":            -50 
+},
+{
+ "Year":           1916,
+"Lat": "X64N.90N",
+"Value":            -25 
+},
+{
+ "Year":           1917,
+"Lat": "X64N.90N",
+"Value":            -64 
+},
+{
+ "Year":           1918,
+"Lat": "X64N.90N",
+"Value":           -108 
+},
+{
+ "Year":           1919,
+"Lat": "X64N.90N",
+"Value":            -80 
+},
+{
+ "Year":           1920,
+"Lat": "X64N.90N",
+"Value":             13 
+},
+{
+ "Year":           1921,
+"Lat": "X64N.90N",
+"Value":              5 
+},
+{
+ "Year":           1922,
+"Lat": "X64N.90N",
+"Value":            -22 
+},
+{
+ "Year":           1923,
+"Lat": "X64N.90N",
+"Value":             29 
+},
+{
+ "Year":           1924,
+"Lat": "X64N.90N",
+"Value":             38 
+},
+{
+ "Year":           1925,
+"Lat": "X64N.90N",
+"Value":             -4 
+},
+{
+ "Year":           1926,
+"Lat": "X64N.90N",
+"Value":             52 
+},
+{
+ "Year":           1927,
+"Lat": "X64N.90N",
+"Value":             -4 
+},
+{
+ "Year":           1928,
+"Lat": "X64N.90N",
+"Value":             59 
+},
+{
+ "Year":           1929,
+"Lat": "X64N.90N",
+"Value":              1 
+},
+{
+ "Year":           1930,
+"Lat": "X64N.90N",
+"Value":             48 
+},
+{
+ "Year":           1931,
+"Lat": "X64N.90N",
+"Value":             48 
+},
+{
+ "Year":           1932,
+"Lat": "X64N.90N",
+"Value":             25 
+},
+{
+ "Year":           1933,
+"Lat": "X64N.90N",
+"Value":            -29 
+},
+{
+ "Year":           1934,
+"Lat": "X64N.90N",
+"Value":             74 
+},
+{
+ "Year":           1935,
+"Lat": "X64N.90N",
+"Value":             22 
+},
+{
+ "Year":           1936,
+"Lat": "X64N.90N",
+"Value":             24 
+},
+{
+ "Year":           1937,
+"Lat": "X64N.90N",
+"Value":            108 
+},
+{
+ "Year":           1938,
+"Lat": "X64N.90N",
+"Value":            123 
+},
+{
+ "Year":           1939,
+"Lat": "X64N.90N",
+"Value":             51 
+},
+{
+ "Year":           1940,
+"Lat": "X64N.90N",
+"Value":             88 
+},
+{
+ "Year":           1941,
+"Lat": "X64N.90N",
+"Value":            -21 
+},
+{
+ "Year":           1942,
+"Lat": "X64N.90N",
+"Value":             36 
+},
+{
+ "Year":           1943,
+"Lat": "X64N.90N",
+"Value":            118 
+},
+{
+ "Year":           1944,
+"Lat": "X64N.90N",
+"Value":            103 
+},
+{
+ "Year":           1945,
+"Lat": "X64N.90N",
+"Value":             45 
+},
+{
+ "Year":           1946,
+"Lat": "X64N.90N",
+"Value":            -15 
+},
+{
+ "Year":           1947,
+"Lat": "X64N.90N",
+"Value":            100 
+},
+{
+ "Year":           1948,
+"Lat": "X64N.90N",
+"Value":              8 
+},
+{
+ "Year":           1949,
+"Lat": "X64N.90N",
+"Value":             22 
+},
+{
+ "Year":           1950,
+"Lat": "X64N.90N",
+"Value":              4 
+},
+{
+ "Year":           1951,
+"Lat": "X64N.90N",
+"Value":              1 
+},
+{
+ "Year":           1952,
+"Lat": "X64N.90N",
+"Value":             10 
+},
+{
+ "Year":           1953,
+"Lat": "X64N.90N",
+"Value":             81 
+},
+{
+ "Year":           1954,
+"Lat": "X64N.90N",
+"Value":             58 
+},
+{
+ "Year":           1955,
+"Lat": "X64N.90N",
+"Value":            -43 
+},
+{
+ "Year":           1956,
+"Lat": "X64N.90N",
+"Value":            -21 
+},
+{
+ "Year":           1957,
+"Lat": "X64N.90N",
+"Value":              3 
+},
+{
+ "Year":           1958,
+"Lat": "X64N.90N",
+"Value":            -15 
+},
+{
+ "Year":           1959,
+"Lat": "X64N.90N",
+"Value":             50 
+},
+{
+ "Year":           1960,
+"Lat": "X64N.90N",
+"Value":             35 
+},
+{
+ "Year":           1961,
+"Lat": "X64N.90N",
+"Value":            -18 
+},
+{
+ "Year":           1962,
+"Lat": "X64N.90N",
+"Value":             58 
+},
+{
+ "Year":           1963,
+"Lat": "X64N.90N",
+"Value":             -5 
+},
+{
+ "Year":           1964,
+"Lat": "X64N.90N",
+"Value":            -67 
+},
+{
+ "Year":           1965,
+"Lat": "X64N.90N",
+"Value":            -20 
+},
+{
+ "Year":           1966,
+"Lat": "X64N.90N",
+"Value":            -67 
+},
+{
+ "Year":           1967,
+"Lat": "X64N.90N",
+"Value":             43 
+},
+{
+ "Year":           1968,
+"Lat": "X64N.90N",
+"Value":            -17 
+},
+{
+ "Year":           1969,
+"Lat": "X64N.90N",
+"Value":              5 
+},
+{
+ "Year":           1970,
+"Lat": "X64N.90N",
+"Value":            -17 
+},
+{
+ "Year":           1971,
+"Lat": "X64N.90N",
+"Value":             -6 
+},
+{
+ "Year":           1972,
+"Lat": "X64N.90N",
+"Value":            -45 
+},
+{
+ "Year":           1973,
+"Lat": "X64N.90N",
+"Value":             20 
+},
+{
+ "Year":           1974,
+"Lat": "X64N.90N",
+"Value":            -29 
+},
+{
+ "Year":           1975,
+"Lat": "X64N.90N",
+"Value":             22 
+},
+{
+ "Year":           1976,
+"Lat": "X64N.90N",
+"Value":             -4 
+},
+{
+ "Year":           1977,
+"Lat": "X64N.90N",
+"Value":             24 
+},
+{
+ "Year":           1978,
+"Lat": "X64N.90N",
+"Value":             -8 
+},
+{
+ "Year":           1979,
+"Lat": "X64N.90N",
+"Value":            -59 
+},
+{
+ "Year":           1980,
+"Lat": "X64N.90N",
+"Value":             32 
+},
+{
+ "Year":           1981,
+"Lat": "X64N.90N",
+"Value":            129 
+},
+{
+ "Year":           1982,
+"Lat": "X64N.90N",
+"Value":            -27 
+},
+{
+ "Year":           1983,
+"Lat": "X64N.90N",
+"Value":             32 
+},
+{
+ "Year":           1984,
+"Lat": "X64N.90N",
+"Value":             39 
+},
+{
+ "Year":           1985,
+"Lat": "X64N.90N",
+"Value":             41 
+},
+{
+ "Year":           1986,
+"Lat": "X64N.90N",
+"Value":              7 
+},
+{
+ "Year":           1987,
+"Lat": "X64N.90N",
+"Value":            -26 
+},
+{
+ "Year":           1988,
+"Lat": "X64N.90N",
+"Value":             75 
+},
+{
+ "Year":           1989,
+"Lat": "X64N.90N",
+"Value":             40 
+},
+{
+ "Year":           1990,
+"Lat": "X64N.90N",
+"Value":             60 
+},
+{
+ "Year":           1991,
+"Lat": "X64N.90N",
+"Value":             74 
+},
+{
+ "Year":           1992,
+"Lat": "X64N.90N",
+"Value":            -19 
+},
+{
+ "Year":           1993,
+"Lat": "X64N.90N",
+"Value":             63 
+},
+{
+ "Year":           1994,
+"Lat": "X64N.90N",
+"Value":             36 
+},
+{
+ "Year":           1995,
+"Lat": "X64N.90N",
+"Value":            140 
+},
+{
+ "Year":           1996,
+"Lat": "X64N.90N",
+"Value":             79 
+},
+{
+ "Year":           1997,
+"Lat": "X64N.90N",
+"Value":             78 
+},
+{
+ "Year":           1998,
+"Lat": "X64N.90N",
+"Value":             91 
+},
+{
+ "Year":           1999,
+"Lat": "X64N.90N",
+"Value":             47 
+},
+{
+ "Year":           2000,
+"Lat": "X64N.90N",
+"Value":            110 
+},
+{
+ "Year":           2001,
+"Lat": "X64N.90N",
+"Value":            104 
+},
+{
+ "Year":           2002,
+"Lat": "X64N.90N",
+"Value":            126 
+},
+{
+ "Year":           2003,
+"Lat": "X64N.90N",
+"Value":            143 
+},
+{
+ "Year":           2004,
+"Lat": "X64N.90N",
+"Value":             64 
+},
+{
+ "Year":           2005,
+"Lat": "X64N.90N",
+"Value":            200 
+},
+{
+ "Year":           2006,
+"Lat": "X64N.90N",
+"Value":            173 
+},
+{
+ "Year":           2007,
+"Lat": "X64N.90N",
+"Value":            201 
+},
+{
+ "Year":           2008,
+"Lat": "X64N.90N",
+"Value":            144 
+},
+{
+ "Year":           2009,
+"Lat": "X64N.90N",
+"Value":            127 
+},
+{
+ "Year":           2010,
+"Lat": "X64N.90N",
+"Value":            199 
+},
+{
+ "Year":           2011,
+"Lat": "X64N.90N",
+"Value":            211 
+},
+{
+ "Year":           2012,
+"Lat": "X64N.90N",
+"Value":            189 
+},
+{
+ "Year":           2013,
+"Lat": "X64N.90N",
+"Value":            123 
+},
+{
+ "Year":           2014,
+"Lat": "X64N.90N",
+"Value":            185 
+},
+{
+ "Year":           1880,
+"Lat": "X44N.64N",
+"Value":            -54 
+},
+{
+ "Year":           1881,
+"Lat": "X44N.64N",
+"Value":            -40 
+},
+{
+ "Year":           1882,
+"Lat": "X44N.64N",
+"Value":            -20 
+},
+{
+ "Year":           1883,
+"Lat": "X44N.64N",
+"Value":            -57 
+},
+{
+ "Year":           1884,
+"Lat": "X44N.64N",
+"Value":            -58 
+},
+{
+ "Year":           1885,
+"Lat": "X44N.64N",
+"Value":            -70 
+},
+{
+ "Year":           1886,
+"Lat": "X44N.64N",
+"Value":            -43 
+},
+{
+ "Year":           1887,
+"Lat": "X44N.64N",
+"Value":            -52 
+},
+{
+ "Year":           1888,
+"Lat": "X44N.64N",
+"Value":            -43 
+},
+{
+ "Year":           1889,
+"Lat": "X44N.64N",
+"Value":            -13 
+},
+{
+ "Year":           1890,
+"Lat": "X44N.64N",
+"Value":            -41 
+},
+{
+ "Year":           1891,
+"Lat": "X44N.64N",
+"Value":            -17 
+},
+{
+ "Year":           1892,
+"Lat": "X44N.64N",
+"Value":            -30 
+},
+{
+ "Year":           1893,
+"Lat": "X44N.64N",
+"Value":            -35 
+},
+{
+ "Year":           1894,
+"Lat": "X44N.64N",
+"Value":            -17 
+},
+{
+ "Year":           1895,
+"Lat": "X44N.64N",
+"Value":            -38 
+},
+{
+ "Year":           1896,
+"Lat": "X44N.64N",
+"Value":            -34 
+},
+{
+ "Year":           1897,
+"Lat": "X44N.64N",
+"Value":            -31 
+},
+{
+ "Year":           1898,
+"Lat": "X44N.64N",
+"Value":             -2 
+},
+{
+ "Year":           1899,
+"Lat": "X44N.64N",
+"Value":              4 
+},
+{
+ "Year":           1900,
+"Lat": "X44N.64N",
+"Value":             -3 
+},
+{
+ "Year":           1901,
+"Lat": "X44N.64N",
+"Value":             -1 
+},
+{
+ "Year":           1902,
+"Lat": "X44N.64N",
+"Value":            -40 
+},
+{
+ "Year":           1903,
+"Lat": "X44N.64N",
+"Value":            -30 
+},
+{
+ "Year":           1904,
+"Lat": "X44N.64N",
+"Value":            -53 
+},
+{
+ "Year":           1905,
+"Lat": "X44N.64N",
+"Value":            -16 
+},
+{
+ "Year":           1906,
+"Lat": "X44N.64N",
+"Value":              4 
+},
+{
+ "Year":           1907,
+"Lat": "X44N.64N",
+"Value":            -69 
+},
+{
+ "Year":           1908,
+"Lat": "X44N.64N",
+"Value":            -50 
+},
+{
+ "Year":           1909,
+"Lat": "X44N.64N",
+"Value":            -49 
+},
+{
+ "Year":           1910,
+"Lat": "X44N.64N",
+"Value":            -13 
+},
+{
+ "Year":           1911,
+"Lat": "X44N.64N",
+"Value":            -36 
+},
+{
+ "Year":           1912,
+"Lat": "X44N.64N",
+"Value":            -70 
+},
+{
+ "Year":           1913,
+"Lat": "X44N.64N",
+"Value":            -27 
+},
+{
+ "Year":           1914,
+"Lat": "X44N.64N",
+"Value":             -6 
+},
+{
+ "Year":           1915,
+"Lat": "X44N.64N",
+"Value":             -6 
+},
+{
+ "Year":           1916,
+"Lat": "X44N.64N",
+"Value":            -43 
+},
+{
+ "Year":           1917,
+"Lat": "X44N.64N",
+"Value":            -39 
+},
+{
+ "Year":           1918,
+"Lat": "X44N.64N",
+"Value":            -13 
+},
+{
+ "Year":           1919,
+"Lat": "X44N.64N",
+"Value":            -44 
+},
+{
+ "Year":           1920,
+"Lat": "X44N.64N",
+"Value":             -8 
+},
+{
+ "Year":           1921,
+"Lat": "X44N.64N",
+"Value":             24 
+},
+{
+ "Year":           1922,
+"Lat": "X44N.64N",
+"Value":            -31 
+},
+{
+ "Year":           1923,
+"Lat": "X44N.64N",
+"Value":             -3 
+},
+{
+ "Year":           1924,
+"Lat": "X44N.64N",
+"Value":            -15 
+},
+{
+ "Year":           1925,
+"Lat": "X44N.64N",
+"Value":             27 
+},
+{
+ "Year":           1926,
+"Lat": "X44N.64N",
+"Value":             25 
+},
+{
+ "Year":           1927,
+"Lat": "X44N.64N",
+"Value":            -12 
+},
+{
+ "Year":           1928,
+"Lat": "X44N.64N",
+"Value":             -7 
+},
+{
+ "Year":           1929,
+"Lat": "X44N.64N",
+"Value":            -50 
+},
+{
+ "Year":           1930,
+"Lat": "X44N.64N",
+"Value":             16 
+},
+{
+ "Year":           1931,
+"Lat": "X44N.64N",
+"Value":              8 
+},
+{
+ "Year":           1932,
+"Lat": "X44N.64N",
+"Value":             31 
+},
+{
+ "Year":           1933,
+"Lat": "X44N.64N",
+"Value":            -38 
+},
+{
+ "Year":           1934,
+"Lat": "X44N.64N",
+"Value":             40 
+},
+{
+ "Year":           1935,
+"Lat": "X44N.64N",
+"Value":              7 
+},
+{
+ "Year":           1936,
+"Lat": "X44N.64N",
+"Value":             18 
+},
+{
+ "Year":           1937,
+"Lat": "X44N.64N",
+"Value":              8 
+},
+{
+ "Year":           1938,
+"Lat": "X44N.64N",
+"Value":             44 
+},
+{
+ "Year":           1939,
+"Lat": "X44N.64N",
+"Value":             33 
+},
+{
+ "Year":           1940,
+"Lat": "X44N.64N",
+"Value":              3 
+},
+{
+ "Year":           1941,
+"Lat": "X44N.64N",
+"Value":            -11 
+},
+{
+ "Year":           1942,
+"Lat": "X44N.64N",
+"Value":              0 
+},
+{
+ "Year":           1943,
+"Lat": "X44N.64N",
+"Value":             33 
+},
+{
+ "Year":           1944,
+"Lat": "X44N.64N",
+"Value":             50 
+},
+{
+ "Year":           1945,
+"Lat": "X44N.64N",
+"Value":             -1 
+},
+{
+ "Year":           1946,
+"Lat": "X44N.64N",
+"Value":              2 
+},
+{
+ "Year":           1947,
+"Lat": "X44N.64N",
+"Value":            -15 
+},
+{
+ "Year":           1948,
+"Lat": "X44N.64N",
+"Value":             36 
+},
+{
+ "Year":           1949,
+"Lat": "X44N.64N",
+"Value":             17 
+},
+{
+ "Year":           1950,
+"Lat": "X44N.64N",
+"Value":            -34 
+},
+{
+ "Year":           1951,
+"Lat": "X44N.64N",
+"Value":              3 
+},
+{
+ "Year":           1952,
+"Lat": "X44N.64N",
+"Value":             -7 
+},
+{
+ "Year":           1953,
+"Lat": "X44N.64N",
+"Value":             37 
+},
+{
+ "Year":           1954,
+"Lat": "X44N.64N",
+"Value":            -20 
+},
+{
+ "Year":           1955,
+"Lat": "X44N.64N",
+"Value":             -7 
+},
+{
+ "Year":           1956,
+"Lat": "X44N.64N",
+"Value":            -47 
+},
+{
+ "Year":           1957,
+"Lat": "X44N.64N",
+"Value":             22 
+},
+{
+ "Year":           1958,
+"Lat": "X44N.64N",
+"Value":             18 
+},
+{
+ "Year":           1959,
+"Lat": "X44N.64N",
+"Value":             17 
+},
+{
+ "Year":           1960,
+"Lat": "X44N.64N",
+"Value":             -6 
+},
+{
+ "Year":           1961,
+"Lat": "X44N.64N",
+"Value":             37 
+},
+{
+ "Year":           1962,
+"Lat": "X44N.64N",
+"Value":             34 
+},
+{
+ "Year":           1963,
+"Lat": "X44N.64N",
+"Value":             32 
+},
+{
+ "Year":           1964,
+"Lat": "X44N.64N",
+"Value":            -22 
+},
+{
+ "Year":           1965,
+"Lat": "X44N.64N",
+"Value":            -24 
+},
+{
+ "Year":           1966,
+"Lat": "X44N.64N",
+"Value":            -16 
+},
+{
+ "Year":           1967,
+"Lat": "X44N.64N",
+"Value":             26 
+},
+{
+ "Year":           1968,
+"Lat": "X44N.64N",
+"Value":             -2 
+},
+{
+ "Year":           1969,
+"Lat": "X44N.64N",
+"Value":            -59 
+},
+{
+ "Year":           1970,
+"Lat": "X44N.64N",
+"Value":            -14 
+},
+{
+ "Year":           1971,
+"Lat": "X44N.64N",
+"Value":              0 
+},
+{
+ "Year":           1972,
+"Lat": "X44N.64N",
+"Value":            -49 
+},
+{
+ "Year":           1973,
+"Lat": "X44N.64N",
+"Value":             26 
+},
+{
+ "Year":           1974,
+"Lat": "X44N.64N",
+"Value":            -11 
+},
+{
+ "Year":           1975,
+"Lat": "X44N.64N",
+"Value":             35 
+},
+{
+ "Year":           1976,
+"Lat": "X44N.64N",
+"Value":            -33 
+},
+{
+ "Year":           1977,
+"Lat": "X44N.64N",
+"Value":             22 
+},
+{
+ "Year":           1978,
+"Lat": "X44N.64N",
+"Value":              0 
+},
+{
+ "Year":           1979,
+"Lat": "X44N.64N",
+"Value":              6 
+},
+{
+ "Year":           1980,
+"Lat": "X44N.64N",
+"Value":              1 
+},
+{
+ "Year":           1981,
+"Lat": "X44N.64N",
+"Value":             77 
+},
+{
+ "Year":           1982,
+"Lat": "X44N.64N",
+"Value":              7 
+},
+{
+ "Year":           1983,
+"Lat": "X44N.64N",
+"Value":             67 
+},
+{
+ "Year":           1984,
+"Lat": "X44N.64N",
+"Value":              7 
+},
+{
+ "Year":           1985,
+"Lat": "X44N.64N",
+"Value":            -27 
+},
+{
+ "Year":           1986,
+"Lat": "X44N.64N",
+"Value":             24 
+},
+{
+ "Year":           1987,
+"Lat": "X44N.64N",
+"Value":             13 
+},
+{
+ "Year":           1988,
+"Lat": "X44N.64N",
+"Value":             49 
+},
+{
+ "Year":           1989,
+"Lat": "X44N.64N",
+"Value":             67 
+},
+{
+ "Year":           1990,
+"Lat": "X44N.64N",
+"Value":             83 
+},
+{
+ "Year":           1991,
+"Lat": "X44N.64N",
+"Value":             59 
+},
+{
+ "Year":           1992,
+"Lat": "X44N.64N",
+"Value":             37 
+},
+{
+ "Year":           1993,
+"Lat": "X44N.64N",
+"Value":             23 
+},
+{
+ "Year":           1994,
+"Lat": "X44N.64N",
+"Value":             46 
+},
+{
+ "Year":           1995,
+"Lat": "X44N.64N",
+"Value":             95 
+},
+{
+ "Year":           1996,
+"Lat": "X44N.64N",
+"Value":             19 
+},
+{
+ "Year":           1997,
+"Lat": "X44N.64N",
+"Value":             87 
+},
+{
+ "Year":           1998,
+"Lat": "X44N.64N",
+"Value":             92 
+},
+{
+ "Year":           1999,
+"Lat": "X44N.64N",
+"Value":             82 
+},
+{
+ "Year":           2000,
+"Lat": "X44N.64N",
+"Value":             75 
+},
+{
+ "Year":           2001,
+"Lat": "X44N.64N",
+"Value":             81 
+},
+{
+ "Year":           2002,
+"Lat": "X44N.64N",
+"Value":             96 
+},
+{
+ "Year":           2003,
+"Lat": "X44N.64N",
+"Value":             94 
+},
+{
+ "Year":           2004,
+"Lat": "X44N.64N",
+"Value":             92 
+},
+{
+ "Year":           2005,
+"Lat": "X44N.64N",
+"Value":            116 
+},
+{
+ "Year":           2006,
+"Lat": "X44N.64N",
+"Value":            105 
+},
+{
+ "Year":           2007,
+"Lat": "X44N.64N",
+"Value":            129 
+},
+{
+ "Year":           2008,
+"Lat": "X44N.64N",
+"Value":            102 
+},
+{
+ "Year":           2009,
+"Lat": "X44N.64N",
+"Value":             58 
+},
+{
+ "Year":           2010,
+"Lat": "X44N.64N",
+"Value":             86 
+},
+{
+ "Year":           2011,
+"Lat": "X44N.64N",
+"Value":             90 
+},
+{
+ "Year":           2012,
+"Lat": "X44N.64N",
+"Value":             89 
+},
+{
+ "Year":           2013,
+"Lat": "X44N.64N",
+"Value":            103 
+},
+{
+ "Year":           2014,
+"Lat": "X44N.64N",
+"Value":            113 
+},
+{
+ "Year":           1880,
+"Lat": "X24N.44N",
+"Value":            -22 
+},
+{
+ "Year":           1881,
+"Lat": "X24N.44N",
+"Value":            -14 
+},
+{
+ "Year":           1882,
+"Lat": "X24N.44N",
+"Value":             -3 
+},
+{
+ "Year":           1883,
+"Lat": "X24N.44N",
+"Value":            -20 
+},
+{
+ "Year":           1884,
+"Lat": "X24N.44N",
+"Value":            -41 
+},
+{
+ "Year":           1885,
+"Lat": "X24N.44N",
+"Value":            -43 
+},
+{
+ "Year":           1886,
+"Lat": "X24N.44N",
+"Value":            -38 
+},
+{
+ "Year":           1887,
+"Lat": "X24N.44N",
+"Value":            -21 
+},
+{
+ "Year":           1888,
+"Lat": "X24N.44N",
+"Value":            -22 
+},
+{
+ "Year":           1889,
+"Lat": "X24N.44N",
+"Value":            -21 
+},
+{
+ "Year":           1890,
+"Lat": "X24N.44N",
+"Value":            -30 
+},
+{
+ "Year":           1891,
+"Lat": "X24N.44N",
+"Value":            -27 
+},
+{
+ "Year":           1892,
+"Lat": "X24N.44N",
+"Value":            -12 
+},
+{
+ "Year":           1893,
+"Lat": "X24N.44N",
+"Value":            -30 
+},
+{
+ "Year":           1894,
+"Lat": "X24N.44N",
+"Value":             -9 
+},
+{
+ "Year":           1895,
+"Lat": "X24N.44N",
+"Value":            -18 
+},
+{
+ "Year":           1896,
+"Lat": "X24N.44N",
+"Value":            -12 
+},
+{
+ "Year":           1897,
+"Lat": "X24N.44N",
+"Value":            -19 
+},
+{
+ "Year":           1898,
+"Lat": "X24N.44N",
+"Value":            -21 
+},
+{
+ "Year":           1899,
+"Lat": "X24N.44N",
+"Value":            -12 
+},
+{
+ "Year":           1900,
+"Lat": "X24N.44N",
+"Value":             -8 
+},
+{
+ "Year":           1901,
+"Lat": "X24N.44N",
+"Value":             -9 
+},
+{
+ "Year":           1902,
+"Lat": "X24N.44N",
+"Value":            -26 
+},
+{
+ "Year":           1903,
+"Lat": "X24N.44N",
+"Value":            -46 
+},
+{
+ "Year":           1904,
+"Lat": "X24N.44N",
+"Value":            -47 
+},
+{
+ "Year":           1905,
+"Lat": "X24N.44N",
+"Value":            -57 
+},
+{
+ "Year":           1906,
+"Lat": "X24N.44N",
+"Value":            -32 
+},
+{
+ "Year":           1907,
+"Lat": "X24N.44N",
+"Value":            -44 
+},
+{
+ "Year":           1908,
+"Lat": "X24N.44N",
+"Value":            -45 
+},
+{
+ "Year":           1909,
+"Lat": "X24N.44N",
+"Value":            -40 
+},
+{
+ "Year":           1910,
+"Lat": "X24N.44N",
+"Value":            -44 
+},
+{
+ "Year":           1911,
+"Lat": "X24N.44N",
+"Value":            -43 
+},
+{
+ "Year":           1912,
+"Lat": "X24N.44N",
+"Value":            -48 
+},
+{
+ "Year":           1913,
+"Lat": "X24N.44N",
+"Value":            -46 
+},
+{
+ "Year":           1914,
+"Lat": "X24N.44N",
+"Value":            -25 
+},
+{
+ "Year":           1915,
+"Lat": "X24N.44N",
+"Value":            -13 
+},
+{
+ "Year":           1916,
+"Lat": "X24N.44N",
+"Value":            -19 
+},
+{
+ "Year":           1917,
+"Lat": "X24N.44N",
+"Value":            -36 
+},
+{
+ "Year":           1918,
+"Lat": "X24N.44N",
+"Value":            -23 
+},
+{
+ "Year":           1919,
+"Lat": "X24N.44N",
+"Value":            -25 
+},
+{
+ "Year":           1920,
+"Lat": "X24N.44N",
+"Value":            -29 
+},
+{
+ "Year":           1921,
+"Lat": "X24N.44N",
+"Value":             -4 
+},
+{
+ "Year":           1922,
+"Lat": "X24N.44N",
+"Value":             -8 
+},
+{
+ "Year":           1923,
+"Lat": "X24N.44N",
+"Value":            -21 
+},
+{
+ "Year":           1924,
+"Lat": "X24N.44N",
+"Value":            -16 
+},
+{
+ "Year":           1925,
+"Lat": "X24N.44N",
+"Value":            -11 
+},
+{
+ "Year":           1926,
+"Lat": "X24N.44N",
+"Value":            -18 
+},
+{
+ "Year":           1927,
+"Lat": "X24N.44N",
+"Value":             -9 
+},
+{
+ "Year":           1928,
+"Lat": "X24N.44N",
+"Value":            -18 
+},
+{
+ "Year":           1929,
+"Lat": "X24N.44N",
+"Value":            -33 
+},
+{
+ "Year":           1930,
+"Lat": "X24N.44N",
+"Value":             -5 
+},
+{
+ "Year":           1931,
+"Lat": "X24N.44N",
+"Value":            -10 
+},
+{
+ "Year":           1932,
+"Lat": "X24N.44N",
+"Value":            -15 
+},
+{
+ "Year":           1933,
+"Lat": "X24N.44N",
+"Value":             -8 
+},
+{
+ "Year":           1934,
+"Lat": "X24N.44N",
+"Value":             -8 
+},
+{
+ "Year":           1935,
+"Lat": "X24N.44N",
+"Value":            -11 
+},
+{
+ "Year":           1936,
+"Lat": "X24N.44N",
+"Value":            -21 
+},
+{
+ "Year":           1937,
+"Lat": "X24N.44N",
+"Value":              2 
+},
+{
+ "Year":           1938,
+"Lat": "X24N.44N",
+"Value":              6 
+},
+{
+ "Year":           1939,
+"Lat": "X24N.44N",
+"Value":             10 
+},
+{
+ "Year":           1940,
+"Lat": "X24N.44N",
+"Value":            -10 
+},
+{
+ "Year":           1941,
+"Lat": "X24N.44N",
+"Value":              7 
+},
+{
+ "Year":           1942,
+"Lat": "X24N.44N",
+"Value":             15 
+},
+{
+ "Year":           1943,
+"Lat": "X24N.44N",
+"Value":             16 
+},
+{
+ "Year":           1944,
+"Lat": "X24N.44N",
+"Value":             14 
+},
+{
+ "Year":           1945,
+"Lat": "X24N.44N",
+"Value":              6 
+},
+{
+ "Year":           1946,
+"Lat": "X24N.44N",
+"Value":             20 
+},
+{
+ "Year":           1947,
+"Lat": "X24N.44N",
+"Value":              6 
+},
+{
+ "Year":           1948,
+"Lat": "X24N.44N",
+"Value":              2 
+},
+{
+ "Year":           1949,
+"Lat": "X24N.44N",
+"Value":              7 
+},
+{
+ "Year":           1950,
+"Lat": "X24N.44N",
+"Value":              4 
+},
+{
+ "Year":           1951,
+"Lat": "X24N.44N",
+"Value":             12 
+},
+{
+ "Year":           1952,
+"Lat": "X24N.44N",
+"Value":             18 
+},
+{
+ "Year":           1953,
+"Lat": "X24N.44N",
+"Value":             15 
+},
+{
+ "Year":           1954,
+"Lat": "X24N.44N",
+"Value":             -1 
+},
+{
+ "Year":           1955,
+"Lat": "X24N.44N",
+"Value":             23 
+},
+{
+ "Year":           1956,
+"Lat": "X24N.44N",
+"Value":            -10 
+},
+{
+ "Year":           1957,
+"Lat": "X24N.44N",
+"Value":            -11 
+},
+{
+ "Year":           1958,
+"Lat": "X24N.44N",
+"Value":             12 
+},
+{
+ "Year":           1959,
+"Lat": "X24N.44N",
+"Value":              2 
+},
+{
+ "Year":           1960,
+"Lat": "X24N.44N",
+"Value":             10 
+},
+{
+ "Year":           1961,
+"Lat": "X24N.44N",
+"Value":             17 
+},
+{
+ "Year":           1962,
+"Lat": "X24N.44N",
+"Value":             14 
+},
+{
+ "Year":           1963,
+"Lat": "X24N.44N",
+"Value":             13 
+},
+{
+ "Year":           1964,
+"Lat": "X24N.44N",
+"Value":            -11 
+},
+{
+ "Year":           1965,
+"Lat": "X24N.44N",
+"Value":            -11 
+},
+{
+ "Year":           1966,
+"Lat": "X24N.44N",
+"Value":              8 
+},
+{
+ "Year":           1967,
+"Lat": "X24N.44N",
+"Value":             -6 
+},
+{
+ "Year":           1968,
+"Lat": "X24N.44N",
+"Value":             -8 
+},
+{
+ "Year":           1969,
+"Lat": "X24N.44N",
+"Value":            -15 
+},
+{
+ "Year":           1970,
+"Lat": "X24N.44N",
+"Value":             -6 
+},
+{
+ "Year":           1971,
+"Lat": "X24N.44N",
+"Value":            -10 
+},
+{
+ "Year":           1972,
+"Lat": "X24N.44N",
+"Value":            -22 
+},
+{
+ "Year":           1973,
+"Lat": "X24N.44N",
+"Value":              2 
+},
+{
+ "Year":           1974,
+"Lat": "X24N.44N",
+"Value":            -18 
+},
+{
+ "Year":           1975,
+"Lat": "X24N.44N",
+"Value":             -6 
+},
+{
+ "Year":           1976,
+"Lat": "X24N.44N",
+"Value":            -28 
+},
+{
+ "Year":           1977,
+"Lat": "X24N.44N",
+"Value":              7 
+},
+{
+ "Year":           1978,
+"Lat": "X24N.44N",
+"Value":             -3 
+},
+{
+ "Year":           1979,
+"Lat": "X24N.44N",
+"Value":              9 
+},
+{
+ "Year":           1980,
+"Lat": "X24N.44N",
+"Value":              2 
+},
+{
+ "Year":           1981,
+"Lat": "X24N.44N",
+"Value":              9 
+},
+{
+ "Year":           1982,
+"Lat": "X24N.44N",
+"Value":             -8 
+},
+{
+ "Year":           1983,
+"Lat": "X24N.44N",
+"Value":             -6 
+},
+{
+ "Year":           1984,
+"Lat": "X24N.44N",
+"Value":            -12 
+},
+{
+ "Year":           1985,
+"Lat": "X24N.44N",
+"Value":             -1 
+},
+{
+ "Year":           1986,
+"Lat": "X24N.44N",
+"Value":              4 
+},
+{
+ "Year":           1987,
+"Lat": "X24N.44N",
+"Value":             14 
+},
+{
+ "Year":           1988,
+"Lat": "X24N.44N",
+"Value":             23 
+},
+{
+ "Year":           1989,
+"Lat": "X24N.44N",
+"Value":             27 
+},
+{
+ "Year":           1990,
+"Lat": "X24N.44N",
+"Value":             48 
+},
+{
+ "Year":           1991,
+"Lat": "X24N.44N",
+"Value":             28 
+},
+{
+ "Year":           1992,
+"Lat": "X24N.44N",
+"Value":             -2 
+},
+{
+ "Year":           1993,
+"Lat": "X24N.44N",
+"Value":             -8 
+},
+{
+ "Year":           1994,
+"Lat": "X24N.44N",
+"Value":             43 
+},
+{
+ "Year":           1995,
+"Lat": "X24N.44N",
+"Value":             33 
+},
+{
+ "Year":           1996,
+"Lat": "X24N.44N",
+"Value":             13 
+},
+{
+ "Year":           1997,
+"Lat": "X24N.44N",
+"Value":             26 
+},
+{
+ "Year":           1998,
+"Lat": "X24N.44N",
+"Value":             68 
+},
+{
+ "Year":           1999,
+"Lat": "X24N.44N",
+"Value":             77 
+},
+{
+ "Year":           2000,
+"Lat": "X24N.44N",
+"Value":             56 
+},
+{
+ "Year":           2001,
+"Lat": "X24N.44N",
+"Value":             71 
+},
+{
+ "Year":           2002,
+"Lat": "X24N.44N",
+"Value":             58 
+},
+{
+ "Year":           2003,
+"Lat": "X24N.44N",
+"Value":             52 
+},
+{
+ "Year":           2004,
+"Lat": "X24N.44N",
+"Value":             68 
+},
+{
+ "Year":           2005,
+"Lat": "X24N.44N",
+"Value":             56 
+},
+{
+ "Year":           2006,
+"Lat": "X24N.44N",
+"Value":             67 
+},
+{
+ "Year":           2007,
+"Lat": "X24N.44N",
+"Value":             69 
+},
+{
+ "Year":           2008,
+"Lat": "X24N.44N",
+"Value":             61 
+},
+{
+ "Year":           2009,
+"Lat": "X24N.44N",
+"Value":             67 
+},
+{
+ "Year":           2010,
+"Lat": "X24N.44N",
+"Value":             74 
+},
+{
+ "Year":           2011,
+"Lat": "X24N.44N",
+"Value":             57 
+},
+{
+ "Year":           2012,
+"Lat": "X24N.44N",
+"Value":             73 
+},
+{
+ "Year":           2013,
+"Lat": "X24N.44N",
+"Value":             68 
+},
+{
+ "Year":           2014,
+"Lat": "X24N.44N",
+"Value":             76 
+},
+{
+ "Year":           1880,
+"Lat": "EQU.24N",
+"Value":            -26 
+},
+{
+ "Year":           1881,
+"Lat": "EQU.24N",
+"Value":             -5 
+},
+{
+ "Year":           1882,
+"Lat": "EQU.24N",
+"Value":            -12 
+},
+{
+ "Year":           1883,
+"Lat": "EQU.24N",
+"Value":            -25 
+},
+{
+ "Year":           1884,
+"Lat": "EQU.24N",
+"Value":            -21 
+},
+{
+ "Year":           1885,
+"Lat": "EQU.24N",
+"Value":            -11 
+},
+{
+ "Year":           1886,
+"Lat": "EQU.24N",
+"Value":            -24 
+},
+{
+ "Year":           1887,
+"Lat": "EQU.24N",
+"Value":            -24 
+},
+{
+ "Year":           1888,
+"Lat": "EQU.24N",
+"Value":              7 
+},
+{
+ "Year":           1889,
+"Lat": "EQU.24N",
+"Value":             -3 
+},
+{
+ "Year":           1890,
+"Lat": "EQU.24N",
+"Value":            -35 
+},
+{
+ "Year":           1891,
+"Lat": "EQU.24N",
+"Value":             -8 
+},
+{
+ "Year":           1892,
+"Lat": "EQU.24N",
+"Value":            -32 
+},
+{
+ "Year":           1893,
+"Lat": "EQU.24N",
+"Value":            -43 
+},
+{
+ "Year":           1894,
+"Lat": "EQU.24N",
+"Value":            -53 
+},
+{
+ "Year":           1895,
+"Lat": "EQU.24N",
+"Value":            -19 
+},
+{
+ "Year":           1896,
+"Lat": "EQU.24N",
+"Value":             -2 
+},
+{
+ "Year":           1897,
+"Lat": "EQU.24N",
+"Value":             13 
+},
+{
+ "Year":           1898,
+"Lat": "EQU.24N",
+"Value":            -28 
+},
+{
+ "Year":           1899,
+"Lat": "EQU.24N",
+"Value":            -16 
+},
+{
+ "Year":           1900,
+"Lat": "EQU.24N",
+"Value":             11 
+},
+{
+ "Year":           1901,
+"Lat": "EQU.24N",
+"Value":             -3 
+},
+{
+ "Year":           1902,
+"Lat": "EQU.24N",
+"Value":             -3 
+},
+{
+ "Year":           1903,
+"Lat": "EQU.24N",
+"Value":            -27 
+},
+{
+ "Year":           1904,
+"Lat": "EQU.24N",
+"Value":            -45 
+},
+{
+ "Year":           1905,
+"Lat": "EQU.24N",
+"Value":            -15 
+},
+{
+ "Year":           1906,
+"Lat": "EQU.24N",
+"Value":            -22 
+},
+{
+ "Year":           1907,
+"Lat": "EQU.24N",
+"Value":            -33 
+},
+{
+ "Year":           1908,
+"Lat": "EQU.24N",
+"Value":            -45 
+},
+{
+ "Year":           1909,
+"Lat": "EQU.24N",
+"Value":            -50 
+},
+{
+ "Year":           1910,
+"Lat": "EQU.24N",
+"Value":            -54 
+},
+{
+ "Year":           1911,
+"Lat": "EQU.24N",
+"Value":            -47 
+},
+{
+ "Year":           1912,
+"Lat": "EQU.24N",
+"Value":            -33 
+},
+{
+ "Year":           1913,
+"Lat": "EQU.24N",
+"Value":            -45 
+},
+{
+ "Year":           1914,
+"Lat": "EQU.24N",
+"Value":            -12 
+},
+{
+ "Year":           1915,
+"Lat": "EQU.24N",
+"Value":              2 
+},
+{
+ "Year":           1916,
+"Lat": "EQU.24N",
+"Value":            -47 
+},
+{
+ "Year":           1917,
+"Lat": "EQU.24N",
+"Value":            -70 
+},
+{
+ "Year":           1918,
+"Lat": "EQU.24N",
+"Value":            -32 
+},
+{
+ "Year":           1919,
+"Lat": "EQU.24N",
+"Value":            -23 
+},
+{
+ "Year":           1920,
+"Lat": "EQU.24N",
+"Value":            -40 
+},
+{
+ "Year":           1921,
+"Lat": "EQU.24N",
+"Value":            -30 
+},
+{
+ "Year":           1922,
+"Lat": "EQU.24N",
+"Value":            -35 
+},
+{
+ "Year":           1923,
+"Lat": "EQU.24N",
+"Value":            -33 
+},
+{
+ "Year":           1924,
+"Lat": "EQU.24N",
+"Value":            -26 
+},
+{
+ "Year":           1925,
+"Lat": "EQU.24N",
+"Value":            -22 
+},
+{
+ "Year":           1926,
+"Lat": "EQU.24N",
+"Value":              1 
+},
+{
+ "Year":           1927,
+"Lat": "EQU.24N",
+"Value":            -12 
+},
+{
+ "Year":           1928,
+"Lat": "EQU.24N",
+"Value":            -14 
+},
+{
+ "Year":           1929,
+"Lat": "EQU.24N",
+"Value":            -26 
+},
+{
+ "Year":           1930,
+"Lat": "EQU.24N",
+"Value":             -9 
+},
+{
+ "Year":           1931,
+"Lat": "EQU.24N",
+"Value":              6 
+},
+{
+ "Year":           1932,
+"Lat": "EQU.24N",
+"Value":            -17 
+},
+{
+ "Year":           1933,
+"Lat": "EQU.24N",
+"Value":            -29 
+},
+{
+ "Year":           1934,
+"Lat": "EQU.24N",
+"Value":            -28 
+},
+{
+ "Year":           1935,
+"Lat": "EQU.24N",
+"Value":            -20 
+},
+{
+ "Year":           1936,
+"Lat": "EQU.24N",
+"Value":             -6 
+},
+{
+ "Year":           1937,
+"Lat": "EQU.24N",
+"Value":              2 
+},
+{
+ "Year":           1938,
+"Lat": "EQU.24N",
+"Value":            -21 
+},
+{
+ "Year":           1939,
+"Lat": "EQU.24N",
+"Value":            -17 
+},
+{
+ "Year":           1940,
+"Lat": "EQU.24N",
+"Value":             19 
+},
+{
+ "Year":           1941,
+"Lat": "EQU.24N",
+"Value":             44 
+},
+{
+ "Year":           1942,
+"Lat": "EQU.24N",
+"Value":             15 
+},
+{
+ "Year":           1943,
+"Lat": "EQU.24N",
+"Value":             -4 
+},
+{
+ "Year":           1944,
+"Lat": "EQU.24N",
+"Value":             11 
+},
+{
+ "Year":           1945,
+"Lat": "EQU.24N",
+"Value":              9 
+},
+{
+ "Year":           1946,
+"Lat": "EQU.24N",
+"Value":              5 
+},
+{
+ "Year":           1947,
+"Lat": "EQU.24N",
+"Value":             -9 
+},
+{
+ "Year":           1948,
+"Lat": "EQU.24N",
+"Value":            -22 
+},
+{
+ "Year":           1949,
+"Lat": "EQU.24N",
+"Value":            -22 
+},
+{
+ "Year":           1950,
+"Lat": "EQU.24N",
+"Value":            -28 
+},
+{
+ "Year":           1951,
+"Lat": "EQU.24N",
+"Value":              1 
+},
+{
+ "Year":           1952,
+"Lat": "EQU.24N",
+"Value":              0 
+},
+{
+ "Year":           1953,
+"Lat": "EQU.24N",
+"Value":              6 
+},
+{
+ "Year":           1954,
+"Lat": "EQU.24N",
+"Value":            -14 
+},
+{
+ "Year":           1955,
+"Lat": "EQU.24N",
+"Value":            -27 
+},
+{
+ "Year":           1956,
+"Lat": "EQU.24N",
+"Value":            -27 
+},
+{
+ "Year":           1957,
+"Lat": "EQU.24N",
+"Value":              6 
+},
+{
+ "Year":           1958,
+"Lat": "EQU.24N",
+"Value":             26 
+},
+{
+ "Year":           1959,
+"Lat": "EQU.24N",
+"Value":              5 
+},
+{
+ "Year":           1960,
+"Lat": "EQU.24N",
+"Value":              5 
+},
+{
+ "Year":           1961,
+"Lat": "EQU.24N",
+"Value":             -7 
+},
+{
+ "Year":           1962,
+"Lat": "EQU.24N",
+"Value":             -4 
+},
+{
+ "Year":           1963,
+"Lat": "EQU.24N",
+"Value":             13 
+},
+{
+ "Year":           1964,
+"Lat": "EQU.24N",
+"Value":            -14 
+},
+{
+ "Year":           1965,
+"Lat": "EQU.24N",
+"Value":             -7 
+},
+{
+ "Year":           1966,
+"Lat": "EQU.24N",
+"Value":             17 
+},
+{
+ "Year":           1967,
+"Lat": "EQU.24N",
+"Value":            -11 
+},
+{
+ "Year":           1968,
+"Lat": "EQU.24N",
+"Value":             -1 
+},
+{
+ "Year":           1969,
+"Lat": "EQU.24N",
+"Value":             35 
+},
+{
+ "Year":           1970,
+"Lat": "EQU.24N",
+"Value":              6 
+},
+{
+ "Year":           1971,
+"Lat": "EQU.24N",
+"Value":            -30 
+},
+{
+ "Year":           1972,
+"Lat": "EQU.24N",
+"Value":              6 
+},
+{
+ "Year":           1973,
+"Lat": "EQU.24N",
+"Value":              6 
+},
+{
+ "Year":           1974,
+"Lat": "EQU.24N",
+"Value":            -23 
+},
+{
+ "Year":           1975,
+"Lat": "EQU.24N",
+"Value":            -29 
+},
+{
+ "Year":           1976,
+"Lat": "EQU.24N",
+"Value":            -14 
+},
+{
+ "Year":           1977,
+"Lat": "EQU.24N",
+"Value":             10 
+},
+{
+ "Year":           1978,
+"Lat": "EQU.24N",
+"Value":             10 
+},
+{
+ "Year":           1979,
+"Lat": "EQU.24N",
+"Value":             24 
+},
+{
+ "Year":           1980,
+"Lat": "EQU.24N",
+"Value":             31 
+},
+{
+ "Year":           1981,
+"Lat": "EQU.24N",
+"Value":             22 
+},
+{
+ "Year":           1982,
+"Lat": "EQU.24N",
+"Value":             24 
+},
+{
+ "Year":           1983,
+"Lat": "EQU.24N",
+"Value":             30 
+},
+{
+ "Year":           1984,
+"Lat": "EQU.24N",
+"Value":              8 
+},
+{
+ "Year":           1985,
+"Lat": "EQU.24N",
+"Value":              4 
+},
+{
+ "Year":           1986,
+"Lat": "EQU.24N",
+"Value":             18 
+},
+{
+ "Year":           1987,
+"Lat": "EQU.24N",
+"Value":             56 
+},
+{
+ "Year":           1988,
+"Lat": "EQU.24N",
+"Value":             32 
+},
+{
+ "Year":           1989,
+"Lat": "EQU.24N",
+"Value":             10 
+},
+{
+ "Year":           1990,
+"Lat": "EQU.24N",
+"Value":             36 
+},
+{
+ "Year":           1991,
+"Lat": "EQU.24N",
+"Value":             34 
+},
+{
+ "Year":           1992,
+"Lat": "EQU.24N",
+"Value":             20 
+},
+{
+ "Year":           1993,
+"Lat": "EQU.24N",
+"Value":             29 
+},
+{
+ "Year":           1994,
+"Lat": "EQU.24N",
+"Value":             27 
+},
+{
+ "Year":           1995,
+"Lat": "EQU.24N",
+"Value":             40 
+},
+{
+ "Year":           1996,
+"Lat": "EQU.24N",
+"Value":             31 
+},
+{
+ "Year":           1997,
+"Lat": "EQU.24N",
+"Value":             52 
+},
+{
+ "Year":           1998,
+"Lat": "EQU.24N",
+"Value":             63 
+},
+{
+ "Year":           1999,
+"Lat": "EQU.24N",
+"Value":             19 
+},
+{
+ "Year":           2000,
+"Lat": "EQU.24N",
+"Value":             22 
+},
+{
+ "Year":           2001,
+"Lat": "EQU.24N",
+"Value":             41 
+},
+{
+ "Year":           2002,
+"Lat": "EQU.24N",
+"Value":             55 
+},
+{
+ "Year":           2003,
+"Lat": "EQU.24N",
+"Value":             59 
+},
+{
+ "Year":           2004,
+"Lat": "EQU.24N",
+"Value":             56 
+},
+{
+ "Year":           2005,
+"Lat": "EQU.24N",
+"Value":             61 
+},
+{
+ "Year":           2006,
+"Lat": "EQU.24N",
+"Value":             55 
+},
+{
+ "Year":           2007,
+"Lat": "EQU.24N",
+"Value":             44 
+},
+{
+ "Year":           2008,
+"Lat": "EQU.24N",
+"Value":             33 
+},
+{
+ "Year":           2009,
+"Lat": "EQU.24N",
+"Value":             66 
+},
+{
+ "Year":           2010,
+"Lat": "EQU.24N",
+"Value":             72 
+},
+{
+ "Year":           2011,
+"Lat": "EQU.24N",
+"Value":             38 
+},
+{
+ "Year":           2012,
+"Lat": "EQU.24N",
+"Value":             46 
+},
+{
+ "Year":           2013,
+"Lat": "EQU.24N",
+"Value":             57 
+},
+{
+ "Year":           2014,
+"Lat": "EQU.24N",
+"Value":             70 
+},
+{
+ "Year":           1880,
+"Lat": "X24S.EQU",
+"Value":             -5 
+},
+{
+ "Year":           1881,
+"Lat": "X24S.EQU",
+"Value":              2 
+},
+{
+ "Year":           1882,
+"Lat": "X24S.EQU",
+"Value":             -8 
+},
+{
+ "Year":           1883,
+"Lat": "X24S.EQU",
+"Value":            -19 
+},
+{
+ "Year":           1884,
+"Lat": "X24S.EQU",
+"Value":            -14 
+},
+{
+ "Year":           1885,
+"Lat": "X24S.EQU",
+"Value":            -23 
+},
+{
+ "Year":           1886,
+"Lat": "X24S.EQU",
+"Value":            -24 
+},
+{
+ "Year":           1887,
+"Lat": "X24S.EQU",
+"Value":            -31 
+},
+{
+ "Year":           1888,
+"Lat": "X24S.EQU",
+"Value":              8 
+},
+{
+ "Year":           1889,
+"Lat": "X24S.EQU",
+"Value":             11 
+},
+{
+ "Year":           1890,
+"Lat": "X24S.EQU",
+"Value":            -43 
+},
+{
+ "Year":           1891,
+"Lat": "X24S.EQU",
+"Value":            -24 
+},
+{
+ "Year":           1892,
+"Lat": "X24S.EQU",
+"Value":            -29 
+},
+{
+ "Year":           1893,
+"Lat": "X24S.EQU",
+"Value":            -36 
+},
+{
+ "Year":           1894,
+"Lat": "X24S.EQU",
+"Value":            -23 
+},
+{
+ "Year":           1895,
+"Lat": "X24S.EQU",
+"Value":             -8 
+},
+{
+ "Year":           1896,
+"Lat": "X24S.EQU",
+"Value":              8 
+},
+{
+ "Year":           1897,
+"Lat": "X24S.EQU",
+"Value":             18 
+},
+{
+ "Year":           1898,
+"Lat": "X24S.EQU",
+"Value":            -29 
+},
+{
+ "Year":           1899,
+"Lat": "X24S.EQU",
+"Value":            -10 
+},
+{
+ "Year":           1900,
+"Lat": "X24S.EQU",
+"Value":             19 
+},
+{
+ "Year":           1901,
+"Lat": "X24S.EQU",
+"Value":             -6 
+},
+{
+ "Year":           1902,
+"Lat": "X24S.EQU",
+"Value":             -8 
+},
+{
+ "Year":           1903,
+"Lat": "X24S.EQU",
+"Value":            -37 
+},
+{
+ "Year":           1904,
+"Lat": "X24S.EQU",
+"Value":            -48 
+},
+{
+ "Year":           1905,
+"Lat": "X24S.EQU",
+"Value":            -11 
+},
+{
+ "Year":           1906,
+"Lat": "X24S.EQU",
+"Value":            -21 
+},
+{
+ "Year":           1907,
+"Lat": "X24S.EQU",
+"Value":            -36 
+},
+{
+ "Year":           1908,
+"Lat": "X24S.EQU",
+"Value":            -49 
+},
+{
+ "Year":           1909,
+"Lat": "X24S.EQU",
+"Value":            -55 
+},
+{
+ "Year":           1910,
+"Lat": "X24S.EQU",
+"Value":            -54 
+},
+{
+ "Year":           1911,
+"Lat": "X24S.EQU",
+"Value":            -47 
+},
+{
+ "Year":           1912,
+"Lat": "X24S.EQU",
+"Value":            -11 
+},
+{
+ "Year":           1913,
+"Lat": "X24S.EQU",
+"Value":            -16 
+},
+{
+ "Year":           1914,
+"Lat": "X24S.EQU",
+"Value":             -2 
+},
+{
+ "Year":           1915,
+"Lat": "X24S.EQU",
+"Value":             -1 
+},
+{
+ "Year":           1916,
+"Lat": "X24S.EQU",
+"Value":            -42 
+},
+{
+ "Year":           1917,
+"Lat": "X24S.EQU",
+"Value":            -51 
+},
+{
+ "Year":           1918,
+"Lat": "X24S.EQU",
+"Value":            -22 
+},
+{
+ "Year":           1919,
+"Lat": "X24S.EQU",
+"Value":             -5 
+},
+{
+ "Year":           1920,
+"Lat": "X24S.EQU",
+"Value":            -14 
+},
+{
+ "Year":           1921,
+"Lat": "X24S.EQU",
+"Value":            -25 
+},
+{
+ "Year":           1922,
+"Lat": "X24S.EQU",
+"Value":            -29 
+},
+{
+ "Year":           1923,
+"Lat": "X24S.EQU",
+"Value":            -27 
+},
+{
+ "Year":           1924,
+"Lat": "X24S.EQU",
+"Value":            -24 
+},
+{
+ "Year":           1925,
+"Lat": "X24S.EQU",
+"Value":            -22 
+},
+{
+ "Year":           1926,
+"Lat": "X24S.EQU",
+"Value":              5 
+},
+{
+ "Year":           1927,
+"Lat": "X24S.EQU",
+"Value":            -17 
+},
+{
+ "Year":           1928,
+"Lat": "X24S.EQU",
+"Value":            -14 
+},
+{
+ "Year":           1929,
+"Lat": "X24S.EQU",
+"Value":            -29 
+},
+{
+ "Year":           1930,
+"Lat": "X24S.EQU",
+"Value":            -15 
+},
+{
+ "Year":           1931,
+"Lat": "X24S.EQU",
+"Value":              0 
+},
+{
+ "Year":           1932,
+"Lat": "X24S.EQU",
+"Value":            -18 
+},
+{
+ "Year":           1933,
+"Lat": "X24S.EQU",
+"Value":            -29 
+},
+{
+ "Year":           1934,
+"Lat": "X24S.EQU",
+"Value":            -26 
+},
+{
+ "Year":           1935,
+"Lat": "X24S.EQU",
+"Value":            -24 
+},
+{
+ "Year":           1936,
+"Lat": "X24S.EQU",
+"Value":            -23 
+},
+{
+ "Year":           1937,
+"Lat": "X24S.EQU",
+"Value":            -14 
+},
+{
+ "Year":           1938,
+"Lat": "X24S.EQU",
+"Value":            -31 
+},
+{
+ "Year":           1939,
+"Lat": "X24S.EQU",
+"Value":            -18 
+},
+{
+ "Year":           1940,
+"Lat": "X24S.EQU",
+"Value":             18 
+},
+{
+ "Year":           1941,
+"Lat": "X24S.EQU",
+"Value":             34 
+},
+{
+ "Year":           1942,
+"Lat": "X24S.EQU",
+"Value":             14 
+},
+{
+ "Year":           1943,
+"Lat": "X24S.EQU",
+"Value":              5 
+},
+{
+ "Year":           1944,
+"Lat": "X24S.EQU",
+"Value":             32 
+},
+{
+ "Year":           1945,
+"Lat": "X24S.EQU",
+"Value":             35 
+},
+{
+ "Year":           1946,
+"Lat": "X24S.EQU",
+"Value":             -7 
+},
+{
+ "Year":           1947,
+"Lat": "X24S.EQU",
+"Value":             -9 
+},
+{
+ "Year":           1948,
+"Lat": "X24S.EQU",
+"Value":            -14 
+},
+{
+ "Year":           1949,
+"Lat": "X24S.EQU",
+"Value":            -13 
+},
+{
+ "Year":           1950,
+"Lat": "X24S.EQU",
+"Value":            -26 
+},
+{
+ "Year":           1951,
+"Lat": "X24S.EQU",
+"Value":            -13 
+},
+{
+ "Year":           1952,
+"Lat": "X24S.EQU",
+"Value":              3 
+},
+{
+ "Year":           1953,
+"Lat": "X24S.EQU",
+"Value":              5 
+},
+{
+ "Year":           1954,
+"Lat": "X24S.EQU",
+"Value":            -28 
+},
+{
+ "Year":           1955,
+"Lat": "X24S.EQU",
+"Value":            -38 
+},
+{
+ "Year":           1956,
+"Lat": "X24S.EQU",
+"Value":            -37 
+},
+{
+ "Year":           1957,
+"Lat": "X24S.EQU",
+"Value":              8 
+},
+{
+ "Year":           1958,
+"Lat": "X24S.EQU",
+"Value":             14 
+},
+{
+ "Year":           1959,
+"Lat": "X24S.EQU",
+"Value":              8 
+},
+{
+ "Year":           1960,
+"Lat": "X24S.EQU",
+"Value":             -3 
+},
+{
+ "Year":           1961,
+"Lat": "X24S.EQU",
+"Value":              1 
+},
+{
+ "Year":           1962,
+"Lat": "X24S.EQU",
+"Value":             -5 
+},
+{
+ "Year":           1963,
+"Lat": "X24S.EQU",
+"Value":              9 
+},
+{
+ "Year":           1964,
+"Lat": "X24S.EQU",
+"Value":            -13 
+},
+{
+ "Year":           1965,
+"Lat": "X24S.EQU",
+"Value":              1 
+},
+{
+ "Year":           1966,
+"Lat": "X24S.EQU",
+"Value":             -1 
+},
+{
+ "Year":           1967,
+"Lat": "X24S.EQU",
+"Value":            -16 
+},
+{
+ "Year":           1968,
+"Lat": "X24S.EQU",
+"Value":            -10 
+},
+{
+ "Year":           1969,
+"Lat": "X24S.EQU",
+"Value":             29 
+},
+{
+ "Year":           1970,
+"Lat": "X24S.EQU",
+"Value":              6 
+},
+{
+ "Year":           1971,
+"Lat": "X24S.EQU",
+"Value":            -22 
+},
+{
+ "Year":           1972,
+"Lat": "X24S.EQU",
+"Value":             26 
+},
+{
+ "Year":           1973,
+"Lat": "X24S.EQU",
+"Value":             28 
+},
+{
+ "Year":           1974,
+"Lat": "X24S.EQU",
+"Value":            -16 
+},
+{
+ "Year":           1975,
+"Lat": "X24S.EQU",
+"Value":            -14 
+},
+{
+ "Year":           1976,
+"Lat": "X24S.EQU",
+"Value":             -7 
+},
+{
+ "Year":           1977,
+"Lat": "X24S.EQU",
+"Value":             23 
+},
+{
+ "Year":           1978,
+"Lat": "X24S.EQU",
+"Value":              7 
+},
+{
+ "Year":           1979,
+"Lat": "X24S.EQU",
+"Value":             27 
+},
+{
+ "Year":           1980,
+"Lat": "X24S.EQU",
+"Value":             28 
+},
+{
+ "Year":           1981,
+"Lat": "X24S.EQU",
+"Value":             16 
+},
+{
+ "Year":           1982,
+"Lat": "X24S.EQU",
+"Value":             30 
+},
+{
+ "Year":           1983,
+"Lat": "X24S.EQU",
+"Value":             58 
+},
+{
+ "Year":           1984,
+"Lat": "X24S.EQU",
+"Value":             30 
+},
+{
+ "Year":           1985,
+"Lat": "X24S.EQU",
+"Value":             18 
+},
+{
+ "Year":           1986,
+"Lat": "X24S.EQU",
+"Value":             30 
+},
+{
+ "Year":           1987,
+"Lat": "X24S.EQU",
+"Value":             63 
+},
+{
+ "Year":           1988,
+"Lat": "X24S.EQU",
+"Value":             45 
+},
+{
+ "Year":           1989,
+"Lat": "X24S.EQU",
+"Value":             22 
+},
+{
+ "Year":           1990,
+"Lat": "X24S.EQU",
+"Value":             39 
+},
+{
+ "Year":           1991,
+"Lat": "X24S.EQU",
+"Value":             44 
+},
+{
+ "Year":           1992,
+"Lat": "X24S.EQU",
+"Value":             41 
+},
+{
+ "Year":           1993,
+"Lat": "X24S.EQU",
+"Value":             38 
+},
+{
+ "Year":           1994,
+"Lat": "X24S.EQU",
+"Value":             37 
+},
+{
+ "Year":           1995,
+"Lat": "X24S.EQU",
+"Value":             49 
+},
+{
+ "Year":           1996,
+"Lat": "X24S.EQU",
+"Value":             37 
+},
+{
+ "Year":           1997,
+"Lat": "X24S.EQU",
+"Value":             54 
+},
+{
+ "Year":           1998,
+"Lat": "X24S.EQU",
+"Value":             81 
+},
+{
+ "Year":           1999,
+"Lat": "X24S.EQU",
+"Value":             32 
+},
+{
+ "Year":           2000,
+"Lat": "X24S.EQU",
+"Value":             33 
+},
+{
+ "Year":           2001,
+"Lat": "X24S.EQU",
+"Value":             48 
+},
+{
+ "Year":           2002,
+"Lat": "X24S.EQU",
+"Value":             67 
+},
+{
+ "Year":           2003,
+"Lat": "X24S.EQU",
+"Value":             68 
+},
+{
+ "Year":           2004,
+"Lat": "X24S.EQU",
+"Value":             58 
+},
+{
+ "Year":           2005,
+"Lat": "X24S.EQU",
+"Value":             69 
+},
+{
+ "Year":           2006,
+"Lat": "X24S.EQU",
+"Value":             58 
+},
+{
+ "Year":           2007,
+"Lat": "X24S.EQU",
+"Value":             50 
+},
+{
+ "Year":           2008,
+"Lat": "X24S.EQU",
+"Value":             45 
+},
+{
+ "Year":           2009,
+"Lat": "X24S.EQU",
+"Value":             71 
+},
+{
+ "Year":           2010,
+"Lat": "X24S.EQU",
+"Value":             66 
+},
+{
+ "Year":           2011,
+"Lat": "X24S.EQU",
+"Value":             37 
+},
+{
+ "Year":           2012,
+"Lat": "X24S.EQU",
+"Value":             57 
+},
+{
+ "Year":           2013,
+"Lat": "X24S.EQU",
+"Value":             58 
+},
+{
+ "Year":           2014,
+"Lat": "X24S.EQU",
+"Value":             64 
+},
+{
+ "Year":           1880,
+"Lat": "X44S.24S",
+"Value":             -2 
+},
+{
+ "Year":           1881,
+"Lat": "X44S.24S",
+"Value":             -6 
+},
+{
+ "Year":           1882,
+"Lat": "X44S.24S",
+"Value":              3 
+},
+{
+ "Year":           1883,
+"Lat": "X44S.24S",
+"Value":             -1 
+},
+{
+ "Year":           1884,
+"Lat": "X44S.24S",
+"Value":            -15 
+},
+{
+ "Year":           1885,
+"Lat": "X44S.24S",
+"Value":            -27 
+},
+{
+ "Year":           1886,
+"Lat": "X44S.24S",
+"Value":            -18 
+},
+{
+ "Year":           1887,
+"Lat": "X44S.24S",
+"Value":            -24 
+},
+{
+ "Year":           1888,
+"Lat": "X44S.24S",
+"Value":            -30 
+},
+{
+ "Year":           1889,
+"Lat": "X44S.24S",
+"Value":            -16 
+},
+{
+ "Year":           1890,
+"Lat": "X44S.24S",
+"Value":            -16 
+},
+{
+ "Year":           1891,
+"Lat": "X44S.24S",
+"Value":            -20 
+},
+{
+ "Year":           1892,
+"Lat": "X44S.24S",
+"Value":             -4 
+},
+{
+ "Year":           1893,
+"Lat": "X44S.24S",
+"Value":              3 
+},
+{
+ "Year":           1894,
+"Lat": "X44S.24S",
+"Value":            -16 
+},
+{
+ "Year":           1895,
+"Lat": "X44S.24S",
+"Value":            -21 
+},
+{
+ "Year":           1896,
+"Lat": "X44S.24S",
+"Value":            -15 
+},
+{
+ "Year":           1897,
+"Lat": "X44S.24S",
+"Value":            -21 
+},
+{
+ "Year":           1898,
+"Lat": "X44S.24S",
+"Value":            -27 
+},
+{
+ "Year":           1899,
+"Lat": "X44S.24S",
+"Value":            -13 
+},
+{
+ "Year":           1900,
+"Lat": "X44S.24S",
+"Value":            -31 
+},
+{
+ "Year":           1901,
+"Lat": "X44S.24S",
+"Value":            -29 
+},
+{
+ "Year":           1902,
+"Lat": "X44S.24S",
+"Value":            -27 
+},
+{
+ "Year":           1903,
+"Lat": "X44S.24S",
+"Value":            -37 
+},
+{
+ "Year":           1904,
+"Lat": "X44S.24S",
+"Value":            -36 
+},
+{
+ "Year":           1905,
+"Lat": "X44S.24S",
+"Value":            -37 
+},
+{
+ "Year":           1906,
+"Lat": "X44S.24S",
+"Value":            -23 
+},
+{
+ "Year":           1907,
+"Lat": "X44S.24S",
+"Value":            -25 
+},
+{
+ "Year":           1908,
+"Lat": "X44S.24S",
+"Value":            -31 
+},
+{
+ "Year":           1909,
+"Lat": "X44S.24S",
+"Value":            -38 
+},
+{
+ "Year":           1910,
+"Lat": "X44S.24S",
+"Value":            -32 
+},
+{
+ "Year":           1911,
+"Lat": "X44S.24S",
+"Value":            -43 
+},
+{
+ "Year":           1912,
+"Lat": "X44S.24S",
+"Value":            -37 
+},
+{
+ "Year":           1913,
+"Lat": "X44S.24S",
+"Value":            -29 
+},
+{
+ "Year":           1914,
+"Lat": "X44S.24S",
+"Value":            -17 
+},
+{
+ "Year":           1915,
+"Lat": "X44S.24S",
+"Value":            -10 
+},
+{
+ "Year":           1916,
+"Lat": "X44S.24S",
+"Value":            -22 
+},
+{
+ "Year":           1917,
+"Lat": "X44S.24S",
+"Value":            -17 
+},
+{
+ "Year":           1918,
+"Lat": "X44S.24S",
+"Value":             -8 
+},
+{
+ "Year":           1919,
+"Lat": "X44S.24S",
+"Value":             -7 
+},
+{
+ "Year":           1920,
+"Lat": "X44S.24S",
+"Value":            -20 
+},
+{
+ "Year":           1921,
+"Lat": "X44S.24S",
+"Value":            -25 
+},
+{
+ "Year":           1922,
+"Lat": "X44S.24S",
+"Value":            -23 
+},
+{
+ "Year":           1923,
+"Lat": "X44S.24S",
+"Value":            -26 
+},
+{
+ "Year":           1924,
+"Lat": "X44S.24S",
+"Value":            -38 
+},
+{
+ "Year":           1925,
+"Lat": "X44S.24S",
+"Value":            -24 
+},
+{
+ "Year":           1926,
+"Lat": "X44S.24S",
+"Value":            -32 
+},
+{
+ "Year":           1927,
+"Lat": "X44S.24S",
+"Value":            -31 
+},
+{
+ "Year":           1928,
+"Lat": "X44S.24S",
+"Value":            -32 
+},
+{
+ "Year":           1929,
+"Lat": "X44S.24S",
+"Value":            -41 
+},
+{
+ "Year":           1930,
+"Lat": "X44S.24S",
+"Value":            -31 
+},
+{
+ "Year":           1931,
+"Lat": "X44S.24S",
+"Value":            -42 
+},
+{
+ "Year":           1932,
+"Lat": "X44S.24S",
+"Value":            -25 
+},
+{
+ "Year":           1933,
+"Lat": "X44S.24S",
+"Value":            -22 
+},
+{
+ "Year":           1934,
+"Lat": "X44S.24S",
+"Value":            -23 
+},
+{
+ "Year":           1935,
+"Lat": "X44S.24S",
+"Value":            -29 
+},
+{
+ "Year":           1936,
+"Lat": "X44S.24S",
+"Value":            -27 
+},
+{
+ "Year":           1937,
+"Lat": "X44S.24S",
+"Value":            -21 
+},
+{
+ "Year":           1938,
+"Lat": "X44S.24S",
+"Value":             -9 
+},
+{
+ "Year":           1939,
+"Lat": "X44S.24S",
+"Value":             -5 
+},
+{
+ "Year":           1940,
+"Lat": "X44S.24S",
+"Value":              1 
+},
+{
+ "Year":           1941,
+"Lat": "X44S.24S",
+"Value":              2 
+},
+{
+ "Year":           1942,
+"Lat": "X44S.24S",
+"Value":              8 
+},
+{
+ "Year":           1943,
+"Lat": "X44S.24S",
+"Value":             13 
+},
+{
+ "Year":           1944,
+"Lat": "X44S.24S",
+"Value":             32 
+},
+{
+ "Year":           1945,
+"Lat": "X44S.24S",
+"Value":             14 
+},
+{
+ "Year":           1946,
+"Lat": "X44S.24S",
+"Value":            -18 
+},
+{
+ "Year":           1947,
+"Lat": "X44S.24S",
+"Value":            -16 
+},
+{
+ "Year":           1948,
+"Lat": "X44S.24S",
+"Value":            -19 
+},
+{
+ "Year":           1949,
+"Lat": "X44S.24S",
+"Value":            -15 
+},
+{
+ "Year":           1950,
+"Lat": "X44S.24S",
+"Value":             -5 
+},
+{
+ "Year":           1951,
+"Lat": "X44S.24S",
+"Value":            -20 
+},
+{
+ "Year":           1952,
+"Lat": "X44S.24S",
+"Value":             -9 
+},
+{
+ "Year":           1953,
+"Lat": "X44S.24S",
+"Value":            -10 
+},
+{
+ "Year":           1954,
+"Lat": "X44S.24S",
+"Value":            -16 
+},
+{
+ "Year":           1955,
+"Lat": "X44S.24S",
+"Value":            -16 
+},
+{
+ "Year":           1956,
+"Lat": "X44S.24S",
+"Value":            -11 
+},
+{
+ "Year":           1957,
+"Lat": "X44S.24S",
+"Value":             -8 
+},
+{
+ "Year":           1958,
+"Lat": "X44S.24S",
+"Value":             -9 
+},
+{
+ "Year":           1959,
+"Lat": "X44S.24S",
+"Value":             -4 
+},
+{
+ "Year":           1960,
+"Lat": "X44S.24S",
+"Value":            -10 
+},
+{
+ "Year":           1961,
+"Lat": "X44S.24S",
+"Value":             11 
+},
+{
+ "Year":           1962,
+"Lat": "X44S.24S",
+"Value":              6 
+},
+{
+ "Year":           1963,
+"Lat": "X44S.24S",
+"Value":            -11 
+},
+{
+ "Year":           1964,
+"Lat": "X44S.24S",
+"Value":            -30 
+},
+{
+ "Year":           1965,
+"Lat": "X44S.24S",
+"Value":            -21 
+},
+{
+ "Year":           1966,
+"Lat": "X44S.24S",
+"Value":            -24 
+},
+{
+ "Year":           1967,
+"Lat": "X44S.24S",
+"Value":             -7 
+},
+{
+ "Year":           1968,
+"Lat": "X44S.24S",
+"Value":            -12 
+},
+{
+ "Year":           1969,
+"Lat": "X44S.24S",
+"Value":              2 
+},
+{
+ "Year":           1970,
+"Lat": "X44S.24S",
+"Value":              9 
+},
+{
+ "Year":           1971,
+"Lat": "X44S.24S",
+"Value":              4 
+},
+{
+ "Year":           1972,
+"Lat": "X44S.24S",
+"Value":             14 
+},
+{
+ "Year":           1973,
+"Lat": "X44S.24S",
+"Value":             20 
+},
+{
+ "Year":           1974,
+"Lat": "X44S.24S",
+"Value":             21 
+},
+{
+ "Year":           1975,
+"Lat": "X44S.24S",
+"Value":             13 
+},
+{
+ "Year":           1976,
+"Lat": "X44S.24S",
+"Value":              9 
+},
+{
+ "Year":           1977,
+"Lat": "X44S.24S",
+"Value":             23 
+},
+{
+ "Year":           1978,
+"Lat": "X44S.24S",
+"Value":             20 
+},
+{
+ "Year":           1979,
+"Lat": "X44S.24S",
+"Value":             32 
+},
+{
+ "Year":           1980,
+"Lat": "X44S.24S",
+"Value":             35 
+},
+{
+ "Year":           1981,
+"Lat": "X44S.24S",
+"Value":             29 
+},
+{
+ "Year":           1982,
+"Lat": "X44S.24S",
+"Value":             18 
+},
+{
+ "Year":           1983,
+"Lat": "X44S.24S",
+"Value":             20 
+},
+{
+ "Year":           1984,
+"Lat": "X44S.24S",
+"Value":             16 
+},
+{
+ "Year":           1985,
+"Lat": "X44S.24S",
+"Value":             29 
+},
+{
+ "Year":           1986,
+"Lat": "X44S.24S",
+"Value":             26 
+},
+{
+ "Year":           1987,
+"Lat": "X44S.24S",
+"Value":             33 
+},
+{
+ "Year":           1988,
+"Lat": "X44S.24S",
+"Value":             39 
+},
+{
+ "Year":           1989,
+"Lat": "X44S.24S",
+"Value":             37 
+},
+{
+ "Year":           1990,
+"Lat": "X44S.24S",
+"Value":             38 
+},
+{
+ "Year":           1991,
+"Lat": "X44S.24S",
+"Value":             33 
+},
+{
+ "Year":           1992,
+"Lat": "X44S.24S",
+"Value":             21 
+},
+{
+ "Year":           1993,
+"Lat": "X44S.24S",
+"Value":             26 
+},
+{
+ "Year":           1994,
+"Lat": "X44S.24S",
+"Value":             27 
+},
+{
+ "Year":           1995,
+"Lat": "X44S.24S",
+"Value":             32 
+},
+{
+ "Year":           1996,
+"Lat": "X44S.24S",
+"Value":             35 
+},
+{
+ "Year":           1997,
+"Lat": "X44S.24S",
+"Value":             43 
+},
+{
+ "Year":           1998,
+"Lat": "X44S.24S",
+"Value":             43 
+},
+{
+ "Year":           1999,
+"Lat": "X44S.24S",
+"Value":             50 
+},
+{
+ "Year":           2000,
+"Lat": "X44S.24S",
+"Value":             47 
+},
+{
+ "Year":           2001,
+"Lat": "X44S.24S",
+"Value":             58 
+},
+{
+ "Year":           2002,
+"Lat": "X44S.24S",
+"Value":             49 
+},
+{
+ "Year":           2003,
+"Lat": "X44S.24S",
+"Value":             47 
+},
+{
+ "Year":           2004,
+"Lat": "X44S.24S",
+"Value":             50 
+},
+{
+ "Year":           2005,
+"Lat": "X44S.24S",
+"Value":             52 
+},
+{
+ "Year":           2006,
+"Lat": "X44S.24S",
+"Value":             54 
+},
+{
+ "Year":           2007,
+"Lat": "X44S.24S",
+"Value":             54 
+},
+{
+ "Year":           2008,
+"Lat": "X44S.24S",
+"Value":             56 
+},
+{
+ "Year":           2009,
+"Lat": "X44S.24S",
+"Value":             61 
+},
+{
+ "Year":           2010,
+"Lat": "X44S.24S",
+"Value":             66 
+},
+{
+ "Year":           2011,
+"Lat": "X44S.24S",
+"Value":             68 
+},
+{
+ "Year":           2012,
+"Lat": "X44S.24S",
+"Value":             60 
+},
+{
+ "Year":           2013,
+"Lat": "X44S.24S",
+"Value":             64 
+},
+{
+ "Year":           2014,
+"Lat": "X44S.24S",
+"Value":             76 
+},
+{
+ "Year":           1880,
+"Lat": "X64S.44S",
+"Value":             -8 
+},
+{
+ "Year":           1881,
+"Lat": "X64S.44S",
+"Value":             -3 
+},
+{
+ "Year":           1882,
+"Lat": "X64S.44S",
+"Value":              8 
+},
+{
+ "Year":           1883,
+"Lat": "X64S.44S",
+"Value":              0 
+},
+{
+ "Year":           1884,
+"Lat": "X64S.44S",
+"Value":             -5 
+},
+{
+ "Year":           1885,
+"Lat": "X64S.44S",
+"Value":             -7 
+},
+{
+ "Year":           1886,
+"Lat": "X64S.44S",
+"Value":            -21 
+},
+{
+ "Year":           1887,
+"Lat": "X64S.44S",
+"Value":            -29 
+},
+{
+ "Year":           1888,
+"Lat": "X64S.44S",
+"Value":            -38 
+},
+{
+ "Year":           1889,
+"Lat": "X64S.44S",
+"Value":            -17 
+},
+{
+ "Year":           1890,
+"Lat": "X64S.44S",
+"Value":            -40 
+},
+{
+ "Year":           1891,
+"Lat": "X64S.44S",
+"Value":            -28 
+},
+{
+ "Year":           1892,
+"Lat": "X64S.44S",
+"Value":            -34 
+},
+{
+ "Year":           1893,
+"Lat": "X64S.44S",
+"Value":            -22 
+},
+{
+ "Year":           1894,
+"Lat": "X64S.44S",
+"Value":            -32 
+},
+{
+ "Year":           1895,
+"Lat": "X64S.44S",
+"Value":            -13 
+},
+{
+ "Year":           1896,
+"Lat": "X64S.44S",
+"Value":            -22 
+},
+{
+ "Year":           1897,
+"Lat": "X64S.44S",
+"Value":            -37 
+},
+{
+ "Year":           1898,
+"Lat": "X64S.44S",
+"Value":            -30 
+},
+{
+ "Year":           1899,
+"Lat": "X64S.44S",
+"Value":            -23 
+},
+{
+ "Year":           1900,
+"Lat": "X64S.44S",
+"Value":            -38 
+},
+{
+ "Year":           1901,
+"Lat": "X64S.44S",
+"Value":            -26 
+},
+{
+ "Year":           1902,
+"Lat": "X64S.44S",
+"Value":            -42 
+},
+{
+ "Year":           1903,
+"Lat": "X64S.44S",
+"Value":            -25 
+},
+{
+ "Year":           1904,
+"Lat": "X64S.44S",
+"Value":            -38 
+},
+{
+ "Year":           1905,
+"Lat": "X64S.44S",
+"Value":            -34 
+},
+{
+ "Year":           1906,
+"Lat": "X64S.44S",
+"Value":            -22 
+},
+{
+ "Year":           1907,
+"Lat": "X64S.44S",
+"Value":            -31 
+},
+{
+ "Year":           1908,
+"Lat": "X64S.44S",
+"Value":            -38 
+},
+{
+ "Year":           1909,
+"Lat": "X64S.44S",
+"Value":            -41 
+},
+{
+ "Year":           1910,
+"Lat": "X64S.44S",
+"Value":            -32 
+},
+{
+ "Year":           1911,
+"Lat": "X64S.44S",
+"Value":            -53 
+},
+{
+ "Year":           1912,
+"Lat": "X64S.44S",
+"Value":            -13 
+},
+{
+ "Year":           1913,
+"Lat": "X64S.44S",
+"Value":            -31 
+},
+{
+ "Year":           1914,
+"Lat": "X64S.44S",
+"Value":            -23 
+},
+{
+ "Year":           1915,
+"Lat": "X64S.44S",
+"Value":            -23 
+},
+{
+ "Year":           1916,
+"Lat": "X64S.44S",
+"Value":            -17 
+},
+{
+ "Year":           1917,
+"Lat": "X64S.44S",
+"Value":              4 
+},
+{
+ "Year":           1918,
+"Lat": "X64S.44S",
+"Value":            -23 
+},
+{
+ "Year":           1919,
+"Lat": "X64S.44S",
+"Value":            -22 
+},
+{
+ "Year":           1920,
+"Lat": "X64S.44S",
+"Value":            -44 
+},
+{
+ "Year":           1921,
+"Lat": "X64S.44S",
+"Value":            -49 
+},
+{
+ "Year":           1922,
+"Lat": "X64S.44S",
+"Value":            -27 
+},
+{
+ "Year":           1923,
+"Lat": "X64S.44S",
+"Value":            -28 
+},
+{
+ "Year":           1924,
+"Lat": "X64S.44S",
+"Value":            -60 
+},
+{
+ "Year":           1925,
+"Lat": "X64S.44S",
+"Value":            -55 
+},
+{
+ "Year":           1926,
+"Lat": "X64S.44S",
+"Value":            -46 
+},
+{
+ "Year":           1927,
+"Lat": "X64S.44S",
+"Value":            -41 
+},
+{
+ "Year":           1928,
+"Lat": "X64S.44S",
+"Value":            -62 
+},
+{
+ "Year":           1929,
+"Lat": "X64S.44S",
+"Value":            -57 
+},
+{
+ "Year":           1930,
+"Lat": "X64S.44S",
+"Value":            -42 
+},
+{
+ "Year":           1931,
+"Lat": "X64S.44S",
+"Value":            -31 
+},
+{
+ "Year":           1932,
+"Lat": "X64S.44S",
+"Value":            -57 
+},
+{
+ "Year":           1933,
+"Lat": "X64S.44S",
+"Value":            -46 
+},
+{
+ "Year":           1934,
+"Lat": "X64S.44S",
+"Value":            -34 
+},
+{
+ "Year":           1935,
+"Lat": "X64S.44S",
+"Value":            -34 
+},
+{
+ "Year":           1936,
+"Lat": "X64S.44S",
+"Value":            -28 
+},
+{
+ "Year":           1937,
+"Lat": "X64S.44S",
+"Value":            -14 
+},
+{
+ "Year":           1938,
+"Lat": "X64S.44S",
+"Value":             -8 
+},
+{
+ "Year":           1939,
+"Lat": "X64S.44S",
+"Value":            -10 
+},
+{
+ "Year":           1940,
+"Lat": "X64S.44S",
+"Value":            -21 
+},
+{
+ "Year":           1941,
+"Lat": "X64S.44S",
+"Value":            -18 
+},
+{
+ "Year":           1942,
+"Lat": "X64S.44S",
+"Value":             -5 
+},
+{
+ "Year":           1943,
+"Lat": "X64S.44S",
+"Value":              1 
+},
+{
+ "Year":           1944,
+"Lat": "X64S.44S",
+"Value":             -1 
+},
+{
+ "Year":           1945,
+"Lat": "X64S.44S",
+"Value":             -4 
+},
+{
+ "Year":           1946,
+"Lat": "X64S.44S",
+"Value":            -16 
+},
+{
+ "Year":           1947,
+"Lat": "X64S.44S",
+"Value":            -11 
+},
+{
+ "Year":           1948,
+"Lat": "X64S.44S",
+"Value":            -16 
+},
+{
+ "Year":           1949,
+"Lat": "X64S.44S",
+"Value":            -13 
+},
+{
+ "Year":           1950,
+"Lat": "X64S.44S",
+"Value":            -21 
+},
+{
+ "Year":           1951,
+"Lat": "X64S.44S",
+"Value":            -21 
+},
+{
+ "Year":           1952,
+"Lat": "X64S.44S",
+"Value":              0 
+},
+{
+ "Year":           1953,
+"Lat": "X64S.44S",
+"Value":            -12 
+},
+{
+ "Year":           1954,
+"Lat": "X64S.44S",
+"Value":             -4 
+},
+{
+ "Year":           1955,
+"Lat": "X64S.44S",
+"Value":            -19 
+},
+{
+ "Year":           1956,
+"Lat": "X64S.44S",
+"Value":              0 
+},
+{
+ "Year":           1957,
+"Lat": "X64S.44S",
+"Value":             -9 
+},
+{
+ "Year":           1958,
+"Lat": "X64S.44S",
+"Value":             -7 
+},
+{
+ "Year":           1959,
+"Lat": "X64S.44S",
+"Value":            -15 
+},
+{
+ "Year":           1960,
+"Lat": "X64S.44S",
+"Value":             -4 
+},
+{
+ "Year":           1961,
+"Lat": "X64S.44S",
+"Value":            -11 
+},
+{
+ "Year":           1962,
+"Lat": "X64S.44S",
+"Value":             -9 
+},
+{
+ "Year":           1963,
+"Lat": "X64S.44S",
+"Value":            -20 
+},
+{
+ "Year":           1964,
+"Lat": "X64S.44S",
+"Value":             -9 
+},
+{
+ "Year":           1965,
+"Lat": "X64S.44S",
+"Value":              0 
+},
+{
+ "Year":           1966,
+"Lat": "X64S.44S",
+"Value":            -17 
+},
+{
+ "Year":           1967,
+"Lat": "X64S.44S",
+"Value":             -7 
+},
+{
+ "Year":           1968,
+"Lat": "X64S.44S",
+"Value":              2 
+},
+{
+ "Year":           1969,
+"Lat": "X64S.44S",
+"Value":             13 
+},
+{
+ "Year":           1970,
+"Lat": "X64S.44S",
+"Value":              0 
+},
+{
+ "Year":           1971,
+"Lat": "X64S.44S",
+"Value":             11 
+},
+{
+ "Year":           1972,
+"Lat": "X64S.44S",
+"Value":              2 
+},
+{
+ "Year":           1973,
+"Lat": "X64S.44S",
+"Value":             -1 
+},
+{
+ "Year":           1974,
+"Lat": "X64S.44S",
+"Value":             -6 
+},
+{
+ "Year":           1975,
+"Lat": "X64S.44S",
+"Value":              4 
+},
+{
+ "Year":           1976,
+"Lat": "X64S.44S",
+"Value":             10 
+},
+{
+ "Year":           1977,
+"Lat": "X64S.44S",
+"Value":             37 
+},
+{
+ "Year":           1978,
+"Lat": "X64S.44S",
+"Value":             16 
+},
+{
+ "Year":           1979,
+"Lat": "X64S.44S",
+"Value":             38 
+},
+{
+ "Year":           1980,
+"Lat": "X64S.44S",
+"Value":             37 
+},
+{
+ "Year":           1981,
+"Lat": "X64S.44S",
+"Value":             37 
+},
+{
+ "Year":           1982,
+"Lat": "X64S.44S",
+"Value":             30 
+},
+{
+ "Year":           1983,
+"Lat": "X64S.44S",
+"Value":             29 
+},
+{
+ "Year":           1984,
+"Lat": "X64S.44S",
+"Value":             24 
+},
+{
+ "Year":           1985,
+"Lat": "X64S.44S",
+"Value":             38 
+},
+{
+ "Year":           1986,
+"Lat": "X64S.44S",
+"Value":             26 
+},
+{
+ "Year":           1987,
+"Lat": "X64S.44S",
+"Value":             21 
+},
+{
+ "Year":           1988,
+"Lat": "X64S.44S",
+"Value":             18 
+},
+{
+ "Year":           1989,
+"Lat": "X64S.44S",
+"Value":             25 
+},
+{
+ "Year":           1990,
+"Lat": "X64S.44S",
+"Value":             32 
+},
+{
+ "Year":           1991,
+"Lat": "X64S.44S",
+"Value":             34 
+},
+{
+ "Year":           1992,
+"Lat": "X64S.44S",
+"Value":             33 
+},
+{
+ "Year":           1993,
+"Lat": "X64S.44S",
+"Value":             35 
+},
+{
+ "Year":           1994,
+"Lat": "X64S.44S",
+"Value":             25 
+},
+{
+ "Year":           1995,
+"Lat": "X64S.44S",
+"Value":             16 
+},
+{
+ "Year":           1996,
+"Lat": "X64S.44S",
+"Value":             31 
+},
+{
+ "Year":           1997,
+"Lat": "X64S.44S",
+"Value":             38 
+},
+{
+ "Year":           1998,
+"Lat": "X64S.44S",
+"Value":             32 
+},
+{
+ "Year":           1999,
+"Lat": "X64S.44S",
+"Value":             16 
+},
+{
+ "Year":           2000,
+"Lat": "X64S.44S",
+"Value":             10 
+},
+{
+ "Year":           2001,
+"Lat": "X64S.44S",
+"Value":             20 
+},
+{
+ "Year":           2002,
+"Lat": "X64S.44S",
+"Value":             29 
+},
+{
+ "Year":           2003,
+"Lat": "X64S.44S",
+"Value":             23 
+},
+{
+ "Year":           2004,
+"Lat": "X64S.44S",
+"Value":             21 
+},
+{
+ "Year":           2005,
+"Lat": "X64S.44S",
+"Value":             20 
+},
+{
+ "Year":           2006,
+"Lat": "X64S.44S",
+"Value":             19 
+},
+{
+ "Year":           2007,
+"Lat": "X64S.44S",
+"Value":              6 
+},
+{
+ "Year":           2008,
+"Lat": "X64S.44S",
+"Value":             10 
+},
+{
+ "Year":           2009,
+"Lat": "X64S.44S",
+"Value":             18 
+},
+{
+ "Year":           2010,
+"Lat": "X64S.44S",
+"Value":             23 
+},
+{
+ "Year":           2011,
+"Lat": "X64S.44S",
+"Value":             26 
+},
+{
+ "Year":           2012,
+"Lat": "X64S.44S",
+"Value":             25 
+},
+{
+ "Year":           2013,
+"Lat": "X64S.44S",
+"Value":             30 
+},
+{
+ "Year":           2014,
+"Lat": "X64S.44S",
+"Value":             23 
+},
+{
+ "Year":           1880,
+"Lat": "X90S.64S",
+"Value":             39 
+},
+{
+ "Year":           1881,
+"Lat": "X90S.64S",
+"Value":             37 
+},
+{
+ "Year":           1882,
+"Lat": "X90S.64S",
+"Value":             42 
+},
+{
+ "Year":           1883,
+"Lat": "X90S.64S",
+"Value":             37 
+},
+{
+ "Year":           1884,
+"Lat": "X90S.64S",
+"Value":             40 
+},
+{
+ "Year":           1885,
+"Lat": "X90S.64S",
+"Value":             38 
+},
+{
+ "Year":           1886,
+"Lat": "X90S.64S",
+"Value":             28 
+},
+{
+ "Year":           1887,
+"Lat": "X90S.64S",
+"Value":             21 
+},
+{
+ "Year":           1888,
+"Lat": "X90S.64S",
+"Value":             16 
+},
+{
+ "Year":           1889,
+"Lat": "X90S.64S",
+"Value":             19 
+},
+{
+ "Year":           1890,
+"Lat": "X90S.64S",
+"Value":              4 
+},
+{
+ "Year":           1891,
+"Lat": "X90S.64S",
+"Value":              9 
+},
+{
+ "Year":           1892,
+"Lat": "X90S.64S",
+"Value":              5 
+},
+{
+ "Year":           1893,
+"Lat": "X90S.64S",
+"Value":              2 
+},
+{
+ "Year":           1894,
+"Lat": "X90S.64S",
+"Value":            -12 
+},
+{
+ "Year":           1895,
+"Lat": "X90S.64S",
+"Value":             -1 
+},
+{
+ "Year":           1896,
+"Lat": "X90S.64S",
+"Value":              3 
+},
+{
+ "Year":           1897,
+"Lat": "X90S.64S",
+"Value":              5 
+},
+{
+ "Year":           1898,
+"Lat": "X90S.64S",
+"Value":              8 
+},
+{
+ "Year":           1899,
+"Lat": "X90S.64S",
+"Value":             13 
+},
+{
+ "Year":           1900,
+"Lat": "X90S.64S",
+"Value":             12 
+},
+{
+ "Year":           1901,
+"Lat": "X90S.64S",
+"Value":              1 
+},
+{
+ "Year":           1902,
+"Lat": "X90S.64S",
+"Value":              6 
+},
+{
+ "Year":           1903,
+"Lat": "X90S.64S",
+"Value":            -43 
+},
+{
+ "Year":           1904,
+"Lat": "X90S.64S",
+"Value":           -108 
+},
+{
+ "Year":           1905,
+"Lat": "X90S.64S",
+"Value":            -20 
+},
+{
+ "Year":           1906,
+"Lat": "X90S.64S",
+"Value":            -49 
+},
+{
+ "Year":           1907,
+"Lat": "X90S.64S",
+"Value":           -101 
+},
+{
+ "Year":           1908,
+"Lat": "X90S.64S",
+"Value":             82 
+},
+{
+ "Year":           1909,
+"Lat": "X90S.64S",
+"Value":            -32 
+},
+{
+ "Year":           1910,
+"Lat": "X90S.64S",
+"Value":             43 
+},
+{
+ "Year":           1911,
+"Lat": "X90S.64S",
+"Value":             31 
+},
+{
+ "Year":           1912,
+"Lat": "X90S.64S",
+"Value":           -137 
+},
+{
+ "Year":           1913,
+"Lat": "X90S.64S",
+"Value":            -75 
+},
+{
+ "Year":           1914,
+"Lat": "X90S.64S",
+"Value":            -16 
+},
+{
+ "Year":           1915,
+"Lat": "X90S.64S",
+"Value":           -182 
+},
+{
+ "Year":           1916,
+"Lat": "X90S.64S",
+"Value":           -104 
+},
+{
+ "Year":           1917,
+"Lat": "X90S.64S",
+"Value":             37 
+},
+{
+ "Year":           1918,
+"Lat": "X90S.64S",
+"Value":              4 
+},
+{
+ "Year":           1919,
+"Lat": "X90S.64S",
+"Value":             44 
+},
+{
+ "Year":           1920,
+"Lat": "X90S.64S",
+"Value":            -69 
+},
+{
+ "Year":           1921,
+"Lat": "X90S.64S",
+"Value":            -52 
+},
+{
+ "Year":           1922,
+"Lat": "X90S.64S",
+"Value":             -5 
+},
+{
+ "Year":           1923,
+"Lat": "X90S.64S",
+"Value":            -34 
+},
+{
+ "Year":           1924,
+"Lat": "X90S.64S",
+"Value":            -49 
+},
+{
+ "Year":           1925,
+"Lat": "X90S.64S",
+"Value":            -59 
+},
+{
+ "Year":           1926,
+"Lat": "X90S.64S",
+"Value":            -39 
+},
+{
+ "Year":           1927,
+"Lat": "X90S.64S",
+"Value":           -130 
+},
+{
+ "Year":           1928,
+"Lat": "X90S.64S",
+"Value":           -205 
+},
+{
+ "Year":           1929,
+"Lat": "X90S.64S",
+"Value":            -97 
+},
+{
+ "Year":           1930,
+"Lat": "X90S.64S",
+"Value":           -237 
+},
+{
+ "Year":           1931,
+"Lat": "X90S.64S",
+"Value":            -26 
+},
+{
+ "Year":           1932,
+"Lat": "X90S.64S",
+"Value":            -81 
+},
+{
+ "Year":           1933,
+"Lat": "X90S.64S",
+"Value":            -94 
+},
+{
+ "Year":           1934,
+"Lat": "X90S.64S",
+"Value":            -31 
+},
+{
+ "Year":           1935,
+"Lat": "X90S.64S",
+"Value":           -139 
+},
+{
+ "Year":           1936,
+"Lat": "X90S.64S",
+"Value":             26 
+},
+{
+ "Year":           1937,
+"Lat": "X90S.64S",
+"Value":             74 
+},
+{
+ "Year":           1938,
+"Lat": "X90S.64S",
+"Value":            -72 
+},
+{
+ "Year":           1939,
+"Lat": "X90S.64S",
+"Value":           -155 
+},
+{
+ "Year":           1940,
+"Lat": "X90S.64S",
+"Value":             16 
+},
+{
+ "Year":           1941,
+"Lat": "X90S.64S",
+"Value":            -26 
+},
+{
+ "Year":           1942,
+"Lat": "X90S.64S",
+"Value":            -69 
+},
+{
+ "Year":           1943,
+"Lat": "X90S.64S",
+"Value":            136 
+},
+{
+ "Year":           1944,
+"Lat": "X90S.64S",
+"Value":            -49 
+},
+{
+ "Year":           1945,
+"Lat": "X90S.64S",
+"Value":           -143 
+},
+{
+ "Year":           1946,
+"Lat": "X90S.64S",
+"Value":             41 
+},
+{
+ "Year":           1947,
+"Lat": "X90S.64S",
+"Value":             28 
+},
+{
+ "Year":           1948,
+"Lat": "X90S.64S",
+"Value":            -83 
+},
+{
+ "Year":           1949,
+"Lat": "X90S.64S",
+"Value":           -152 
+},
+{
+ "Year":           1950,
+"Lat": "X90S.64S",
+"Value":            -68 
+},
+{
+ "Year":           1951,
+"Lat": "X90S.64S",
+"Value":            -48 
+},
+{
+ "Year":           1952,
+"Lat": "X90S.64S",
+"Value":            -21 
+},
+{
+ "Year":           1953,
+"Lat": "X90S.64S",
+"Value":            -93 
+},
+{
+ "Year":           1954,
+"Lat": "X90S.64S",
+"Value":            -69 
+},
+{
+ "Year":           1955,
+"Lat": "X90S.64S",
+"Value":            130 
+},
+{
+ "Year":           1956,
+"Lat": "X90S.64S",
+"Value":             59 
+},
+{
+ "Year":           1957,
+"Lat": "X90S.64S",
+"Value":             39 
+},
+{
+ "Year":           1958,
+"Lat": "X90S.64S",
+"Value":            -68 
+},
+{
+ "Year":           1959,
+"Lat": "X90S.64S",
+"Value":            -36 
+},
+{
+ "Year":           1960,
+"Lat": "X90S.64S",
+"Value":            -86 
+},
+{
+ "Year":           1961,
+"Lat": "X90S.64S",
+"Value":             12 
+},
+{
+ "Year":           1962,
+"Lat": "X90S.64S",
+"Value":            -85 
+},
+{
+ "Year":           1963,
+"Lat": "X90S.64S",
+"Value":              5 
+},
+{
+ "Year":           1964,
+"Lat": "X90S.64S",
+"Value":            -44 
+},
+{
+ "Year":           1965,
+"Lat": "X90S.64S",
+"Value":             -6 
+},
+{
+ "Year":           1966,
+"Lat": "X90S.64S",
+"Value":             15 
+},
+{
+ "Year":           1967,
+"Lat": "X90S.64S",
+"Value":             27 
+},
+{
+ "Year":           1968,
+"Lat": "X90S.64S",
+"Value":            -14 
+},
+{
+ "Year":           1969,
+"Lat": "X90S.64S",
+"Value":             -4 
+},
+{
+ "Year":           1970,
+"Lat": "X90S.64S",
+"Value":             41 
+},
+{
+ "Year":           1971,
+"Lat": "X90S.64S",
+"Value":             25 
+},
+{
+ "Year":           1972,
+"Lat": "X90S.64S",
+"Value":             55 
+},
+{
+ "Year":           1973,
+"Lat": "X90S.64S",
+"Value":             29 
+},
+{
+ "Year":           1974,
+"Lat": "X90S.64S",
+"Value":             58 
+},
+{
+ "Year":           1975,
+"Lat": "X90S.64S",
+"Value":             28 
+},
+{
+ "Year":           1976,
+"Lat": "X90S.64S",
+"Value":            -36 
+},
+{
+ "Year":           1977,
+"Lat": "X90S.64S",
+"Value":             13 
+},
+{
+ "Year":           1978,
+"Lat": "X90S.64S",
+"Value":             -5 
+},
+{
+ "Year":           1979,
+"Lat": "X90S.64S",
+"Value":            -24 
+},
+{
+ "Year":           1980,
+"Lat": "X90S.64S",
+"Value":            104 
+},
+{
+ "Year":           1981,
+"Lat": "X90S.64S",
+"Value":             54 
+},
+{
+ "Year":           1982,
+"Lat": "X90S.64S",
+"Value":            -27 
+},
+{
+ "Year":           1983,
+"Lat": "X90S.64S",
+"Value":              4 
+},
+{
+ "Year":           1984,
+"Lat": "X90S.64S",
+"Value":             58 
+},
+{
+ "Year":           1985,
+"Lat": "X90S.64S",
+"Value":             14 
+},
+{
+ "Year":           1986,
+"Lat": "X90S.64S",
+"Value":             -3 
+},
+{
+ "Year":           1987,
+"Lat": "X90S.64S",
+"Value":             18 
+},
+{
+ "Year":           1988,
+"Lat": "X90S.64S",
+"Value":            105 
+},
+{
+ "Year":           1989,
+"Lat": "X90S.64S",
+"Value":             34 
+},
+{
+ "Year":           1990,
+"Lat": "X90S.64S",
+"Value":             28 
+},
+{
+ "Year":           1991,
+"Lat": "X90S.64S",
+"Value":             99 
+},
+{
+ "Year":           1992,
+"Lat": "X90S.64S",
+"Value":             42 
+},
+{
+ "Year":           1993,
+"Lat": "X90S.64S",
+"Value":            -13 
+},
+{
+ "Year":           1994,
+"Lat": "X90S.64S",
+"Value":            -11 
+},
+{
+ "Year":           1995,
+"Lat": "X90S.64S",
+"Value":              8 
+},
+{
+ "Year":           1996,
+"Lat": "X90S.64S",
+"Value":            111 
+},
+{
+ "Year":           1997,
+"Lat": "X90S.64S",
+"Value":             -4 
+},
+{
+ "Year":           1998,
+"Lat": "X90S.64S",
+"Value":             21 
+},
+{
+ "Year":           1999,
+"Lat": "X90S.64S",
+"Value":              3 
+},
+{
+ "Year":           2000,
+"Lat": "X90S.64S",
+"Value":             34 
+},
+{
+ "Year":           2001,
+"Lat": "X90S.64S",
+"Value":             49 
+},
+{
+ "Year":           2002,
+"Lat": "X90S.64S",
+"Value":             87 
+},
+{
+ "Year":           2003,
+"Lat": "X90S.64S",
+"Value":             59 
+},
+{
+ "Year":           2004,
+"Lat": "X90S.64S",
+"Value":             -6 
+},
+{
+ "Year":           2005,
+"Lat": "X90S.64S",
+"Value":             76 
+},
+{
+ "Year":           2006,
+"Lat": "X90S.64S",
+"Value":             36 
+},
+{
+ "Year":           2007,
+"Lat": "X90S.64S",
+"Value":            117 
+},
+{
+ "Year":           2008,
+"Lat": "X90S.64S",
+"Value":             50 
+},
+{
+ "Year":           2009,
+"Lat": "X90S.64S",
+"Value":             85 
+},
+{
+ "Year":           2010,
+"Lat": "X90S.64S",
+"Value":             38 
+},
+{
+ "Year":           2011,
+"Lat": "X90S.64S",
+"Value":             93 
+},
+{
+ "Year":           2012,
+"Lat": "X90S.64S",
+"Value":             32 
+},
+{
+ "Year":           2013,
+"Lat": "X90S.64S",
+"Value":             67 
+},
+{
+ "Year":           2014,
+"Lat": "X90S.64S",
+"Value":             47 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+    <script></script>    
+  </body>
+</html>
