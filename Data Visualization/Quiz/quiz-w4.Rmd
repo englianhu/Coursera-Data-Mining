@@ -1,0 +1,65 @@
+---
+title: "Coursera Data Visualization - Week 4 Quiz"
+author: "®γσ, Eng Lian Hu"
+date: "5/1/2016"
+output: html_document
+---
+
+[**Coursera Data Visualization**](https://www.coursera.org/learn/datavisualization/home/welcome) *by University of Illinois at Urbana-Champaign*
+
+## Week 4 Quiz: The Visualization Dashboard
+
+**8 questions**
+
+1. When creating an overview visualization of a large dataset, it is most important to:
+
+  - 1. Display all of the data using a simple representation and axes that spread the data out as much as possible
+  - WRONG **2.** <s>Display only an important subset of the datapoints so as to not overwhelm the user</s>
+  - WRONG **3.** <s>Pack as many details as possible into the display to be as efficient and informative as possible</s>
+
+2. The process of zooming on the data plotted in a visualization, where the zoomed region then fills the entire display:
+
+  - WRONG **1.** <s>Is an important part of Schneiderman's information visualization mantra</s>
+  - WRONG **2.** <s>Provides focus on the zoomed portion of the data</s>
+  - 3. Is actually a filtering operation on the display coordinates of the plotted data
+  - WRONG **4.** <s>All of the above</s>
+  - 5. None of the above
+
+3.  The goal of the filtering step of the information visualization mantra is to:
+
+  - **1.** Display a subset
+  - 2. Remove outliers
+  - 3. Smooth noisy data
+
+4.  Which of the following benefits of a fisheye lens is LEAST important for data visualization?
+
+  - **1.** It makes the data appear more interesting.
+  - WRONG **2.** <s>It allows zooming without obscuring the unzoomed data.</s>
+  - 3. It supports focus on detail along with the context of that detail amid the rest of the dataset.
+
+5.  Suppose we have a dataset representing an image consisting of pixel records of the form (x,y,b) where x and y are the spatial coordinates of the pixel and b is the brightness of the pixel. Then which of the following describes a histogram of the data?
+
+  - 1. A plot of the average pixel brightness over the y axis, of all pixels that share the same x coordinate
+  - **2.** A subdivision of the image's brightness values into ranges, plotting the count of the pixels whose brightness is in each range
+  - 3. A subdivision of the image's (x,y) coordinates into regions, plotting an average pixel brightness for each region
+
+6.  Suppose we have a dataset representing an image consisting of pixel records of the form (x,y,b) where x and y are the spatial coordinates of the pixel and b is the brightness of the pixel. Then which of the following represents a "rollup" of the x and y dimensions of this dataset?
+
+  - **1.** The average brightness of the image
+  - 2. The position of the center of the image
+  - 3. None of the above
+
+7.  Suppose we have a dataset representing an image consisting of pixel records of the form (x,y,b) where x and y are the spatial coordinates of the pixel and b is the brightness of the pixel. Which axis definition would we NOT use if we wanted to plot the pixel brightness at a unique axis location for every pixel in the image?
+
+  - 1. An axis formed by the product of the x dimension and the y dimension
+  - **2.** An axis formed by the concatenation of the x dimension and the y dimension
+  - 3. An axis formed by nesting the x dimension under the y dimension
+
+8.  When designing a dashboard visualization, what should the primary concern be?
+
+  - 1. That the dashboard visualization presents all of the data necessary to make an informed decision
+  - WRONG **2.** <s>That the dashboard visualization engages the user to motivate further study of the data</s>
+  - WRONG **3.** <s>That the dashboard provide a simple overview of all the data, without any distracting details</s>
+
+  
+  
