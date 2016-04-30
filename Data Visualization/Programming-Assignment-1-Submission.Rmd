@@ -83,10 +83,7 @@ gc()
 # 2. Data
 
   - Section [2.1 Collecting Data]
-  - Section [2.2 Processing Data]
-  - Section [2.2.1 Read Data]
-  - Section [2.2.2 Analyse Data]
-  - Section [2.3 Plot Histogram]
+  - Section [2.2 Read Data]
 
 ## 2.1 Collecting Data
 
@@ -94,9 +91,11 @@ gc()
 
 ```{r collect-data, echo = FALSE}
 suppressMessages(library('plyr'))
+suppressMessages(library('dplyr'))
 suppressMessages(library('magrittr'))
 suppressMessages(library('formattable'))
 suppressMessages(library('knitr'))
+suppressMessages(library('sparkline'))
 
 if(!file.exists('data/')) dir.create('data/')
 
@@ -116,8 +115,28 @@ if(!file.exists(paste0('data/final'))) {
 }
 
 ## list down the details of the zipped file
-unzip(paste0('data/', destfile), list = TRUE) %>% kable #%>% formattable(Length = normalize_bar('blue', 0.2), Date = color_tile('white', 'orange'))
+df <- unzip(paste0('data/', destfile), list = TRUE) %>% tbl_df
+
+## stylise the ranking
+df <- formattable(
+  df, list(
+    Length = formatter("span",
+    style = x ~ style(color = ifelse(rank(-x) <= 3, "green", "gray")),
+    x ~ sprintf("%.2f (rank: %02d)", x, rank(-x)))
+    )
+  )
+
+## http://stackoverflow.com/questions/35922583/setting-the-width-of-formattable-object
+#  so what happens is a formattable object
+#   gets converted to an htmlwidget
+#   for viewing when interactive
+#  to specify a width
+#   we have to do the htmlwidget conversion ourselves
+#   with as.htmlwidget
+as.htmlwidget(df)#, width=400)
 ```
+
+  *table 2.1.1 : Summary of downloaded zipped file.*
 
 ```{r rm-objs1, include = FALSE}
 rm(lnk, destfile)
@@ -138,10 +157,21 @@ lsfiles
 
 ## summary of files
 datafiles <- paste0('data/Programming Assignment 1 Data New/', lsfiles)
-summ <- llply(as.list(datafiles), file.info) %>% rbind_all #%>% formattable(., list(size=color_bar('pink', 0.5)))
-dt <- dTable(summ, sPaginationType = "full_numbers", iDisplayLength = 6, sScrollX = "100%")
-dt$show('inline', include_assets = TRUE, cdn = TRUE)
+
+## Stylise the table
+df <- llply(as.list(datafiles), file.info) %>% rbind_all %>% formattable(list(size = normalize_bar('pink', 0.2)))
+
+## http://stackoverflow.com/questions/35922583/setting-the-width-of-formattable-object
+#  so what happens is a formattable object
+#   gets converted to an htmlwidget
+#   for viewing when interactive
+#  to specify a width
+#   we have to do the htmlwidget conversion ourselves
+#   with as.htmlwidget
+as.htmlwidget(df)#, width=400)
 ```
+
+  *table 2.1.2 : Summary of files.*
 
 ```{r rm-objs2, include = FALSE}
 rm(lsfiles, summ)
@@ -254,14 +284,14 @@ datatable(dats[[2]],
 suppressMessages(library('rCharts'))
 
 dt1 <- dTable(dats[[1]], sPaginationType = "full_numbers", iDisplayLength = 10, sScrollX = "100%")
-dt1$show('inline', include_assets = TRUE, cdn = TRUE)
+dt1#$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
   *table 3.2.1 : Climate Degree Celsius from Year 1880 to 2015.*
 
 ```{r datatable2b, results = 'asis', echo = FALSE, comment = NA, cache = FALSE}
 dt2 <- dTable(dats[[2]], sPaginationType = "full_numbers", iDisplayLength = 10, sScrollX = "100%")
-dt2$show('inline', include_assets = TRUE, cdn = TRUE)
+dt2#$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
   *table 3.2.2 : Global Temperature over the years.*
@@ -278,6 +308,8 @@ dt2$show('inline', include_assets = TRUE, cdn = TRUE)
   - You can choose what element(s) to be show on the graph
   - You can download and save the graph in different format through the top corner of right-hand site
   - The graph will be auto zooming to fit the trend if you select/deselect a/some element(s)
+  
+  **Remarks :** kindly refer to [5.3 Speech and Blooper]^[The [Programming Assignment 1 Submission](http://englianhu.github.io/2016/04/Programming%20Assignment%201%20Submission.html) inside my personal blog shows a completed version.] if you unable see the interactive graphs.
 
 ```{r line-1a, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
 suppressMessages(library('tidyr'))
@@ -289,7 +321,7 @@ td.dat1 <- dats[[1]] %>% gather(Month, Value, Jan:SON) %>% mutate(Year = as.nume
 L1a <- hPlot(Value ~ Year, data = td.dat1, group = 'Month', type = 'line', size = 'hp', title = 'Zoom with Line Chart 1', subtitle = 'Climate Degree Celsius from Year 1880 to 2015')
 L1a$exporting(enabled = T)
 L1a$chart(zoomType = "xy", margin = list(left=100, right=100, top=100, bottom=200))
-L1a$show('inline', include_assets = TRUE, cdn = TRUE)
+L1a#$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
   *graph 3.2.1 : Climate Degree Celsius from Year 1880 to 2015.*
@@ -303,7 +335,7 @@ td.dat2 <- dats[[2]] %>% gather(Lat, Value, Glob:X90S.64S) %>% mutate(Year = as.
 L2a <- hPlot(Value ~ Year, data = td.dat2, group = 'Lat', type = 'line', size = 'hp', title = 'Zoom with Line Chart 2', subtitle = 'Global Temperature over the years')
 L2a$exporting(enabled = T)
 L2a$chart(zoomType = "xy", margin = list(left=100, right=100, top=100, bottom=200))
-L2a$show('inline', include_assets = TRUE, cdn = TRUE)
+L2a#$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
   *graph 3.2.2 : Globe and the North and South Hemispheres through all the given years.*
@@ -317,7 +349,7 @@ L2a$show('inline', include_assets = TRUE, cdn = TRUE)
 ```{r line-1b, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
 L1b <- mPlot(x = 'Year', y = names(dats[[1]])[-1], type = "Line", data = dats[[1]])
 L1b$set(pointSize = 0, lineWidth = 1)
-L1b$show('inline', include_assets = TRUE, cdn = TRUE)
+L1b#$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
   *graph 3.3.1 : Climate Degree Celsius from Year 1880 to 2015.*
@@ -327,7 +359,7 @@ L1b$show('inline', include_assets = TRUE, cdn = TRUE)
 ```{r line-2b, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
 L2b <- mPlot(x = 'Year', y = names(dats[[2]])[-1], type = "Line", data = dats[[2]])
 L2b$set(pointSize = 0, lineWidth = 1)
-L2b$show('inline', include_assets = TRUE, cdn = TRUE)
+L2b#$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
   *graph 3.3.2 : Global Temperature over the years.*
@@ -340,7 +372,7 @@ L2b$show('inline', include_assets = TRUE, cdn = TRUE)
 
 ```{r line-1c, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
 L2a <- nPlot(Value ~ Year, group = 'Month', data = td.dat1, type = 'lineChart')
-L2a$show('inline', include_assets = TRUE, cdn = TRUE)
+L2a#$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
   *graph 3.4.1 : Climate Degree Celsius from Year 1880 to 2015.*
@@ -349,7 +381,7 @@ L2a$show('inline', include_assets = TRUE, cdn = TRUE)
   
 ```{r line-2c, echo = FALSE, results = 'asis', comment = NA, cache = FALSE}
 L2c <- nPlot(Value ~ Year, group = 'Lat', data = td.dat2, type = 'lineChart')
-L2c$show('inline', include_assets = TRUE, cdn = TRUE)
+L2c#$show('inline', include_assets = TRUE, cdn = TRUE)
 ```
 
   *graph 3.4.2 : Global Temperature over the years.*
@@ -394,6 +426,8 @@ options(op)
 
   - Section [5.1 Documenting File Creation]
   - Section [5.2 Versions' Log]
+  - Section [5.3 Speech and Blooper]
+  - Section [5.4 References]
 
 ## 5.1 Documenting File Creation
 
@@ -423,9 +457,12 @@ Sys.info()
 
 ## 5.3 Speech and Blooper
 
-  I faced few issues during preparation of this assignment.
-  - Tried to refer to [Add sparkline graph to a table](http://stackoverflow.com/questions/32841221/add-sparkline-graph-to-a-table)^[There has [**formattable** package](https://github.com/renkun-ken/formattable) and also an example of [mixing **sparklines** with formattable](https://github.com/renkun-ken/formattable/issues/10#issuecomment-110864675)] and applied it on my dataset but formattable doesn't work.
-  - 
+  I faced below issue during preparation of this assignment.
+  
+  - The embed rChart plots unable display on both RStudioConnect and rPubs^[Similar issues with [**rCharts sharing to Rpubs issue** : *by Koba Khitalishvili - May 16, 2015*](https://rpubs.com/Koba/80208) and [**UFO Reports Chart Demo** : *Connie Zabarovskaya - Monday, July 14, 2014*](http://rpubs.com/conniez/ufo_rchart) and I've raised the [#issue](https://github.com/ramnathv/rCharts/issues/571#issuecomment-215878319) on GitHub.].
+  - You can refer to later post at [rPubs (new)](http://rpubs.com/englianhu/177089) or [ｮStudioConnect (new)](https://beta.rstudioconnect.com/englianhu/Programming-Assignment-1-Submission/) which added stylish tables but the whole background changed to white from yellow.
+  - You can refer to [rPubs (old)](http://rpubs.com/englianhu/coursera-data-mining-data-visualization).
+  - You are feel free to browse over interactive plots via my blogs [Programming Assignment 1 Submission](englianhu.github.io/2016/04/Programming Assignment 1 Submission.html).
 
 ## 5.4 References
 

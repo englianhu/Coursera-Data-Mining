@@ -1,0 +1,322 @@
+---
+title: "Programming Assignment 2 Submission"
+subtitle: "Data Visualization by University of Illinois at Urbana-Champaign"
+author: "[®γσ, Eng Lian Hu](http://englianhu.wordpress.com) <img src='figure/ShirotoNorimichi.jpg' width='24'> 白戸則道®"
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_html:
+    toc: yes
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+# 1. Introduction
+
+  - Section [1.1 Assignment]
+  - Section [1.2 Preparing Environment]
+
+## 1.1 Assignment
+
+  **Instructions**
+
+  Before submitting your visualization image, make sure you review the [full instructions page](https://www.coursera.org/learn/datavisualization/supplement/TTbrU/programming-assignment-2-visualize-network-data).
+
+  Submit your assignment on the **My submission** tab. Enter your answers directly in the spaces provided in the **My submission** tab. You may save a draft of your work as you go, and you can come back later to continue working on your draft. When you are finished working, click the **Preview** button, verify your identity, and then click **Submit for review** to submit the assignment.
+
+  **Review Criteria**
+
+  Before submitting your visualization image, make sure you review [Programming Assignment 2 Rubric page](https://www.coursera.org/learn/datavisualization/supplement/F1vg5/programming-assignment-2-rubric).
+
+  You are required to evaluate the submissions of **at least FOUR** of your peers based on the instructions and rubric provided. You may begin giving feedback to other students as soon as you submit your assignment; click the **Review classmates** tab to begin. Feel free to provide additional reviews beyond the four required!
+
+  Find some network data that you think is suitable and that you would like to visualize. Here are some sites that provide links to a wide variety of different graph/network datasets:
+
+  - [Stanford Large Network Dataset Collection](http://snap.stanford.edu/data/index.html)
+  - [UCI Network Data Repository](https://networkdata.ics.uci.edu/index.php)
+
+## 1.2 Preparing Environment
+
+  I am using R programming for this assignment. You are feel free to setup your [**ｮStudio Server**](http://www.rstudio.com)^[The tutorial currently only provides Chinese version and will come out with Japanese and English version during my spare time. [为数据科学家们量身定做の专业统计软件 — ®Studio服务器](https://beta.rstudioconnect.com/englianhu/Introducing-RStudio-Server-for-Data-Scientists/)]. Loading packages.
+
+```{r load-packages, cache=TRUE}
+## Loading the package 'BBmisc'
+if(suppressMessages(!require('BBmisc'))) install.packages('BBmisc')
+suppressMessages(library('BBmisc'))
+
+pkgs <- c('plyr', 'dplyr', 'magrittr', 'DT', 'lubridate', 'igraph', 'd3Network', 'networkD3', 'googleVis')
+suppressAll(lib(pkgs)) 
+rm(pkgs)
+```
+
+```{r setting adjustment, include = FALSE}
+## Setup and setting adjustment.
+##
+
+## http://rpubs.com/conniez/ufo_rchart
+## setting but doesn't work since different error.
+options(rpubs.upload.method = 'internal')
+
+## knitr configuration
+# invalidate cache when the tufte version changes
+suppressMessages(library('knitr'))
+
+opts_chunk$set(tidy = TRUE, fig.path = 'figure/', comment = NA, message = FALSE, cache.extra = packageVersion('tufte'), echo = TRUE, progress = TRUE)#, fig.align = 'center', fig.keep = 'high', fig.width = 10, fig.height = 6)
+```
+
+```{r clear-memory, include = FALSE}
+## clear memory cache to lease the memory capacity ease
+gc()
+```
+
+# 2. Data
+
+  - Section [2.1 Collecting Data]
+  - Section [2.2 Read Data]
+
+## 2.1 Collecting Data
+
+  This assignment kind of similar with my previous [**Natural Language Analysis** : *by ®γσ, Eng Lian Hu - 9/22/2015*](http://rpubs.com/englianhu/natural-language-analysis)^[The 1st reference paper inside [5.4 References]] and [**Coursera Data Visualization Programming Assignment 2** : *Richard Seiter - Sunday, August 09, 2015*](https://rpubs.com/rseiter/99527)^[The 6th reference paper inside [5.4 References]]. Therefore I just simply enhanced some data visualization effect to the paper.
+
+  I get the data of [America College Football](https://networkdata.ics.uci.edu/data.php?id=5)^[The [**network of American football**](http://www-personal.umich.edu/~mejn/netdata/football.zip) games between Division IA colleges during regular season Fall 2000 from **The UCI Network Data Repository**..] Please cite :
+  
+  - M. Girvan and M. E. J. Newman, Proc. Natl. Acad. Sci. USA 99, 7821-7826 (2002)
+  - [Community structure in social and biological networks (Girvan and Newman, 2002)](http://www.pnas.org/content/99/12/7821.abstract)
+  
+  The values are as follows:
+
+  - 0 = Atlantic Coast
+  - 1 = Big East
+  - 2 = Big Ten
+  - 3 = Big Twelve
+  - 4 = Conference USA
+  - 5 = Independents
+  - 6 = Mid-American
+  - 7 = Mountain West
+  - 8 = Pacific Ten
+  - 9 = Southeastern
+  - 10 = Sun Belt
+  - 11 = Western Athletic
+
+```{r collect-data, echo = FALSE}
+suppressMessages(library('igraph'))
+suppressMessages(library('dplyr'))
+
+football <- read.graph(file='http://networkdata.ics.uci.edu/data/football/football.gml', format='gml')
+
+conferences <- c('Atlantic Coast', 'Big East', 'Big Ten', 'Big Twelve', 'Conference USA', 'Independents', 'Mid-American', 'Mountain West', 'Pacific Ten', 'Southeastern', 'Sun Belt', 'Western Athletic')
+V(football)$conference <- conferences[V(football)$value + 1]
+
+## Write files into the folder 'data'
+#'@ write.graph(football, 'Data Visualization/data/football_edit.gml', format='gml')
+```
+
+## 2.2 Read Data
+
+ data summary. I simply apply [**DT** : *Helper Functions*](http://rstudio.github.io/DT/functions.html)^[The 7th reference paper inside [5.4 References]] and [HTML Color Names](http://www.w3schools.com/colors/colors_names.asp) to choose the color, as well as [CSS Transforms](http://css3.bradshawenterprises.com/transforms/) to adjust the rotation of a 3D object.
+
+```{r read-files, echo = FALSE}
+suppressMessages(library('dplyr'))
+
+## Centrality Measures by 'betweenness' and 'closeness'.
+football.nodes <- get.data.frame(football, what = 'vertices') %>% tbl_df %>% mutate(Betweenness = betweenness(football), Closeness = closeness(football))
+football.edges <- get.data.frame(football, what = 'edges') %>% tbl_df
+
+## networkD3 requires edge references to nodes start from 0
+football.edges$from <- football.edges$from - 1
+football.edges$to <- football.edges$to - 1
+```
+
+```{r clear-memory, include = FALSE}
+```
+
+```{r data-summary, echo = FALSE}
+suppressMessages(library('DT'))
+
+datatable(football.nodes, 
+  caption="Table 2.2.1 : Division of Football Teams",
+  extensions = list("ColReorder"=NULL, "ColVis"=NULL, "TableTools"=NULL
+                    #, "FixedColumns"=list(leftColumns=2)
+                    ), 
+  options = list(autoWidth=TRUE,
+                 oColReorder=list(realtime=TRUE), #oColVis=list(exclude=c(0, 1), activate='mouseover'),
+                 oTableTools=list(
+                 sSwfPath="//cdnjs.cloudflare.com/ajax/libs/datatables-tabletools/2.1.5/swf/copy_csv_xls.swf",
+                 aButtons=list("copy", "print",
+                               list(sExtends="collection",
+                                    sButtonText="Save",
+                                    aButtons=c("csv","xls")))),
+                 dom='CRTrilftp', scrollX=TRUE, scrollCollapse=TRUE,
+                 colVis=list(exclude=c(0), activate='mouseover'))) %>% 
+  formatStyle(
+    'value',
+    color = styleInterval(c(3, 8), c('white', 'blue', 'red')),
+    backgroundColor = styleInterval(3, c('darkgoldenrod', 'moccasin'))
+  ) %>% 
+  formatStyle(
+    'conference',
+    transform = 'rotateX(5deg) rotateY(-10deg) rotateZ(0deg) rotateX(5deg) rotateY(-10deg) rotateZ(0deg) rotateX(5deg) rotateY(-10deg) rotateZ(0deg) rotateX(5deg) rotateY(-10deg) rotateZ(0deg)',
+    backgroundColor = styleEqual(
+      unique(football.nodes$conference), c('lightblue', 'lightgreen', 'lightpink', 'aquamarine', 'gray', 'lightyellow', 'lawngreen', 'red', 'orange', 'blanchedalmond ', 'cornflowerblue ', 'gold')
+    )
+  ) %>% 
+  formatStyle(
+    'Betweenness',
+    background = styleColorBar(football.nodes$Betweenness, 'steelblue'),
+    backgroundSize = '100% 90%',
+    backgroundRepeat = 'no-repeat',
+    backgroundPosition = 'center'
+  ) %>% 
+  formatStyle(
+    'Closeness',
+    color = styleInterval(quantile(football.nodes$Closeness)[2:4], c('red', 'yellow', 'green', 'blue')),
+    backgroundColor = styleInterval(3, c('orangered', 'sandybrown'))
+  )
+```
+
+  *table 2.2.1 : The leagues of football teams.*
+
+  Above table separates the football teams by regional leagues.
+
+```{r clear-memory, include = FALSE}
+```
+
+# 3. Data Visulaization
+
+  - Section [3.1 Histogram]
+  - Section [3.2 networkD3 Graph]
+  - Section [3.3 d3Network Graph]
+  - Section [3.4 d3Network Tree]
+
+## 3.1 Histogram
+
+```{r hist, echo = FALSE, results='asis'}
+suppressMessages(library('googleVis'))
+## Set the googleVis options first to change the behaviour of plot.gvis, so that only the chart 
+##  component of the HTML file is written into the output file.
+##  
+## Set option to below if you want to plot an independent webpage with graph 
+#'@ op <- options(gvis.plot.tag=NULL)
+op <- options(gvis.plot.tag='chart')
+
+LeagueCode <- data.frame(degree(football))
+plot( 
+  gvisHistogram(LeagueCode, options=list(
+    legend="{ position: 'top', maxLines: 2 }",
+    colors="['#B8860B']", width=600),
+    chartid="Histogram"))
+```
+
+  *table 3.1.1 : histogram of league codes*
+
+```{r reset-setting, include = FALSE}
+## Set options back to original options
+options(op)
+```
+
+## 3.2 networkD3 Graph
+
+  Create an interactive D3 plot while you can :
+  
+  - click-and-drag the molecule.
+  - double click on any molecule for zooming.
+  - move your cursor to the graph and scroll can zoom on whole graph. 
+
+```{r d3-network1, echo = FALSE}
+suppressMessages(library('networkD3'))
+
+forceNetwork(Links = football.edges, Nodes = football.nodes,
+            Source = 'from', Target = 'to',
+            NodeID = 'label',
+            legend = TRUE,
+            linkDistance = 100, 
+            Group = 'conference', opacity = 1.0, zoom = TRUE)
+```
+
+  *graph 3.2.1 : d3 Network graph of football teams.*
+
+## 3.3 d3Network Graph
+
+  Create an interactive D3 plot while you can :
+  
+  - click-and-drag the molecule.
+  - double click on any molecule for pointing/focusing.
+
+```{r d3-network2, echo = FALSE, results = 'asis'}
+suppressMessages(library('d3Network'))
+
+d3ForceNetwork(Links = data.frame(football.edges), Nodes = data.frame(football.nodes),
+            Source = 'from', Target = 'to',
+            NodeID = 'label',
+            linkDistance = 100, 
+            Group = 'conference', opacity = 1.0, zoom = TRUE)
+```
+
+  *graph 3.3.1 : d3 Network graph of football teams.*
+
+## 3.4 d3Network Tree
+
+```{r d3-tree, echo = FALSE, results = 'asis'}
+d3Tree(List = as.list(football.nodes), fontsize = 4, diameter = 400)
+```
+
+  *graph 3.4.1 : d3 Network tree of football teams.*
+
+# 4. Conclusion
+
+  Similar with previous research while I've enhance the data visualization effects to the table and also d3 network graph.
+
+# 5. Appendices
+
+  - Section [5.1 Documenting File Creation]
+  - Section [5.2 Versions' Log]
+  - Section [5.3 Speech and Blooper]
+  - Section [5.4 References]
+
+## 5.1 Documenting File Creation
+
+  It's useful to record some information about how your file was created.
+  
+  - File creation date: 2016-04-30
+  - File latest updated date: `r Sys.Date()`
+  - `r R.version.string`
+  - R version (short form): `r getRversion()`
+  - [**rmarkdown** package]() version: `r packageVersion('rmarkdown')`
+  - [**tufte** package](https://github.com/rstudio/tufte) version: `r packageVersion('tufte')`
+  - [**mosaic** package](https://github.com/ProjectMOSAIC/mosaic) version: `r packageVersion('mosaic')`
+  - File version: 1.0.0
+  - Author Profile: [®γσ, Eng Lian Hu](https://beta.rstudioconnect.com/englianhu/ryo-eng/)
+  - GitHub: [Source Code](https://github.com/englianhu/Coursera-Data-Mining)
+  - Additional session information:
+
+```{r info, echo=FALSE, results='asis'}
+lubridate::now()
+devtools::session_info()$platform
+Sys.info()
+```
+
+## 5.2 Versions' Log
+
+  - *April 30, 2016*: [version: 1.0.0](https://github.com/englianhu/Coursera-Data-Mining/tree/master/Data%20Visualization)
+
+## 5.3 Speech and Blooper
+
+  The graph inside [3.3 d3Network Graph] and [3.4 d3Network Tree] do not display at central of the graph.
+
+## 5.4 References
+
+  1. [**Natural Language Analysis** : *by ®γσ, Eng Lian Hu - 9/22/2015*](http://rpubs.com/englianhu/natural-language-analysis)
+  2. [**Programming Assignment 1 Submission** : *by ®γσ, Eng Lian Hu - 2016-04-30*](http://englianhu.github.io/2016/04/Programming%20Assignment%201%20Submission.html)
+  3. [**Dolphin Social Network - D3 analysis** : *Michael Gilhooly - 9 August 2015*](http://rstudio-pubs-static.s3.amazonaws.com/99559_b23773f0305e47d790cafea6d7f95775.html)
+  4. [**Network** : *Laurii - 9 Aug 2015*](https://rpubs.com/rseiter/99527)
+  5. [Facebook Network Analysis](https://github.com/benjamin-chan/FacebookNetworkAnalysis)
+  6. [**Coursera Data Visualization Programming Assignment 2** : *Richard Seiter - Sunday, August 09, 2015*](https://rpubs.com/rseiter/99527)
+  7. [**DT** : *Helper Functions*](http://rstudio.github.io/DT/functions.html)
+  8. [**DT** : *More Examples on Styling Cells, Rows, and Tables*](http://rstudio.github.io/DT/010-style.html)
+  9. [**Interactive visualizations with R - a minireview** : *A minireview of R packages ggvis, rCharts, plotly and googleVis for interactive visualizations - November 21, 2014*](http://ouzor.github.io/blog/2014/11/21/interactive-visualizations.html)
+
