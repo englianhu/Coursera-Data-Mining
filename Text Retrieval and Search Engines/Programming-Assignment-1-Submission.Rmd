@@ -73,7 +73,7 @@ rm(fls)
 sudo: sorry, you must have a tty to run sudo`]. This can be done using the following two commands:
 
 ```{r setup-sh}
-system('cd data/Assignment_1; ./setup.sh')
+tryCatch(system('cd data/Assignment_1; ./setup.sh'), error = function(err) print(err))
 ```
 
 3.  Now using MeTA as a library to compile. Kindly run `bash-4.2$sudo yum install -y cmake3`^[If your installed cmake's version is 2.xx] via Shell to install `cmake3` prior to run below coding. Kindly *grant permission*^[Kindly refer to [How to set chmod for a folder and all of its subfolders and files in Linux Ubuntu Terminal?](http://stackoverflow.com/questions/3740152/how-to-set-chmod-for-a-folder-and-all-of-its-subfolders-and-files-in-linux-ubunt)] via terminal prior to run below codes.
@@ -112,7 +112,7 @@ tryCatch(system('cd data/Assignment_1/build; cmake .. -DCMAKE_BUILD_TYPE=Release
 
   After running the above, if everything is setup correctly, then you should see:
 
-```
+```{r eval = FALSE}
 $ ./analyze ../config.toml Assignment1/doc.txt --stop
 Running stopword removal -> 
   file saved as Assignment1/doc.stops.txt
@@ -136,7 +136,7 @@ tryCatch(system("cd Assignment_1/build/Assignment1; wc  < doc.stops.txt | sed 's
 
   Now you will perform tokenization and stemming on the same document *doc.txt*. The analyze program you ran in Task 1 provides several other text analysis functionalities, including stemming. For the different functions implemented in analyze, open *Assignment_1/analyze.cpp* and have a look. In addition, simply run *./analyze* and you should see:
 
-```
+```{r eval = FALSE}
 $ ./analyze
 Usage: ./analyze config.toml file.txt [OPTION]
 where [OPTION] is one or more of:        
@@ -169,7 +169,7 @@ tryCatch(system("wc  < doc.stems.txt  | sed 's/^\\s*//g' > doc.stems.txt.wc"), e
   As you have learned in the lecture on natural language processing, part-of-speech tagging is the process of assigning parts of speech (such as verb, noun, adjective, adverb, etc.) to the words in a given text. Your task is to do POS tagging (without replacement) on *doc.txt* using the analyze program. After executing the program, examine the output in *doc.pos-tagged.txt*. You should see how a POS tag is assigned to each word after the underscore. Note that the tags are abbreviated; for example, the tag "NN" stands for a noun. For a list of commonly used tags and their meanings see the UPenn Treebank list. For a more comprehensive covering of POS tagging, you can check MeTA's POS Tagging Tutorial. Don't forget to submit your output file after running the following!
 
 ```{r tagging}
-tryCatch(system("wc  <  doc.pos-tagged.txt  | sed 's/^\\s*//g' >  doc.pos-tagged.txt.wc"), error=function(err) print(err))
+tryCatch(system("wc  <  doc.pos-tagged.txt  | sed 's/^\\s*//g' >  doc.pos-tagged.txt.wc"), error = function(err) print(err))
 ```
 
 #### 1.1.1.5 Task 3.5: Writing a New Function (15 pts)
@@ -182,7 +182,7 @@ tryCatch(system("wc  <  doc.pos-tagged.txt  | sed 's/^\\s*//g' >  doc.pos-tagged
 
   Find the function:
 
-```
+```{r eval = FALSE}
 void stopstem(const std::string& file, 
               const cpptoml::table& config)
 ```
@@ -240,7 +240,7 @@ inverted-index = "moocs-inv"
 
   You should also have a look at another important snippet:
 
-```
+```{r eval = FALSE}
 [[analyzers]]
 method = "ngram-word"
 ngram = 1
@@ -257,7 +257,7 @@ filter = "default-unigram-chain"
 
   (index program is in the `meta/build` directory under root). You should see something like below:
 
-```
+```{r eval = FALSE}
 $ ./meta/build/index ../config.toml
 1463154868: [info]     Loading index from disk: moocs-inv (root/meta/src/index/inverted_index.cpp:178)
 Number of documents: 23566
@@ -273,7 +273,7 @@ Index generation took: 0.007 seconds
   After creating the inverted index, you can efficiently search the MOOCs dataset. The ranking function to be used in retrieving documents is defined in *config.toml*. Open *config.toml* and look for the ranker tag. Under this tag, you will see that the default ranker is "bm25" along with values assigned to its three parameters. To test your search engine, you can use the interactive-search program provided with MeTA:
 
 ```{r search}
-tryCatch(system('cd Assignment_1/build; ../../meta/build/interactive-search ../config.toml'), error=function(err) print(err))
+tryCatch(system('cd data/Assignment_1/build; ../../meta/build/interactive-search ../config.toml'), error = function(err) print(err))
 ```
 
   Enter any query you want, and the top results should show up instantaneously. Feel free to experiment with different queries to explore the contents of the dataset.
@@ -300,7 +300,7 @@ tryCatch(system('cd Assignment_1/build; ./ranking-experiment ../config.toml task
 
 Change the parameter b of bm25 in *config.toml* to 0.75
 
-```
+```{r eval = FALSE}
 ranker] 
 method = "bm25" 
 k1 = 1.2 
@@ -334,7 +334,7 @@ tryCatch(system('cd Assignment_1/build; ./ranking-experiment ../config.toml task
 
   Every ranking function in MeTA should have its own class that subclasses the base class ranker. Go to [MeTA's ranker Class Reference](https://meta-toolkit.github.io/meta/doxygen/classmeta_1_1index_1_1ranker.html) and have a quick look at the member functions of ranker. One important function in ranker you should be aware of is:
 
-```
+```{r eval = FALSE}
 float score_one(const index::score_data&) override;
 ```
 
@@ -352,7 +352,7 @@ float score_one(const index::score_data&) override;
 
   Your task is to complete the implementation of the function:
 
-```
+```{r eval = FALSE}
 float score_one(const index::score_data&)
 ```
 
@@ -360,7 +360,7 @@ float score_one(const index::score_data&)
 
   In addition, in *config.toml*, change the ranker to "pl2" with appropriate parameters. In below, we use "#" to comment out lines that we don't need.
 
-```
+```{r eval = FALSE}
 [ranker]
 #method = "bm25"
 #k1 = 1.2
@@ -383,7 +383,7 @@ tryCatch(system('cd Assignment_1/build; cmake .. -DCMAKE_BUILD_TYPE=Release; mak
 
   In this task you will tune the PL2 ranking function in order to get better values of $c$ and $λ$. Open *ranking-experiment.cpp*, and look for the function “*pl2_tune.*” This function is expected to sweep over pairs of the parameters $c$ and $λ$ and select the pair that gives the highest MAP. However, the function has a few incomplete lines:
 
-```
+```{r eval = FALSE}
 maxmap = 0; // Change 0 to the correct value
 cmax = 0; // Change 0 to the correct value
 lambdamax = 0; // Change 0 to the correct value
@@ -429,14 +429,21 @@ tryCatch(system('cd Assignment_1/build; ./relevance-judgements ../config.toml'),
 
   Loading packages.
 
-```{r load-packages, cache=TRUE}
+```{r}
+## Check installed packages
+pkgs <- c('plyr', 'dplyr', 'magrittr', 'htmltools', 'rCharts', 'DT', 'lubridate', 'data.table', 'quanteda', 'stringr', 'stringi', 'tufte')
+
+installed.packages()[installed.packages() %in% pkgs]
+```
+
+```{r load-packages, cache = TRUE}
 ## Loading the package 'BBmisc'
 #'@ if(suppressMessages(!require('BBmisc'))) install.packages('BBmisc', repos = 'https://cran.rstudio.com')
 #'@ suppressMessages(library('BBmisc'))
 #'@ suppressMessages(library('plyr'))
 
-pkgs <- c('plyr', 'dplyr', 'magrittr', 'tidyr', 'googleVis', 'htmltools', 'rCharts', 'DT', 'lubridate', 'data.table', 'quanteda', 'stringr', 'stringi', 'tufte')
-#'@ suppressAll(lib(pkgs)) 
+pkgs <- c('plyr', 'dplyr', 'magrittr', 'htmltools', 'rCharts', 'DT', 'lubridate', 'data.table', 'quanteda', 'stringr', 'stringi', 'tufte')
+#'@ suppressAll(lib(pkgs))
 
 suppressMessages(lapply(pkgs, library, character.only = TRUE))
 rm(pkgs)
@@ -470,7 +477,7 @@ gc()
   The dataset is downloadable in zipped file via [Assignment_1.tar.gz](https://d3c33hcgiwev3.cloudfront.net/_059c3c14eca1c6bcd7f71a397e279467_Assignment_1.tar.gz?Expires=1464480000&Signature=GULCCyN1w13Xy8KXde6M01ltKQUm79WiFM-JKRq1Kx0HC0iMk8-Y8VdXDMIytRNJDZ57bbeyDInvPDKsBBBO6BsJhuEIBRJnlx5xI45nUehd5bmZAfJ6yA2D2QJhNBzy1gdHrXTVpb35cI6G8jecQv2Pg23exA7GUpIvSxkNVX0_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A).
 
 ```{r collect-data, echo = FALSE}
-suppressMessages(library('plyr'))
+#'@ suppressMessages(library('plyr'))
 suppressMessages(library('dplyr'))
 suppressMessages(library('magrittr'))
 suppressMessages(library('formattable'))
@@ -523,7 +530,7 @@ rm(df)
  Read data.  
 
 ```{r read-files, echo = FALSE, comment = NA, cache = FALSE}
-suppressMessages(library('plyr'))
+#'@ suppressMessages(library('plyr'))
 suppressMessages(library('dplyr'))
 suppressMessages(library('data.table'))
 suppressMessages(library('readr'))
@@ -827,7 +834,7 @@ CMake Error: The source directory "/home/ryoeng/englianhu/Coursera-Data-Mining/T
   
 ![Permission Proof](figure/permission-error.jpg)
 
-```{diff}
+```
 > system('cd data/Assignment_1/build; cmake .. -DCMAKE_BUILD_TYPE=Release; make -j8')
 -- Searching for ICU 56.1
 -- ICU version found is 50.1.2, expected 56.1; attempting to build ICU from scratch...
@@ -893,6 +900,9 @@ See also "/home/ryoeng/englianhu/Coursera-Data-Mining/Text Retrieval and Search 
 make: *** No targets specified and no makefile found.  Stop.
 ```
 
+  - `library('plyr')`
+
+![load package *plyr* error](figure/plyr-err.jpg)
 
 ## 5.4 References
 

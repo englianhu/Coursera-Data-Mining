@@ -2,9 +2,9 @@ name: Text-Retrieval-and-Search-Engines-1-Submission
 account: englianhu
 server: beta.rstudioconnect.com
 appId: 961
-bundleId: 1820
+bundleId: 1830
 url: https://beta.rstudioconnect.com/englianhu/Text-Retrieval-and-Search-Engines-1-Submission/
-when: 1464462543.73325
+when: 1464499300.37115
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: Assignment_1/Assignment1/doc.txt
