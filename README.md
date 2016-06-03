@@ -1,6 +1,6 @@
 # Coursera Data Mining
 
-**Data Mining** *by University of Illinois at Urbana-Champaign*
+[**Data Mining**](https://www.coursera.org/specializations/data-mining) *by University of Illinois at Urbana-Champaign*
 
 ## Assignment
 
