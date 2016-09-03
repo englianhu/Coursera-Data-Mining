@@ -58,7 +58,12 @@ Deadline	*Pass this assignment by September 4, 11:59 PM PDT*
 
   In the example above, the corresponding place has two category instances: "Local Services" and "IT Services & Computer Repair".
 
-[`categories.txt`]()
+[`categories.txt`](https://github.com/englianhu/Coursera-Data-Mining/blob/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt)
+
+```{r data, echo = FALSE, results = 'asis'}
+
+
+```
 
 ## 1.2 Output
 
@@ -127,6 +132,8 @@ options(op)
 
 # 3. Conclusion
 
+  I will also [](https://github.com/scibrokes/betting-strategy-and-model-validation)
+
 
 # 4. Appendices
 
@@ -164,4 +171,9 @@ data.frame(Sys.info()) %>% mutate(Category = rownames(.)) %>% .[2:1] %>% rename(
 
 ## 4.3 References
 
+1. [A biased comparsion of JSON packages in R](https://rstudio-pubs-static.s3.amazonaws.com/31702_9c22e3d1a0c44968a4a1f9656f1800ab.html)
+2. [**Introduction to arules – A computational environment for mining association rules and frequent item sets** *by Michael Hahsler, Bettina Grun, Kurt Hornik, Christian Buchta (2015)*](https://cran.r-project.org/web/packages/arules/vignettes/arules.pdf)
+3. [**Association Rules and Market Basket Analysis with R** *by David Smith (2015)*](http://blog.revolutionanalytics.com/2015/04/association-rules-and-market-basket-analysis-with-r.html)
+4. [**Market Basket Analysis with R** *by Salem (2014)*](http://www.salemmarafi.com/code/market-basket-analysis-with-r/)
+5. [**ASSOCIATION MINING: WHAT PRODUCTS TO RECOMMEND TO YOUR CUSTOMERS BASED ON HISTORIC BUYING PATTERNS?** *by RSTATISTICS.NET*](http://rstatistics.net/association-mining-with-r/)
 
