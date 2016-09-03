@@ -1,0 +1,13 @@
+base
+plyr
+jsonlite
+Matrix
+arules
+stringr
+dplyr
+purrr
+formattable
+DT
+lubridate
+googleVis
+magrittr

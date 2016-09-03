@@ -1,0 +1,167 @@
+---
+title: "[**Pattern Discovery in Data Mining** *Programming Assignment: Frequent Itemset Mining Using Apriori*](https://www.coursera.org/learn/data-patterns)"
+subtitle: "[**Data Mining** *by University of Illinois at Urbana-Champaign*](https://www.coursera.org/specializations/data-mining)"
+author: "[®γσ, Eng Lian Hu](http://englianhu.wordpress.com) <img src='figure/ShirotoNorimichi2.jpg' width='24'> 白戸則道®"
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_html:
+    toc: yes
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+```{r libs, message = FALSE, warning = FALSE, cache = TRUE, include = FALSE}
+## Setup Options, Loading Required Libraries and Preparing Environment
+## Loading the packages and setting adjustment
+suppressMessages(library('utils'))
+suppressMessages(require('plyr', quietly = TRUE))
+
+pkgs <- c('jsonlite', 'arules', 'stringr', 'dplyr', 'purrr', 'magrittr', 'formattable', 'DT', 'lubridate', 'googleVis')
+l_ply(pkgs, require, character.only = TRUE)
+rm(pkgs)
+
+## Set the googleVis options first to change the behaviour of plot.gvis, so that only the chart 
+##  component of the HTML file is written into the output file.
+op <- options(gvis.plot.tag = 'chart')
+```
+
+# Abstract
+
+## Programming Assignment: Frequent Itemset Mining Using Apriori
+
+You have not submitted. You must earn *70/100 points* to pass.
+Deadline	*Pass this assignment by September 4, 11:59 PM PDT*
+
+# 1. Instructions
+
+  - Section [1.1 Input]
+  - Section [1.2 Output]
+  - Section [1.3 Important Tips]
+
+**Description**
+
+  In this programming assignment, you are required to implement the Apriori algorithm and apply it to mine frequent itemsets from a real-life data set.
+
+## 1.1 Input
+
+  The provided input file ("categories.txt") consists of the category lists of 77,185 places in the US. Each line corresponds to the category list of one place, where the list consists of a number of category instances (e.g., hotels, restaurants, etc.) that are separated by semicolons.
+
+  An example line is provided below:
+
+  Local Services; IT Services & Computer Repair
+
+  In the example above, the corresponding place has two category instances: "Local Services" and "IT Services & Computer Repair".
+
+[`categories.txt`]()
+
+## 1.2 Output
+
+  You need to implement the Apriori algorithm and use it to mine category sets that are frequent in the input data. When implementing the Apriori algorithm, you may use any programming language you like. We only need your result pattern file, not your source code file.
+
+  After implementing the Apriori algorithm, please set the relative minimum support to 0.01 and run it on the 77,185 category lists. In other words, you need to extract all the category sets that have an absolute support no smaller than 771.
+
+### Part 1
+
+  Please output all the length-1 frequent categories with their absolute supports into a text file named "patterns.txt". Every line corresponds to exactly one frequent category and should be in the following format:
+
+`support:category`
+
+  For example, suppose a category (Fast Food) has an absolute support 3000, then the line corresponding to this frequent category set in "patterns.txt" should be:
+
+`3000:Fast Food`
+
+### Part 2
+
+  Please write all the frequent category sets along with their absolute supports into a text file named "patterns.txt". Every line corresponds to exactly one frequent category set and should be in the following format:
+
+`support:category_1,category_2,category_3,...`
+
+  For example, suppose a category set (Fast Food; Restaurants) has an absolute support 2851, then the line corresponding to this frequent category set in "patterns.txt" should be:
+
+`2851:Fast Food;Restaurants`
+
+## 1.3 Important Tips
+
+  Make sure that you format each line correctly in the output file. For instance, use a semicolon instead of another character to separate the categories for each frequent category set.
+
+  In the result pattern file, the order of the categories does not matter. For example, the following two cases will be considered equivalent by the grader:
+
+Case 1:
+
+`2851:Fast Food;Restaurants`
+
+Case 2:
+
+`2851:Restaurants;Fast Food`
+
+# 2. My submission
+
+  - Section [2.1 Frequent Single Item Mining]
+  - Section [2.2 Frequent Itemset Mining using Apriori]
+
+**Upload Files and Submit**
+
+  To upload a file, click the part below. Then, submit the files. You can submit as many times as you like. You do not need to upload all parts in order to submit.
+  
+  - Frequent Single Item Mining (*30 points*)
+  - Frequent Itemset Mining using Apriori (*70 points*)
+
+## 2.1 Frequent Single Item Mining
+
+
+
+## 2.2 Frequent Itemset Mining using Apriori
+
+
+
+```{r gvis-setting, echo = FALSE, results = 'asis'}
+## Set options back to original options
+options(op)
+```
+
+# 3. Conclusion
+
+
+# 4. Appendices
+
+  - Section [4.1 Documenting File Creation ]
+  - Section [4.2 Speech and Blooper]
+  - Section [4.3 References]
+
+## 4.1 Documenting File Creation 
+
+  It's useful to record some information about how your file was created.
+
+  - File creation date: 2016-09-03
+  - File latest updated date: `r Sys.Date()`
+  - `r R.version.string`
+  - R version (short form): `r getRversion()`
+  - [**rmarkdown** package](https://github.com/rstudio/rmarkdown) version: `r packageVersion('rmarkdown')`
+  - [**tufte** package](https://github.com/rstudio/tufte) version: `r packageVersion('tufte')`
+  - File version: 1.0.0
+  - Author Profile: [®γσ, Eng Lian Hu](https://beta.rstudioconnect.com/englianhu/ryo-eng/)
+  - GitHub: [Source Code](https://github.com/Scibrokes/Betting-Strategy-and-Model-Validation)
+  - Additional session information
+  
+```{r info, echo = FALSE, results = 'asis'}
+suppressMessages(require('dplyr', quietly = TRUE))
+suppressMessages(require('formattable', quietly = TRUE))
+
+lubridate::now()
+devtools::session_info()$platform
+data.frame(Sys.info()) %>% mutate(Category = rownames(.)) %>% .[2:1] %>% rename(Category = Category, Sys.info =  Sys.info..) %>% formattable %>% as.htmlwidget
+```
+
+## 4.2 Speech and Blooper
+
+
+
+## 4.3 References
+
+
