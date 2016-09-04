@@ -22,8 +22,8 @@ link-citations: yes
 suppressMessages(library('utils'))
 suppressMessages(require('plyr', quietly = TRUE))
 
-pkgs <- c('jsonlite', 'arules', 'stringr', 'dplyr', 'purrr', 'magrittr', 'formattable', 'DT', 'lubridate', 'googleVis')
-l_ply(pkgs, require, character.only = TRUE)
+pkgs <- c('jsonlite', 'arules', 'arulesViz', 'readr', 'knitr', 'stringr', 'stringi', 'dplyr', 'purrr', 'magrittr', 'formattable', 'DT', 'lubridate', 'googleVis')
+l_ply(pkgs, require, quietly = TRUE, character.only = TRUE)
 rm(pkgs)
 
 ## Set the googleVis options first to change the behaviour of plot.gvis, so that only the chart 
@@ -61,8 +61,9 @@ Deadline	*Pass this assignment by September 4, 11:59 PM PDT*
 [`categories.txt`](https://github.com/englianhu/Coursera-Data-Mining/blob/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt)
 
 ```{r data, echo = FALSE, results = 'asis'}
+require('arules', quietly = TRUE)
 
-
+transDat <- read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt')
 ```
 
 ## 1.2 Output
@@ -119,11 +120,58 @@ Case 2:
 
 ## 2.1 Frequent Single Item Mining
 
+```{r item1, echo = FALSE, results = 'asis'}
+itemFrequencyPlot(transDat, topN = 20, type = 'absolute', col = rainbow(4))
+```
 
+*graph 2.1.1 : explore the top 20 items in the dataset.*
+
+```{r}
+inspect(transDat[1:100]) # view the observations
+length(transDat) # get number of observations
+size(transDat[1:100]) # number of items in each observation
+
+## Endless proceed 3 hours due to length of list, here I omit LIST() and only process inspect().
+#'@ LIST(transDat) # convert 'transactions' to a list, note the LIST in CAPS
+```
+
+```{r}
+head(transDat)
+```
+
+```{r}
+frequentItems <- eclat(transDat, parameter = list(supp = 0.07, maxlen = 15)) # calculates support for frequent items
+
+itemFrequencyPlot(transDat, topN = 10, type = 'absolute', col = rainbow(4)) # plot frequent items
+```
+
+*graph 2.1.2 : top 10 items in dataset.*
 
 ## 2.2 Frequent Itemset Mining using Apriori
 
+```{r}
+# Get the rules
+rules <- apriori(transDat, parameter = list(supp = 0.001, conf = 0.8))
+ 
+# Show the top 5 rules, but only 2 digits
+options(digits=2)
+inspect(sort(subset(rules[1:5], subset = lift > 6), by = 'confidence'))
+```
 
+```{r plot1, echo = FALSE, results = 'asis'}
+## All plots unable proceed...
+
+# Interactive Plot
+#'@ plot(rules[1:25], method = 'graph', interactive = TRUE, shading = 'confidence') # feel free to expand and move around the objects in this plot
+
+#'@ plot(rules[1:25])
+
+#'@ plot(rules[1:25], method = 'grouped', control = list(k = 20))
+
+#'@ plot(rules[1:25], measure = c('support', 'lift'), shading = 'confidence')
+
+#'@ plot(rules[1:25], method = NULL, measure = 'support', shading = 'lift', interactive = FALSE)
+```
 
 ```{r gvis-setting, echo = FALSE, results = 'asis'}
 ## Set options back to original options
@@ -132,7 +180,7 @@ options(op)
 
 # 3. Conclusion
 
-  I will also [](https://github.com/scibrokes/betting-strategy-and-model-validation)
+  I will also conducting a market basket analysis in [Betting Strategy and Model Validation](https://github.com/scibrokes/betting-strategy-and-model-validation) with regards sportsbook betting.
 
 
 # 4. Appendices
@@ -153,21 +201,26 @@ options(op)
   - [**tufte** package](https://github.com/rstudio/tufte) version: `r packageVersion('tufte')`
   - File version: 1.0.0
   - Author Profile: [®γσ, Eng Lian Hu](https://beta.rstudioconnect.com/englianhu/ryo-eng/)
-  - GitHub: [Source Code](https://github.com/Scibrokes/Betting-Strategy-and-Model-Validation)
+  - GitHub: [Source Code](https://github.com/englianhu/Coursera-Data-Mining/blob/master/4%20Pattern%20Discovery%20in%20Data%20Mining/Programming%20Assignment%20-%20Frequent%20Itemset%20Mining%20Using%20Apriori.Rmd)
   - Additional session information
   
-```{r info, echo = FALSE, results = 'asis'}
+```{r info, echo = FALSE, warning = FALSE, results = 'asis'}
 suppressMessages(require('dplyr', quietly = TRUE))
 suppressMessages(require('formattable', quietly = TRUE))
 
 lubridate::now()
-devtools::session_info()$platform
+sys1 <- devtools::session_info()$platform %>% unlist %>% data.frame(Category = names(.), session_info = .)
+rownames(sys1) <- NULL
+sys1 %>% formattable %>% as.htmlwidget
+
 data.frame(Sys.info()) %>% mutate(Category = rownames(.)) %>% .[2:1] %>% rename(Category = Category, Sys.info =  Sys.info..) %>% formattable %>% as.htmlwidget
+
+rm(sys1)
 ```
 
 ## 4.2 Speech and Blooper
 
-
+  All `plot()` funtion for `arules` in rmarkdown unable work but run chunk-by-chunk is working fine.
 
 ## 4.3 References
 
@@ -176,4 +229,5 @@ data.frame(Sys.info()) %>% mutate(Category = rownames(.)) %>% .[2:1] %>% rename(
 3. [**Association Rules and Market Basket Analysis with R** *by David Smith (2015)*](http://blog.revolutionanalytics.com/2015/04/association-rules-and-market-basket-analysis-with-r.html)
 4. [**Market Basket Analysis with R** *by Salem (2014)*](http://www.salemmarafi.com/code/market-basket-analysis-with-r/)
 5. [**ASSOCIATION MINING: WHAT PRODUCTS TO RECOMMEND TO YOUR CUSTOMERS BASED ON HISTORIC BUYING PATTERNS?** *by RSTATISTICS.NET*](http://rstatistics.net/association-mining-with-r/)
+6. [**RPubs - LastFM Prediction Using Market Basket Analysis** *by Ranjit Mishra (2015)*](https://rpubs.com/ranjitmishra/124373)
 

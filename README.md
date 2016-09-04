@@ -18,7 +18,7 @@
     - 3.1 Assignment (*Prefer Python*)
     
   4. Pattern Discovery in Data Mining
-    - 4.1 Assignment
+    - 4.1 [Assignment](http://rpubs.com/englianhu/pattern-discovery-in-data-mining-assignment1)
     
   5. Cluster Analysis in Data Mining
     - 5.1 Assignment
