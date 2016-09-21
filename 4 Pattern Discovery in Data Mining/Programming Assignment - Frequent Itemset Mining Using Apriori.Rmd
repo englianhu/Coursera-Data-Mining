@@ -63,7 +63,15 @@ Deadline	*Pass this assignment by September 4, 11:59 PM PDT*
 ```{r data, echo = FALSE, results = 'asis'}
 require('arules', quietly = TRUE)
 
-transDat <- read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt')
+transDat <- read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt', format = 'single', cols = c(1, 2), sep = ';')
+
+transDat2 <- read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt', format = 'basket', sep = ';')
+```
+
+```{r write-file, echo = FALSE}
+# write(transDat, file = './4 Pattern Discovery in Data Mining/data/single.txt', sep = ';')
+
+# write(transDat2, file = './4 Pattern Discovery in Data Mining/data/basket.txt', sep = ';')
 ```
 
 ## 1.2 Output
@@ -120,13 +128,19 @@ Case 2:
 
 ## 2.1 Frequent Single Item Mining
 
-```{r item1, echo = FALSE, results = 'asis'}
+```{r item1a, echo = FALSE, results = 'asis'}
 itemFrequencyPlot(transDat, topN = 20, type = 'absolute', col = rainbow(4))
 ```
 
-*graph 2.1.1 : explore the top 20 items in the dataset.*
+*graph 2.1.1a : explore the top 20 items in the dataset.*
 
-```{r}
+```{r item1b, echo = FALSE, results = 'asis'}
+itemFrequencyPlot(transDat2, topN = 20, type = 'absolute', col = rainbow(4))
+```
+
+*graph 2.1.1b : explore the top 20 items in the dataset.*
+
+```{r item2a}
 inspect(transDat[1:100]) # view the observations
 length(transDat) # get number of observations
 size(transDat[1:100]) # number of items in each observation
@@ -135,23 +149,53 @@ size(transDat[1:100]) # number of items in each observation
 #'@ LIST(transDat) # convert 'transactions' to a list, note the LIST in CAPS
 ```
 
-```{r}
+```{r item2b}
+inspect(transDat2[1:100]) # view the observations
+length(transDat2) # get number of observations
+size(transDat2[1:100]) # number of items in each observation
+
+## Endless proceed 3 hours due to length of list, here I omit LIST() and only process inspect().
+#'@ LIST(transDat) # convert 'transactions' to a list, note the LIST in CAPS
+```
+
+```{r item3a}
 head(transDat)
 ```
 
-```{r}
+```{r item3b}
+head(transDat2)
+```
+
+```{r item4a}
 frequentItems <- eclat(transDat, parameter = list(supp = 0.07, maxlen = 15)) # calculates support for frequent items
 
 itemFrequencyPlot(transDat, topN = 10, type = 'absolute', col = rainbow(4)) # plot frequent items
 ```
 
-*graph 2.1.2 : top 10 items in dataset.*
+*graph 2.1.2a : top 10 items in dataset.*
+
+```{r item4b}
+frequentItems <- eclat(transDat2, parameter = list(supp = 0.07, maxlen = 15)) # calculates support for frequent items
+
+itemFrequencyPlot(transDat2, topN = 10, type = 'absolute', col = rainbow(4)) # plot frequent items
+```
+
+*graph 2.1.2b : top 10 items in dataset.*
 
 ## 2.2 Frequent Itemset Mining using Apriori
 
-```{r}
+```{r apriori-a}
 # Get the rules
 rules <- apriori(transDat, parameter = list(supp = 0.001, conf = 0.8))
+ 
+# Show the top 5 rules, but only 2 digits
+options(digits=2)
+inspect(sort(subset(rules[1:5], subset = lift > 6), by = 'confidence'))
+```
+
+```{r apriori-b}
+# Get the rules
+rules <- apriori(transDat2, parameter = list(supp = 0.001, conf = 0.8))
  
 # Show the top 5 rules, but only 2 digits
 options(digits=2)
