@@ -12,18 +12,22 @@ output:
   tufte::tufte_book:
     citation_package: natbib
     latex_engine: xelatex
-bibliography: skeleton.bib
 link-citations: yes
 ---
+
+```{r, include = FALSE}
+# bibliography: skeleton.bib
+```
 
 ```{r libs, message = FALSE, warning = FALSE, cache = TRUE, include = FALSE}
 ## Setup Options, Loading Required Libraries and Preparing Environment
 ## Loading the packages and setting adjustment
 suppressMessages(library('utils'))
 suppressMessages(require('plyr', quietly = TRUE))
+suppressMessages(require('BBmisc', quietly = TRUE))
 
 pkgs <- c('jsonlite', 'arules', 'arulesViz', 'readr', 'knitr', 'stringr', 'stringi', 'dplyr', 'purrr', 'magrittr', 'formattable', 'DT', 'lubridate', 'googleVis')
-l_ply(pkgs, require, quietly = TRUE, character.only = TRUE)
+suppressAll(l_ply(pkgs, require, quietly = TRUE, character.only = TRUE))
 rm(pkgs)
 
 ## Set the googleVis options first to change the behaviour of plot.gvis, so that only the chart 
@@ -60,12 +64,13 @@ Deadline	*Pass this assignment by September 4, 11:59 PM PDT*
 
 [`categories.txt`](https://github.com/englianhu/Coursera-Data-Mining/blob/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt)
 
-```{r data, echo = FALSE, results = 'asis'}
-require('arules', quietly = TRUE)
+```{r data, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis'}
+suppressMessages(require('arules', quietly = TRUE))
+suppressMessages(require('BBmisc', quietly = TRUE))
 
-transDat <- read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt', format = 'single', cols = c(1, 2), sep = ';')
+transDat <- suppressAll(read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt', format = 'single', cols = c(1, 2), sep = ';'))
 
-transDat2 <- read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt', format = 'basket', sep = ';')
+transDat2 <- suppressAll(read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt', format = 'basket', sep = ';'))
 ```
 
 ```{r write-file, echo = FALSE}
@@ -141,9 +146,9 @@ itemFrequencyPlot(transDat2, topN = 20, type = 'absolute', col = rainbow(4))
 *graph 2.1.1b : explore the top 20 items in the dataset.*
 
 ```{r item2a}
-inspect(transDat[1:100]) # view the observations
+inspect(transDat[1:10]) # view the observations
 length(transDat) # get number of observations
-size(transDat[1:100]) # number of items in each observation
+size(transDat[1:10]) # number of items in each observation
 
 ## Endless proceed 3 hours due to length of list, here I omit LIST() and only process inspect().
 #'@ LIST(transDat) # convert 'transactions' to a list, note the LIST in CAPS
@@ -186,7 +191,7 @@ itemFrequencyPlot(transDat2, topN = 10, type = 'absolute', col = rainbow(4)) # p
 
 ```{r apriori-a}
 # Get the rules
-rules <- apriori(transDat, parameter = list(supp = 0.001, conf = 0.8))
+rules <- apriori(transDat, parameter = list(supp = 0.01, conf = 0.5))
  
 # Show the top 5 rules, but only 2 digits
 options(digits=2)
@@ -195,7 +200,7 @@ inspect(sort(subset(rules[1:5], subset = lift > 6), by = 'confidence'))
 
 ```{r apriori-b}
 # Get the rules
-rules <- apriori(transDat2, parameter = list(supp = 0.001, conf = 0.8))
+rules <- apriori(transDat2, parameter = list(supp = 0.01, conf = 0.5))
  
 # Show the top 5 rules, but only 2 digits
 options(digits=2)
