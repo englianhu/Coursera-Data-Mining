@@ -26,7 +26,7 @@ suppressMessages(library('utils'))
 suppressMessages(require('plyr', quietly = TRUE))
 suppressMessages(require('BBmisc', quietly = TRUE))
 
-pkgs <- c('jsonlite', 'arules', 'arulesViz', 'readr', 'knitr', 'stringr', 'stringi', 'dplyr', 'purrr', 'magrittr', 'formattable', 'DT', 'lubridate', 'googleVis')
+pkgs <- c('jsonlite', 'arules', 'arulesViz', 'readr', 'knitr', 'stringr', 'stringi', 'dplyr', 'purrr', 'magrittr', 'formattable', 'DT', 'lubridate', 'googleVis', 'rvest')
 suppressAll(l_ply(pkgs, require, quietly = TRUE, character.only = TRUE))
 rm(pkgs)
 
@@ -68,12 +68,21 @@ Deadline	*Pass this assignment by September 4, 11:59 PM PDT*
 suppressMessages(require('arules', quietly = TRUE))
 suppressMessages(require('BBmisc', quietly = TRUE))
 
-transDat <- suppressAll(read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt', format = 'single', cols = c(1, 2), sep = ';'))
+lnk <- 'https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt'
 
-transDat2 <- suppressAll(read.transactions('https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/master/4%20Pattern%20Discovery%20in%20Data%20Mining/data/categories.txt', format = 'basket', sep = ';'))
+transDat <- suppressAll(read.transactions(lnk, format = 'single', cols = c(1, 2), sep = ';'))
+
+transDat2 <- suppressAll(read.transactions(lnk, format = 'basket', sep = ';'))
+
 ```
 
 ```{r write-file, echo = FALSE}
+#'@ txt <- suppressWarnings(readBin(lnk, what = 'character')) #only read first 1000 words but all more than 220000 words.
+txt <- lnk %>% read_html %>% html_text
+txt %<>% str_replace_all('\n', ';') %>% str_split(';') %>% .[[1]] %>% na.omit
+
+uniqueItem <- sort(unique(txt))
+
 # write(transDat, file = './4 Pattern Discovery in Data Mining/data/single.txt', sep = ';')
 
 # write(transDat2, file = './4 Pattern Discovery in Data Mining/data/basket.txt', sep = ';')
