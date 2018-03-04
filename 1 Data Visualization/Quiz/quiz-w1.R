@@ -34,7 +34,7 @@ Ans : Occlusion
 
 Q10 : Given a plot of life expectancy based on country and birth year, you look up your country and birth year and find the displayed life expectancy, and conclude you will probably live that long. This is an example of _________________.
 Inductive reasoning, Abductive reasoning - wrong
-Ans : 
+Ans : Deductive Reasoning
 
 
 
