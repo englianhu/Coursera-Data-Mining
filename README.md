@@ -1,8 +1,6 @@
-<img src='figure/coursera.jpg' width='56' align='center' valign='middle'> <img src='figure/Illinois.jpg' width='56' align='center' valign='middle'>
+<img src='figure/coursera.jpg' width='100' align='center' valign='middle'>   <img src='figure/Illinois.jpg' width='100' align='center' valign='middle'>
 
 # Coursera - Data Mining
-
----
 
 [**Data Mining**](https://www.coursera.org/specializations/data-mining) *by University of Illinois at Urbana-Champaign*
 
