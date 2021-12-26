@@ -17,7 +17,7 @@ The courses content below chapters
     - 1.2 [Assignment 2](http://rpubs.com/englianhu/177151) as below (*Prefer Tebleau*)
     - <img src='figure/20160922_015545.gif' width='240' align='center' valign='middle'>
     - <img src='1 Data Visualization/figure/01 Data Visualization.png' width='240' align='center' valign='middle'>
-    - Coursera : 88.16% [Certificate](https://www.coursera.org/account/accomplishments/certificate/THXLR367Y3PR) ([pdf version](~/1 Data Visualization/01 Data Visualization.pdf))
+    - Coursera : 88.16% [Certificate](https://www.coursera.org/account/accomplishments/certificate/THXLR367Y3PR) ([pdf version](https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/81a15a3c69d6f39bb9f5af28fb8a3f05e8c21b55/1%20Data%20Visualization/01%20Data%20Visualization.pdf))
 
 <br>
 
@@ -27,7 +27,7 @@ The courses content below chapters
     - <img src='figure/20160922_015848.gif' width='240' align='center' valign='middle'>
     - 2.2 [Assignment 2](https://beta.rstudioconnect.com/englianhu/Programming-Assignment-2-Submission/) (*Prefer Python*)
     - <img src='2 Text Retrieval and Search Engines/figure/02 Text Retrieval and Search Engines.png' width='240' align='center' valign='middle'>
-    - Coursera : 93.25% [Certificate](https://www.coursera.org/account/accomplishments/certificate/9MK37PQWCWCU) ([pdf version](./2 Text Retrieval and Search Engines/02 Text Retrieval and Search Engines.pdf))
+    - Coursera : 93.25% [Certificate](https://www.coursera.org/account/accomplishments/certificate/9MK37PQWCWCU) ([pdf version](https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/81a15a3c69d6f39bb9f5af28fb8a3f05e8c21b55/2%20Text%20Retrieval%20and%20Search%20Engines/02%20Text%20Retrieval%20and%20Search%20Engines.pdf))
 
 <br>
 
@@ -35,7 +35,7 @@ The courses content below chapters
 
     - 3.1 Assignment (*Prefer Python*)
     - <img src='3 Text Mining and Analytics/figure/03 Text Mining and Analytics.png' width='240' align='center' valign='middle'>
-    - Coursera : 92.29% [Certificate](https://www.coursera.org/account/accomplishments/certificate/8D8V4VJJUVYK) ([pdf version](/3 Text Mining and Analytics/03 Text Mining and Analytics.pdf))
+    - Coursera : 92.29% [Certificate](https://www.coursera.org/account/accomplishments/certificate/8D8V4VJJUVYK) ([pdf version](https://raw.githubusercontent.com/englianhu/Coursera-Data-Mining/81a15a3c69d6f39bb9f5af28fb8a3f05e8c21b55/3%20Text%20Mining%20and%20Analytics/03%20Text%20Mining%20and%20Analytics.pdf))
 
 <br>
 
