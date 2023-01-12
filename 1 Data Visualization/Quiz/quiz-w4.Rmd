@@ -22,8 +22,8 @@ output: html_document
   - WRONG **1.** <s>Is an important part of Schneiderman's information visualization mantra</s>
   - WRONG **2.** <s>Provides focus on the zoomed portion of the data</s>
   - 3. Is actually a filtering operation on the display coordinates of the plotted data
-  - WRONG **4.** <s>All of the above</s>
-  - 5. None of the above
+  - ANS **4.** <s>All of the above</s>
+  - WRONG5. None of the above
 
 3.  The goal of the filtering step of the information visualization mantra is to:
 
@@ -35,7 +35,7 @@ output: html_document
 
   - **1.** It makes the data appear more interesting.
   - WRONG **2.** <s>It allows zooming without obscuring the unzoomed data.</s>
-  - 3. It supports focus on detail along with the context of that detail amid the rest of the dataset.
+  - WRONG 3. It supports focus on detail along with the context of that detail amid the rest of the dataset.
 
 5.  Suppose we have a dataset representing an image consisting of pixel records of the form (x,y,b) where x and y are the spatial coordinates of the pixel and b is the brightness of the pixel. Then which of the following describes a histogram of the data?
 
